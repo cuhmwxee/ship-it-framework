@@ -1,6 +1,7 @@
 import FAQ from "@/components/FAQ";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
+import Manifesto from "@/components/Manifesto";
 import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
 import WorksWith from "@/components/WorksWith";
@@ -11,6 +12,7 @@ export default function Home() {
       <Hero />
       <Framework />
       <OneRule />
+      <Manifesto />
       <Principles />
       <WorksWith />
       <FAQ />

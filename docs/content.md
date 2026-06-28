@@ -208,7 +208,9 @@ Every Input becomes Development.
 
 Every Development deserves Validation.
 
-Validated software can be shipped.
+Validated work can be shipped.
+
+If validation fails, the work becomes new Input.
 
 Keep building.
 
