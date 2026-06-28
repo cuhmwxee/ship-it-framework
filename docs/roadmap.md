@@ -1,21 +1,37 @@
-# Roadmap
+# Ship It! Roadmap
 
-v0.1
+## v0.1
 
-✓ Framework idea
+* Initial website
+* Hero
+* Framework overview
+* Principles
+* FAQ
+* Manifesto
+* Ship Mark
+* Responsive design
 
-v0.2
+---
 
-✓ Website
+## v0.2
 
-v0.3
+* Framework diagram
+* Open Graph image
+* Sticky navigation
+* Improved branding
+* Better animations
 
-✓ Manifesto
+---
 
-v0.4
+## v0.3
 
-✓ Specification
+* Framework Specification
+* Examples
+* Documentation
 
-v1.0
+---
 
-Public release
+## v1.0
+
+First stable public release.
+

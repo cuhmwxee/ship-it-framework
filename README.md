@@ -34,8 +34,16 @@ Validation that fails creates new input.
 
 ## Status
 
-🚧 Work in progress
+🚧 Early development
+
+Ship It! is actively evolving.
+
+The framework is intentionally minimal.
+
+Feedback and ideas are welcome.
 
 ## License
 
 MIT
+
+
