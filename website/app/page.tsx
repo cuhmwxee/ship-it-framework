@@ -1,4 +1,5 @@
 import FAQ from "@/components/FAQ";
+import Footer from "@/components/Footer";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
@@ -16,6 +17,7 @@ export default function Home() {
       <Principles />
       <WorksWith />
       <FAQ />
+      <Footer />
     </main>
   );
 }
