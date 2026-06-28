@@ -15,6 +15,7 @@ const workflowSteps = ["Input", "Development", "Validation", "Ship it!"];
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
     <section
+      id="framework"
       aria-labelledby="framework-title"
       className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
     >

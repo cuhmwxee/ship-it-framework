@@ -22,6 +22,7 @@ function SectionContainer({
 }) {
   return (
     <section
+      id="manifesto"
       aria-labelledby={titleId}
       className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
     >
