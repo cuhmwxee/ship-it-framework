@@ -10,7 +10,7 @@ const frameworkCopy = {
   ],
 };
 
-const workflowSteps = ["Input", "Development", "Validation", "Production"];
+const workflowSteps = ["Input", "Development", "Validation", "Ship it!"];
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
@@ -53,7 +53,7 @@ function WorkflowDiagram() {
   return (
     <figure
       className="mt-16"
-      aria-label="Input. Development. Validation. Production. Or validation creates new Input."
+      aria-label="Input. Development. Validation. Ship it!. Or validation creates new Input."
     >
       <ol className="grid gap-3 sm:grid-cols-4">
         {workflowSteps.map((step) => (
