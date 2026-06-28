@@ -9,6 +9,7 @@ const heroCopy = {
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
     <section
+      id="hero"
       aria-labelledby="hero-title"
       className="mx-auto flex min-h-screen w-full max-w-5xl items-center px-6 py-20 sm:px-10 lg:px-12"
     >
