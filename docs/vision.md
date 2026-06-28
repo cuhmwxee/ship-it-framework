@@ -161,3 +161,38 @@ Possible future additions include:
 
 The single page design should remain the primary experience.
 
+# Information Architecture
+
+Every element on the page should answer one question.
+
+Hero
+What is Ship It!?
+
+Framework
+How does it work?
+
+Principles
+Why is it designed this way?
+
+FAQ
+Can I use it?
+
+Manifesto
+What does it stand for?
+
+Footer
+Where can I learn more?
+
+If a section cannot answer a single clear question, it probably should not exist.
+
+# Simplicity
+
+Every element must have a purpose.
+
+Every section should answer one question.
+
+Every page should communicate one idea.
+
+If something does not help explain the framework, remove it.
+
+The website itself should be an example of the Ship It! philosophy.
