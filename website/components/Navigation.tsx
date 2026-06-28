@@ -116,7 +116,7 @@ export default function Navigation() {
           <span className="text-lg font-semibold tracking-tight">Ship It!</span>
         </a>
 
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-5 sm:gap-6">
           <nav
             aria-label="Section navigation"
             className={`flex items-center gap-2 transition-all duration-300 motion-reduce:transition-none sm:gap-4 ${
@@ -165,7 +165,7 @@ export default function Navigation() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="Open the Ship It! GitHub repository"
-            className="flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-opacity duration-200 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+            className="ml-1 flex h-8 w-8 items-center justify-center rounded-full text-zinc-400 transition-opacity duration-200 hover:opacity-80 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
           >
             <svg
               viewBox="0 0 24 24"
