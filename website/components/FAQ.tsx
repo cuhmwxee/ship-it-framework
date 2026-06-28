@@ -34,6 +34,7 @@ const faqCopy = {
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
     <section
+      id="faq"
       aria-labelledby="faq-title"
       className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
     >
