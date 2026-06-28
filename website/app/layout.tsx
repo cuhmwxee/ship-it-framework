@@ -15,7 +15,24 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Ship It! | The Minimal Software Delivery Framework",
   description:
-    "Build. Validate. Ship. A lightweight software delivery framework created by developers, for developers.",
+    "Build. Validate. Ship. A minimal software delivery framework created by developers, for developers.",
+
+  openGraph: {
+    title: "Ship It!",
+    description:
+      "Build. Validate. Ship. A minimal software delivery framework.",
+    url: "https://www.shipitframe.work",
+    siteName: "Ship It!",
+    locale: "en_US",
+    type: "website",
+  },
+
+  twitter: {
+    card: "summary_large_image",
+    title: "Ship It!",
+    description:
+      "Build. Validate. Ship. A minimal software delivery framework.",
+  },
 };
 
 export default function RootLayout({
