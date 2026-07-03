@@ -51,3 +51,9 @@ Validation may be:
 Making validated work available to its intended users.
 
 How software is shipped is implementation detail.
+
+## See also
+
+framework-diagram.md
+
+specification.md

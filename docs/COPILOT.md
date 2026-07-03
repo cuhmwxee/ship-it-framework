@@ -25,6 +25,14 @@ Think:
 
 rather than Salesforce or enterprise consulting.
 
+Always read these documents before making changes.
+
+1. vision.md
+2. principles.md
+3. core-concepts.md
+4. terminology.md (when created)
+5. content.md (if website copy changes)
+
 ---
 
 ## Technology
