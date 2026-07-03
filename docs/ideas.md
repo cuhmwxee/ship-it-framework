@@ -1,12 +1,12 @@
-# Future Ideas
+# Framework
 
-- Framework Specification 1.0
+- Framework Specification
 - Framework Diagram
 - Examples
 - AI Agents
-- GitHub Flow example
-- FAQ improvements
+
+# Website
+
+- Design System
 - Open Graph improvements
 - Ship Mark guidelines
-- Design System
-- Search Engine optimation
