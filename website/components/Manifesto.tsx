@@ -6,10 +6,7 @@ const manifestoCopy = {
     "Every Input becomes Development.",
     "Every Development deserves Validation.",
     "Validated work can be shipped.",
-    "If validation fails, the work becomes new Input.",
-    "Keep building.",
-    "Keep validating.",
-    "Keep shipping.",
+    "If validation fails, the work becomes new Input."
   ],
 };
 
