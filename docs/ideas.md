@@ -10,3 +10,12 @@
 - Design System
 - Open Graph improvements
 - Ship Mark guidelines
+
+# Scenario
+
+▼ Feature
+  Bug
+  Security
+  Refactoring
+  AI
+  Documentation
