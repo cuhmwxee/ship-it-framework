@@ -9,3 +9,4 @@
 - Open Graph improvements
 - Ship Mark guidelines
 - Design System
+- Search Engine optimation

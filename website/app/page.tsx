@@ -6,6 +6,7 @@ import Manifesto from "@/components/Manifesto";
 import Navigation from "@/components/Navigation";
 import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
+import Why from "@/components/Why";
 import WorksWith from "@/components/WorksWith";
 
 export default function Home() {
@@ -13,6 +14,7 @@ export default function Home() {
     <main id="top" className="min-h-screen bg-background text-foreground">
       <Navigation />
       <Hero />
+      <Why />
       <Framework />
       <OneRule />
       <Manifesto />

@@ -22,13 +22,53 @@ Ship.
 
 # Why?
 
-Software delivery doesn't have to be complicated.
+## The Problem
 
-Every team already develops software.
+Software delivery is still more complicated than it needs to be.
 
-Every team already validates software.
+Teams use different tools, methodologies and processes.
 
-Ship It! simply makes that workflow explicit.
+Yet every successful software delivery eventually follows the same simple pattern:
+
+Build.
+
+Validate.
+
+Ship.
+
+## Inspiration
+
+In 2023 I attended Dave Thomas' presentation "Innovation-Enabled, Value-Driven Architecture Evolution."
+
+One sentence stayed with me:
+
+"Shut up and ship."
+
+Ship It! is not Dave Thomas' framework.
+
+His presentation inspired me to ask:
+
+"What is the smallest software delivery framework that still works?"
+
+## Experience
+
+Ship It! wasn't created in academia.
+
+It wasn't created by a consulting company.
+
+It was created while building, maintaining and delivering software.
+
+This framework reflects practical experience rather than academic research.
+
+## Philosophy
+
+Ship It! doesn't replace Scrum, Kanban or XP.
+
+It simply describes the smallest workflow that has consistently worked in practice.
+
+If your team already ships software successfully...
+
+You might already be using Ship It! without calling it that.
 
 ---
 
