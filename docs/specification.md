@@ -1,3 +1,8 @@
 # Specification
 
-This document describes the intended scope and behavior of the ship-it-framework project.
+This document builds upon:
+
+- vision.md
+- principles.md
+- core-concepts.md
+- framework-diagram.md
