@@ -14,12 +14,12 @@ const whyCopy = {
     {
       title: "Inspiration",
       body: [
-        "In 2023 I attended Dave Thomas' presentation "Innovation-Enabled, Value-Driven Architecture Evolution."",
+        `In 2023 I attended Dave Thomas' presentation "Innovation-Enabled, Value-Driven Architecture Evolution."`,
         "One sentence stayed with me:",
-        ""Shut up and ship."",
+        `"Shut up and ship."`,
         "Ship It! is not Dave Thomas' framework.",
         "His presentation inspired me to ask:",
-        ""What is the smallest software delivery framework that still works?"",
+        `"What is the smallest software delivery framework that still works?"`,
       ],
     },
     {

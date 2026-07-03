@@ -72,6 +72,14 @@ You might already be using Ship It! without calling it that.
 
 ---
 
+# Statement
+
+Ship It! wasn't created to change software development.
+
+It was created to simplify software delivery.
+
+---
+
 # The Framework
 
 Every piece of work starts as Input.
