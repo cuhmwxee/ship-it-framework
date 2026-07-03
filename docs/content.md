@@ -140,7 +140,7 @@ Use whatever works.
 
 ## Validation builds trust.
 
-Independent validation is the heart of the framework.
+Independent validation builds trust.
 
 If validation succeeds, ship it.
 
@@ -321,6 +321,8 @@ Only the Validation changed.
 ---
 
 ## Closing
+
+The workflow is the anchor.
 
 Everything else is implementation detail.
 

@@ -34,15 +34,7 @@ Development may be performed by:
 
 ## Validation
 
-Independent verification that the work is ready to ship.
-
-Validation may be:
-
-- Manual
-- Automated
-- Code review
-- Testing
-- Static analysis
+Validation provides independent verification that work is ready to ship.
 
 ---
 

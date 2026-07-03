@@ -27,4 +27,4 @@ V -->|New Input| I
 - Successful validation leads to Ship.
 - Failed validation creates new Input.
 
-Everything else is implementation detail.
+The workflow is the anchor of the framework. Everything else is implementation detail.

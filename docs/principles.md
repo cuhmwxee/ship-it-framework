@@ -12,6 +12,10 @@ Simple is better than clever.
 
 Practice before theory.
 
+Metaphors describe the framework.
+
+They never define framework concepts.
+
 ## Website
 
 Every page should communicate one idea.
@@ -49,3 +53,21 @@ Every artifact has a single source of truth.
 Documentation should never duplicate concepts.
 
 Reference instead of repeating.
+
+## Language
+
+Use metaphors sparingly.
+
+A metaphor should clarify an idea, never become the idea.
+
+If a metaphor can be removed without losing meaning, consider removing it.
+
+## Canonical Language
+
+Some sentences define the identity of the framework.
+
+Reuse them.
+
+Do not rewrite them.
+
+Consistency is more valuable than variation.
