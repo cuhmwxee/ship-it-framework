@@ -9,3 +9,5 @@ Examples should demonstrate invariants, not variations.
 The purpose of an example is not to explain the workflow.
 
 The purpose is to show that the workflow remains the same.
+
+Every new concept increases the complexity of the framework. Can this be explained using the concepts we already have?
