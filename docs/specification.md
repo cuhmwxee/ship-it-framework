@@ -8,22 +8,22 @@ Version
 
 1.0
 
-Normative Language
+Normative language
 
-The key words MUST, MUST NOT, SHOULD, SHOULD NOT and MAY
+The key words "MUST", "MUST NOT", "SHOULD", "SHOULD NOT", and "MAY"
 are to be interpreted as described in RFC 2119.
 
 Informative documents:
 
-- vision.md
-- manifesto.md
-- scenarios/
+- [vision.md](vision.md)
+- [manifesto.md](manifesto.md)
+- [scenarios/](scenarios/)
 
 Normative documents:
 
-- specification.md
-- core-concepts.md
-- framework-diagram.md
+- [core-concepts.md](core-concepts.md)
+- [framework-diagram.md](framework-diagram.md)
+- [specification.md](specification.md)
 
 ---
 
@@ -37,21 +37,21 @@ It specifies the minimum workflow required to deliver software safely.
 
 ## 2. Design Goal
 
-The framework defines the workflow.
+This specification defines the workflow.
 
-It intentionally does not define its implementation.
+Implementation is intentionally left outside the scope of this specification.
 
 ## 3. Scope
 
-This specification defines the minimum workflow required for software delivery.
+This specification defines the minimum workflow for software delivery.
 
-Topics outside this scope are listed in Section 7.
+Section 8 lists topics outside this scope.
 
 ---
 
 ## 4. Terminology
 
-The terminology used in this specification is defined in core-concepts.md.
+The terminology used in this specification is defined in [core-concepts.md](core-concepts.md).
 
 This specification introduces no additional terminology.
 
@@ -59,19 +59,15 @@ This specification introduces no additional terminology.
 
 ## 5. Workflow
 
-The framework workflow is defined by [framework-diagram.md](framework-diagram.md). The workflow MUST follow the sequence Input, Development, Validation, and Ship.
+The workflow is defined by [framework-diagram.md](framework-diagram.md). It MUST follow the sequence Input, Development, Validation, and Ship.
 
 The workflow MUST begin with Input.
-
 Every Input MUST pass through Development.
-
 Development MUST be followed by Validation.
-
 Ship MUST follow successful Validation.
-
 If Validation fails, the workflow MUST return to Input.
 
-The workflow MAY be implemented using different tools, practices, or organizational structures. Such implementation choices MUST NOT change the sequence of the framework.
+The workflow MAY be implemented with different tools, practices, or organizational structures. Such choices MUST NOT change the sequence.
 
 ---
 
@@ -101,13 +97,13 @@ A workflow is Ship It! compliant if:
 - ✓ Work passes independent Validation.
 - ✓ Only validated work is shipped.
 
-Implementation details are intentionally left outside the scope of this specification.
+Implementation details are outside the scope of this specification.
 
 A workflow is non-compliant if it skips Development, skips Validation, or ships before Validation.
 
-See scenarios/ for informative examples.
+See [scenarios/](scenarios/) for informative examples.
 
-A workflow that violates any Compliance Rule is not Ship It! compliant.
+A workflow that violates any compliance rule is not Ship It! compliant.
 
 ---
 
@@ -130,6 +126,4 @@ This specification does not define:
 
 ## 9. References
 
-RFC 2119
-
-Key words for use in RFCs to Indicate Requirement Levels.
+- RFC 2119, "Key words for use in RFCs to Indicate Requirement Levels"
