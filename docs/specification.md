@@ -29,15 +29,17 @@ Normative documents:
 
 ## 1. Purpose
 
-This specification defines the Ship It! Framework. It establishes the required sequence of activities for software delivery and defines the minimum conditions under which work may be shipped.
+This specification defines the normative requirements of the Ship It! Framework.
+
+It specifies the minimum workflow required to deliver software safely.
 
 ---
 
 ## 2. Design Goal
 
-The goal of the framework is to define the minimum workflow required to safely deliver software.
+The framework defines the workflow.
 
-Everything outside this workflow is implementation detail.
+It intentionally does not define its implementation.
 
 ## 3. Scope
 
@@ -60,8 +62,13 @@ This specification introduces no additional terminology.
 The framework workflow is defined by [framework-diagram.md](framework-diagram.md). The workflow MUST follow the sequence Input, Development, Validation, and Ship.
 
 The workflow MUST begin with Input.
-Every Input MUST pass through Development before Validation.
+
+Every Input MUST pass through Development.
+
+Development MUST be followed by Validation.
+
 Ship MUST follow successful Validation.
+
 If Validation fails, the workflow MUST return to Input.
 
 The workflow MAY be implemented using different tools, practices, or organizational structures. Such implementation choices MUST NOT change the sequence of the framework.
@@ -91,10 +98,10 @@ A workflow is Ship It! compliant if:
 
 - ✓ Work enters the framework as Input.
 - ✓ Work passes through Development.
-- ✓ Work is independently validated.
+- ✓ Work passes independent Validation.
 - ✓ Only validated work is shipped.
 
-Everything else is implementation detail.
+Implementation details are intentionally left outside the scope of this specification.
 
 A workflow is non-compliant if it skips Development, skips Validation, or ships before Validation.
 
@@ -117,16 +124,12 @@ This specification does not define:
 - CI/CD implementation
 - issue tracking
 - deployment technology
+- team roles
 
 ---
 
 ## 9. References
 
-This specification references existing project documents rather than duplicating them.
+RFC 2119
 
-- [vision.md](vision.md) describes the purpose and audience of the project.
-- [principles.md](principles.md) defines the framework principles and documentation approach.
-- [core-concepts.md](core-concepts.md) defines the normative terminology used in this specification.
-- [framework-diagram.md](framework-diagram.md) defines the normative workflow.
-- [manifesto.md](manifesto.md) describes the project philosophy.
-- [scenarios/README.md](scenarios/README.md) and the scenario documents in [scenarios/](scenarios/) provide examples and validation cases for the workflow.
+Key words for use in RFCs to Indicate Requirement Levels.
