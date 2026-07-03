@@ -1,23 +1,22 @@
 # Framework Diagram
 
-This document contains the source of truth for the Ship It! Framework diagram.
+The framework diagram is the visual source of truth for the Ship It! Framework.
 
 ```mermaid
 flowchart TD
 
-    I([Input])
+I((Input))
 
-    D([Development])
+D((Development))
 
-    V([Validation])
+V((Validation))
 
-    S([Ship])
+S((Ship))
 
-    I --> D
-    D --> V
-
-    V -->|Success| S
-    V -->|Needs changes| I
+I --> D
+D --> V
+V -->|Ready| S
+V -->|New Input| I
 ```
 
 ## Principles
