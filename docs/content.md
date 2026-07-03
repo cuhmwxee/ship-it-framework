@@ -156,6 +156,176 @@ Teams should own their own implementation.
 
 ---
 
+# Examples
+
+## Subtitle
+
+Different situations.
+
+Same workflow.
+
+## New Feature
+
+### Input
+
+Customer request
+
+↓
+
+Development
+
+↓
+
+Validation
+
+↓
+
+Ship
+
+### Conclusion
+
+The workflow didn't change.
+
+Only the Input changed.
+
+---
+
+## Production Bug
+
+### Input
+
+Production issue
+
+↓
+
+Development
+
+↓
+
+Validation
+
+↓
+
+Ship
+
+### Conclusion
+
+The workflow didn't change.
+
+Only the Input changed.
+
+---
+
+## Validation Failed
+
+↓
+
+Development
+
+↓
+
+Validation
+
+↓
+
+New Input
+
+↓
+
+Development
+
+↓
+
+Validation
+
+↓
+
+Ship
+
+### Conclusion
+
+The workflow didn't change.
+
+Validation simply created new Input.
+
+---
+
+## Technical Debt
+
+### Input
+
+Technical debt
+
+↓
+
+Development
+
+↓
+
+Validation
+
+↓
+
+Ship
+
+### Conclusion
+
+The workflow didn't change.
+
+Only the Input changed.
+
+---
+
+## AI-assisted Development
+
+↓
+
+Development (AI)
+
+↓
+
+Validation (Developer)
+
+↓
+
+Ship
+
+### Conclusion
+
+The workflow didn't change.
+
+Only the Development changed.
+
+---
+
+## Continuous Delivery
+
+↓
+
+Development
+
+↓
+
+Automated Validation
+
+↓
+
+Ship
+
+### Conclusion
+
+The workflow didn't change.
+
+Only the Validation changed.
+
+---
+
+## Closing
+
+Everything else is implementation detail.
+
+---
+
 # Works With
 
 Scrum?

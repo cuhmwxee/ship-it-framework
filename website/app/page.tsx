@@ -1,3 +1,4 @@
+import Examples from "@/components/Examples";
 import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Framework from "@/components/Framework";
@@ -21,6 +22,7 @@ export default function Home() {
       <OneRule />
       <Manifesto />
       <Principles />
+      <Examples />
       <WorksWith />
       <FAQ />
       <Footer />
