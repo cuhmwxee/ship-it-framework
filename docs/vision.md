@@ -56,13 +56,11 @@ Ship It! works with all of them.
 
 Software delivery should be as simple as possible.
 
-Everything else is implementation detail.
-
 Ship It! defines the minimum workflow required to safely deliver software.
 
-Nothing more.
+The workflow is the anchor of the framework.
 
-Nothing less.
+Everything else is implementation detail.
 
 ---
 
