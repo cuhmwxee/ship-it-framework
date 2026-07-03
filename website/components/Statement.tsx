@@ -1,6 +1,6 @@
 const statementCopy = {
-  line1: "Ship It! wasn't created to change software development.",
-  line2: "It was created to simplify software delivery.",
+  line1: "Ship It! doesn't try to change software development.",
+  line2: "It simply tries to simplify software delivery.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
