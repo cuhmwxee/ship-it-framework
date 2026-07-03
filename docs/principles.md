@@ -43,3 +43,9 @@ Assume good intentions.
 Welcome discussion.
 
 Challenge ideas, not people.
+
+Every artifact has a single source of truth.
+
+Documentation should never duplicate concepts.
+
+Reference instead of repeating.
