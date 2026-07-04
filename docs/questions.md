@@ -4,8 +4,6 @@ These questions exist to challenge the framework.
 
 When a question no longer challenges it, it probably belongs somewhere else.
 
-- Why does Ship It! exist?
--- TBD
 - What does "ready to ship" actually mean?
 -- TBD
 - What problem does Ship It! intentionally not solve?
@@ -30,3 +28,5 @@ When a question no longer challenges it, it probably belongs somewhere else.
 -- TBD
 - Is this a language more than a process?
 -- More like a "thorn in the side" of your software development framework's current status quo
+- What would convince us that the framework is wrong?
+-- TBD
