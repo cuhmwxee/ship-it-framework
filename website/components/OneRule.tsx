@@ -1,8 +1,6 @@
 const oneRuleCopy = {
   title: "One Rule",
-  body: [
-    "Every change must be independently validated before it is shipped.",
-  ],
+  rule: "Every change must be independently validated before it is shipped.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
@@ -18,18 +16,17 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 
 function RuleStatement() {
   return (
-    <div className="max-w-3xl space-y-6">
+    <div className="mx-auto max-w-2xl text-center">
       <h2
         id="one-rule-title"
-        className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+        className="mb-10 font-mono text-xs uppercase tracking-[0.35em] text-zinc-500 sm:text-sm"
       >
         {oneRuleCopy.title}
       </h2>
-      <div className="space-y-4 text-2xl leading-snug text-zinc-200 sm:text-3xl">
-        {oneRuleCopy.body.map((line) => (
-          <p key={line}>{line}</p>
-        ))}
-      </div>
+
+      <p className="text-3xl leading-tight text-blue-400 sm:text-4xl lg:text-5xl">
+        {oneRuleCopy.rule}
+      </p>
     </div>
   );
 }

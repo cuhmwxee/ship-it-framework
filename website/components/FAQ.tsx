@@ -55,7 +55,7 @@ const faqCopy = {
     },
     {
       question: "I want to contact you.",
-      answer: ["Mail to captain <at> shipitframe.work."],
+      answer: ["Mail to: captain <at> shipitframe.work."],
     },
   ],
 };
