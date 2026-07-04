@@ -1,32 +1,44 @@
 # Open Questions
 
-These questions exist to challenge the framework.
+Answers are intentionally not tracked here.
 
-When a question no longer challenges it, it probably belongs somewhere else.
+Once a question has a stable answer, move both the question and its answer to the appropriate document.
+
+This document should remain a place for active thinking rather than accumulated knowledge.
+
+---
+
+## Questions for the Framework
+
+These questions may eventually become part of the framework,
+Specification, Core Concepts, or FAQ.
 
 - What does "ready to ship" actually mean?
--- TBD
-- What problem does Ship It! intentionally not solve?
--- TBD
-- What can't be included as a Validation?
--- TBD
-- What would make Ship It! obsolete?
--- TBD
-- Can a single person perform Input, Development, Validation and Shipping?
--- TBD
-- What is the smallest possible Ship it! project? 
---  1 byte, I think. If you are able to provide smaller change, please let me know. 
-- What is the most dangerous misunderstanding about Ship It! framework that some one can do?
--- TBD
-- When has the intended audience received the change?
--- TBD
-- Can a machine perform independent validation?
--- Yes.
-- Is a deployment without users still a Ship?
--- Can be.
+- What is not Validation?
 - Can the validator approve work without being influenced by the implementation?
--- TBD
+- Can a machine perform independent validation?
+- Can a single person perform every step of the workflow?
+- When has the intended audience received the change?
+- Is a deployment without users still a Ship?
+
+---
+
+## Questions about the Framework
+
+These questions intentionally explore the boundaries of the framework.
+
+They may never have canonical answers.
+
+- What problem does Ship It! intentionally not solve?
+- What is the most dangerous misunderstanding about the Ship It! framework?
 - Is this a language more than a process?
--- More like a "thorn in the side" of your software development framework's current status quo
+- What would make Ship It! obsolete?
 - What would convince us that the framework is wrong?
--- TBD
+
+---
+
+## Thought Experiments
+
+Questions that exist primarily to test the limits of the framework.
+
+- What is the smallest possible Ship It! project?
