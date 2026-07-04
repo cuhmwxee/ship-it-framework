@@ -112,8 +112,14 @@ export default function Navigation() {
             window.scrollTo({ top: 0, behavior: prefersReducedMotion ? "auto" : "smooth" });
           }}
         >
-          <BrandMark width={24} height={24} className="h-6 w-6 shrink-0" />
-          <span className="text-lg font-semibold tracking-tight">Ship It!</span>
+          <BrandMark
+            width={28}
+            height={28}
+            className="h-7 w-7 shrink-0 sm:h-6 sm:w-6"
+          />
+          <span className="hidden sm:block text-lg font-semibold tracking-tight">
+            Ship It!
+          </span>
         </a>
 
         <div className="flex items-center gap-5 sm:gap-6">

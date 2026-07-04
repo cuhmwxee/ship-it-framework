@@ -11,7 +11,6 @@ import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
-import WorksWith from "@/components/WorksWith";
 
 export default function Home() {
   return (
@@ -30,7 +29,6 @@ export default function Home() {
       <Manifesto />
       <Principles />
       <Examples />
-      <WorksWith />
       <FAQ />
 
       <ReflectionStatement

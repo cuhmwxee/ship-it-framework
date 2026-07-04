@@ -13,18 +13,18 @@ const faqCopy = {
       ],
     },
     {
-      question: "Will the framework grow over time?",
+      question: "Does Ship It! require Scrum, Kanban, GitHub Flow, Jira, AI, or any specific tool?",
       answer: [
-        "Only if it becomes simpler."
+        "No.",
+        "Use whatever works.",
+        "Ship It! only defines the workflow."
       ],
     },
     {
-      question: "Does Ship It! replace Scrum?",
-      answer: ["No.", "Ship It! is compatible with Scrum."],
-    },
-    {
-      question: "Does Ship It! require Kanban?",
-      answer: ["No.", "Ship It! is compatible with Kanban."],
+      question: "Will the framework grow over time?",
+      answer: [
+        "Only if it helps remove complexity."
+      ],
     },
     {
       question: "Can AI perform Development?",
@@ -48,9 +48,9 @@ const faqCopy = {
     {
       question: "What is this based on? Is there some science behind this idea?",
       answer: [
-        "No.", 
-        "This framework is based on practical experience rather than academic research.",
-        "If future research challenges these ideas, the framework should evolve.",
+        "It is based on practical software development experience.",
+        "It is not based on academic research.",
+        "If future research challenges these ideas, the framework should evolve."
       ],
     },
     {
