@@ -1,13 +1,30 @@
+"use client";
+
+import { useState } from "react";
+
 const faqCopy = {
   title: "FAQ",
   items: [
     {
+      question: "Why is the framework so small?",
+      answer: [
+        "Because every new concept increases complexity.",
+        "The framework intentionally defines only the minimum workflow required to deliver validated software."
+      ],
+    },
+    {
+      question: "Will the framework grow over time?",
+      answer: [
+        "Only if it becomes simpler."
+      ],
+    },
+    {
       question: "Does Ship It! replace Scrum?",
-      answer: ["No.", "It works perfectly alongside Scrum."],
+      answer: ["No.", "Ship It! is compatible with Scrum."],
     },
     {
       question: "Does Ship It! require Kanban?",
-      answer: ["No.", "Use whatever helps your team."],
+      answer: ["No.", "Ship It! is compatible with Kanban."],
     },
     {
       question: "Can AI perform Development?",
@@ -31,8 +48,9 @@ const faqCopy = {
     {
       question: "What is this based on? Is there some science behind this idea?",
       answer: [
-        "No. There isn't any science behind this, or at least none that I am aware of.",
-        "And if research argues against the Ship It! idea, then that research is wrong.",
+        "No.", 
+        "This framework is based on practical experience rather than academic research.",
+        "If future research challenges these ideas, the framework should evolve.",
       ],
     },
     {
@@ -57,25 +75,67 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 function FAQItem({
   question,
   answer,
+  isOpen,
+  onToggle,
+  panelId,
+  buttonId,
 }: {
   question: string;
   answer: string[];
+  isOpen: boolean;
+  onToggle: () => void;
+  panelId: string;
+  buttonId: string;
 }) {
   return (
-    <article className="space-y-4 border-t border-zinc-800 py-8">
-      <h3 className="text-2xl font-semibold leading-snug text-zinc-50 sm:text-3xl">
-        {question}
+    <article className="border-t border-zinc-800 py-6 sm:py-8">
+      <h3 className="m-0">
+        <button
+          id={buttonId}
+          type="button"
+          aria-expanded={isOpen}
+          aria-controls={panelId}
+          onClick={onToggle}
+          className="flex w-full items-center justify-between gap-4 py-2 text-left text-2xl font-semibold leading-snug text-zinc-50 transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-3xl"
+        >
+          <span>{question}</span>
+          <span
+            aria-hidden="true"
+            className={`text-xl text-zinc-400 transition-transform duration-200 motion-reduce:transition-none ${
+              isOpen ? "rotate-180" : "rotate-0"
+            }`}
+          >
+            ˅
+          </span>
+        </button>
       </h3>
-      <div className="space-y-2 text-xl leading-relaxed text-zinc-300">
-        {answer.map((line) => (
-          <p key={line}>{line}</p>
-        ))}
+      <div
+        id={panelId}
+        role="region"
+        aria-labelledby={buttonId}
+        className={`grid overflow-hidden transition-all duration-200 motion-reduce:transition-none ${
+          isOpen ? "mt-4 max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+        }`}
+      >
+        <div className="space-y-2 pb-2 text-xl leading-relaxed text-zinc-300">
+          {answer.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
       </div>
     </article>
   );
 }
 
 export default function FAQ() {
+  const [openItems, setOpenItems] = useState<number[]>([]);
+
+  const toggleItem = (index: number) => {
+    setOpenItems((current) =>
+      current.includes(index) ? current.filter((item) => item !== index) : [...current, index],
+    );
+  };
+
   return (
     <SectionContainer>
       <div className="space-y-10">
@@ -86,13 +146,23 @@ export default function FAQ() {
           {faqCopy.title}
         </h2>
         <div>
-          {faqCopy.items.map((item) => (
-            <FAQItem
-              key={item.question}
-              question={item.question}
-              answer={item.answer}
-            />
-          ))}
+          {faqCopy.items.map((item, index) => {
+            const isOpen = openItems.includes(index);
+            const buttonId = `faq-button-${index}`;
+            const panelId = `faq-panel-${index}`;
+
+            return (
+              <FAQItem
+                key={item.question}
+                question={item.question}
+                answer={item.answer}
+                isOpen={isOpen}
+                onToggle={() => toggleItem(index)}
+                panelId={panelId}
+                buttonId={buttonId}
+              />
+            );
+          })}
         </div>
       </div>
     </SectionContainer>
