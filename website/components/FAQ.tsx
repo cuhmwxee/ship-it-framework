@@ -114,7 +114,7 @@ function FAQItem({
         role="region"
         aria-labelledby={buttonId}
         className={`grid overflow-hidden transition-all duration-200 motion-reduce:transition-none ${
-          isOpen ? "mt-3 max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "mt-3 max-h-80 opacity-100" : "max-h-0 opacity-0"
         }`}
       >
         <div className="space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
@@ -128,12 +128,10 @@ function FAQItem({
 }
 
 export default function FAQ() {
-  const [openItems, setOpenItems] = useState<number[]>([]);
+  const [openItem, setOpenItem] = useState<number | null>(null);
 
   const toggleItem = (index: number) => {
-    setOpenItems((current) =>
-      current.includes(index) ? current.filter((item) => item !== index) : [...current, index],
-    );
+    setOpenItem(current => current === index ? null : index);
   };
 
   return (
@@ -147,7 +145,7 @@ export default function FAQ() {
         </h2>
         <div>
           {faqCopy.items.map((item, index) => {
-            const isOpen = openItems.includes(index);
+            const isOpen = openItem === index;
             const buttonId = `faq-button-${index}`;
             const panelId = `faq-panel-${index}`;
 
