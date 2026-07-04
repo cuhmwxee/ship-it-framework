@@ -8,6 +8,7 @@ import Manifesto from "@/components/Manifesto";
 import Navigation from "@/components/Navigation";
 import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
+import ReflectionStatement from "@/components/ReflectionStatement";
 import Statement from "@/components/Statement";
 import Why from "@/components/Why";
 import WorksWith from "@/components/WorksWith";
@@ -18,10 +19,22 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Why />
+      <ReflectionStatement
+        lines={[
+          "Ship It! doesn't try to change software development.",
+          "It simply tries to simplify software delivery.",
+        ]}
+      />
       <Statement />
       <Framework />
       <OneRule />
       <About />
+      <ReflectionStatement
+        lines={[
+          "The framework is intentionally small.",
+          "Your implementation doesn't have to be.",
+        ]}
+      />
       <Manifesto />
       <Principles />
       <Examples />
