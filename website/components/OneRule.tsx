@@ -2,7 +2,6 @@ const oneRuleCopy = {
   title: "One Rule",
   body: [
     "Every change must be independently validated before it is shipped.",
-    "Validation may be performed by another developer, an automated process, or any combination that fits your team.",
   ],
 };
 
