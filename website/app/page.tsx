@@ -28,18 +28,19 @@ export default function Home() {
       <Statement />
       <Framework />
       <OneRule />
-      <About />
-      <ReflectionStatement
-        lines={[
-          "The framework is intentionally small.",
-          "Your implementation doesn't have to be.",
-        ]}
-      />
       <Manifesto />
       <Principles />
       <Examples />
       <WorksWith />
       <FAQ />
+      <ReflectionStatement
+        lines={[
+          "Frameworks don't change software development.",
+          "Conversations do.",
+        ]}
+      />
+      <About />
+      <Footer />
       <Footer />
     </main>
   );
