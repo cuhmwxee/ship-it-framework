@@ -23,7 +23,7 @@ const faqCopy = {
     {
       question: "Will the framework grow over time?",
       answer: [
-        "Only if it helps remove complexity."
+        "Only if it makes the framework simpler."
       ],
     },
     {
@@ -65,7 +65,7 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
+      className="mx-auto w-full max-w-5xl px-6 py-20 sm:px-10 lg:px-12"
     >
       {children}
     </section>
@@ -88,7 +88,7 @@ function FAQItem({
   buttonId: string;
 }) {
   return (
-    <article className="border-t border-zinc-800 py-6 sm:py-8">
+    <article className="border-t border-zinc-800 py-4 sm:py-5">
       <h3 className="m-0">
         <button
           id={buttonId}
@@ -96,16 +96,16 @@ function FAQItem({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
-          className="flex w-full items-center justify-between gap-4 py-2 text-left text-2xl font-semibold leading-snug text-zinc-50 transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-3xl"
+          className="flex w-full items-center justify-between gap-4 py-2 text-left text-lg font-medium leading-snug text-zinc-50 transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-xl"
         >
           <span>{question}</span>
           <span
             aria-hidden="true"
-            className={`text-xl text-zinc-400 transition-transform duration-200 motion-reduce:transition-none ${
+            className={`text-lg text-zinc-400 transition-transform duration-200 motion-reduce:transition-none ${
               isOpen ? "rotate-180" : "rotate-0"
             }`}
           >
-            ˅
+            ▾
           </span>
         </button>
       </h3>
@@ -114,10 +114,10 @@ function FAQItem({
         role="region"
         aria-labelledby={buttonId}
         className={`grid overflow-hidden transition-all duration-200 motion-reduce:transition-none ${
-          isOpen ? "mt-4 max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+          isOpen ? "mt-3 max-h-[500px] opacity-100" : "max-h-0 opacity-0"
         }`}
       >
-        <div className="space-y-2 pb-2 text-xl leading-relaxed text-zinc-300">
+        <div className="space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
           {answer.map((line) => (
             <p key={line}>{line}</p>
           ))}
@@ -138,10 +138,10 @@ export default function FAQ() {
 
   return (
     <SectionContainer>
-      <div className="space-y-10">
+      <div className="space-y-8">
         <h2
           id="faq-title"
-          className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+          className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
         >
           {faqCopy.title}
         </h2>
