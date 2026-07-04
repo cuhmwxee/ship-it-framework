@@ -13,7 +13,7 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
     <section
       id="about"
       aria-labelledby="about-title"
-      className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
+      className="mx-auto w-full max-w-4xl px-6 py-20 sm:px-10 sm:py-24 lg:px-12"
     >
       {children}
     </section>
@@ -23,14 +23,14 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 export default function About() {
   return (
     <SectionContainer>
-      <div className="max-w-3xl space-y-8">
+      <div className="max-w-3xl space-y-6">
         <h2
           id="about-title"
-          className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+          className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
         >
           {aboutCopy.title}
         </h2>
-        <div className="space-y-4 text-xl leading-relaxed text-zinc-300 sm:text-2xl">
+        <div className="space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
           {aboutCopy.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
