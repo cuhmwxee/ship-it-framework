@@ -19,13 +19,14 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Why />
+
       <ReflectionStatement
         lines={[
           "Ship It! doesn't try to change software development.",
           "It simply tries to simplify software delivery.",
         ]}
       />
-      <Statement />
+
       <Framework />
       <OneRule />
       <Manifesto />
@@ -33,12 +34,14 @@ export default function Home() {
       <Examples />
       <WorksWith />
       <FAQ />
+
       <ReflectionStatement
         lines={[
           "Frameworks don't change software development.",
           "Conversations do.",
         ]}
       />
+
       <About />
       <Footer />
     </main>
