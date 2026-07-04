@@ -1,43 +1,11 @@
 const principlesCopy = {
   title: "Principles",
   items: [
-    {
-      title: "Everything starts with Input.",
-      body: [
-        "Features.",
-        "Bugs.",
-        "Security issues.",
-        "Customer requests.",
-        "Technical debt.",
-        "Anything requiring work becomes Input.",
-      ],
-    },
-    {
-      title: "Development creates value.",
-      body: [
-        "How you build software is your choice.",
-        "Use Scrum.",
-        "Use Kanban.",
-        "Use AI.",
-        "Use pair programming.",
-        "Use whatever works.",
-      ],
-    },
-    {
-      title: "Validation builds trust.",
-      body: [
-        "Independent validation is the heart of the framework.",
-        "If validation succeeds, ship it.",
-        "If not, create new Input.",
-      ],
-    },
-    {
-      title: "Keep the framework minimal.",
-      body: [
-        "Ship It! intentionally defines as little as possible.",
-        "Teams should own their own implementation.",
-      ],
-    },
+    "Define as little as possible.",
+    "Leave implementation to implementation.",
+    "Compatibility beats replacement.",
+    "Simple beats clever.",
+    "Clarity beats completeness.",
   ],
 };
 
@@ -54,43 +22,35 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 }
 
 function PrincipleItem({
-  title,
-  body,
+  text,
+  index,
 }: {
-  title: string;
-  body: string[];
+  text: string;
+  index: number;
 }) {
   return (
-    <article className="space-y-5 border-t border-zinc-800 py-8">
-      <h3 className="text-2xl font-semibold leading-snug text-zinc-50 sm:text-3xl">
-        {title}
-      </h3>
-      <div className="space-y-2 text-xl leading-relaxed text-zinc-300">
-        {body.map((line) => (
-          <p key={line}>{line}</p>
-        ))}
-      </div>
-    </article>
+    <div className="flex flex-col gap-3 py-6 sm:flex-row sm:items-baseline sm:gap-8">
+      <span className="text-xs text-zinc-500">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <p className="text-lg leading-relaxed text-zinc-200 sm:text-xl">{text}</p>
+    </div>
   );
 }
 
 export default function Principles() {
   return (
     <SectionContainer>
-      <div className="space-y-10">
+      <div className="mx-auto flex max-w-3xl flex-col items-start">
         <h2
           id="principles-title"
-          className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+          className="mb-12 text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
         >
           {principlesCopy.title}
         </h2>
-        <div>
-          {principlesCopy.items.map((principle) => (
-            <PrincipleItem
-              key={principle.title}
-              title={principle.title}
-              body={principle.body}
-            />
+        <div className="w-full">
+          {principlesCopy.items.map((principle, index) => (
+            <PrincipleItem key={principle} text={principle} index={index} />
           ))}
         </div>
       </div>
