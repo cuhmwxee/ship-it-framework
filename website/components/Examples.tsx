@@ -4,53 +4,44 @@ import { useState, type KeyboardEvent } from "react";
 
 const examplesCopy = {
   title: "Examples",
-  subtitle: "Different situations.",
-  subtitleContinued: "Same workflow.",
   examples: [
     {
       title: "New Feature",
       input: "Customer request",
       steps: ["Input", "Development", "Validation", "Ship"],
-      output: null,
       conclusion: "The workflow didn't change. Only the Input changed.",
     },
     {
       title: "Production Bug",
       input: "Production issue",
       steps: ["Input", "Development", "Validation", "Ship"],
-      output: null,
       conclusion: "The workflow didn't change. Only the Input changed.",
     },
     {
       title: "Validation Failed",
       input: null,
       steps: ["Input", "Development", "Validation", "New Input", "Development", "Validation", "Ship"],
-      output: null,
       conclusion: "The workflow didn't change. Validation simply created new Input.",
     },
     {
       title: "Technical Debt",
       input: "Technical debt",
       steps: ["Input", "Development", "Validation", "Ship"],
-      output: null,
       conclusion: "The workflow didn't change. Only the Input changed.",
     },
     {
       title: "AI-assisted Development",
       input: null,
       steps: ["Input", "Development (AI)", "Validation (Developer)", "Ship"],
-      output: null,
       conclusion: "The workflow didn't change. Only the Development changed.",
     },
     {
       title: "Continuous Delivery",
       input: null,
       steps: ["Input", "Development", "Automated Validation", "Ship"],
-      output: null,
       conclusion: "The workflow didn't change. Only the Validation changed.",
     },
   ],
-  closing: "Everything else is implementation detail.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
@@ -154,17 +145,9 @@ export default function Examples() {
   return (
     <SectionContainer>
       <div className="space-y-10">
-        <div className="space-y-3">
-          <h2 className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl">
-            {examplesCopy.title}
-          </h2>
-          <p className="text-2xl leading-relaxed text-zinc-300">
-            {examplesCopy.subtitle}
-          </p>
-          <p className="text-2xl leading-relaxed text-zinc-300">
-            {examplesCopy.subtitleContinued}
-          </p>
-        </div>
+        <h2 className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl">
+          {examplesCopy.title}
+        </h2>
 
         <div className="space-y-4">
           <div
@@ -203,7 +186,6 @@ export default function Examples() {
             role="tabpanel"
             id={`example-panel-${activeIndex}`}
             aria-labelledby={`example-tab-${activeIndex}`}
-            className=""
           >
             <ExampleCard
               title={activeExample.title}
@@ -212,12 +194,6 @@ export default function Examples() {
               conclusion={activeExample.conclusion}
             />
           </div>
-        </div>
-
-        <div className="flex justify-center border-t border-zinc-800 pt-10">
-          <p className="max-w-2xl text-center text-2xl leading-relaxed text-zinc-300">
-            {examplesCopy.closing}
-          </p>
         </div>
       </div>
     </SectionContainer>
