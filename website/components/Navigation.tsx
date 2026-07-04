@@ -5,10 +5,9 @@ import BrandMark from "@/components/BrandMark";
 
 const navItems = [
   { id: "framework", label: "Framework" },
-  { id: "about", label: "About" },
-  { id: "principles", label: "Principles" },
+  { id: "examples", label: "Examples" },
   { id: "faq", label: "FAQ" },
-  { id: "manifesto", label: "Manifesto" },
+  { id: "about", label: "About" },
 ];
 
 function scrollToSection(id: string) {

@@ -9,7 +9,7 @@ import Navigation from "@/components/Navigation";
 import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
-import Statement from "@/components/Statement";
+import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
 import WorksWith from "@/components/WorksWith";
 
@@ -19,13 +19,12 @@ export default function Home() {
       <Navigation />
       <Hero />
       <Why />
+
       <ReflectionStatement
-        lines={[
-          "Ship It! doesn't try to change software development.",
-          "It simply tries to simplify software delivery.",
-        ]}
+        emphasis={1}
+        lines={reflections.simplify}
       />
-      <Statement />
+
       <Framework />
       <OneRule />
       <Manifesto />
@@ -33,14 +32,13 @@ export default function Home() {
       <Examples />
       <WorksWith />
       <FAQ />
+
       <ReflectionStatement
-        lines={[
-          "Frameworks don't change software development.",
-          "Conversations do.",
-        ]}
+        emphasis={1}
+        lines={reflections.conversations}
       />
+
       <About />
-      <Footer />
       <Footer />
     </main>
   );
