@@ -1,24 +1,19 @@
-# Documentation Structure
+# Ship It! Website
 
-## Philosophy
+The official website for the Ship It! framework.
 
-- vision.md
-- principles.md
-- manifesto.md
+Built with:
 
-## Framework
+- Next.js
+- React
+- TypeScript
+- Tailwind CSS
 
-- core-concepts.md
-- framework-diagram.md
-- specification.md
+Development
 
-## Website
+npm install
+npm run dev
 
-- content.md
+Production
 
-## Project
-
-- roadmap.md
-- ideas.md
-- working-agreement.md
-- COPILOT.md
+Vercel
