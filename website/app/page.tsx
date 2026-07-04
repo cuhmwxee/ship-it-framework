@@ -17,16 +17,16 @@ export default function Home() {
     <main id="top" className="min-h-screen bg-background text-foreground">
       <Navigation />
       <Hero />
-      <Why />
 
       <ReflectionStatement
         emphasis={1}
         lines={reflections.simplify}
       />
 
+      <Why />
       <Framework />
-      <OneRule />
       <Manifesto />
+      <OneRule />
       <Principles />
       <Examples />
       <FAQ />
