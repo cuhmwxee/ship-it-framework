@@ -1,11 +1,19 @@
 const principlesCopy = {
   title: "Principles",
   items: [
-    "Define as little as possible.",
-    "Leave implementation to implementation.",
-    "Compatibility beats replacement.",
-    "Simple beats clever.",
+    "The framework should define as little as possible.",
+    [
+      "If something can be left to implementation,",
+      "leave it to implementation.",
+    ],
+    "Compatibility is better than replacement.",
+    "Simple is better than clever.",
     "Clarity beats completeness.",
+    "Practice before theory.",
+    [
+      "Metaphors describe the framework.",
+      "They never define framework concepts.",
+    ],
   ],
 };
 
@@ -21,36 +29,37 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
   );
 }
 
-function PrincipleItem({
-  text,
-  index,
-}: {
-  text: string;
-  index: number;
-}) {
-  return (
-    <div className="flex flex-col gap-3 py-6 sm:flex-row sm:items-baseline sm:gap-8">
-      <span className="text-xs text-zinc-500">
-        {String(index + 1).padStart(2, "0")}
-      </span>
-      <p className="text-lg leading-relaxed text-zinc-200 sm:text-xl">{text}</p>
-    </div>
-  );
-}
-
 export default function Principles() {
   return (
     <SectionContainer>
-      <div className="mx-auto flex max-w-3xl flex-col items-start">
+      <div className="mx-auto max-w-3xl text-center">
         <h2
           id="principles-title"
-          className="mb-12 text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+          className="mb-16 text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
         >
           {principlesCopy.title}
         </h2>
-        <div className="w-full">
+
+        <div className="flex flex-col items-center space-y-10">
           {principlesCopy.items.map((principle, index) => (
-            <PrincipleItem key={principle} text={principle} index={index} />
+            <div key={index} className="flex flex-col items-center">
+              {Array.isArray(principle) ? (
+                <div className="space-y-10">
+                  {principle.map((line) => (
+                    <p
+                      key={line}
+                      className="text-2xl leading-relaxed text-zinc-300 sm:text-3xl"
+                    >
+                      {line}
+                    </p>
+                  ))}
+                </div>
+              ) : (
+                <p className="text-2xl leading-relaxed text-zinc-300 sm:text-3xl">
+                  {principle}
+                </p>
+              )}
+            </div>
           ))}
         </div>
       </div>
