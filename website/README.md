@@ -1,36 +1,96 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Ship It!
 
-## Getting Started
+The minimal software delivery framework.
 
-First, run the development server:
+> Build. Validate. Ship.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+Ship It! is a minimal framework focused on one thing:
+
+**Delivering validated software.**
+
+It defines the minimum workflow required for software delivery.
+
+Everything else is implementation detail.
+
+---
+
+## Core Workflow
+
+```text
+Input
+
+↓
+
+Development
+
+↓
+
+Validation
+
+↓
+
+Ship
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+If Validation fails, the work becomes new Input.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Design Philosophy
 
-## Learn More
+The framework intentionally defines as little as possible.
 
-To learn more about Next.js, take a look at the following resources:
+It does not prescribe:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- project management
+- planning
+- estimation
+- ceremonies
+- programming languages
+- AI tooling
+- CI/CD implementation
+- deployment technology
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+Ship It! is designed to work alongside existing methods rather than replace them.
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Status
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+**Draft**
+
+The framework is evolving through practical experience and discussion.
+
+Feedback and ideas are welcome.
+
+---
+
+## Documentation
+
+The project documentation is organized by purpose.
+
+| Document | Purpose |
+|----------|---------|
+| `docs/vision.md` | Project vision and scope |
+| `docs/about.md` | Background, inspiration and project context |
+| `docs/principles.md` | Framework and documentation principles |
+| `docs/core-concepts.md` | Core terminology |
+| `docs/framework-diagram.md` | Canonical workflow diagram |
+| `docs/specification.md` | Normative framework specification |
+| `docs/scenarios/` | Informative examples |
+| `docs/content.md` | Canonical website content |
+| `docs/reflections.md` | Reflection statements |
+| `docs/ideas.md` | Future ideas and backlog |
+| `docs/COPILOT.md` | AI assistant guidance |
+
+---
+
+## Website
+
+https://www.shipitframe.work
+
+---
+
+## License
+
+MIT
