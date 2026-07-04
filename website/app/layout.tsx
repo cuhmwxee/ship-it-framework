@@ -18,9 +18,9 @@ export const metadata: Metadata = {
   description:
     "Build. Validate. Ship. A minimal software delivery framework created by developers, for developers.",
   icons: {
-    icon: [{ url: "/brand/shipit-icon.png", type: "image/png" }],
-    shortcut: "/brand/shipit-icon.png",
-    apple: "/brand/shipit-icon.png",
+    icon: "/favicon.ico",
+    apple: "/icons/apple-touch-icon.png",
+}
   },
 
   openGraph: {
@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     siteName: "Ship It!",
     locale: "en_US",
     type: "website",
-    images: [{ url: "/brand/shipit-icon.png", width: 1200, height: 630, alt: "Ship It!" }],
   },
 
   twitter: {
@@ -39,7 +38,7 @@ export const metadata: Metadata = {
     title: "Ship It!",
     description:
       "Build. Validate. Ship. A minimal software delivery framework.",
-    images: [{ url: "/brand/shipit-icon.png", width: 1200, height: 630, alt: "Ship It!" }],
+    creator: "@HarriMaatta",
   },
 };
 
