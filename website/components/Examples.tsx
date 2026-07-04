@@ -71,7 +71,7 @@ function ExampleCard({
   const variation = conclusionParts[1] ?? "";
 
   return (
-    <article className="space-y-8 border border-zinc-800 p-8">
+    <article className="w-full max-w-3xl space-y-7 border border-zinc-800/80 bg-zinc-950/40 p-8 sm:p-10">
       <h3 className="text-2xl font-semibold leading-snug text-zinc-50 sm:text-3xl">
         {title}
       </h3>
@@ -93,7 +93,7 @@ function ExampleCard({
         </div>
       </div>
 
-      <div className="space-y-4 border-t border-zinc-800 pt-8">
+      <div className="space-y-4 border-t border-zinc-800/70 pt-7">
         <div className="space-y-1">
           <p className="text-[11px] font-medium uppercase tracking-[0.25em] text-zinc-500">
             Invariant
@@ -144,16 +144,16 @@ export default function Examples() {
 
   return (
     <SectionContainer>
-      <div className="space-y-10">
-        <h2 className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl">
+      <div className="mx-auto flex max-w-4xl flex-col items-center">
+        <h2 className="mb-8 text-center text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl">
           {examplesCopy.title}
         </h2>
 
-        <div className="space-y-4">
+        <div className="w-full space-y-4">
           <div
             role="tablist"
             aria-label={examplesCopy.title}
-            className="flex gap-2 overflow-x-auto pb-2"
+            className="flex justify-center gap-2 overflow-x-auto pb-2"
           >
             {examplesCopy.examples.map((example, index) => {
               const isActive = index === activeIndex;

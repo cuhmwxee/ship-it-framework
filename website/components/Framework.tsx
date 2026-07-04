@@ -17,7 +17,7 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
     <section
       id="framework"
       aria-labelledby="framework-title"
-      className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
+      className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
     >
       {children}
     </section>
@@ -26,14 +26,14 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 
 function FrameworkIntro() {
   return (
-    <div className="max-w-3xl space-y-6">
+    <div className="max-w-3xl space-y-5">
       <h2
         id="framework-title"
-        className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+        className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
       >
         {frameworkCopy.title}
       </h2>
-      <div className="space-y-3 text-xl leading-relaxed text-zinc-300 sm:text-2xl">
+      <div className="space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
         {frameworkCopy.description.map((line) => (
           <p key={line}>{line}</p>
         ))}
@@ -44,7 +44,7 @@ function FrameworkIntro() {
 
 function WorkflowStep({ label }: { label: string }) {
   return (
-    <li className="flex min-h-24 items-center justify-center border border-zinc-800 px-5 py-6 text-center font-mono text-lg text-zinc-100">
+    <li className="flex min-h-20 items-center justify-center border border-zinc-800/80 bg-zinc-950/40 px-5 py-5 text-center font-mono text-base text-zinc-100 sm:text-lg">
       {label}
     </li>
   );
@@ -53,7 +53,7 @@ function WorkflowStep({ label }: { label: string }) {
 function WorkflowDiagram() {
   return (
     <figure
-      className="mt-16"
+      className="mt-12 max-w-3xl"
       aria-label="Input. Development. Validation. Ship it!. Or validation creates new Input."
     >
       <ol className="grid gap-3 sm:grid-cols-4">
@@ -61,7 +61,7 @@ function WorkflowDiagram() {
           <WorkflowStep key={step} label={step} />
         ))}
       </ol>
-      <figcaption className="mt-5 font-mono text-base leading-relaxed text-zinc-500">
+      <figcaption className="mt-4 font-mono text-sm leading-relaxed text-zinc-500 sm:text-base">
         Or validation creates new Input.
       </figcaption>
     </figure>

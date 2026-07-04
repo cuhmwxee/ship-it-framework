@@ -65,7 +65,7 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
     <section
       id="faq"
       aria-labelledby="faq-title"
-      className="mx-auto w-full max-w-5xl px-6 py-20 sm:px-10 lg:px-12"
+      className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
     >
       {children}
     </section>
@@ -88,7 +88,7 @@ function FAQItem({
   buttonId: string;
 }) {
   return (
-    <article className="border-t border-zinc-800 py-4 sm:py-5">
+    <article className="border-t border-zinc-800/80 py-4 sm:py-5">
       <h3 className="m-0">
         <button
           id={buttonId}
@@ -96,7 +96,7 @@ function FAQItem({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
-          className="flex w-full items-center justify-between gap-4 py-2 text-left text-lg font-medium leading-snug text-zinc-50 transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-xl"
+          className="flex w-full items-center justify-between gap-4 py-3 text-left text-base font-medium leading-snug text-zinc-50 transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-lg"
         >
           <span>{question}</span>
           <span
@@ -136,10 +136,10 @@ export default function FAQ() {
 
   return (
     <SectionContainer>
-      <div className="space-y-8">
+      <div className="mx-auto flex max-w-3xl flex-col">
         <h2
           id="faq-title"
-          className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
+          className="mb-6 text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
         >
           {faqCopy.title}
         </h2>

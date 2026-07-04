@@ -21,7 +21,7 @@ function SectionContainer({
     <section
       id="manifesto"
       aria-labelledby={titleId}
-      className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
+      className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
     >
       {children}
     </section>
@@ -38,7 +38,7 @@ function SectionHeading({
   return (
     <h2
       id={id}
-      className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
+      className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
     >
       {title}
     </h2>
@@ -47,21 +47,24 @@ function SectionHeading({
 
 function ManifestoPoints({ points }: { points: string[] }) {
   return (
-    <div className="mt-12 flex flex-col items-center">
+    <div className="mt-10 flex flex-col items-center">
       {points.map((point, index) => (
         <div key={point} className="flex flex-col items-center">
           <p
             className={`max-w-3xl text-center leading-relaxed ${
               index === 0
-                ? "text-3xl text-zinc-50 sm:text-4xl"
-                : "text-2xl text-zinc-300 sm:text-3xl"
+                ? "text-2xl text-zinc-50 sm:text-3xl"
+                : "text-xl text-zinc-300 sm:text-2xl"
             }`}
           >
             {point}
           </p>
 
           {index < points.length - 1 && (
-            <div className="my-8 text-blue-400" aria-hidden="true">
+            <div
+              className="my-6 text-sm text-blue-400"
+              aria-hidden="true"
+            >
               ▲
             </div>
           )}

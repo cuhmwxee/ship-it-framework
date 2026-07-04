@@ -103,7 +103,7 @@ export default function Navigation() {
           : "border-transparent bg-transparent backdrop-blur-none"
       }`}
     >
-      <div className="mx-auto flex h-16 max-w-5xl items-center justify-between px-6 sm:px-10 lg:px-12">
+      <div className="mx-auto flex h-16 max-w-4xl items-center justify-between px-6 sm:px-10 lg:px-12">
         <a
           href="#top"
           className="flex items-center gap-3 rounded-full text-zinc-50 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
@@ -125,7 +125,7 @@ export default function Navigation() {
         <div className="flex items-center gap-5 sm:gap-6">
           <nav
             aria-label="Section navigation"
-            className={`flex items-center gap-2 transition-all duration-300 motion-reduce:transition-none sm:gap-4 ${
+            className={`flex items-center gap-1 transition-all duration-300 motion-reduce:transition-none sm:gap-3 ${
               isNavigationVisible
                 ? "translate-y-0 opacity-100"
                 : "pointer-events-none -translate-y-1 opacity-0"
