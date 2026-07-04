@@ -6,6 +6,7 @@ import BrandMark from "@/components/BrandMark";
 const navItems = [
   { id: "framework", label: "Framework" },
   { id: "examples", label: "Examples" },
+  { id: "faq", label: "FAQ" },
   { id: "about", label: "About" },
 ];
 
