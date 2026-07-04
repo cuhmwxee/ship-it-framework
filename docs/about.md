@@ -24,6 +24,20 @@ That phrase helped frame the question of what the smallest useful workflow for d
 
 ---
 
+## Why publish this?
+
+Ship It! may not solve your problems.
+
+It may not fit your team.
+
+It may not even tell you anything new.
+
+But if it helps your team ask better questions about software delivery,
+or gives you a simpler way to discuss an existing process,
+then it has already served its purpose.
+
+---
+
 ## Independent Development
 
 Ship It! was developed independently.
