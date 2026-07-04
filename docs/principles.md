@@ -8,13 +8,18 @@ If something can be left to implementation, leave it to implementation.
 
 Compatibility is better than replacement.
 
+Clarity beats completeness.
+
 Simple is better than clever.
 
 Practice before theory.
 
+Prefer refining existing concepts over introducing new ones.
+
 Metaphors describe the framework.
 
 They never define framework concepts.
+
 
 ## Website
 

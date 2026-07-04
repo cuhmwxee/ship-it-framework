@@ -29,9 +29,9 @@ Normative documents:
 
 ## 1. Purpose
 
-This specification defines the normative requirements of the Ship It! Framework.
+This specification defines the Ship It! framework.
 
-It specifies the minimum workflow required to deliver software safely.
+It specifies the minimum requirements for delivering validated software.
 
 ---
 
@@ -67,7 +67,9 @@ Development MUST be followed by Validation.
 Ship MUST follow successful Validation.
 If Validation fails, the workflow MUST return to Input.
 
-The workflow MAY be implemented with different tools, practices, or organizational structures. Such choices MUST NOT change the sequence.
+Implementation MAY vary.
+
+The workflow MUST NOT.
 
 ---
 
@@ -109,7 +111,7 @@ A workflow that violates any compliance rule is not Ship It! compliant.
 
 ## 8. Non-goals
 
-This specification does not define:
+This specification intentionally does not define implementation details, including but not limited to:
 
 - project management
 - ceremonies
