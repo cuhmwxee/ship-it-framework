@@ -141,3 +141,16 @@ As the available space becomes smaller, the mark becomes simpler.
 Nothing essential is lost.
 
 Everything else is implementation detail.
+
+## Icon Generation
+
+The files in `public/icons/` are generated from the official marks.
+
+Preferred source:
+
+- compact-mark.png → favicon.ico
+- compact-mark.png → favicon-32x32.png
+- compact-mark.png → favicon-16x16.png
+- compact-mark.png → apple-touch-icon.png
+
+Do not edit generated icons manually. The Compact Mark is the single source of truth for all application icons. Generated icons should never be edited manually.
