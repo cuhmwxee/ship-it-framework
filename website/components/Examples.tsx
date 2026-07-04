@@ -1,3 +1,7 @@
+"use client";
+
+import { useState, type KeyboardEvent } from "react";
+
 const examplesCopy = {
   title: "Examples",
   subtitle: "Different situations.",
@@ -72,7 +76,7 @@ function ExampleCard({
   conclusion: string;
 }) {
   return (
-    <article className="space-y-6 border border-zinc-800 p-8">
+    <article className="space-y-6 border border-zinc-800 bg-zinc-950/60 p-8">
       <h3 className="text-2xl font-semibold leading-snug text-zinc-50 sm:text-3xl">
         {title}
       </h3>
@@ -104,6 +108,36 @@ function ExampleCard({
 }
 
 export default function Examples() {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const activeExample = examplesCopy.examples[activeIndex];
+
+  const handleTabKeyDown = (
+    event: KeyboardEvent<HTMLButtonElement>,
+    index: number,
+  ) => {
+    const total = examplesCopy.examples.length;
+
+    if (event.key === "ArrowRight") {
+      event.preventDefault();
+      setActiveIndex((index + 1) % total);
+    }
+
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      setActiveIndex((index - 1 + total) % total);
+    }
+
+    if (event.key === "Home") {
+      event.preventDefault();
+      setActiveIndex(0);
+    }
+
+    if (event.key === "End") {
+      event.preventDefault();
+      setActiveIndex(total - 1);
+    }
+  };
+
   return (
     <SectionContainer>
       <div className="space-y-10">
@@ -119,16 +153,52 @@ export default function Examples() {
           </p>
         </div>
 
-        <div className="grid gap-8 sm:grid-cols-2">
-          {examplesCopy.examples.map((example) => (
+        <div className="space-y-4">
+          <div
+            role="tablist"
+            aria-label={examplesCopy.title}
+            className="flex gap-2 overflow-x-auto pb-2"
+          >
+            {examplesCopy.examples.map((example, index) => {
+              const isActive = index === activeIndex;
+
+              return (
+                <button
+                  key={example.title}
+                  type="button"
+                  role="tab"
+                  id={`example-tab-${index}`}
+                  aria-selected={isActive}
+                  aria-controls={`example-panel-${index}`}
+                  tabIndex={isActive ? 0 : -1}
+                  className={`shrink-0 rounded-full border px-4 py-2 text-sm font-medium transition-colors duration-200 focus:outline-none focus:ring-2 focus:ring-zinc-400 focus:ring-offset-2 focus:ring-offset-zinc-950 sm:text-base ${
+                    isActive
+                      ? "border-zinc-100 bg-zinc-100 text-zinc-950"
+                      : "border-zinc-800 bg-transparent text-zinc-400 hover:border-zinc-600 hover:text-zinc-200"
+                  }`}
+                  onClick={() => setActiveIndex(index)}
+                  onKeyDown={(event) => handleTabKeyDown(event, index)}
+                >
+                  {example.title}
+                </button>
+              );
+            })}
+          </div>
+
+          <div
+            key={activeExample.title}
+            role="tabpanel"
+            id={`example-panel-${activeIndex}`}
+            aria-labelledby={`example-tab-${activeIndex}`}
+            className="transition-opacity duration-200 motion-reduce:transition-none"
+          >
             <ExampleCard
-              key={example.title}
-              title={example.title}
-              input={example.input}
-              steps={example.steps}
-              conclusion={example.conclusion}
+              title={activeExample.title}
+              input={activeExample.input}
+              steps={activeExample.steps}
+              conclusion={activeExample.conclusion}
             />
-          ))}
+          </div>
         </div>
 
         <div className="flex justify-center border-t border-zinc-800 pt-10">
