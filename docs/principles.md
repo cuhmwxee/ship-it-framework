@@ -87,3 +87,9 @@ If it only makes the framework more complete, reconsider it.
 The framework should evolve through refinement, not expansion.
 
 Prefer improving existing concepts over introducing new ones.
+
+## Terminology
+
+Normative terminology should remain consistent throughout the framework.
+
+Marketing copy and slogans may use different wording, provided they do not redefine framework concepts.
