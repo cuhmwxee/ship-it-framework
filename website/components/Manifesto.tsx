@@ -47,13 +47,27 @@ function SectionHeading({
 
 function ManifestoPoints({ points }: { points: string[] }) {
   return (
-    <ul className="mt-8 space-y-4 text-xl leading-relaxed text-zinc-300 sm:text-2xl">
-      {points.map((point) => (
-        <li key={point} className="leading-relaxed">
-          {point}
-        </li>
+    <div className="mt-12 flex flex-col items-center">
+      {points.map((point, index) => (
+        <div key={point} className="flex flex-col items-center">
+          <p
+            className={`max-w-3xl text-center leading-relaxed ${
+              index === 0
+                ? "text-3xl text-zinc-50 sm:text-4xl"
+                : "text-2xl text-zinc-300 sm:text-3xl"
+            }`}
+          >
+            {point}
+          </p>
+
+          {index < points.length - 1 && (
+            <div className="my-8 text-blue-400" aria-hidden="true">
+              ▲
+            </div>
+          )}
+        </div>
       ))}
-    </ul>
+    </div>
   );
 }
 
@@ -62,7 +76,7 @@ export default function Manifesto() {
 
   return (
     <SectionContainer titleId={titleId}>
-      <div className="max-w-3xl">
+      <div className="mx-auto max-w-3xl text-center">
         <SectionHeading id={titleId} title={manifestoCopy.title} />
         <ManifestoPoints points={manifestoCopy.points} />
       </div>
