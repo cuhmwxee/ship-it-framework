@@ -5,10 +5,6 @@ const footerCopy = {
   title: "Ship It!",
   subtitle: "The minimal software delivery framework.",
   developerTitle: "Framework",
-  developerItems: [
-    { label: "Version", value: "Version 0.1" },
-    { label: "License", value: "MIT" },
-  ],
 };
 
 function FooterSection({ children }: { children: ReactNode }) {
@@ -41,15 +37,6 @@ function FooterMeta() {
       <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
         {footerCopy.developerTitle}
       </h2>
-
-      <dl className="space-y-2">
-        {footerCopy.developerItems.map((item) => (
-          <div key={item.label} className="flex gap-2">
-            <dt>{item.label}</dt>
-            <dd className="text-zinc-300">{item.value}</dd>
-          </div>
-        ))}
-      </dl>
     </div>
   );
 }
