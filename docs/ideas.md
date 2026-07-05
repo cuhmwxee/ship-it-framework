@@ -117,3 +117,17 @@ They are much harder to keep simple.
 Software changes.
 
 The workflow shouldn't have to.
+
+## Homepage narrative
+
+The framework diagram should appear immediately after the opening reflections.
+
+The reader first recognizes the problem.
+
+Then immediately sees the workflow.
+
+Only after that should the homepage explain the framework.
+
+The diagram is the answer.
+
+The text is the explanation.
