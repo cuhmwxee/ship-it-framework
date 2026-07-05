@@ -1,217 +1,136 @@
-# Ship It! Website - Technical Brief
+# Ship It! Website
 
-## Goal
+## Purpose
 
-Create a modern, minimal, single page website for the **Ship It! Framework**.
+Build the public website for the Ship It! Framework.
 
-The website should feel like it was created by software developers, not by a marketing department.
+The website is the primary user experience.
 
-Avoid stock photos.
+GitHub is the development environment.
 
-Avoid generic corporate illustrations.
+Always optimize for website readers rather than repository visitors.
 
-Avoid huge feature grids.
+---
 
-Avoid marketing buzzwords.
+## Before making changes
 
-The website should feel calm, technical, minimal and slightly playful.
-
-Think:
-
-* GitHub
-* Vercel
-* Linear
-* Stripe documentation
-
-rather than Salesforce or enterprise consulting.
-
-Always read these documents before making changes.
+Read these documents first:
 
 1. vision.md
-2. principles.md
-3. core-concepts.md
-4. terminology.md (when created)
-5. content.md (if website copy changes)
+2. manifesto.md
+3. principles.md
+4. core-concepts.md
+5. specification.md
+6. content.md
+7. writing-style.md
+8. documentation-strategy.md
+
+Never introduce concepts that contradict these documents.
 
 ---
 
 ## Technology
 
+- Next.js App Router
+- React
+- TypeScript
+- Tailwind CSS
+
+Prefer simple solutions.
+
+Avoid unnecessary dependencies.
+
+---
+
+## Design
+
+The design should reflect the framework.
+
+Prefer removing complexity over adding it.
+
 Use:
 
-* Next.js App Router
-* React
-* TypeScript
-* Tailwind CSS
+- whitespace
+- typography
+- rhythm
 
-No UI framework.
+instead of decoration.
 
-No Bootstrap.
+Avoid:
 
-No Material UI.
-
-No unnecessary dependencies.
-
-Animations should use CSS only.
+- feature grids
+- marketing sections
+- unnecessary cards
+- generic illustrations
 
 ---
 
-## Design principles
+## Writing
 
-Dark theme.
+The website should describe reality.
 
-Large typography.
+Avoid marketing language.
 
-Lots of whitespace.
+Avoid buzzwords.
 
-Very few colors.
+Avoid attacking other frameworks.
 
-No gradients unless subtle.
+Every important statement should pass the Recognition Test:
 
-Rounded corners.
+> Can an experienced software developer honestly say:
+>
+> "I've seen this happen."
 
-Responsive.
+If not, rewrite it.
 
-Fast loading.
+Describe observations.
 
-Accessibility first.
-
----
-
-## Color palette
-
-Background:
-
-#0F172A
-
-Text:
-
-#FFFFFF
-
-Secondary text:
-
-#CBD5E1
-
-Accent:
-
-#22D3EE
+Not opinions.
 
 ---
 
-## Typography
+## Homepage
 
-Large headlines.
+The homepage introduces the framework.
 
-Minimal body text.
+It is intentionally incomplete.
 
-One idea per section.
+Detailed explanations belong on dedicated pages such as:
 
-Avoid walls of text.
+- Getting Started
+- Specification
+- Examples
+- FAQ
+- About
 
----
-
-## Navigation
-
-Sticky top navigation.
-
-Logo:
-
-Ship It!
-
-Navigation:
-
-* Framework
-* Principles
-* FAQ
-* GitHub
-
-No login.
-
-No pricing.
-
-No contact.
-
----
-
-## Layout
-
-Hero
-
-↓
-
-Why
-
-↓
-
-Framework
-
-↓
-
-One Rule
-
-↓
-
-Principles
-
-↓
-
-Works With
-
-↓
-
-FAQ
-
-↓
-
-Manifesto
-
-↓
-
-Footer
-
----
-
-## Animations
-
-Fade in.
-
-Subtle slide up.
-
-Framework diagram appears step by step.
-
-Nothing flashy.
+Do not solve every problem on the homepage.
 
 ---
 
 ## Philosophy
 
-This is NOT a product website.
+The website should feel like it was written by experienced software developers.
 
-This is NOT a consulting company.
+Calm.
 
-This is an open framework created by developers.
+Confident.
 
-The tone should be friendly, confident and simple.
+Minimal.
 
-Avoid sounding academic.
+Clear.
 
-Avoid sounding corporate.
+Never clever for the sake of being clever.
 
-Use short sentences.
+## Decision Rule
 
-Sometimes use words like:
+When proposing new content, first ask:
 
-Yeah.
+Does this help someone understand the framework?
 
-Sure.
+If yes,
+it belongs on the website.
 
-Nope.
+Does this help someone develop the framework?
 
-Exactly.
-
-When appropriate.
-
-Never mock other frameworks.
-
-Ship It! is compatible with every methodology and every tool.
-
+If yes,
+it belongs in the repository.
