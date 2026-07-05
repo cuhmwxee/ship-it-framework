@@ -1,12 +1,13 @@
 export const reflections = {
-  confidence: [
-    "Most software doesn't fail because it can't be built.",
-    "It fails because it never gets confidently shipped.",
+  seen: [
+    "You've seen this.",
+    "The software was ready.",
+    "Nobody was ready to ship it.",
   ],
 
-  simplify: [
-    "Ship It! doesn't try to change software development.",
-    "It simply tries to simplify software delivery.",
+  reveals: [
+    "Ship It! doesn't introduce a new workflow.",
+    "It reveals the one that was already there.",
   ],
 
   conversations: [

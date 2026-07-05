@@ -10,7 +10,6 @@ import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import { reflections } from "@/content/reflections";
-import WorkflowObservation from "@/components/WorkflowObservation";
 import Why from "@/components/Why";
 
 export default function Home() {
@@ -20,19 +19,17 @@ export default function Home() {
       <Hero />
 
       <ReflectionStatement
-        emphasis={1}
-        lines={reflections.confidence}
+        emphasis={0}
+        lines={reflections.seen}
       />
-
-      <Why />
 
       <ReflectionStatement
         emphasis={1}
-        lines={reflections.simplify}
+        lines={reflections.reveals}
       />
 
-      <WorkflowObservation />
       <Framework />
+      <Why />
       <Manifesto />
       <OneRule />
       <Principles />
