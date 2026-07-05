@@ -9,8 +9,8 @@ import Navigation from "@/components/Navigation";
 import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
-import Simplifies from "@/components/Simplifies";
 import { reflections } from "@/content/reflections";
+import WorkflowObservation from "@/components/WorkflowObservation";
 import Why from "@/components/Why";
 
 export default function Home() {
@@ -31,7 +31,7 @@ export default function Home() {
         lines={reflections.simplify}
       />
 
-      <Simplifies />
+      <WorkflowObservation />
       <Framework />
       <Manifesto />
       <OneRule />
