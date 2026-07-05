@@ -7,6 +7,7 @@ const workflowSteps = [
   {
     title: "Development",
     description: "Turn the Input into a working change.",
+    examples: ["Code", "Configuration", "Documentation"],
   },
   {
     title: "Validation",
@@ -51,11 +52,8 @@ function WorkflowStep({
       </p>
 
       {step.examples && (
-        <div className="mt-6">
-          <h3 className="font-mono text-xs uppercase tracking-[0.35em] text-zinc-500">
-            Examples
-          </h3>
-          <ul className="mt-4 space-y-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
+        <div className="mt-8 flex justify-end">
+          <ul className="space-y-1 text-right font-mono text-xs leading-relaxed text-zinc-500 sm:text-sm">
             {step.examples.map((example) => (
               <li key={example}>{example}</li>
             ))}
