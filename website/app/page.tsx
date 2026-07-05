@@ -6,8 +6,6 @@ import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
 import Navigation from "@/components/Navigation";
-import OneRule from "@/components/OneRule";
-import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";

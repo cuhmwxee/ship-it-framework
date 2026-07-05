@@ -1,4 +1,24 @@
-const workflowSteps = ["Input", "Development", "Validation", "Ship it!"];
+const workflowSteps = [
+  {
+    title: "Input",
+    description: "Work that enters the framework.",
+    examples: ["Feature request", "Bug report", "Technical debt"],
+  },
+  {
+    title: "Development",
+    description: "Turn the Input into a working change.",
+  },
+  {
+    title: "Validation",
+    description: "Independently verify that the change is ready to ship.",
+    examples: ["Code review", "Automated tests", "User acceptance"],
+  },
+  {
+    title: "Ship",
+    description: "Make the validated change available to its intended users.",
+    examples: ["Production deployment", "Published package", "Released application"],
+  },
+];
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
@@ -12,11 +32,37 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
   );
 }
 
-function WorkflowStep({ label }: { label: string }) {
+function WorkflowStep({
+  step,
+}: {
+  step: {
+    title: string;
+    description: string;
+    examples?: string[];
+  };
+}) {
   return (
-    <li className="flex min-h-20 items-center justify-center border border-zinc-800/80 bg-zinc-950/40 px-5 py-5 text-center font-mono text-base text-zinc-100 sm:text-lg">
-      {label}
-    </li>
+    <article className="border border-zinc-800/80 bg-zinc-950/40 p-8">
+      <h2 className="font-mono text-2xl text-zinc-50 sm:text-3xl">
+        {step.title}
+      </h2>
+      <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+        {step.description}
+      </p>
+
+      {step.examples && (
+        <div className="mt-6">
+          <h3 className="font-mono text-xs uppercase tracking-[0.35em] text-zinc-500">
+            Examples
+          </h3>
+          <ul className="mt-4 space-y-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
+            {step.examples.map((example) => (
+              <li key={example}>{example}</li>
+            ))}
+          </ul>
+        </div>
+      )}
+    </article>
   );
 }
 
@@ -24,11 +70,21 @@ function WorkflowDiagram() {
   return (
     <figure
       className="mx-auto max-w-3xl"
-      aria-label="Input. Development. Validation. Ship it!."
+      aria-label="Input. Development. Validation. Ship."
     >
-      <ol className="grid gap-3 sm:grid-cols-4">
-        {workflowSteps.map((step) => (
-          <WorkflowStep key={step} label={step} />
+      <ol>
+        {workflowSteps.map((step, index) => (
+          <li key={step.title}>
+            <WorkflowStep step={step} />
+            {index < workflowSteps.length - 1 && (
+              <div
+                className="flex justify-center py-5 font-mono text-blue-400"
+                aria-hidden="true"
+              >
+                ↓
+              </div>
+            )}
+          </li>
         ))}
       </ol>
     </figure>
