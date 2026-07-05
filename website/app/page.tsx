@@ -30,7 +30,6 @@ export default function Home() {
 
       <Framework />
       <Why />
-      <OneRule />
       <Manifesto />
       <Principles />
       <Examples />
