@@ -9,6 +9,7 @@ import Navigation from "@/components/Navigation";
 import OneRule from "@/components/OneRule";
 import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
+import Simplifies from "@/components/Simplifies";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
 
@@ -20,10 +21,17 @@ export default function Home() {
 
       <ReflectionStatement
         emphasis={1}
-        lines={reflections.simplify}
+        lines={reflections.confidence}
       />
 
       <Why />
+
+      <ReflectionStatement
+        emphasis={1}
+        lines={reflections.simplify}
+      />
+
+      <Simplifies />
       <Framework />
       <Manifesto />
       <OneRule />
