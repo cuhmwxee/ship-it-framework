@@ -31,7 +31,6 @@ export default function Home() {
       <Framework />
       <Why />
       <Manifesto />
-      <Principles />
       <Examples />
       <FAQ />
 
