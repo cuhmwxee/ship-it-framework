@@ -24,16 +24,13 @@ function WorkflowDiagram() {
   return (
     <figure
       className="mx-auto max-w-3xl"
-      aria-label="Input. Development. Validation. Ship it!. Or validation creates new Input."
+      aria-label="Input. Development. Validation. Ship it!."
     >
       <ol className="grid gap-3 sm:grid-cols-4">
         {workflowSteps.map((step) => (
           <WorkflowStep key={step} label={step} />
         ))}
       </ol>
-      <figcaption className="mt-4 font-mono text-sm leading-relaxed text-zinc-500 sm:text-base">
-        Or validation creates new Input.
-      </figcaption>
     </figure>
   );
 }
