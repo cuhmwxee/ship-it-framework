@@ -1,4 +1,9 @@
 export const reflections = {
+  confidence: [
+    "Most software doesn't fail because it can't be built.",
+    "It fails because it never gets confidently shipped.",
+  ],
+
   simplify: [
     "Ship It! doesn't try to change software development.",
     "It simply tries to simplify software delivery.",

@@ -39,3 +39,19 @@ Micro Mark
 The appropriate mark should be selected based on available space.
 
 Smaller contexts should use simpler marks.
+
+## Good hooks describe reality.
+
+Avoid slogans.
+
+Avoid marketing.
+
+Instead, write observations that experienced software developers recognize immediately.
+
+A good Ship It! statement should make the reader think:
+
+"Yes. I've seen that."
+
+before they think:
+
+"Interesting framework."
