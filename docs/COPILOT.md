@@ -120,3 +120,17 @@ Minimal.
 Clear.
 
 Never clever for the sake of being clever.
+
+## Decision Rule
+
+When proposing new content, first ask:
+
+Does this help someone understand the framework?
+
+If yes,
+it belongs on the website.
+
+Does this help someone develop the framework?
+
+If yes,
+it belongs in the repository.
