@@ -1,23 +1,23 @@
 const workflowSteps = [
   {
     title: "Input",
-    description: "Work that enters the framework.",
-    examples: ["Feature request", "Bug report", "Technical debt"],
+    description: "Something worth changing.",
+    examples: ["Need", "Idea", "Observation"],
   },
   {
     title: "Development",
-    description: "Turn the Input into a working change.",
-    examples: ["Code", "Configuration", "Documentation"],
+    description: "Turn the change into reality.",
+    examples: ["Create", "Change", "Remove"],
   },
   {
     title: "Validation",
-    description: "Independently verify that the change is ready to ship.",
-    examples: ["Code review", "Automated tests", "User acceptance"],
+    description: "Confirm it is ready to ship.",
+    examples: ["Review", "Verify", "Approve"],
   },
   {
     title: "Ship",
-    description: "Make the validated change available to its intended users.",
-    examples: ["Production deployment", "Published package", "Released application"],
+    description: "Deliver the validated change.",
+    examples: ["Internal", "External", "Automated"],
   },
 ];
 
