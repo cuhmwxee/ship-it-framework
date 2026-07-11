@@ -16,8 +16,7 @@ const workflowSteps = [
   },
   {
     title: "Ship",
-    description: "Deliver the validated change.",
-    examples: ["Internal", "External", "Automated"],
+    description: "Deliver the validated change."
   },
 ];
 

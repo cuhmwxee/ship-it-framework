@@ -7,6 +7,7 @@ import Hero from "@/components/Hero";
 import Manifesto from "@/components/Manifesto";
 import Navigation from "@/components/Navigation";
 import ReflectionStatement from "@/components/ReflectionStatement";
+import SoundFamiliar from "@/components/SoundFamiliar";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
 
@@ -28,6 +29,7 @@ export default function Home() {
 
       <Framework />
       <Why />
+      <SoundFamiliar />
       <Manifesto />
       <Examples />
       <FAQ />
