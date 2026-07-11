@@ -10,6 +10,11 @@ export const reflections = {
     "It reveals the one that was already there.",
   ],
 
+  workflowNamed: [
+    "The workflow was already there.",
+    "Now it has a name.",
+  ],
+
   simplerProcess: [
     "You may not need a new process.",
     "You may need a simpler one.",
