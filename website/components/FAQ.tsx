@@ -35,6 +35,14 @@ const faqCopy = {
       answer: ["Yes."],
     },
     {
+      question: "What happens when Validation fails?",
+      answer: [
+        "Validation does not end the workflow.",
+        "Failed validation creates new Input.",
+        "The framework does not define whether that Input is a bug report, a review comment, a failed test or something else.",
+        "Only that the work continues."],
+    },
+    {
       question: "Can one person validate their own work?",
       answer: [
         "Sometimes.",
