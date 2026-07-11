@@ -81,7 +81,6 @@ function WorkflowStep({
 
       <div className="my-10 flex items-center gap-5" aria-hidden="true">
         <div className="h-px flex-1 bg-zinc-800/80" />
-        <div className="font-mono text-sm text-blue-400">↓</div>
         <div className="h-px flex-1 bg-zinc-800/80" />
       </div>
 
