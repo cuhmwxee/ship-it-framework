@@ -30,7 +30,6 @@ export default function Home() {
       <Framework />
       <Why />
       <SoundFamiliar />
-      /* <Manifesto /> */
       <Examples />
       <FAQ />
 
