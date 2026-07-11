@@ -4,7 +4,6 @@ import FAQ from "@/components/FAQ";
 import Footer from "@/components/Footer";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
-import Manifesto from "@/components/Manifesto";
 import Navigation from "@/components/Navigation";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import SoundFamiliar from "@/components/SoundFamiliar";
@@ -30,6 +29,10 @@ export default function Home() {
       <Framework />
       <Why />
       <SoundFamiliar />
+      <ReflectionStatement
+        emphasis={1}
+        lines={reflections.simplerProcess}
+      />
       <Examples />
       <FAQ />
 
