@@ -25,8 +25,8 @@ export default function Home() {
         lines={reflections.reveals}
       />
 
-      <Framework />
       <Why />
+      <Framework />
       <SoundFamiliar />
       <ReflectionStatement
         emphasis={1}
