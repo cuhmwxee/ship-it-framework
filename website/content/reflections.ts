@@ -2,7 +2,7 @@ export const reflections = {
   seen: [
     "You've seen this.",
     "The software was ready.",
-    "Nobody was ready to ship it.",
+    "The release wasn't.",
   ],
 
   reveals: [
