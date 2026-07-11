@@ -10,6 +10,11 @@ export const reflections = {
     "It reveals the one that was already there.",
   ],
 
+  simplerProcess: [
+    "You may not need a new process.",
+    "You may need a simpler one.",
+  ],
+
   conversations: [
     "Frameworks don't change software development.",
     "Conversations do.",
