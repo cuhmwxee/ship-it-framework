@@ -26,6 +26,10 @@ export default function Home() {
       />
 
       <Why />
+      <ReflectionStatement
+        emphasis={1}
+        lines={reflections.workflowNamed}
+      />
       <Framework />
       <SoundFamiliar />
       <ReflectionStatement
