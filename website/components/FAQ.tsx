@@ -6,10 +6,59 @@ const faqCopy = {
   title: "FAQ",
   items: [
     {
+      question: "What is Ship It!?",
+      answer: [
+        "Ship It! is a minimal software delivery framework.",
+        "It describes the smallest workflow required to move a change from Input to Ship.",
+        "The framework does not replace Scrum, Kanban or other methodologies.",
+        "It tries to reveal the workflow many teams already follow."
+      ],
+    },
+    {
+      question: "What does Ship It! define?",
+      answer: [
+        "Ship It! defines:",
+        "✓ Input",
+        "✓ Development",
+        "✓ Validation",
+        "✓ Ship",
+        "—",
+        "Ship It! intentionally does not define:",
+        "• Roles",
+        "• Ceremonies",
+        "• Estimation",
+        "• Planning",
+        "• Team structure"
+      ],
+    },
+    {
+      question: "Who is Ship It! for?",
+      answer: [
+        "Ship It! is for developers and teams who feel software delivery became more complicated than it had to.",
+        "It is especially useful when software delivery feels heavier than it needs to be."
+      ],
+    },  
+    {
+      question: "Is this a process?",
+      answer: [
+        "Yes.",
+        "But it intentionally defines much less than traditional methodologies.",
+        "Ship It! focuses on the path from Input to Ship."
+      ],
+    },
+    {
       question: "Why is the framework so small?",
       answer: [
         "Because every new concept increases complexity.",
         "The framework intentionally defines only the minimum workflow required to deliver validated software."
+      ],
+    },
+      {
+      question: "Where does Ship It! come from?",
+      answer: [
+        "It emerged from practical software development experience.",
+        "It was created by observing how software is actually delivered.",
+        "If better ideas emerge, the framework should evolve."
       ],
     },
     {
@@ -27,39 +76,12 @@ const faqCopy = {
       ],
     },
     {
-      question: "Can AI perform Development?",
-      answer: ["Yes."],
-    },
-    {
-      question: "Can AI perform Validation?",
-      answer: ["Yes."],
-    },
-    {
       question: "What happens when Validation fails?",
       answer: [
         "Validation does not end the workflow.",
         "Failed validation creates new Input.",
         "The framework does not define whether that Input is a bug report, a review comment, a failed test or something else.",
         "Only that the work continues."],
-    },
-    {
-      question: "Can one person validate their own work?",
-      answer: [
-        "Sometimes.",
-        "Independent validation is recommended whenever possible.",
-      ],
-    },
-    {
-      question: "Is this a process?",
-      answer: ["Yes.", "A very small one."],
-    },
-    {
-      question: "What is this based on? Is there some science behind this idea?",
-      answer: [
-        "It is based on practical software development experience.",
-        "It is not based on academic research.",
-        "If future research challenges these ideas, the framework should evolve."
-      ],
     },
     {
       question: "I want to contact you.",
