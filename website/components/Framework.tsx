@@ -29,7 +29,7 @@ const workflowSteps = [
     ],
   },
   {
-    title: "Ship",
+    title: "Ship It!",
     description: "Deliver the validated change.",
     examples: ["Out."],
     requirements: [
