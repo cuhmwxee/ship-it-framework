@@ -21,6 +21,15 @@ const whyCopy = {
         "It helps teams rethink software delivery in a world of continuous change.",
       ],
     },
+    {
+      title: "Philosophy",
+      body: [
+        "What does Ship It! simplify?",
+        "Oversized delivery processes for continuous change.",
+        "Ship It! does not remove process.",
+        "It helps reduce process where the process has become larger than the change.",
+      ],
+    },
   ],
 };
 
@@ -53,7 +62,7 @@ function Card({ title, body }: { title: string; body: string[] }) {
 export default function Why() {
   return (
     <SectionContainer>
-      <div className="grid gap-8 lg:grid-cols-3">
+      <div className="grid gap-8 sm:grid-cols-2">
         {whyCopy.cards.map((card) => (
           <Card key={card.title} title={card.title} body={card.body} />
         ))}
