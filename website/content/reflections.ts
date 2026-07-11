@@ -15,9 +15,9 @@ export const reflections = {
     "You may need a simpler one.",
   ],
 
-  conversations: [
-    "Frameworks don't change software development.",
-    "Conversations do.",
+  permission: [
+    "You don't need permission.",
+    "Try it on your next change.",
   ],
 
   obvious: [
