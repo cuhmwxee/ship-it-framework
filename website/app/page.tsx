@@ -36,7 +36,7 @@ export default function Home() {
 
       <ReflectionStatement
         emphasis={1}
-        lines={reflections.conversations}
+        lines={reflections.permission}
       />
 
       <About />
