@@ -19,12 +19,13 @@ const workflowSteps = [
   },
   {
     title: "Validation",
-    description: "Confirm it is ready to ship.",
-    examples: ["Review", "Verify", "Approve"],
+    description: "Determine whether the change is ready to ship.",
+    examples: ["Ready", "Not ready", "Continue"],
     requirements: [
-      "Validation may be automated or human.",
+      "Validation creates enough confidence to ship.",
       "Successful validation leads to Ship.",
       "Failed validation creates new Input.",
+      "The workflow continues.",
     ],
   },
   {
