@@ -62,10 +62,6 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 function FrameworkBridge() {
   return (
     <div className="mx-auto mb-24 max-w-3xl border-t border-zinc-800/80 pt-12 sm:mb-28 sm:pt-14">
-      <p className="font-mono text-sm leading-relaxed text-blue-400 sm:text-base">
-        {frameworkBridge.lead}
-      </p>
-
       <div className="mt-7 space-y-4 text-xl leading-relaxed text-zinc-200 sm:text-2xl">
         {frameworkBridge.body.map((line) => (
           <p key={line}>{line}</p>
