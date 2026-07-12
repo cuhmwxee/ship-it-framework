@@ -20,9 +20,9 @@ export const reflections = {
     "You may need a simpler one.",
   ],
 
-  permission: [
-    "You don't need permission.",
+  try: [
     "Try it on your next change.",
+    "Ask what is actually required before shipping.",
   ],
 
   obvious: [

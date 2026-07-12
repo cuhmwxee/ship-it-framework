@@ -39,8 +39,8 @@ export default function Home() {
       <FAQ />
 
       <ReflectionStatement
-        emphasis={1}
-        lines={reflections.permission}
+        emphasis={0}
+        lines={reflections.try}
       />
 
       <About />
