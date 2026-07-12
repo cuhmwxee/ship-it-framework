@@ -40,7 +40,7 @@ export default function Home() {
 
       <ReflectionStatement
         emphasis={1}
-        lines={reflections.permission}
+        lines={reflections.try}
       />
 
       <About />
