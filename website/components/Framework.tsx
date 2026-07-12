@@ -40,11 +40,10 @@ const workflowSteps = [
 ];
 
 const frameworkBridge = {
-  lead: "Because teams do not need to start over.",
   body: [
     "Ship It! works with existing teams, tools and processes.",
     "It reveals the workflow already underneath them, then asks what is actually required before shipping.",
-    "When delivery process grows larger than continuous change, the model gives teams a simpler way to adapt without reinventing how they work.",
+    "When delivery processes grow larger than continuous change, teams can adapt without reinventing how they work.",
   ],
 };
 
