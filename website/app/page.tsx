@@ -32,10 +32,6 @@ export default function Home() {
       />
       <Framework />
       <SoundFamiliar />
-      <ReflectionStatement
-        emphasis={1}
-        lines={reflections.simplerProcess}
-      />
       <FAQ />
 
       <ReflectionStatement

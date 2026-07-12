@@ -1,11 +1,13 @@
 const soundFamiliarCopy = {
   title: "Sound familiar?",
-  statements: [
-    ["The feature was ready.", "The release process wasn't."],
-    ["The team added new tools.", "Shipping did not become simpler."],
-    ["Validation existed.", "Nobody could agree where."],
-    ["Every project seemed different.", "The workflow rarely was."],
-    ["The workflow was never the problem.", "Sometimes it was simply buried."],
+  cases: [
+    "A dependency update waits two weeks.",
+    "A one-line fix follows the same process as a major feature.",
+    "An automated change needs the same approvals as manual work.",
+  ],
+  reflection: [
+    "You may not need a new process.",
+    "You may need a simpler one.",
   ],
 };
 
@@ -26,18 +28,18 @@ function SectionContainer({
   );
 }
 
-function StatementPair({ lines }: { lines: string[] }) {
+function CasesList({ cases }: { cases: string[] }) {
   return (
-    <div className="space-y-3 text-center">
-      {lines.map((line) => (
-        <p
-          key={line}
-          className="text-2xl leading-snug text-zinc-200 sm:text-3xl"
+    <ul className="mx-auto max-w-3xl divide-y divide-zinc-800/80 border-y border-zinc-800/80">
+      {cases.map((example) => (
+        <li
+          key={example}
+          className="py-7 text-xl leading-relaxed text-zinc-200 sm:py-8 sm:text-2xl"
         >
-          {line}
-        </p>
+          {example}
+        </li>
       ))}
-    </div>
+    </ul>
   );
 }
 
@@ -47,25 +49,23 @@ export default function SoundFamiliar() {
   return (
     <SectionContainer titleId={titleId}>
       <div className="mx-auto max-w-3xl text-center">
+        <CasesList cases={soundFamiliarCopy.cases} />
+
         <h2
           id={titleId}
-          className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
+          className="mt-20 text-3xl font-semibold leading-tight text-zinc-50 sm:mt-24 sm:text-4xl"
         >
           {soundFamiliarCopy.title}
         </h2>
 
-        <div className="mt-14">
-          {soundFamiliarCopy.statements.map((statement, index) => (
-            <div key={statement.join(" ")}>
-              <StatementPair lines={statement} />
-
-              {index < soundFamiliarCopy.statements.length - 1 && (
-                <div
-                  className="mx-auto my-12 h-px w-full max-w-2xl bg-zinc-800/70"
-                  aria-hidden="true"
-                />
-              )}
-            </div>
+        <div className="mt-8 space-y-3">
+          {soundFamiliarCopy.reflection.map((line) => (
+            <p
+              key={line}
+              className="text-2xl leading-snug text-zinc-200 sm:text-3xl"
+            >
+              {line}
+            </p>
           ))}
         </div>
       </div>
