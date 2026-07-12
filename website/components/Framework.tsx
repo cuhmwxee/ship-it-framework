@@ -47,6 +47,11 @@ const frameworkBridge = {
   ],
 };
 
+const frameworkDefinition = [
+  "Ship It! defines four concepts.",
+  "Everything else is implementation detail.",
+];
+
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
     <section
@@ -61,12 +66,25 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 
 function FrameworkBridge() {
   return (
-    <div className="mx-auto mb-24 max-w-3xl border-t border-zinc-800/80 pt-12 sm:mb-28 sm:pt-14">
+    <div className="mx-auto mb-20 max-w-3xl border-t border-zinc-800/80 pt-12 sm:mb-24 sm:pt-14">
       <div className="mt-7 space-y-4 text-xl leading-relaxed text-zinc-200 sm:text-2xl">
         {frameworkBridge.body.map((line) => (
           <p key={line}>{line}</p>
         ))}
       </div>
+    </div>
+  );
+}
+
+function FrameworkDefinition() {
+  return (
+    <div className="mx-auto mb-24 max-w-3xl text-center sm:mb-28">
+      <p className="font-mono text-2xl leading-relaxed text-blue-400 sm:text-3xl">
+        {frameworkDefinition[0]}
+      </p>
+      <p className="mt-4 text-xl leading-relaxed text-zinc-400 sm:text-2xl">
+        {frameworkDefinition[1]}
+      </p>
     </div>
   );
 }
@@ -143,6 +161,7 @@ export default function Framework() {
   return (
     <SectionContainer>
       <FrameworkBridge />
+      <FrameworkDefinition />
       <WorkflowDiagram />
     </SectionContainer>
   );
