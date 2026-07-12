@@ -39,7 +39,7 @@ export default function Home() {
       <FAQ />
 
       <ReflectionStatement
-        emphasis={1}
+        emphasis={0}
         lines={reflections.try}
       />
 
