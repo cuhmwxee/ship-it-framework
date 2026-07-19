@@ -6,22 +6,18 @@ const soundFamiliarCopy = {
     "A one-line fix follows the same process as a major feature.",
     "An automated change needs the same approvals as manual work.",
   ],
-  reflection: [
-    "You may not need a new process.",
-    "You may need a simpler one.",
-  ],
 };
 
 function SectionContainer({
   children,
-  titleId,
+  labelledBy,
 }: {
   children: React.ReactNode;
-  titleId: string;
+  labelledBy: string;
 }) {
   return (
     <section
-      aria-labelledby={titleId}
+      aria-labelledby={labelledBy}
       className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
     >
       {children}
@@ -54,35 +50,16 @@ function CasesList({ cases, titleId }: { cases: string[]; titleId: string }) {
 }
 
 export default function SoundFamiliar() {
-  const titleId = "sound-familiar-title";
   const casesTitleId = "examples-title";
 
   return (
-    <SectionContainer titleId={titleId}>
+    <SectionContainer labelledBy={casesTitleId}>
       <div className="mx-auto max-w-3xl text-center">
         <CasesList cases={soundFamiliarCopy.cases} titleId={casesTitleId} />
 
-        <h2
-          id={titleId}
-          className="mt-20 text-3xl font-semibold leading-tight text-zinc-50 sm:mt-24 sm:text-4xl"
-        >
+        <p className="mt-16 text-xl leading-relaxed text-zinc-400 sm:mt-20 sm:text-2xl">
           {soundFamiliarCopy.title}
-        </h2>
-
-        <div className="mt-8 space-y-3">
-          {soundFamiliarCopy.reflection.map((line, index) => (
-            <p
-              key={line}
-              className={
-                index === 1
-                  ? "font-mono text-2xl leading-snug text-blue-400 sm:text-3xl"
-                  : "text-2xl leading-snug text-zinc-200 sm:text-3xl"
-              }
-            >
-              {line}
-            </p>
-          ))}
-        </div>
+        </p>
       </div>
     </SectionContainer>
   );

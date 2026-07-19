@@ -18,7 +18,13 @@ export default function TryIt() {
             <p key={line}>{line}</p>
           ))}
         </div>
+        <SupportingStatement
+          lines={reflections.simplerProcess}
+          className="mt-12"
+        />
       </div>
     </section>
   );
 }
+import SupportingStatement from "@/components/SupportingStatement";
+import { reflections } from "@/content/reflections";
