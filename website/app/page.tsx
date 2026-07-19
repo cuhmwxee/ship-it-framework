@@ -35,12 +35,6 @@ export default function Home() {
       <SoundFamiliar />
       <TryIt />
       <FAQ />
-
-      <ReflectionStatement
-        emphasis={0}
-        lines={reflections.try}
-      />
-
       <About />
       <Footer />
     </main>
