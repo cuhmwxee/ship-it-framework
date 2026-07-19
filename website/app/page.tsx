@@ -6,6 +6,7 @@ import Hero from "@/components/Hero";
 import Navigation from "@/components/Navigation";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import SoundFamiliar from "@/components/SoundFamiliar";
+import TryIt from "@/components/TryIt";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
 
@@ -32,6 +33,7 @@ export default function Home() {
       />
       <Framework />
       <SoundFamiliar />
+      <TryIt />
       <FAQ />
 
       <ReflectionStatement
