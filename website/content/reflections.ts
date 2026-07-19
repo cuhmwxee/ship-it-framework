@@ -1,8 +1,8 @@
 export const reflections = {
   seen: [
     "You've seen this.",
-    "The software was ready.",
-    "The release wasn't.",
+    "The change was small.",
+    "The process wasn't.",
   ],
 
   reveals: [
