@@ -32,6 +32,34 @@ const faqCopy = {
       ],
     },
     {
+      question: "What is Input?",
+      answer: [
+        "Input is the reason why a change exists.",
+        "It can come from developers, users, monitoring, business requirements or automation.",
+      ],
+    },
+    {
+      question: "What is Development?",
+      answer: [
+        "Development is the activity that creates or modifies the change.",
+        "It can be done by individuals, teams or automated systems.",
+      ],
+    },
+    {
+      question: "What is Validation?",
+      answer: [
+        "Validation provides confidence that the change solves the intended problem and can survive in production.",
+        "Validation may involve people, automation or both.",
+      ],
+    },
+    {
+      question: "What is Ship?",
+      answer: [
+        "Ship makes the validated change available.",
+        "How that happens depends on the team, the product and the change itself.",
+      ],
+    },
+    {
       question: "Who is Ship It! for?",
       answer: [
         "Ship It! is for developers and teams who feel software delivery became more complicated than it had to.",
