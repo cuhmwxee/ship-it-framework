@@ -3,8 +3,6 @@ import Link from "next/link";
 const frameworkPreviewCopy = {
   lead: "Ship It! defines four concepts for describing software delivery.",
   flow: ["Input", "Development", "Validation", "Ship"],
-  description:
-    "A framework for understanding what was actually needed before software shipped.",
 };
 
 export default function Framework() {
@@ -26,16 +24,22 @@ export default function Framework() {
           {frameworkPreviewCopy.flow.map((step) => (
             <span
               key={step}
-              className="rounded-full border border-zinc-800 px-4 py-2 font-mono text-sm text-zinc-100"
+                className="
+                  rounded-full
+                  border
+                  border-zinc-800
+                  px-8
+                  py-4
+                  font-mono
+                  text-xl
+                  tracking-tight
+                  text-zinc-100
+                "
             >
               {step}
             </span>
           ))}
         </div>
-
-        <p className="mt-8 text-lg leading-relaxed text-zinc-400 sm:text-xl">
-          {frameworkPreviewCopy.description}
-        </p>
       </div>
     </section>
   );
