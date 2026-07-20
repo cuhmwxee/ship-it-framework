@@ -1,12 +1,9 @@
-import About from "@/components/About";
-import FAQ from "@/components/FAQ";
+import ExploreFurther from "@/components/ExploreFurther";
 import Footer from "@/components/Footer";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import Navigation from "@/components/Navigation";
 import ReflectionStatement from "@/components/ReflectionStatement";
-import SoundFamiliar from "@/components/SoundFamiliar";
-import TryIt from "@/components/TryIt";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
 
@@ -32,10 +29,7 @@ export default function Home() {
         lines={reflections.workflowNamed}
       />
       <Framework />
-      <SoundFamiliar />
-      <TryIt />
-      <FAQ />
-      <About />
+      <ExploreFurther />
       <Footer />
     </main>
   );

@@ -1,3 +1,6 @@
+import SupportingStatement from "@/components/SupportingStatement";
+import { reflections } from "@/content/reflections";
+
 const tryItCopy = {
   title: "Try it.",
   body: [
@@ -26,5 +29,3 @@ export default function TryIt() {
     </section>
   );
 }
-import SupportingStatement from "@/components/SupportingStatement";
-import { reflections } from "@/content/reflections";
