@@ -29,6 +29,10 @@ export default function Home() {
         lines={reflections.workflowNamed}
       />
       <Framework />
+      <ReflectionStatement
+        emphasis={0}
+        lines={reflections.noNeed}
+      />
       <ExploreFurther />
       <Footer />
     </main>
