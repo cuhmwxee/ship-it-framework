@@ -2,6 +2,11 @@ import Link from "next/link";
 
 const destinations = [
   {
+    href: "/framework",
+    title: "Framework",
+    description: "The four concepts and the thinking behind them.",
+  },
+  {
     href: "/examples",
     title: "Examples",
     description: "Real-world delivery situations and workflows.",
