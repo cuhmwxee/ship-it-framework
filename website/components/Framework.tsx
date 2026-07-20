@@ -49,9 +49,7 @@ const frameworkBridge = {
 
 const frameworkDefinition = {
   lead: "One question:",
-  question: "What actually needs to happen before software ships?",
-  statement: "Ship It! defines four concepts.",
-  detail: "Everything else is implementation detail.",
+  question: "What was actually needed to ship it?",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
@@ -87,14 +85,6 @@ function FrameworkDefinition() {
       <p className="mt-3 text-2xl font-semibold leading-relaxed text-zinc-50 sm:text-3xl">
         {frameworkDefinition.question}
       </p>
-      <div className="mt-12 space-y-2 text-xl leading-relaxed text-zinc-400 sm:text-2xl">
-        <p>
-          {frameworkDefinition.statement}
-        </p>
-        <p>
-          {frameworkDefinition.detail}
-        </p>
-      </div>
     </div>
   );
 }
