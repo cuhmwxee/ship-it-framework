@@ -47,10 +47,12 @@ const frameworkBridge = {
   ],
 };
 
-const frameworkDefinition = [
-  "Ship It! defines four concepts.",
-  "Everything else is implementation detail.",
-];
+const frameworkDefinition = {
+  lead: "One question:",
+  question: "What actually needs to happen before software ships?",
+  statement: "Ship It! defines four concepts.",
+  detail: "Everything else is implementation detail.",
+};
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
@@ -79,12 +81,20 @@ function FrameworkBridge() {
 function FrameworkDefinition() {
   return (
     <div className="mx-auto mb-24 max-w-3xl text-center sm:mb-28">
-      <p className="font-mono text-2xl leading-relaxed text-blue-400 sm:text-3xl">
-        {frameworkDefinition[0]}
+      <p className="text-lg leading-relaxed text-zinc-300 sm:text-xl">
+        {frameworkDefinition.lead}
       </p>
-      <p className="mt-4 text-xl leading-relaxed text-zinc-400 sm:text-2xl">
-        {frameworkDefinition[1]}
+      <p className="mt-3 text-2xl font-semibold leading-relaxed text-zinc-50 sm:text-3xl">
+        {frameworkDefinition.question}
       </p>
+      <div className="mt-12 space-y-2 text-xl leading-relaxed text-zinc-400 sm:text-2xl">
+        <p>
+          {frameworkDefinition.statement}
+        </p>
+        <p>
+          {frameworkDefinition.detail}
+        </p>
+      </div>
     </div>
   );
 }
