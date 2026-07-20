@@ -161,7 +161,6 @@ export default function Framework() {
   return (
     <SectionContainer>
       <FrameworkBridge />
-      <FrameworkDefinition />
       <WorkflowDiagram />
     </SectionContainer>
   );
