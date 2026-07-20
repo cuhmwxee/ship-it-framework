@@ -5,7 +5,6 @@ const frameworkPreviewCopy = {
   flow: ["Input", "Development", "Validation", "Ship"],
   description:
     "A framework for understanding what was actually needed before software shipped.",
-  link: "Explore the framework →",
 };
 
 export default function Framework() {
@@ -37,13 +36,6 @@ export default function Framework() {
         <p className="mt-8 text-lg leading-relaxed text-zinc-400 sm:text-xl">
           {frameworkPreviewCopy.description}
         </p>
-
-        <Link
-          href="/framework"
-          className="mt-10 inline-flex text-lg font-medium text-zinc-300 transition-colors hover:text-zinc-100"
-        >
-          {frameworkPreviewCopy.link}
-        </Link>
       </div>
     </section>
   );
