@@ -30,4 +30,8 @@ export const reflections = {
     "The goal was never to invent something new.",
     "The goal was to describe something essential.",
   ],
+
+  noNeed: [
+    "Not every change needs the same process.",
+  ],
 };
