@@ -1,8 +1,10 @@
 import Link from "next/link";
 
 const frameworkPreviewCopy = {
-  description: "Ship It! provides a simple way to describe software delivery.",
-  flow: "Input → Development → Validation → Ship",
+  lead: "Ship It! defines four concepts for describing software delivery.",
+  flow: ["Input", "Development", "Validation", "Ship"],
+  description:
+    "A framework for understanding what was actually needed before software shipped.",
   link: "Explore the framework →",
 };
 
@@ -18,14 +20,27 @@ export default function Framework() {
           id="framework-title"
           className="text-2xl leading-snug text-zinc-200 sm:text-3xl"
         >
+          {frameworkPreviewCopy.lead}
+        </p>
+
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
+          {frameworkPreviewCopy.flow.map((step) => (
+            <span
+              key={step}
+              className="rounded-full border border-zinc-800 px-4 py-2 font-mono text-sm text-zinc-100"
+            >
+              {step}
+            </span>
+          ))}
+        </div>
+
+        <p className="mt-8 text-lg leading-relaxed text-zinc-400 sm:text-xl">
           {frameworkPreviewCopy.description}
         </p>
-        <p className="mt-8 font-mono text-xl leading-relaxed text-zinc-50 sm:text-2xl">
-          {frameworkPreviewCopy.flow}
-        </p>
+
         <Link
           href="/framework"
-          className="mt-10 inline-flex text-lg font-medium text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-xl"
+          className="mt-10 inline-flex text-lg font-medium text-zinc-300 transition-colors hover:text-zinc-100"
         >
           {frameworkPreviewCopy.link}
         </Link>
