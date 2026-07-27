@@ -20,11 +20,6 @@ export default function Framework() {
         >
           {frameworkPreviewCopy.lead}
         </p>
-
-        <div className="mt-12">
-          <FrameworkDiagram compact />
-        </div>
-
         <nav aria-label="Framework concepts" className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
           {frameworkPreviewCopy.flow.map((step) => (
             <Link
