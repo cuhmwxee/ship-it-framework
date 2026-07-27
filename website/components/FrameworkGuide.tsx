@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FrameworkDiagram from "@/components/FrameworkDiagram";
 
 const frameworkGuideCopy = {
   introduction: [
@@ -72,6 +73,10 @@ export default function FrameworkGuide() {
           </div>
         </header>
 
+        <div className="mt-14 sm:mt-16">
+          <FrameworkDiagram />
+        </div>
+
         <section aria-labelledby="concepts-title" className="mt-20 sm:mt-24">
           <h2
             id="concepts-title"
@@ -81,7 +86,11 @@ export default function FrameworkGuide() {
           </h2>
           <div className="mt-8 border-y border-zinc-800/80">
             {frameworkGuideCopy.concepts.map((concept) => (
-              <article key={concept.title} className="border-t border-zinc-800/80 py-10 first:border-t-0 sm:py-12">
+              <article
+                key={concept.title}
+                id={concept.title.toLowerCase()}
+                className="scroll-mt-24 border-t border-zinc-800/80 py-10 first:border-t-0 sm:py-12"
+              >
                 <h3 className="font-mono text-2xl leading-tight text-zinc-50 sm:text-3xl">
                   {concept.title}
                 </h3>

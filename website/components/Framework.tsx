@@ -1,4 +1,5 @@
 import Link from "next/link";
+import FrameworkDiagram from "@/components/FrameworkDiagram";
 
 const frameworkPreviewCopy = {
   lead: "Ship It! defines four concepts for describing software delivery.",
@@ -20,26 +21,23 @@ export default function Framework() {
           {frameworkPreviewCopy.lead}
         </p>
 
-        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
-          {frameworkPreviewCopy.flow.map((step) => (
-            <span
-              key={step}
-                className="
-                  rounded-full
-                  border
-                  border-zinc-800
-                  px-8
-                  py-4
-                  font-mono
-                  text-xl
-                  tracking-tight
-                  text-zinc-100
-                "
-            >
-              {step}
-            </span>
-          ))}
+        <div className="mt-12">
+          <FrameworkDiagram compact />
         </div>
+
+        <nav aria-label="Framework concepts" className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">
+          {frameworkPreviewCopy.flow.map((step) => (
+            <Link
+              key={step}
+              href={`/framework#${step.toLowerCase()}`}
+              className="group rounded-md border border-zinc-800 px-4 py-5 text-left font-mono text-base tracking-tight text-zinc-300 transition-[border-color,color] duration-200 hover:border-[#c9825d]/70 hover:text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c9825d] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:px-5"
+            >
+              <span className="border-b border-transparent pb-1 transition-colors duration-200 group-hover:border-[#c9825d]/70">
+                {step}
+              </span>
+            </Link>
+          ))}
+        </nav>
       </div>
     </section>
   );
