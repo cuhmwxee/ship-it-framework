@@ -1,8 +1,10 @@
+import Closing from "@/components/Closing";
 import ExploreFurther from "@/components/ExploreFurther";
 import Footer from "@/components/Footer";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import Navigation from "@/components/Navigation";
+import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import { reflections } from "@/content/reflections";
 import Why from "@/components/Why";
@@ -29,10 +31,8 @@ export default function Home() {
         lines={reflections.workflowNamed}
       />
       <Framework />
-      <ReflectionStatement
-        emphasis={0}
-        lines={reflections.noNeed}
-      />
+      <Principles />
+      <Closing />
       <ExploreFurther />
       <Footer />
     </main>
