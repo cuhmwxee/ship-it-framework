@@ -32,6 +32,8 @@ export const reflections = {
   ],
 
   noNeed: [
-    "Not every change needs the same process.",
+    "Works with your existing way of working.",
+    "Keep the practices that help your team collaborate.",
+    "Use Ship It! to think about what each software change actually needs before it ships.",
   ],
 };
