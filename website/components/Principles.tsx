@@ -1,12 +1,12 @@
 const principlesCopy = {
-  title: "Principles",
+  title: "Ship It! assumes",
   items: [
-    "Define as little as possible.",
-    "Leave implementation to implementation.",
-    "Compatibility beats replacement.",
-    "Simple beats clever.",
-    "Clarity beats completeness.",
+    "Software changes continuously.",
+    "Not every change carries the same risk.",
+    "Different changes may require different delivery processes.",
+    "Teams do not necessarily need another methodology.",
   ],
+  conclusion: "These assumptions form the foundation of the framework.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
@@ -44,15 +44,18 @@ export default function Principles() {
       <div className="mx-auto flex max-w-3xl flex-col items-start">
         <h2
           id="principles-title"
-          className="mb-10 text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
+          className="mb-8 text-2xl font-medium leading-tight text-zinc-50 sm:text-3xl"
         >
           {principlesCopy.title}
         </h2>
-        <div className="w-full">
+        <div className="w-full divide-y divide-zinc-800/80 border-y border-zinc-800/80">
           {principlesCopy.items.map((principle, index) => (
             <PrincipleItem key={principle} text={principle} index={index} />
           ))}
         </div>
+        <p className="mt-6 text-lg leading-relaxed text-zinc-400 sm:text-xl">
+          {principlesCopy.conclusion}
+        </p>
       </div>
     </SectionContainer>
   );

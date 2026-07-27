@@ -29,7 +29,7 @@ export default function FrameworkDiagram({ compact = false }: { compact?: boolea
               orient="auto"
               markerUnits="strokeWidth"
             >
-              <path d="M1 1L6 4L1 7" stroke="#c9825d" strokeWidth="1.5" />
+              <path d="M1 1L6 4L1 7" stroke="#60a5fa" strokeWidth="1.5" />
             </marker>
           </defs>
 

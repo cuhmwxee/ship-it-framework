@@ -30,9 +30,9 @@ export default function Framework() {
             <Link
               key={step}
               href={`/framework#${step.toLowerCase()}`}
-              className="group rounded-md border border-zinc-800 px-4 py-5 text-left font-mono text-base tracking-tight text-zinc-300 transition-[border-color,color] duration-200 hover:border-[#c9825d]/70 hover:text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#c9825d] focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:px-5"
+              className="group rounded-md border border-zinc-800 px-4 py-5 text-left font-mono text-base tracking-tight text-zinc-300 transition-[border-color,color] duration-200 hover:border-blue-400/70 hover:text-zinc-50 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:px-5"
             >
-              <span className="border-b border-transparent pb-1 transition-colors duration-200 group-hover:border-[#c9825d]/70">
+              <span className="border-b border-transparent pb-1 transition-colors duration-200 group-hover:border-blue-400/70">
                 {step}
               </span>
             </Link>
