@@ -22,7 +22,7 @@ export default function Framework() {
         </p>
 
         <div className="mt-12">
-          <FrameworkDiagram compact />
+          <FrameworkDiagram />
         </div>
 
         <nav aria-label="Framework concepts" className="mt-10 grid grid-cols-2 gap-3 sm:grid-cols-4">

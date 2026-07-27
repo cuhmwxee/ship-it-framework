@@ -5,12 +5,13 @@ const concepts = [
   { label: "Ship", x: 780 },
 ] as const;
 
-export default function FrameworkDiagram({ compact = false }: { compact?: boolean }) {
+export default function FrameworkDiagram({
+  showReturnPath = false,
+}: {
+  showReturnPath?: boolean;
+}) {
   return (
-    <figure
-      aria-labelledby="framework-diagram-caption"
-      className={compact ? "w-full" : "w-full border-y border-zinc-800/80 py-8 sm:py-10"}
-    >
+    <figure aria-labelledby="framework-diagram-caption" className="w-full">
       <div className="overflow-x-auto pb-2">
         <svg
           aria-hidden="true"
@@ -34,12 +35,14 @@ export default function FrameworkDiagram({ compact = false }: { compact?: boolea
           </defs>
 
           <path d="M204 86H276M456 86H528M708 86H780" stroke="#52525b" strokeWidth="1.25" markerEnd="url(#framework-arrow)" />
-          <path
-            d="M618 132V202C618 211 611 218 602 218H374C365 218 358 211 358 202V132"
-            stroke="#52525b"
-            strokeWidth="1.25"
-            markerEnd="url(#framework-arrow)"
-          />
+          {showReturnPath && (
+            <path
+              d="M618 132V202C618 211 611 218 602 218H374C365 218 358 211 358 202V132"
+              stroke="#52525b"
+              strokeWidth="1.25"
+              markerEnd="url(#framework-arrow)"
+            />
+          )}
 
           {concepts.map((concept) => (
             <g key={concept.label} transform={`translate(${concept.x} 40)`}>
@@ -59,7 +62,9 @@ export default function FrameworkDiagram({ compact = false }: { compact?: boolea
         </svg>
       </div>
       <figcaption id="framework-diagram-caption" className="sr-only">
-        Input, Development, Validation and Ship are equally important concepts. Validation can continue to Ship or return to Development.
+        {showReturnPath
+          ? "Input, Development, Validation and Ship are equally important concepts. Validation can continue to Ship or return to Development."
+          : "Input, Development, Validation and Ship are equally important concepts."}
       </figcaption>
     </figure>
   );
