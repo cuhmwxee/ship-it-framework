@@ -67,11 +67,11 @@ export default function FrameworkGuide() {
           ))}
         </PageHero>
 
-        <div className="mt-14 sm:mt-16">
+        <div className="mt-16 sm:mt-20">
           <FrameworkGraph variant="process" />
         </div>
 
-        <section aria-labelledby="concepts-title" className="mt-20 sm:mt-24">
+        <section aria-labelledby="concepts-title" className="mt-16 sm:mt-20">
           <h2
             id="concepts-title"
             className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
