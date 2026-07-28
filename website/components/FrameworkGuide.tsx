@@ -1,4 +1,4 @@
-import FrameworkDiagram from "@/components/FrameworkDiagram";
+import FrameworkGraph from "@/components/FrameworkGraph";
 import FrameworkStep from "@/components/FrameworkStep";
 import PageHero from "@/components/PageHero";
 import RelatedPages from "@/components/RelatedPages";
@@ -72,7 +72,7 @@ export default function FrameworkGuide() {
         </PageHero>
 
         <div className="mt-14 sm:mt-16">
-          <FrameworkDiagram variant="process" />
+          <FrameworkGraph variant="process" />
         </div>
 
         <section aria-labelledby="concepts-title" className="mt-20 sm:mt-24">

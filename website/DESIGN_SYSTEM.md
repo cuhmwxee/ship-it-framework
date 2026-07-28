@@ -15,7 +15,13 @@ Use the existing primitives before adding page-local layout or visual styles.
 
 ## Framework components
 
-`FrameworkDiagram` owns the framework’s visual notation. Use `variant="overview"` for linked concepts and `variant="process"` for the delivery relationships. Do not recreate its nodes, arrows or styles elsewhere. `FrameworkStep` provides the named concept treatment used by the Framework page.
+`FrameworkGraph` owns the framework’s visual notation. Use `variant="overview"` for linked concepts and `variant="process"` for the delivery relationships. Do not recreate its nodes, arrows or styles elsewhere. `FrameworkStep` provides the named concept treatment used by the Framework page.
+
+## Diagram scale
+
+`FrameworkGraph.tsx` exports `frameworkGraphScale`, the single scale for every Ship It! graph. Its tokens define node width and height, horizontal and vertical padding, border width, radius, gap, label size and weight, relationship width and radius, arrowhead size, and graph maximum width. New graph variants must use these tokens rather than introducing local SVG dimensions.
+
+Nodes are primary conceptual entities. Relationships only describe how nodes relate; they must not add status or priority styling.
 
 ## Adding a page
 
