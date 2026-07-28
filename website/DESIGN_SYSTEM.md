@@ -19,7 +19,7 @@ Use the existing primitives before adding page-local layout or visual styles.
 
 ## Diagram scale
 
-`FrameworkGraph.tsx` exports `frameworkGraphScale`, the single scale for every Ship It! graph. Its tokens define node width and height, horizontal and vertical padding, border width, radius, gap, label size and weight, relationship width and radius, arrowhead size, and graph maximum width. New graph variants must use these tokens rather than introducing local SVG dimensions.
+`FrameworkGraph.tsx` exports `frameworkGraphScale`, the single scale for every Ship It! graph. Its tokens define node width and height, horizontal and vertical padding, border width, radius, gap, label size and weight, relationship width and radius, arrowhead size, graph bounds, and graph maximum width. New graph variants must use these tokens rather than introducing local SVG dimensions.
 
 Nodes are primary conceptual entities. Relationships only describe how nodes relate; they must not add status or priority styling.
 
