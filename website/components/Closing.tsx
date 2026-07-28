@@ -3,6 +3,7 @@ import Section from "@/components/ui/Section";
 const closingCopy = {
   title: "Works with your existing way of working.",
   body: [
+    "Writing software is becoming easier. Delivering it responsibly remains a decision.",
     "Keep the practices that help your team collaborate.",
     "Use Ship It! to think about what each software change actually needs before it ships.",
   ],

@@ -24,9 +24,15 @@ Ship.
 
 ## The Problem
 
-Software delivery is still more complicated than it needs to be.
+Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-Teams use different tools, methodologies and processes.
+Teams can produce changes faster than ever.
+
+Writing software is becoming easier.
+
+Delivery decisions are becoming more important.
+
+Teams still use different tools, methodologies and processes.
 
 Yet every successful software delivery eventually follows the same simple pattern:
 
