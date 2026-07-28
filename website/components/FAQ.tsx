@@ -11,26 +11,41 @@ const faqCopy = {
       question: "What is Ship It!?",
       answer: [
         "Ship It! is a minimal software delivery framework.",
-        "It describes the smallest workflow required to move a change from Input to Ship.",
-        "The framework does not replace Scrum, Kanban or other methodologies.",
-        "It tries to reveal the workflow many teams already follow."
+        "It describes the minimum workflow required to move a software change from Input to Ship.",
+        "Rather than introducing a new methodology, it makes an existing delivery workflow explicit."
       ],
     },
     {
-      question: "What does Ship It! define?",
+      question: "Can Ship It! be used with Scrum or Kanban?",
       answer: [
-        "Ship It! defines:",
-        "✓ Input",
-        "✓ Development",
-        "✓ Validation",
-        "✓ Ship",
-        "—",
-        "Ship It! intentionally does not define:",
-        "• Roles",
-        "• Ceremonies",
-        "• Estimation",
-        "• Planning",
-        "• Team structure"
+        "Yes.",
+        "Ship It! is designed to complement—not replace—your existing way of working.",
+        "Whether your team uses Scrum, Kanban or another development approach, Ship It! helps determine what each software change needs before it ships.",
+        "Keep the practices that help your team collaborate. Use Ship It! to make better delivery decisions."
+      ],
+    },
+    {
+      question: "Is Ship It! a software development methodology?",
+      answer: [
+        "No.",
+        "Ship It! intentionally defines much less than traditional methodologies.",
+        "It focuses only on the workflow required to deliver software.",
+        "Planning, estimation, ceremonies, team structure and roles remain your team's choice."
+      ],
+    },
+    {
+      question: "Who is Ship It! for?",
+      answer: [
+        "Ship It! is for developers and teams who feel software delivery became more complicated than it had to.",
+        "It is especially useful when software delivery feels heavier than it needs to be."
+      ],
+    },
+      {
+      question: "Where does Ship It! come from?",
+      answer: [
+        "It emerged from practical software development experience.",
+        "It was created by observing how software is actually delivered.",
+        "If better ideas emerge, the framework should evolve."
       ],
     },
     {
@@ -60,49 +75,12 @@ const faqCopy = {
         "Ship makes the validated change available.",
         "How that happens depends on the team, the product and the change itself.",
       ],
-    },
-    {
-      question: "Who is Ship It! for?",
-      answer: [
-        "Ship It! is for developers and teams who feel software delivery became more complicated than it had to.",
-        "It is especially useful when software delivery feels heavier than it needs to be."
-      ],
-    },  
-    {
-      question: "Is this a process?",
-      answer: [
-        "Yes.",
-        "But it intentionally defines much less than traditional methodologies.",
-        "Ship It! focuses on the path from Input to Ship."
-      ],
-    },
-    {
-      question: "Why is the framework so small?",
-      answer: [
-        "Because every new concept increases complexity.",
-        "The framework intentionally defines only the minimum workflow required to deliver validated software."
-      ],
-    },
-      {
-      question: "Where does Ship It! come from?",
-      answer: [
-        "It emerged from practical software development experience.",
-        "It was created by observing how software is actually delivered.",
-        "If better ideas emerge, the framework should evolve."
-      ],
-    },
-    {
-      question: "Does Ship It! require Scrum, Kanban, GitHub Flow, Jira, AI, or any specific tool?",
+    },    {
+      question: "Is Ship It! an AI framework?",
       answer: [
         "No.",
-        "Use whatever works.",
-        "Ship It! only defines the workflow."
-      ],
-    },
-    {
-      question: "Will the framework grow over time?",
-      answer: [
-        "Only if it makes the framework simpler."
+        "Ship It! is technology-agnostic.",
+        "AI is one reason software delivery is changing, but the framework applies regardless of how software is created."
       ],
     },
     {
@@ -112,6 +90,28 @@ const faqCopy = {
         "Failed validation creates new Input.",
         "The framework does not define whether that Input is a bug report, a review comment, a failed test or something else.",
         "Only that the work continues."],
+    },
+    {
+      question: "Why is the framework so small?",
+      answer: [
+        "Because every new concept increases complexity.",
+        "The framework intentionally defines only the minimum workflow required to deliver validated software."
+      ],
+    },
+    {
+      question: "Will the framework grow over time?",
+      answer: [
+        "Only when new ideas make the framework simpler, clearer or easier to apply.",
+      ],
+    },
+    {
+      question: "Does Ship It! require any specific tools or technologies?",
+      answer: [
+        "No.",
+        "Use whatever works.",
+        "Ship It! is independent of tools, platforms and technologies.",
+        "It only defines the delivery workflow."
+      ],
     },
     {
       question: "I want to contact you.",
