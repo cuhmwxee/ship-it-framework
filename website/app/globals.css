@@ -200,6 +200,12 @@ body {
   font-family: var(--font-geist-mono), ui-monospace, monospace;
 }
 
+.framework-graph-annotation {
+  fill: var(--color-text-muted);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  letter-spacing: 0.02em;
+}
+
 .framework-graph-relationship {
   stroke: var(--framework-graph-relationship);
   stroke-linecap: round;
