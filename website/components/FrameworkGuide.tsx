@@ -67,11 +67,11 @@ export default function FrameworkGuide() {
           ))}
         </PageHero>
 
-        <div className="mt-16 sm:mt-20">
+        <div className="mt-12 sm:mt-16">
           <FrameworkGraph variant="process" />
         </div>
 
-        <section aria-labelledby="concepts-title" className="mt-16 sm:mt-20">
+        <section aria-labelledby="concepts-title" className="mt-12 sm:mt-16">
           <h2
             id="concepts-title"
             className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
@@ -93,18 +93,18 @@ export default function FrameworkGuide() {
             Principles
           </h2>
           <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            Ship It! assumes:
+            Those assumptions show up in practice:
           </p>
           <ul className="mt-4 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             {frameworkGuideCopy.principles.map((principle) => (
               <li key={principle} className="flex gap-3">
-                <span aria-hidden="true" className="text-zinc-500">•</span>
+                <span aria-hidden="true" className="text-zinc-500">✓</span>
                 <span>{principle}</span>
               </li>
             ))}
           </ul>
           <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            The framework provides a common language for delivery decisions.
+            Those assumptions keep the framework small and the language consistent.
           </p>
         </section>
 

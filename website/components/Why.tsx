@@ -6,8 +6,7 @@ const whyCopy = {
     {
       title: "Why now?",
       body: [
-        "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
-        "Teams can produce changes faster than many delivery processes were designed to handle.",
+        "Software changes are becoming smaller, more frequent and increasingly AI-assisted. Teams can produce changes faster than many delivery processes were designed to handle.",
       ],
     },
     {
@@ -27,8 +26,7 @@ const whyCopy = {
     {
       title: "Philosophy",
       body: [
-        "Ship It! does not remove process.",
-        "It keeps process proportional so the workflow matches the change.",
+        "Ship It! does not remove process. It keeps process proportional so the workflow matches the change.",
       ],
     },
   ],
