@@ -77,7 +77,7 @@ The project documentation is organized by purpose.
 | `docs/about.md` | Background, inspiration and project context |
 | `docs/principles.md` | Framework and documentation principles |
 | `docs/core-concepts.md` | Core terminology |
-| `docs/framework-diagram.md` | Canonical workflow diagram |
+| `docs/framework-diagram.md` | Canonical framework graph |
 | `docs/specification.md` | Normative framework specification |
 | `docs/scenarios/` | Informative examples |
 | `docs/content.md` | Canonical website content |

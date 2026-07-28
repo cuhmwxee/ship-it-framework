@@ -154,15 +154,14 @@ body {
 .ds-framework-step__title { color: var(--color-text-primary); font-family: var(--font-geist-mono), ui-monospace, monospace; font-size: clamp(1.5rem, 3vw, 1.875rem); line-height: 1.15; }
 .ds-framework-step__body { display: grid; gap: var(--space-sm); margin-top: var(--space-md); color: var(--color-text-secondary); font-size: var(--type-body); line-height: 1.6; }
 
-/* Shared visual tokens for every presentation of the Ship It! framework. */
-.framework-diagram {
-  --framework-diagram-border: #60a5fa;
-  --framework-diagram-connection: #52525b;
-  --framework-diagram-label: var(--color-text-secondary);
-  --framework-diagram-accent: var(--color-interactive-hover);
-  --framework-diagram-radius: var(--radius-md);
-  --framework-diagram-stroke: 1.25px;
-  width: 100%;
+/* Framework Graph: shared node-and-relationship language for all graph variants. */
+.framework-graph {
+  --framework-graph-border: #60a5fa;
+  --framework-graph-relationship: #52525b;
+  --framework-graph-label: var(--color-text-secondary);
+  --framework-graph-interactive: var(--color-interactive-hover);
+  width: min(100%, 72rem);
+  margin-inline: auto;
 }
 
 @media (min-width: 640px) {
@@ -173,60 +172,66 @@ body {
   .ds-container { padding-inline: 3rem; }
 }
 
-.framework-diagram-scroll {
+.framework-graph-scroll {
   overflow-x: auto;
-  padding-bottom: 0.5rem;
+  padding-bottom: var(--space-xs);
 }
 
-.framework-diagram-svg {
+.framework-graph-svg {
   display: block;
-  min-width: 620px;
+  min-width: 60rem;
   width: 100%;
 }
 
-.framework-diagram-box,
-.framework-diagram-label,
-.framework-diagram-connection,
-.framework-diagram-arrowhead {
-  transition: stroke 180ms ease, fill 180ms ease, font-weight 180ms ease;
+.framework-graph-node-shape,
+.framework-graph-node-label,
+.framework-graph-relationship,
+.framework-graph-arrowhead {
+  transition: stroke var(--motion-duration) var(--motion-ease), fill var(--motion-duration) var(--motion-ease), font-weight var(--motion-duration) var(--motion-ease);
 }
 
-.framework-diagram-box {
+.framework-graph-node-shape {
   fill: var(--background);
-  rx: var(--framework-diagram-radius);
-  stroke: var(--framework-diagram-border);
-  stroke-width: var(--framework-diagram-stroke);
+  stroke: var(--framework-graph-border);
 }
 
-.framework-diagram-label {
-  fill: var(--framework-diagram-label);
+.framework-graph-node-label {
+  fill: var(--framework-graph-label);
   font-family: var(--font-geist-mono), ui-monospace, monospace;
-  font-size: 17px;
-  font-weight: 400;
 }
 
-.framework-diagram-connection {
-  stroke: var(--framework-diagram-connection);
-  stroke-width: var(--framework-diagram-stroke);
+.framework-graph-relationship {
+  stroke: var(--framework-graph-relationship);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 2;
 }
 
-.framework-diagram-arrowhead {
+.framework-graph-arrowhead {
   fill: none;
-  stroke: var(--framework-diagram-accent);
-  stroke-width: var(--framework-diagram-stroke);
+  stroke: var(--framework-graph-interactive);
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
-.framework-diagram-concept:focus {
+.framework-graph-node:focus {
   outline: none;
 }
 
-.framework-diagram-concept:hover .framework-diagram-box,
-.framework-diagram-concept:focus-visible .framework-diagram-box {
-  stroke: var(--framework-diagram-accent);
+.framework-graph-node:hover .framework-graph-node-shape,
+.framework-graph-node:focus-visible .framework-graph-node-shape {
+  stroke: var(--framework-graph-interactive);
 }
 
-.framework-diagram-concept:hover .framework-diagram-label,
-.framework-diagram-concept:focus-visible .framework-diagram-label {
+.framework-graph-node:hover .framework-graph-node-label,
+.framework-graph-node:focus-visible .framework-graph-node-label {
   fill: var(--foreground);
-  font-weight: 500;
+}
+
+@media (min-width: 768px) {
+  .framework-graph {
+    width: min(calc(100vw - 3rem), 72rem);
+    margin-left: 50%;
+    transform: translateX(-50%);
+  }
 }

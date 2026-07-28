@@ -1,4 +1,4 @@
-import FrameworkDiagram from "@/components/FrameworkDiagram";
+import FrameworkGraph from "@/components/FrameworkGraph";
 
 const frameworkPreviewCopy = {
   lead: "Ship It! defines four concepts for describing software delivery.",
@@ -19,7 +19,7 @@ export default function Framework() {
           {frameworkPreviewCopy.lead}
         </p>
         <div className="mt-10">
-          <FrameworkDiagram variant="overview" />
+          <FrameworkGraph variant="overview" />
         </div>
       </div>
     </section>
