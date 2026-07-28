@@ -6,7 +6,7 @@ export const reflections = {
   ],
 
   reveals: [
-    "Ship It! doesn't introduce a new workflow.",
+    "Ship It! does not introduce a new workflow.",
     "It names the workflow teams already follow.",
   ],
 
