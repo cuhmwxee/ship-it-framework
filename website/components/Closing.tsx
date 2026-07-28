@@ -11,7 +11,7 @@ const closingCopy = {
 
 export default function Closing() {
   return (
-    <Section labelledBy="closing-title">
+    <Section labelledBy="closing-title" className="pb-10 sm:pb-12">
       <div className="ds-content border-t border-zinc-800/80 pt-10 sm:pt-12">
         <h2
           id="closing-title"

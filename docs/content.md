@@ -426,23 +426,17 @@ A very small one.
 
 # Manifesto
 
-Software delivery should be simple.
+Software delivery has changed.
 
-Every change begins with Input.
+Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-Every Input becomes Development.
+AI accelerates change. Ship It! brings proportion to delivery.
 
-Every Development deserves Validation.
+Not every software change needs the same delivery process.
 
-Validated work can be shipped.
+Ship It! works with your existing way of working.
 
-If validation fails, the work becomes new Input.
-
-Keep building.
-
-Keep validating.
-
-Keep shipping.
+It provides a common language for delivery decisions.
 
 ---
 

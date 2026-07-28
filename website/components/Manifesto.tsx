@@ -1,88 +1,33 @@
+import Section from "@/components/ui/Section";
+
 const manifestoCopy = {
   title: "Manifesto",
-  points: [
-    "Software delivery should be simple.",
-    "Every change begins with Input.",
-    "Every Input becomes Development.",
-    "Every Development deserves Validation.",
-    "Validated work can be shipped.",
-    "If validation fails, the work becomes new Input."
+  statements: [
+    "Software delivery has changed.",
+    "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
+    "AI accelerates change. Ship It! brings proportion to delivery.",
+    "Not every software change needs the same delivery process.",
+    "Ship It! works with your existing way of working.",
+    "It provides a common language for delivery decisions.",
   ],
-};
-
-function SectionContainer({
-  children,
-  titleId,
-}: {
-  children: React.ReactNode;
-  titleId: string;
-}) {
-  return (
-    <section
-      id="manifesto"
-      aria-labelledby={titleId}
-      className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
-    >
-      {children}
-    </section>
-  );
-}
-
-function SectionHeading({
-  id,
-  title,
-}: {
-  id: string;
-  title: string;
-}) {
-  return (
-    <h2
-      id={id}
-      className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
-    >
-      {title}
-    </h2>
-  );
-}
-
-function ManifestoPoints({ points }: { points: string[] }) {
-  return (
-    <div className="mt-10 flex flex-col items-center">
-      {points.map((point, index) => (
-        <div key={point} className="flex flex-col items-center">
-          <p
-            className={`max-w-3xl text-center leading-relaxed ${
-              index === 0
-                ? "text-2xl text-zinc-50 sm:text-3xl"
-                : "text-xl text-zinc-300 sm:text-2xl"
-            }`}
-          >
-            {point}
-          </p>
-
-          {index < points.length - 1 && (
-            <div
-              className="my-6 text-sm text-[var(--color-accent)]"
-              aria-hidden="true"
-            >
-              ▲
-            </div>
-          )}
-        </div>
-      ))}
-    </div>
-  );
-}
+} as const;
 
 export default function Manifesto() {
-  const titleId = "manifesto-title";
-
   return (
-    <SectionContainer titleId={titleId}>
-      <div className="mx-auto max-w-3xl text-center">
-        <SectionHeading id={titleId} title={manifestoCopy.title} />
-        <ManifestoPoints points={manifestoCopy.points} />
+    <Section id="manifesto" labelledBy="manifesto-title" spacing="compact" className="pt-10 sm:pt-12 pb-8 sm:pb-10">
+      <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
+        <h2
+          id="manifesto-title"
+          className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
+        >
+          {manifestoCopy.title}
+        </h2>
+        <ul className="mt-6 space-y-3 text-lg leading-relaxed text-zinc-400 sm:text-xl">
+          {manifestoCopy.statements.map((statement) => (
+            <li key={statement}>{statement}</li>
+          ))}
+        </ul>
       </div>
-    </SectionContainer>
+    </Section>
   );
 }

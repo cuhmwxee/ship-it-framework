@@ -2,6 +2,7 @@ import Closing from "@/components/Closing";
 import ExploreFurther from "@/components/ExploreFurther";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
+import Manifesto from "@/components/Manifesto";
 import PageShell from "@/components/PageShell";
 import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
@@ -31,6 +32,7 @@ export default function Home() {
       <Framework />
       <Principles />
       <Closing />
+      <Manifesto />
       <ExploreFurther />
     </PageShell>
   );
