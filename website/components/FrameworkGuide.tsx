@@ -74,7 +74,7 @@ export default function FrameworkGuide() {
         </header>
 
         <div className="mt-14 sm:mt-16">
-          <FrameworkDiagram showReturnPath />
+          <FrameworkDiagram variant="process" />
         </div>
 
         <section aria-labelledby="concepts-title" className="mt-20 sm:mt-24">

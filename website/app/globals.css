@@ -17,3 +17,72 @@ body {
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
 }
+
+/* Shared visual tokens for every presentation of the Ship It! framework. */
+.framework-diagram {
+  --framework-diagram-border: #3f3f46;
+  --framework-diagram-connection: #52525b;
+  --framework-diagram-label: #d4d4d8;
+  --framework-diagram-accent: #c47a4a;
+  --framework-diagram-radius: 8px;
+  --framework-diagram-stroke: 1.25px;
+  width: 100%;
+}
+
+.framework-diagram-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.framework-diagram-svg {
+  display: block;
+  min-width: 620px;
+  width: 100%;
+}
+
+.framework-diagram-box,
+.framework-diagram-label,
+.framework-diagram-connection,
+.framework-diagram-arrowhead {
+  transition: stroke 180ms ease, fill 180ms ease, font-weight 180ms ease;
+}
+
+.framework-diagram-box {
+  fill: var(--background);
+  rx: var(--framework-diagram-radius);
+  stroke: var(--framework-diagram-border);
+  stroke-width: var(--framework-diagram-stroke);
+}
+
+.framework-diagram-label {
+  fill: var(--framework-diagram-label);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.framework-diagram-connection {
+  stroke: var(--framework-diagram-connection);
+  stroke-width: var(--framework-diagram-stroke);
+}
+
+.framework-diagram-arrowhead {
+  fill: none;
+  stroke: var(--framework-diagram-accent);
+  stroke-width: var(--framework-diagram-stroke);
+}
+
+.framework-diagram-concept:focus {
+  outline: none;
+}
+
+.framework-diagram-concept:hover .framework-diagram-box,
+.framework-diagram-concept:focus-visible .framework-diagram-box {
+  stroke: var(--framework-diagram-accent);
+}
+
+.framework-diagram-concept:hover .framework-diagram-label,
+.framework-diagram-concept:focus-visible .framework-diagram-label {
+  fill: var(--foreground);
+  font-weight: 500;
+}
