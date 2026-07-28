@@ -40,12 +40,14 @@ const graphCopy = {
 export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
   const isProcess = variant === "process";
   const markerId = `framework-graph-arrow-${variant}`;
+  const connectionInset = 2;
+  const nodeLabelYOffset = -1;
   const nodeRight = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth;
   const nodeMiddle = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth / 2;
   const nodeBottom = graphTop + frameworkGraphScale.nodeHeight;
-  const returnY = 240;
+  const returnY = 236;
   const feedbackLabelX = (nodeMiddle(1) + nodeMiddle(2)) / 2;
-  const feedbackLabelY = returnY - 10;
+  const feedbackLabelY = returnY - 12;
   const graphHeight = isProcess
     ? frameworkGraphScale.graphHeight
     : frameworkGraphScale.overviewHeight;
@@ -80,9 +82,9 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
 
           {isProcess && (
             <>
-              <path className="framework-graph-relationship" d={`M${nodeRight(0)} ${graphCenterY}H${concepts[1].x}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
-              <path className="framework-graph-relationship" d={`M${nodeRight(1)} ${graphCenterY}H${concepts[2].x}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
-              <path className="framework-graph-relationship" d={`M${nodeRight(2)} ${graphCenterY}H${concepts[3].x}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
+              <path className="framework-graph-relationship" d={`M${nodeRight(0) + connectionInset} ${graphCenterY}H${concepts[1].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
+              <path className="framework-graph-relationship" d={`M${nodeRight(1) + connectionInset} ${graphCenterY}H${concepts[2].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
+              <path className="framework-graph-relationship" d={`M${nodeRight(2) + connectionInset} ${graphCenterY}H${concepts[3].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
               <path
                 className="framework-graph-relationship"
                 d={`M${nodeMiddle(2)} ${nodeBottom}V${returnY - frameworkGraphScale.arrowRadius}Q${nodeMiddle(2)} ${returnY} ${nodeMiddle(2) - frameworkGraphScale.arrowRadius} ${returnY}H${nodeMiddle(1) + frameworkGraphScale.arrowRadius}Q${nodeMiddle(1)} ${returnY} ${nodeMiddle(1)} ${returnY - frameworkGraphScale.arrowRadius}V${nodeBottom}`}
@@ -119,7 +121,7 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
                 <text
                   className="framework-graph-node-label"
                   x={frameworkGraphScale.nodePaddingX + (frameworkGraphScale.nodeWidth - frameworkGraphScale.nodePaddingX * 2) / 2}
-                  y={frameworkGraphScale.nodePaddingY + (frameworkGraphScale.nodeHeight - frameworkGraphScale.nodePaddingY * 2) / 2 + frameworkGraphScale.nodeFontSize / 3}
+                  y={frameworkGraphScale.nodePaddingY + (frameworkGraphScale.nodeHeight - frameworkGraphScale.nodePaddingY * 2) / 2 + frameworkGraphScale.nodeFontSize / 3 + nodeLabelYOffset}
                   fontSize={frameworkGraphScale.nodeFontSize}
                   fontWeight={frameworkGraphScale.nodeFontWeight}
                   textAnchor="middle"
