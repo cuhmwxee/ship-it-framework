@@ -76,7 +76,8 @@ const faqCopy = {
         "Ship makes the validated change available.",
         "How that happens depends on the team, the product and the change itself.",
       ],
-    },    {
+    },
+    {
       question: "Is Ship It! an AI framework?",
       answer: [
         "No.",
