@@ -1,4 +1,5 @@
 import type { ReactNode } from "react";
+import Link from "next/link";
 import BrandMark from "@/components/BrandMark";
 
 const footerCopy = {
@@ -18,12 +19,12 @@ function FooterSection({ children }: { children: ReactNode }) {
 function FooterBrand() {
   return (
     <div className="max-w-xl space-y-3">
-      <div className="flex items-center gap-3">
+      <Link href="/" className="ds-brand-link ds-focusable flex w-fit items-center gap-3 rounded-md text-zinc-50">
         <BrandMark width={28} height={28} className="h-7 w-7 shrink-0" />
         <p className="text-2xl font-semibold tracking-tight text-zinc-50 sm:text-3xl">
           {footerCopy.title}
         </p>
-      </div>
+      </Link>
       <p className="text-base leading-relaxed text-zinc-400 sm:text-lg">
         {footerCopy.subtitle}
       </p>

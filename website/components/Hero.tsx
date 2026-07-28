@@ -50,7 +50,7 @@ export default function Hero() {
           <div className="space-y-6">
             <h1
               id="hero-title"
-              className="text-6xl font-semibold leading-none text-zinc-50 sm:text-7xl lg:text-8xl"
+              className="ds-type-hero"
             >
               {heroCopy.title}
             </h1>

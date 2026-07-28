@@ -24,7 +24,7 @@ function RuleStatement() {
         {oneRuleCopy.title}
       </h2>
 
-      <p className="text-3xl leading-tight text-blue-400 sm:text-4xl">
+      <p className="text-3xl leading-tight text-[var(--color-accent)] sm:text-4xl">
         {oneRuleCopy.rule}
       </p>
     </div>

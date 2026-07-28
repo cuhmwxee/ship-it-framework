@@ -1,6 +1,8 @@
 "use client";
 
 import { useState } from "react";
+import PageHero from "@/components/PageHero";
+import Section from "@/components/ui/Section";
 
 const faqCopy = {
   title: "FAQ",
@@ -118,18 +120,6 @@ const faqCopy = {
   ],
 };
 
-function SectionContainer({ children }: { children: React.ReactNode }) {
-  return (
-    <section
-      id="faq"
-      aria-labelledby="faq-title"
-      className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
-    >
-      {children}
-    </section>
-  );
-}
-
 function FAQItem({
   question,
   answer,
@@ -154,7 +144,7 @@ function FAQItem({
           aria-expanded={isOpen}
           aria-controls={panelId}
           onClick={onToggle}
-          className="flex w-full items-center justify-between gap-4 py-3 text-left text-base font-medium leading-snug text-zinc-50 transition-colors duration-200 hover:text-zinc-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-lg"
+          className="ds-button-link flex w-full items-center justify-between gap-4 py-3 text-left text-base font-medium leading-snug text-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-lg"
         >
           <span>{question}</span>
           <span
@@ -193,14 +183,9 @@ export default function FAQ() {
   };
 
   return (
-    <SectionContainer>
-      <div className="mx-auto flex max-w-3xl flex-col">
-        <h2
-          id="faq-title"
-          className="mb-6 text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
-        >
-          {faqCopy.title}
-        </h2>
+    <Section id="faq" labelledBy="faq-title">
+      <div className="ds-content">
+        <PageHero title={faqCopy.title} titleId="faq-title" className="mb-6" />
         <div>
           {faqCopy.items.map((item, index) => {
             const isOpen = openItem === index;
@@ -221,6 +206,6 @@ export default function FAQ() {
           })}
         </div>
       </div>
-    </SectionContainer>
+    </Section>
   );
 }

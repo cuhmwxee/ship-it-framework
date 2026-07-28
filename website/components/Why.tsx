@@ -1,3 +1,6 @@
+import Card from "@/components/ui/Card";
+import Section from "@/components/ui/Section";
+
 const whyCopy = {
   cards: [
     {
@@ -33,20 +36,9 @@ const whyCopy = {
   ],
 };
 
-function SectionContainer({ children }: { children: React.ReactNode }) {
+function WhyCard({ title, body }: { title: string; body: string[] }) {
   return (
-    <section
-      id="why"
-      className="mx-auto w-full max-w-5xl px-6 py-24 sm:px-10 lg:px-12"
-    >
-      {children}
-    </section>
-  );
-}
-
-function Card({ title, body }: { title: string; body: string[] }) {
-  return (
-    <article className="space-y-6 border border-zinc-800 p-8">
+    <Card className="ds-stack ds-stack--lg">
       <h3 className="text-2xl font-semibold leading-snug text-zinc-50 sm:text-3xl">
         {title}
       </h3>
@@ -55,18 +47,18 @@ function Card({ title, body }: { title: string; body: string[] }) {
           <p key={line}>{line}</p>
         ))}
       </div>
-    </article>
+    </Card>
   );
 }
 
 export default function Why() {
   return (
-    <SectionContainer>
+    <Section id="why" size="wide">
       <div className="grid gap-8 sm:grid-cols-2">
         {whyCopy.cards.map((card) => (
-          <Card key={card.title} title={card.title} body={card.body} />
+          <WhyCard key={card.title} title={card.title} body={card.body} />
         ))}
       </div>
-    </SectionContainer>
+    </Section>
   );
 }

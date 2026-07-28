@@ -1,13 +1,10 @@
 import FAQ from "@/components/FAQ";
-import Footer from "@/components/Footer";
-import Navigation from "@/components/Navigation";
+import PageShell from "@/components/PageShell";
 
 export default function FAQPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Navigation />
+    <PageShell>
       <FAQ />
-      <Footer />
-    </main>
+    </PageShell>
   );
 }

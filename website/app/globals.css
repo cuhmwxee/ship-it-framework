@@ -1,8 +1,35 @@
 @import "tailwindcss";
 
 :root {
+  /* Design tokens: use these values and the ds-* components before adding styles. */
   --background: #050505;
   --foreground: #f4f4f5;
+  --color-surface: #09090b;
+  --color-surface-hover: #18181b;
+  --color-text-primary: #f4f4f5;
+  --color-text-secondary: #d4d4d8;
+  --color-text-muted: #a1a1aa;
+  --color-border: #27272a;
+  --color-border-hover: #c47a4a;
+  --color-accent: #c47a4a;
+  --color-accent-muted: #8f5837;
+  --color-interactive-hover: #60a5fa;
+  --space-xs: 0.5rem;
+  --space-sm: 0.75rem;
+  --space-md: 1.5rem;
+  --space-lg: 2.5rem;
+  --space-xl: 5rem;
+  --radius-sm: 0.375rem;
+  --radius-md: 0.5rem;
+  --motion-duration: 180ms;
+  --motion-ease: ease;
+  --type-hero: clamp(3.75rem, 9vw, 6rem);
+  --type-page-title: clamp(2.25rem, 5vw, 3rem);
+  --type-section-heading: clamp(1.875rem, 4vw, 2.25rem);
+  --type-subheading: clamp(1.5rem, 3vw, 1.875rem);
+  --type-body: clamp(1.125rem, 2vw, 1.25rem);
+  --type-caption: 0.75rem;
+  --type-label: 0.75rem;
 }
 
 @theme inline {
@@ -16,4 +43,190 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+}
+
+.ds-page-shell {
+  min-height: 100vh;
+  background: var(--background);
+  color: var(--foreground);
+}
+
+.ds-container {
+  width: 100%;
+  margin-inline: auto;
+  padding-inline: var(--space-md);
+}
+
+.ds-container--content { max-width: 56rem; }
+.ds-container--wide { max-width: 64rem; }
+.ds-container--page { max-width: 72rem; }
+
+.ds-section { width: 100%; }
+.ds-section--compact { padding-block: var(--space-lg); }
+.ds-section--default { padding-block: var(--space-xl); }
+.ds-section--spacious { padding-block: clamp(8rem, 18vw, 12rem); }
+
+.ds-content { max-width: 48rem; margin-inline: auto; }
+.ds-content--centered { text-align: center; }
+.ds-stack { display: grid; gap: var(--space-sm); }
+.ds-stack--lg { gap: var(--space-lg); }
+
+.ds-type-page-title,
+.ds-type-section-heading,
+.ds-type-subheading {
+  color: var(--color-text-primary);
+  font-weight: 600;
+  line-height: 1.15;
+}
+
+.ds-type-hero { color: var(--color-text-primary); font-size: var(--type-hero); font-weight: 600; line-height: 1; }
+.ds-type-page-title { font-size: var(--type-page-title); }
+.ds-type-section-heading { font-size: var(--type-section-heading); }
+.ds-type-subheading { font-size: var(--type-subheading); }
+.ds-type-body { color: var(--color-text-secondary); font-size: var(--type-body); line-height: 1.6; }
+.ds-type-muted { color: var(--color-text-muted); }
+.ds-type-caption,
+.ds-type-label {
+  color: var(--color-text-muted);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: var(--type-label);
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+}
+.ds-type-code { color: var(--color-text-secondary); font-family: var(--font-geist-mono), ui-monospace, monospace; }
+
+.ds-page-hero { max-width: 48rem; }
+.ds-page-hero__body { display: grid; gap: var(--space-sm); margin-top: var(--space-lg); }
+
+.ds-card {
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-md);
+  padding: var(--space-lg);
+  transition: border-color var(--motion-duration) var(--motion-ease), background-color var(--motion-duration) var(--motion-ease);
+}
+
+.ds-inline-link,
+.ds-navigation-card {
+  color: var(--color-text-primary);
+  transition: color var(--motion-duration) var(--motion-ease), border-color var(--motion-duration) var(--motion-ease), background-color var(--motion-duration) var(--motion-ease);
+}
+
+.ds-inline-link {
+  text-decoration: underline;
+  text-decoration-color: var(--color-border);
+  text-underline-offset: 0.25em;
+}
+
+.ds-inline-link:hover { color: var(--color-interactive-hover); text-decoration-color: var(--color-interactive-hover); }
+.ds-inline-link:focus-visible,
+.ds-navigation-card:focus-visible,
+.ds-focusable:focus-visible {
+  outline: 2px solid var(--color-accent);
+  outline-offset: 3px;
+}
+
+.ds-navigation-card {
+  display: block;
+  padding-block: var(--space-md);
+}
+.ds-navigation-card:hover { color: var(--color-interactive-hover); }
+.ds-navigation-card__title { color: var(--color-text-primary); font-size: clamp(1.25rem, 2.5vw, 1.5rem); font-weight: 500; line-height: 1.3; }
+.ds-navigation-card:hover .ds-navigation-card__title { color: var(--color-interactive-hover); }
+.ds-navigation-card__description { color: var(--color-text-muted); font-size: clamp(1.125rem, 2vw, 1.25rem); line-height: 1.6; margin-top: var(--space-xs); }
+
+.ds-text-link,
+.ds-button-link,
+.ds-brand-link {
+  transition: color var(--motion-duration) var(--motion-ease);
+}
+.ds-text-link:hover,
+.ds-button-link:hover,
+.ds-brand-link:hover { color: var(--color-interactive-hover); }
+.ds-brand-link:hover p { color: var(--color-interactive-hover); }
+
+.ds-related-pages { border-top: 1px solid var(--color-border); padding-top: var(--space-lg); }
+.ds-related-pages__intro { margin-top: var(--space-md); }
+.ds-related-pages__list { display: grid; gap: var(--space-sm); margin-top: var(--space-sm); font-size: clamp(1.125rem, 2vw, 1.25rem); line-height: 1.6; }
+
+.ds-framework-step { scroll-margin-top: 6rem; border-top: 1px solid var(--color-border); padding-block: var(--space-lg); }
+.ds-framework-step:first-child { border-top: 0; }
+.ds-framework-step__title { color: var(--color-text-primary); font-family: var(--font-geist-mono), ui-monospace, monospace; font-size: clamp(1.5rem, 3vw, 1.875rem); line-height: 1.15; }
+.ds-framework-step__body { display: grid; gap: var(--space-sm); margin-top: var(--space-md); color: var(--color-text-secondary); font-size: var(--type-body); line-height: 1.6; }
+
+/* Shared visual tokens for every presentation of the Ship It! framework. */
+.framework-diagram {
+  --framework-diagram-border: #60a5fa;
+  --framework-diagram-connection: #52525b;
+  --framework-diagram-label: var(--color-text-secondary);
+  --framework-diagram-accent: var(--color-interactive-hover);
+  --framework-diagram-radius: var(--radius-md);
+  --framework-diagram-stroke: 1.25px;
+  width: 100%;
+}
+
+@media (min-width: 640px) {
+  .ds-container { padding-inline: var(--space-lg); }
+}
+
+@media (min-width: 1024px) {
+  .ds-container { padding-inline: 3rem; }
+}
+
+.framework-diagram-scroll {
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+}
+
+.framework-diagram-svg {
+  display: block;
+  min-width: 620px;
+  width: 100%;
+}
+
+.framework-diagram-box,
+.framework-diagram-label,
+.framework-diagram-connection,
+.framework-diagram-arrowhead {
+  transition: stroke 180ms ease, fill 180ms ease, font-weight 180ms ease;
+}
+
+.framework-diagram-box {
+  fill: var(--background);
+  rx: var(--framework-diagram-radius);
+  stroke: var(--framework-diagram-border);
+  stroke-width: var(--framework-diagram-stroke);
+}
+
+.framework-diagram-label {
+  fill: var(--framework-diagram-label);
+  font-family: var(--font-geist-mono), ui-monospace, monospace;
+  font-size: 17px;
+  font-weight: 400;
+}
+
+.framework-diagram-connection {
+  stroke: var(--framework-diagram-connection);
+  stroke-width: var(--framework-diagram-stroke);
+}
+
+.framework-diagram-arrowhead {
+  fill: none;
+  stroke: var(--framework-diagram-accent);
+  stroke-width: var(--framework-diagram-stroke);
+}
+
+.framework-diagram-concept:focus {
+  outline: none;
+}
+
+.framework-diagram-concept:hover .framework-diagram-box,
+.framework-diagram-concept:focus-visible .framework-diagram-box {
+  stroke: var(--framework-diagram-accent);
+}
+
+.framework-diagram-concept:hover .framework-diagram-label,
+.framework-diagram-concept:focus-visible .framework-diagram-label {
+  fill: var(--foreground);
+  font-weight: 500;
 }
