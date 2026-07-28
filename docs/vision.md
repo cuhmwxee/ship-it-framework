@@ -1,196 +1,95 @@
-# Ship It! Website Vision
+> This document captures the long-term vision, messaging and guiding philosophy of Ship It!.
+>
+> It is intended to evolve over time as the framework matures.
+
+# Vision
 
 ## Purpose
 
-This website is the home of the Ship It! Framework.
+Ship It! is not another software development methodology.
 
-It is not a product.
+It is a lightweight decision framework for software delivery.
 
-It is not a company.
+Its purpose is to help teams decide what each software change needs before it ships.
 
-It is not a consulting business.
-
-It is an open software delivery framework created by developers, for developers.
-
-The goal of the website is to explain the framework as simply as possible.
+Ship It! complements existing ways of working rather than replacing them.
 
 ---
 
-# Audience
+## Why now?
 
-The primary audience is software developers.
+Software delivery has changed.
 
-Secondary audiences include software architects, engineering managers and technical founders.
+Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-The website should feel immediately familiar to anyone working in software development.
+Teams can produce software changes faster than ever.
 
----
+Writing code is becoming less of a bottleneck.
 
-# Tone
+Deciding how software should be validated and delivered is becoming more important.
 
-Friendly.
-
-Simple.
-
-Confident.
-
-Developer-first.
-
-Slightly playful.
-
-Never corporate.
-
-Never academic.
-
-Never arrogant.
-
-Never negative towards other frameworks or tools.
-
-We are not trying to replace Scrum, Kanban, Jira or any other methodology.
-
-Ship It! works with all of them.
+Ship It! exists to help teams make those decisions intentionally.
 
 ---
 
-# Philosophy
+## Vision
 
-Software delivery should be as simple as possible.
+Software delivery should be proportional.
 
-Ship It! defines the minimum workflow required to safely deliver software.
+Not every software change needs the same delivery process.
 
-The workflow is the anchor of the framework.
+Small changes should remain small.
 
-Everything else is implementation detail.
+Critical changes should receive the validation they deserve.
 
----
-
-# Design Principles
-
-Minimal.
-
-Dark theme.
-
-Large typography.
-
-Lots of whitespace.
-
-Very little decoration.
-
-No stock photography.
-
-No illustrations.
-
-No marketing graphics.
-
-The framework diagram should be the visual centerpiece.
-
-The website should feel closer to GitHub or Vercel than to a traditional corporate homepage.
+Teams should spend their effort where it creates the most confidence.
 
 ---
 
-# User Experience
+## Core statements
 
-The visitor should understand the core idea within 30 seconds.
+These statements express the core philosophy of Ship It! and should remain consistent across the website, documentation and presentations.
 
-Scrolling should feel natural.
-
-Each section should communicate exactly one idea.
-
-Avoid long paragraphs.
-
-Prefer short sentences.
-
----
-
-# Personality
-
-Ship It! is calm.
-
-It does not shout.
-
-It does not claim to be revolutionary.
-
-It simply presents a better way to think about software delivery.
-
-Sometimes the copy may use expressions like:
-
-Yeah.
-
-Sure.
-
-Nope.
-
-Exactly.
-
-Only when it feels natural.
+- Not every software change needs the same delivery process.
+- AI accelerates change. Ship It! brings proportion to delivery.
+- Software delivery has changed. Delivery decisions haven't.
+- Validation informs development.
+- Works with your existing way of working.
+- Keep your process. Improve your delivery decisions.
 
 ---
 
-# Technical Principles
+## Voice
 
-Fast.
+Ship It! should communicate with clarity and precision.
 
-Responsive.
+The writing should be:
 
-Accessible.
+- Calm rather than promotional.
+- Technical rather than inspirational.
+- Timeless rather than trendy.
+- Practical rather than theoretical.
+- Explain rather than persuade.
+- Confident without exaggeration.
+- Accessible without oversimplifying.
 
-No unnecessary JavaScript.
+Avoid unnecessary buzzwords and hype.
 
-No unnecessary dependencies.
-
-Every component should have a clear purpose.
-
-Keep everything simple.
+AI is presented as one of the reasons software delivery is changing—not as the focus of the framework.
 
 ---
 
-# Future
+## Long-term goal
 
-The website should be able to grow over time.
+Ship It! should become a simple, memorable mental model for software delivery decisions.
 
-Possible future additions include:
+The framework should feel:
 
-* Framework Specification
-* Examples
-* Documentation
-* Version history
-* Blog
-* Community
+- Easy to understand.
+- Easy to teach.
+- Easy to apply.
+- Easy to evolve.
 
-The single page design should remain the primary experience.
+The goal is not to replace existing frameworks or methodologies.
 
-# Information Architecture
-
-Every element on the page should answer one question.
-
-Hero
-What is Ship It!?
-
-Framework
-How does it work?
-
-Principles
-Why is it designed this way?
-
-FAQ
-Can I use it?
-
-Manifesto
-What does it stand for?
-
-Footer
-Where can I learn more?
-
-If a section cannot answer a single clear question, it probably should not exist.
-
-# Simplicity
-
-Every element must have a purpose.
-
-Every section should answer one question.
-
-Every page should communicate one idea.
-
-If something does not help explain the framework, remove it.
-
-The website itself should be an example of the Ship It! philosophy.
+The goal is to help teams make better delivery decisions—one software change at a time.

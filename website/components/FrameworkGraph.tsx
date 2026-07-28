@@ -44,6 +44,8 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
   const nodeMiddle = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth / 2;
   const nodeBottom = graphTop + frameworkGraphScale.nodeHeight;
   const returnY = 240;
+  const feedbackLabelX = (nodeMiddle(1) + nodeMiddle(2)) / 2;
+  const feedbackLabelY = returnY - 10;
   const graphHeight = isProcess
     ? frameworkGraphScale.graphHeight
     : frameworkGraphScale.overviewHeight;
@@ -87,6 +89,15 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
                 strokeWidth={frameworkGraphScale.arrowWidth}
                 markerEnd={`url(#${markerId})`}
               />
+              <text
+                className="framework-graph-annotation"
+                x={feedbackLabelX}
+                y={feedbackLabelY}
+                fontSize={12}
+                textAnchor="middle"
+              >
+                Feedback
+              </text>
             </>
           )}
 

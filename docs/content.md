@@ -24,9 +24,15 @@ Ship.
 
 ## The Problem
 
-Software delivery is still more complicated than it needs to be.
+Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-Teams use different tools, methodologies and processes.
+Teams can produce changes faster than ever.
+
+Writing software is becoming easier.
+
+Delivery decisions are becoming more important.
+
+Teams still use different tools, methodologies and processes.
 
 Yet every successful software delivery eventually follows the same simple pattern:
 
@@ -420,23 +426,17 @@ A very small one.
 
 # Manifesto
 
-Software delivery should be simple.
+Software delivery has changed.
 
-Every change begins with Input.
+Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-Every Input becomes Development.
+AI accelerates change. Ship It! brings proportion to delivery.
 
-Every Development deserves Validation.
+Not every software change needs the same delivery process.
 
-Validated work can be shipped.
+Ship It! works with your existing way of working.
 
-If validation fails, the work becomes new Input.
-
-Keep building.
-
-Keep validating.
-
-Keep shipping.
+It provides a common language for delivery decisions.
 
 ---
 

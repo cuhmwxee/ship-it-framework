@@ -2,17 +2,17 @@ export const reflections = {
   seen: [
     "You've seen this.",
     "The change was small.",
-    "The process wasn't.",
+    "The process around it wasn't.",
   ],
 
   reveals: [
     "Ship It! doesn't introduce a new workflow.",
-    "It reveals the one that was already there.",
+    "It names the workflow teams already follow.",
   ],
 
   workflowNamed: [
     "The workflow was already there.",
-    "Now it has a name.",
+    "Now delivery decisions can be discussed more clearly.",
   ],
 
   simplerProcess: [

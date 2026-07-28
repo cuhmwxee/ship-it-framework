@@ -3,6 +3,7 @@ import Section from "@/components/ui/Section";
 const closingCopy = {
   title: "Works with your existing way of working.",
   body: [
+    "Writing software is becoming easier. Delivering it responsibly remains a decision.",
     "Keep the practices that help your team collaborate.",
     "Use Ship It! to think about what each software change actually needs before it ships.",
   ],
@@ -10,7 +11,7 @@ const closingCopy = {
 
 export default function Closing() {
   return (
-    <Section labelledBy="closing-title">
+    <Section labelledBy="closing-title" className="pb-10 sm:pb-12">
       <div className="ds-content border-t border-zinc-800/80 pt-10 sm:pt-12">
         <h2
           id="closing-title"

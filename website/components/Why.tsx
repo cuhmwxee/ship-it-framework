@@ -6,8 +6,8 @@ const whyCopy = {
     {
       title: "Why now?",
       body: [
-        "Modern software produces small changes continuously.",
-        "Many delivery processes were designed around a single model for every change.",
+        "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
+        "Teams can produce changes faster than ever, while many delivery processes were designed around a single model for every change.",
       ],
     },
     {
@@ -21,7 +21,7 @@ const whyCopy = {
       title: "What Ship It! does",
       body: [
         "Ship It! reveals the workflow teams already follow.",
-        "It helps teams rethink software delivery in a world of continuous change.",
+        "It helps teams make clearer delivery decisions in a world of continuous change.",
       ],
     },
     {
