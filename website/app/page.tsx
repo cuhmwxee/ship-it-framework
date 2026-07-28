@@ -1,9 +1,8 @@
 import Closing from "@/components/Closing";
 import ExploreFurther from "@/components/ExploreFurther";
-import Footer from "@/components/Footer";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
-import Navigation from "@/components/Navigation";
+import PageShell from "@/components/PageShell";
 import Principles from "@/components/Principles";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import { reflections } from "@/content/reflections";
@@ -11,8 +10,7 @@ import Why from "@/components/Why";
 
 export default function Home() {
   return (
-    <main id="top" className="min-h-screen bg-background text-foreground">
-      <Navigation />
+    <PageShell>
       <Hero />
 
       <ReflectionStatement
@@ -34,7 +32,6 @@ export default function Home() {
       <Principles />
       <Closing />
       <ExploreFurther />
-      <Footer />
-    </main>
+    </PageShell>
   );
 }

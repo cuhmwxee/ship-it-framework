@@ -1,5 +1,8 @@
-import Link from "next/link";
 import FrameworkDiagram from "@/components/FrameworkDiagram";
+import FrameworkStep from "@/components/FrameworkStep";
+import PageHero from "@/components/PageHero";
+import RelatedPages from "@/components/RelatedPages";
+import Section from "@/components/ui/Section";
 
 const frameworkGuideCopy = {
   introduction: [
@@ -60,18 +63,13 @@ const frameworkGuideCopy = {
 
 export default function FrameworkGuide() {
   return (
-    <main className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12">
-      <div className="mx-auto max-w-3xl">
-        <header>
-          <h1 className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl">
-            Framework
-          </h1>
-          <div className="mt-8 space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            {frameworkGuideCopy.introduction.map((paragraph) => (
-              <p key={paragraph}>{paragraph}</p>
-            ))}
-          </div>
-        </header>
+    <Section spacing="default">
+      <div className="ds-content">
+        <PageHero title="Framework" titleId="framework-title">
+          {frameworkGuideCopy.introduction.map((paragraph) => (
+            <p key={paragraph} className="ds-type-body">{paragraph}</p>
+          ))}
+        </PageHero>
 
         <div className="mt-14 sm:mt-16">
           <FrameworkDiagram variant="process" />
@@ -86,20 +84,7 @@ export default function FrameworkGuide() {
           </h2>
           <div className="mt-8 border-y border-zinc-800/80">
             {frameworkGuideCopy.concepts.map((concept) => (
-              <article
-                key={concept.title}
-                id={concept.title.toLowerCase()}
-                className="scroll-mt-24 border-t border-zinc-800/80 py-10 first:border-t-0 sm:py-12"
-              >
-                <h3 className="font-mono text-2xl leading-tight text-zinc-50 sm:text-3xl">
-                  {concept.title}
-                </h3>
-                <div className="mt-5 space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                  {concept.body.map((paragraph) => (
-                    <p key={paragraph}>{paragraph}</p>
-                  ))}
-                </div>
-              </article>
+              <FrameworkStep key={concept.title} title={concept.title} body={concept.body} />
             ))}
           </div>
         </section>
@@ -127,31 +112,10 @@ export default function FrameworkGuide() {
           </p>
         </section>
 
-        <nav aria-labelledby="related-pages-title" className="mt-20 border-t border-zinc-800/80 pt-10 sm:mt-24 sm:pt-12">
-          <h2
-            id="related-pages-title"
-            className="text-2xl font-semibold leading-tight text-zinc-50 sm:text-3xl"
-          >
-            Related pages
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            Framework explains the concepts.
-          </p>
-          <ul className="mt-3 space-y-3 text-lg leading-relaxed sm:text-xl">
-            {frameworkGuideCopy.relatedPages.map((page) => (
-              <li key={page.href}>
-                <Link
-                  href={page.href}
-                  className="text-zinc-50 underline decoration-zinc-700 underline-offset-4 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-                >
-                  {page.label}
-                </Link>{" "}
-                <span className="text-zinc-400">{page.description}</span>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <div className="mt-20 sm:mt-24">
+          <RelatedPages pages={frameworkGuideCopy.relatedPages} intro="Framework explains the concepts." />
+        </div>
       </div>
-    </main>
+    </Section>
   );
 }

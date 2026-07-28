@@ -1,5 +1,7 @@
 # Ship It!
 
+For website visual conventions and reusable UI primitives, see [DESIGN_SYSTEM.md](./DESIGN_SYSTEM.md).
+
 The minimal software delivery framework.
 
 > Build. Validate. Ship.

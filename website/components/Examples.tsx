@@ -1,3 +1,6 @@
+import PageHero from "@/components/PageHero";
+import Section from "@/components/ui/Section";
+
 const examplesCopy = {
   title: "Examples",
   items: [
@@ -135,18 +138,6 @@ const examplesCopy = {
   ],
 } as const;
 
-function SectionContainer({ children }: { children: React.ReactNode }) {
-  return (
-    <section
-      id="examples"
-      aria-labelledby="examples-title"
-      className="mx-auto w-full max-w-6xl px-6 py-24 sm:px-10 lg:px-12"
-    >
-      {children}
-    </section>
-  );
-}
-
 function Example({ example }: { example: (typeof examplesCopy.items)[number] }) {
   return (
     <article
@@ -207,7 +198,7 @@ function TableOfContents() {
           <li key={example.id}>
             <a
               href={`#${example.id}`}
-              className="text-sm leading-relaxed text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+              className="ds-text-link text-sm leading-relaxed text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             >
               {example.title}
             </a>
@@ -220,14 +211,9 @@ function TableOfContents() {
 
 export default function Examples() {
   return (
-    <SectionContainer>
+    <Section id="examples" labelledBy="examples-title" size="page">
       <div className="mx-auto max-w-5xl">
-        <h1
-          id="examples-title"
-          className="text-4xl font-semibold leading-tight text-zinc-50 sm:text-5xl"
-        >
-          {examplesCopy.title}
-        </h1>
+        <PageHero title={examplesCopy.title} titleId="examples-title" />
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem] lg:gap-16">
           <TableOfContents />
@@ -238,6 +224,6 @@ export default function Examples() {
           </div>
         </div>
       </div>
-    </SectionContainer>
+    </Section>
   );
 }

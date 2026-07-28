@@ -1,13 +1,10 @@
 import About from "@/components/About";
-import Footer from "@/components/Footer";
-import Navigation from "@/components/Navigation";
+import PageShell from "@/components/PageShell";
 
 export default function AboutPage() {
   return (
-    <main className="min-h-screen bg-background text-foreground">
-      <Navigation />
+    <PageShell>
       <About />
-      <Footer />
-    </main>
+    </PageShell>
   );
 }

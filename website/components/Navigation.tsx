@@ -15,7 +15,7 @@ export default function Navigation() {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-6 px-6 sm:px-10 lg:px-12">
         <Link
           href="/"
-          className="flex shrink-0 items-center gap-3 rounded-full text-zinc-50 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+          className="ds-brand-link ds-focusable flex shrink-0 items-center gap-3 rounded-md text-zinc-50"
         >
           <BrandMark width={28} height={28} className="h-7 w-7 shrink-0 sm:h-6 sm:w-6" />
           <span className="hidden text-lg font-semibold tracking-tight sm:block">
@@ -28,7 +28,7 @@ export default function Navigation() {
             <Link
               key={item.href}
               href={item.href}
-              className="rounded-full px-2 py-2 text-sm font-medium text-zinc-400 transition-colors hover:text-zinc-200 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:px-3"
+              className="ds-button-link ds-focusable rounded-md px-2 py-2 text-sm font-medium text-zinc-400 sm:px-3"
             >
               {item.label}
             </Link>

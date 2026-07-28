@@ -62,7 +62,7 @@ function ManifestoPoints({ points }: { points: string[] }) {
 
           {index < points.length - 1 && (
             <div
-              className="my-6 text-sm text-blue-400"
+              className="my-6 text-sm text-[var(--color-accent)]"
               aria-hidden="true"
             >
               ▲

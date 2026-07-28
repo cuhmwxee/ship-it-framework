@@ -1,3 +1,5 @@
+import Section from "@/components/ui/Section";
+
 const closingCopy = {
   title: "Works with your existing way of working.",
   body: [
@@ -8,11 +10,8 @@ const closingCopy = {
 
 export default function Closing() {
   return (
-    <section
-      aria-labelledby="closing-title"
-      className="mx-auto w-full max-w-4xl px-6 py-24 sm:px-10 lg:px-12"
-    >
-      <div className="mx-auto max-w-3xl border-t border-zinc-800/80 pt-10 sm:pt-12">
+    <Section labelledBy="closing-title">
+      <div className="ds-content border-t border-zinc-800/80 pt-10 sm:pt-12">
         <h2
           id="closing-title"
           className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
@@ -25,6 +24,6 @@ export default function Closing() {
           ))}
         </div>
       </div>
-    </section>
+    </Section>
   );
 }
