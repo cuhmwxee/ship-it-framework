@@ -6,21 +6,18 @@ import Section from "@/components/ui/Section";
 
 const frameworkGuideCopy = {
   introduction: [
-    "Ship It! is not a replacement for Scrum, Kanban or existing delivery practices.",
-    "It does not prescribe workflows, roles or ceremonies.",
-    "Instead, it exposes the workflow that already exists underneath them and asks what is actually required before software ships.",
-    "Ship It! intentionally stays small.",
-    "It defines four concepts.",
-    "Everything else is implementation detail.",
+    "Ship It! does not replace Scrum, Kanban, or existing delivery practices.",
+    "It does not prescribe workflows, roles, or ceremonies.",
+    "It makes the underlying delivery workflow explicit and asks what is actually required before software ships.",
+    "The framework stays intentionally small: four concepts, then implementation detail.",
   ],
   concepts: [
     {
       title: "Input",
       body: [
         "Every change starts somewhere.",
-        "An incident report, a product idea, a dependency update or an automated system may all become inputs.",
-        "Ship It! does not prescribe where inputs come from.",
-        "It only recognizes that every delivery process begins with one.",
+        "An incident report, a product idea, a dependency update, or an automated system can all become Input.",
+        "Ship It! does not prescribe where Input comes from.",
       ],
     },
     {
@@ -43,8 +40,7 @@ const frameworkGuideCopy = {
       title: "Ship",
       body: [
         "Shipping is the moment a change becomes available.",
-        "Deployment and release are sometimes the same thing.",
-        "Sometimes they are separate.",
+        "Deployment and release are sometimes the same step, and sometimes separate.",
         "Ship It! focuses on the outcome rather than the mechanism.",
       ],
     },
@@ -56,7 +52,7 @@ const frameworkGuideCopy = {
     "Teams do not necessarily need a new methodology.",
   ],
   relatedPages: [
-    { href: "/examples", label: "Examples", description: "shows those concepts in practice." },
+    { href: "/examples", label: "Examples", description: "shows the concepts in practice." },
     { href: "/faq", label: "FAQ", description: "answers common questions." },
   ],
 } as const;
@@ -108,12 +104,12 @@ export default function FrameworkGuide() {
             ))}
           </ul>
           <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            The framework provides a common language for reasoning about delivery.
+            The framework provides a common language for delivery decisions.
           </p>
         </section>
 
         <div className="mt-20 sm:mt-24">
-          <RelatedPages pages={frameworkGuideCopy.relatedPages} intro="Framework explains the concepts." />
+          <RelatedPages pages={frameworkGuideCopy.relatedPages} intro="Explore how these concepts apply in practice." />
         </div>
       </div>
     </Section>

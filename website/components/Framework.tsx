@@ -1,7 +1,7 @@
 import FrameworkGraph from "@/components/FrameworkGraph";
 
 const frameworkPreviewCopy = {
-  lead: "Ship It! defines four concepts for describing software delivery.",
+  lead: "The framework is built around four concepts. Together they describe the path from Input to Ship.",
 };
 
 export default function Framework() {

@@ -7,30 +7,28 @@ const whyCopy = {
       title: "Why now?",
       body: [
         "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
-        "Teams can produce changes faster than ever, while many delivery processes were designed around a single model for every change.",
+        "Teams can produce changes faster than many delivery processes were designed to handle.",
       ],
     },
     {
       title: "The problem",
       body: [
-        "The problem appears when small changes travel through processes designed for something larger.",
-        "Not every change needs the same process.",
+        "Small changes often travel through processes designed for larger, riskier work.",
+        "When every change follows the same path, delivery effort can become disproportionate.",
       ],
     },
     {
       title: "What Ship It! does",
       body: [
         "Ship It! reveals the workflow teams already follow.",
-        "It helps teams make clearer delivery decisions in a world of continuous change.",
+        "It helps teams make proportional delivery decisions for each change.",
       ],
     },
     {
       title: "Philosophy",
       body: [
-        "What does Ship It! simplify?",
-        "Oversized delivery processes for continuous change.",
         "Ship It! does not remove process.",
-        "It helps reduce process where the process has become larger than the change.",
+        "It keeps process proportional so the workflow matches the change.",
       ],
     },
   ],
