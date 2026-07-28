@@ -31,7 +31,7 @@ const destinations = [
 
 export default function ExploreFurther() {
   return (
-    <Section labelledBy="explore-further-title" spacing="compact" className="pt-8 sm:pt-10">
+    <Section labelledBy="explore-further-title" spacing="compact">
       <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
         <h2
           id="explore-further-title"
