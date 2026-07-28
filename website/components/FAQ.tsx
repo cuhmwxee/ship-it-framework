@@ -11,6 +11,7 @@ const faqCopy = {
   items: [
     {
       question: "What is Ship It!?",
+      answerSymbol: "✓",
       answer: [
         "Ship It! is a minimal software delivery framework.",
         "It describes the minimum workflow required to move a software change from Input to Ship.",
@@ -19,6 +20,7 @@ const faqCopy = {
     },
     {
       question: "Can Ship It! be used with Scrum or Kanban?",
+      answerSymbol: "✓",
       answer: [
         "Yes.",
         "Ship It! is designed to complement, not replace, your existing way of working.",
@@ -27,6 +29,7 @@ const faqCopy = {
     },
     {
       question: "Is Ship It! a software development methodology?",
+      answerSymbol: "—",
       answer: [
         "No.",
         "Ship It! intentionally defines less than traditional methodologies.",
@@ -36,6 +39,7 @@ const faqCopy = {
     },
     {
       question: "Who is Ship It! for?",
+      answerSymbol: "✓",
       answer: [
         "Ship It! is for developers and teams who feel software delivery has become more complicated than necessary.",
         "It is especially useful when the delivery process feels heavier than the change itself.",
@@ -43,6 +47,7 @@ const faqCopy = {
     },
     {
       question: "Where does Ship It! come from?",
+      answerSymbol: "✓",
       answer: [
         "It emerged from practical software delivery experience.",
         "It was created by observing how software is actually delivered.",
@@ -51,6 +56,7 @@ const faqCopy = {
     },
     {
       question: "What is Input?",
+      answerSymbol: "✓",
       answer: [
         "Input is the reason why a change exists.",
         "It can come from developers, users, monitoring, business requirements or automation.",
@@ -58,6 +64,7 @@ const faqCopy = {
     },
     {
       question: "What is Development?",
+      answerSymbol: "✓",
       answer: [
         "Development is the activity that creates or modifies the change.",
         "It can be done by individuals, teams or automated systems.",
@@ -65,6 +72,7 @@ const faqCopy = {
     },
     {
       question: "What is Validation?",
+      answerSymbol: "✓",
       answer: [
         "Validation provides confidence that the change solves the intended problem and can survive in production.",
         "Validation may involve people, automation or both.",
@@ -72,12 +80,15 @@ const faqCopy = {
     },
     {
       question: "What is Ship?",
+      answerSymbol: "✓",
       answer: [
         "Ship makes the validated change available.",
         "How that happens depends on the team, the product and the change itself.",
       ],
-    },    {
+    },
+    {
       question: "Is Ship It! an AI framework?",
+      answerSymbol: "—",
       answer: [
         "No.",
         "Ship It! is technology-agnostic.",
@@ -86,6 +97,7 @@ const faqCopy = {
     },
     {
       question: "What happens when Validation fails?",
+      answerSymbol: "—",
       answer: [
         "Validation does not end the workflow.",
         "Failed validation creates new Input.",
@@ -95,6 +107,7 @@ const faqCopy = {
     },
     {
       question: "Why is the framework so small?",
+      answerSymbol: "—",
       answer: [
         "Because every new concept increases complexity.",
         "The framework intentionally defines only the minimum workflow required to deliver validated software.",
@@ -102,12 +115,14 @@ const faqCopy = {
     },
     {
       question: "Will the framework grow over time?",
+      answerSymbol: "—",
       answer: [
         "Only when new ideas make the framework simpler, clearer or easier to apply.",
       ],
     },
     {
       question: "Does Ship It! require any specific tools or technologies?",
+      answerSymbol: "—",
       answer: [
         "No.",
         "Use whatever works for your team.",
@@ -117,6 +132,7 @@ const faqCopy = {
     },
     {
       question: "I want to contact you.",
+      answerSymbol: "—",
       answer: ["Mail to: captain <at> shipitframe.work."],
     },
   ],
@@ -125,6 +141,7 @@ const faqCopy = {
 function FAQItem({
   question,
   answer,
+  answerSymbol,
   isOpen,
   onToggle,
   panelId,
@@ -132,6 +149,7 @@ function FAQItem({
 }: {
   question: string;
   answer: string[];
+  answerSymbol?: string;
   isOpen: boolean;
   onToggle: () => void;
   panelId: string;
@@ -169,7 +187,14 @@ function FAQItem({
       >
         <div className="space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
           {answer.map((line) => (
-            <p key={line}>{line}</p>
+            <p key={line} className="flex gap-3">
+              {answerSymbol && (
+                <span aria-hidden="true" className="w-4 shrink-0 text-zinc-500">
+                  {answerSymbol}
+                </span>
+              )}
+              <span>{line}</span>
+            </p>
           ))}
         </div>
       </div>
@@ -201,6 +226,7 @@ export default function FAQ() {
                 key={item.question}
                 question={item.question}
                 answer={item.answer}
+                answerSymbol={item.answerSymbol}
                 isOpen={isOpen}
                 onToggle={() => toggleItem(index)}
                 panelId={panelId}
