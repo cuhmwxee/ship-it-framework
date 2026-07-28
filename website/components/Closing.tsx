@@ -2,11 +2,7 @@ import Section from "@/components/ui/Section";
 
 const closingCopy = {
   title: "Works with your existing way of working.",
-  body: [
-    "Writing software is becoming easier. Delivering it responsibly remains a decision.",
-    "Keep the practices that help your team collaborate.",
-    "Use Ship It! to think about what each software change actually needs before it ships.",
-  ],
+  body: "Ship It! complements Scrum, Kanban and other existing ways of working. It helps teams make proportional delivery decisions without replacing your current process.",
 };
 
 export default function Closing() {
@@ -15,15 +11,13 @@ export default function Closing() {
       <div className="ds-content border-t border-zinc-800/80 pt-10 sm:pt-12">
         <h2
           id="closing-title"
-          className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
+          className="text-2xl font-semibold leading-snug text-blue-400 sm:text-3xl"
         >
           {closingCopy.title}
         </h2>
-        <div className="mt-6 space-y-3 text-lg leading-relaxed text-zinc-400 sm:text-xl">
-          {closingCopy.body.map((paragraph) => (
-            <p key={paragraph}>{paragraph}</p>
-          ))}
-        </div>
+        <p className="mt-5 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+          {closingCopy.body}
+        </p>
       </div>
     </Section>
   );

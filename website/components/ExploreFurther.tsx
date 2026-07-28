@@ -8,6 +8,11 @@ const destinations = [
     description: "The four concepts and the thinking behind them.",
   },
   {
+    href: "/manifesto",
+    title: "Manifesto",
+    description: "The philosophy behind proportional software delivery.",
+  },
+  {
     href: "/examples",
     title: "Examples",
     description: "Real-world delivery situations and workflows.",

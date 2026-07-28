@@ -8,6 +8,14 @@ const footerCopy = {
   developerTitle: "Framework",
 };
 
+const footerLinks = [
+  { href: "/framework", label: "Framework" },
+  { href: "/manifesto", label: "Manifesto" },
+  { href: "/examples", label: "Examples" },
+  { href: "/faq", label: "FAQ" },
+  { href: "/about", label: "About" },
+] as const;
+
 function FooterSection({ children }: { children: ReactNode }) {
   return (
     <div className="mx-auto flex w-full max-w-5xl flex-col gap-10 px-6 py-16 sm:px-10 lg:flex-row lg:items-end lg:justify-between lg:px-12">
@@ -38,6 +46,17 @@ function FooterMeta() {
       <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.24em] text-zinc-500">
         {footerCopy.developerTitle}
       </h2>
+      <nav aria-label="Footer navigation">
+        <ul className="space-y-2">
+          {footerLinks.map((item) => (
+            <li key={item.href}>
+              <Link href={item.href} className="ds-text-link ds-focusable rounded-md text-base text-zinc-300">
+                {item.label}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </nav>
     </div>
   );
 }

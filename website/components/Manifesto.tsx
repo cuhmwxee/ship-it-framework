@@ -1,32 +1,57 @@
+import PageHero from "@/components/PageHero";
 import Section from "@/components/ui/Section";
 
 const manifestoCopy = {
   title: "Manifesto",
-  statements: [
-    "Software delivery has changed.",
-    "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
-    "AI accelerates change. Ship It! brings proportion to delivery.",
+  intro:
+    "Ship It! is built on a simple belief: delivery should match the nature of the change. The goal is not more process. The goal is proportional confidence.",
+  principles: [
     "Not every software change needs the same delivery process.",
-    "Ship It! works with your existing way of working.",
-    "It provides a common language for delivery decisions.",
+    "Validation should be proportional to risk.",
+    "Small changes should remain small.",
+    "Critical changes deserve stronger validation.",
+    "Feedback improves development.",
+    "Delivery decisions should be intentional.",
+    "Keep your existing way of working.",
+    "AI accelerates change. Engineering judgment remains essential.",
   ],
+  closing: "Keep your process. Improve your delivery decisions.",
 } as const;
+
+function ManifestoPrincipleItem({
+  text,
+  index,
+}: {
+  text: string;
+  index: number;
+}) {
+  return (
+    <li className="flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:gap-6 sm:py-6">
+      <span className="text-[11px] font-mono uppercase tracking-[0.35em] text-zinc-500">
+        {String(index + 1).padStart(2, "0")}
+      </span>
+      <p className="text-lg leading-relaxed text-zinc-300 sm:text-xl">{text}</p>
+    </li>
+  );
+}
 
 export default function Manifesto() {
   return (
-    <Section id="manifesto" labelledBy="manifesto-title" spacing="compact" className="pt-10 sm:pt-12 pb-8 sm:pb-10">
-      <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
-        <h2
-          id="manifesto-title"
-          className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
-        >
-          {manifestoCopy.title}
-        </h2>
-        <ul className="mt-6 space-y-3 text-lg leading-relaxed text-zinc-400 sm:text-xl">
-          {manifestoCopy.statements.map((statement) => (
-            <li key={statement}>{statement}</li>
+    <Section id="manifesto" labelledBy="manifesto-title" spacing="compact">
+      <div className="ds-content">
+        <PageHero title={manifestoCopy.title} titleId="manifesto-title">
+          <p className="ds-type-body">{manifestoCopy.intro}</p>
+        </PageHero>
+
+        <ol className="mt-10 w-full divide-y divide-zinc-800/80 border-y border-zinc-800/80">
+          {manifestoCopy.principles.map((principle, index) => (
+            <ManifestoPrincipleItem key={principle} text={principle} index={index} />
           ))}
-        </ul>
+        </ol>
+
+        <p className="mt-10 text-xl font-semibold leading-relaxed text-blue-400 sm:text-2xl">
+          {manifestoCopy.closing}
+        </p>
       </div>
     </Section>
   );
