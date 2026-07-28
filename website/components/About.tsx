@@ -4,10 +4,9 @@ import Section from "@/components/ui/Section";
 const aboutCopy = {
   title: "About",
   paragraphs: [
-    "Ship It! was created from practical software development experience.",
+    "Ship It! comes from practical software delivery experience.",
     "It was inspired in part by Dave Thomas' ideas about software delivery, and the framework itself was developed independently.",
-    "Similar concepts may appear in other methods because software engineering often converges on common ideas.",
-    "The framework defines the minimum workflow required to deliver validated software.",
+    "Many methods converge on similar patterns. Ship It! focuses on the minimum workflow required to deliver validated software.",
   ],
 };
 

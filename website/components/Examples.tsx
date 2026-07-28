@@ -3,6 +3,10 @@ import Section from "@/components/ui/Section";
 
 const examplesCopy = {
   title: "Examples",
+  introduction: [
+    "These examples show how the same four concepts apply to different software changes.",
+    "They are prompts for delivery decisions, not templates for delivery process.",
+  ],
   items: [
     {
       id: "production-bug",
@@ -37,7 +41,8 @@ const examplesCopy = {
       id: "ai-assisted-development",
       title: "AI-assisted development",
       situation: [
-        "A developer uses AI to create a change in minutes, while the surrounding delivery process was designed for much slower development.",
+        "A developer uses AI to create a change in minutes.",
+        "The surrounding delivery process was designed for much slower development.",
       ],
       question: "What changes when Development accelerates but the rest of the process stays the same?",
       workflow: [
@@ -213,7 +218,11 @@ export default function Examples() {
   return (
     <Section id="examples" labelledBy="examples-title" size="page">
       <div className="mx-auto max-w-5xl">
-        <PageHero title={examplesCopy.title} titleId="examples-title" />
+        <PageHero title={examplesCopy.title} titleId="examples-title">
+          {examplesCopy.introduction.map((paragraph) => (
+            <p key={paragraph} className="ds-type-body">{paragraph}</p>
+          ))}
+        </PageHero>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem] lg:gap-16">
           <TableOfContents />

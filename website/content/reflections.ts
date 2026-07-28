@@ -1,8 +1,8 @@
 export const reflections = {
   seen: [
-    "You've seen this.",
+    "You have seen this.",
     "The change was small.",
-    "The process around it wasn't.",
+    "The process around it was not.",
   ],
 
   reveals: [
@@ -12,7 +12,7 @@ export const reflections = {
 
   workflowNamed: [
     "The workflow was already there.",
-    "Now delivery decisions can be discussed more clearly.",
+    "Now those delivery decisions can be discussed more clearly.",
   ],
 
   simplerProcess: [
@@ -26,7 +26,7 @@ export const reflections = {
   ],
 
   obvious: [
-    "If the framework feels obvious, that's a success.",
+    "If the framework feels obvious, that is a success.",
     "The goal was never to invent something new.",
     "The goal was to describe something essential.",
   ],
