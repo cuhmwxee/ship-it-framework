@@ -7,8 +7,6 @@ import Section from "@/components/ui/Section";
 
 const faqCopy = {
   title: "FAQ",
-  introduction:
-    "Concise answers to common questions about the framework and how it fits into existing delivery workflows.",
   items: [
     {
       question: "What is Ship It!?",
@@ -187,12 +185,7 @@ export default function FAQ() {
   return (
     <Section id="faq" labelledBy="faq-title">
       <div className="ds-content">
-        <PageHero title={faqCopy.title} titleId="faq-title" className="mb-6">
-          <p className="ds-type-body">{faqCopy.introduction}</p>
-          <p className="ds-type-body">
-            For full concept definitions, see the <InlineLink href="/framework">Framework</InlineLink>.
-          </p>
-        </PageHero>
+        <PageHero title={faqCopy.title} titleId="faq-title" className="mb-6" /> 
         <div>
           {faqCopy.items.map((item, index) => {
             const isOpen = openItem === index;
