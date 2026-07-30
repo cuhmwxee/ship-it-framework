@@ -1,4 +1,5 @@
 import Section from "@/components/ui/Section";
+import PageHero from "@/components/PageHero";
 
 const examplesCopy = {
   title: "Examples",
@@ -249,58 +250,59 @@ function TableOfContents() {
   return (
     <nav
       aria-label="Examples table of contents"
-      className="border-y border-zinc-800/80 py-6 lg:sticky lg:top-24 lg:order-2 lg:self-start lg:border-y-0 lg:border-l lg:py-0 lg:pl-6"
+      className="border-y border-zinc-800/80 py-4"
     >
-      <h2 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-        Examples
-      </h2>
-      <ol className="mt-4 space-y-2">
-        {orderedExampleIds.map((id) => (
-          <li key={id}>
-            {id === automatedExampleIds[0] ? (
-              <div className="mb-3 border-t border-zinc-800/80 pt-3">
-                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
-                  Automated and assisted changes
-                </p>
-              </div>
-            ) : null}
-            <a
-              href={`#${id}`}
-              className="ds-text-link text-sm leading-relaxed text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
-            >
-              {examplesById[id].title}
-            </a>
-          </li>
-        ))}
-      </ol>
+      <details>
+        <summary className="ds-button-link flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium uppercase tracking-[0.18em] text-zinc-500 [&::-webkit-details-marker]:hidden">
+          Jump to example
+          <span aria-hidden="true" className="text-zinc-500">▾</span>
+        </summary>
+        <ol className="mt-4 space-y-2">
+          {orderedExampleIds.map((id) => (
+            <li key={id}>
+              {id === developerExampleIds[0] ? (
+                <div className="mb-3 border-t border-zinc-800/80 pt-3">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
+                    Developer-led changes
+                  </p>
+                </div>
+              ) : null}
+              {id === automatedExampleIds[0] ? (
+                <div className="mb-3 border-t border-zinc-800/80 pt-3">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
+                    Automated and assisted changes
+                  </p>
+                </div>
+              ) : null}
+              <a
+                href={`#${id}`}
+                className="ds-text-link text-sm leading-relaxed text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
+              >
+                {examplesById[id].title}
+              </a>
+            </li>
+          ))}
+        </ol>
+      </details>
     </nav>
   );
 }
 
 export default function Examples() {
   return (
-    <Section id="examples" labelledBy="examples-title" size="page">
-      <div className="mx-auto max-w-5xl">
-        <div className="mb-12 pb-12">
-          <h1
-            id="examples-title"
-            className="ds-type-page-title"
-          >
-            {examplesCopy.title}
-          </h1>
-
-          <div className="mt-8 ds-page-hero__body">
+    <Section id="examples" labelledBy="examples-title">
+      <div className="ds-content">
+        <PageHero title={examplesCopy.title} titleId="examples-title" className="mb-12">
             {examplesCopy.introduction.map((paragraph) => (
               <p key={paragraph} className="ds-type-body">
                 {paragraph}
               </p>
             ))}
-          </div>
-        </div>
+        </PageHero>
 
-        <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem] lg:gap-16">
+        <div className="grid gap-12">
           <TableOfContents />
-          <div className="border-b border-zinc-800/80 lg:order-1">
+          <div className="border-b border-zinc-800/80">
             {developerExampleIds.map((id) => (
               <Example key={id} example={examplesById[id]} />
             ))}
