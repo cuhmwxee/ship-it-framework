@@ -1,15 +1,14 @@
 import FrameworkGraph from "@/components/FrameworkGraph";
 import FrameworkStep from "@/components/FrameworkStep";
+import InlineLink from "@/components/ui/InlineLink";
 import PageHero from "@/components/PageHero";
 import RelatedPages from "@/components/RelatedPages";
 import Section from "@/components/ui/Section";
 
 const frameworkGuideCopy = {
   introduction: [
-    "Ship It! does not replace Scrum, Kanban, or existing delivery practices.",
-    "It does not prescribe workflows, roles, or ceremonies.",
-    "It makes the underlying delivery workflow explicit and asks what is actually required before software ships.",
-    "The framework stays intentionally small: four concepts, then implementation detail.",
+    "The framework is built on four concepts: Input, Development, Validation, and Ship.",
+    "Read the model first, then use the concept sections for definition and detail.",
   ],
   assumptions: [
     "Software changes continuously.",
@@ -23,7 +22,7 @@ const frameworkGuideCopy = {
       body: [
         "Every change starts somewhere.",
         "An incident report, a product idea, a dependency update, or an automated system can all become Input.",
-        "Ship It! does not prescribe where Input comes from.",
+        "Input can come from any source in your delivery system.",
       ],
     },
     {
@@ -31,7 +30,7 @@ const frameworkGuideCopy = {
       body: [
         "Development transforms an input into a change.",
         "That work may involve people, AI systems, automation or entire teams.",
-        "The framework intentionally does not define how development should happen.",
+        "How Development happens depends on the change and the team.",
       ],
     },
     {
@@ -39,7 +38,7 @@ const frameworkGuideCopy = {
       body: [
         "Validation provides confidence that the change solves the intended problem and can survive in production.",
         "Validation may involve tests, reviews, monitoring, experimentation or human judgment.",
-        "The framework does not prescribe a single form of validation.",
+        "If Validation fails, it creates new Input and the workflow continues.",
       ],
     },
     {
@@ -83,7 +82,13 @@ export default function FrameworkGuide() {
             ))}
           </ul>
           <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            These assumptions are the conceptual foundation of the framework.
+            These assumptions are the conceptual foundation of the framework. For the
+            rationale behind them, see the <InlineLink href="/manifesto">Manifesto</InlineLink>.
+          </p>
+          <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            Read the graph from left to right: Input flows through Development and
+            Validation to Ship. If Validation fails, it creates new Input and work
+            returns for further Development.
           </p>
         </section>
 
