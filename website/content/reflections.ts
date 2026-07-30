@@ -7,7 +7,7 @@ export const reflections = {
 
   reveals: [
     "Ship It! does not introduce a new workflow.",
-    "It names the workflow teams already follow.",
+    "Ship It! is a minimal software delivery framework.",
   ],
 
   workflowNamed: [
