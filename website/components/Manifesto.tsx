@@ -42,7 +42,7 @@ function ManifestoPrincipleItem({
 
 export default function Manifesto() {
   return (
-    <Section id="manifesto" labelledBy="manifesto-title" spacing="compact">
+    <Section id="manifesto" labelledBy="manifesto-title" spacing="default">
       <div className="ds-content">
         <PageHero title={manifestoCopy.title} titleId="manifesto-title">
           {manifestoCopy.intro.map((paragraph) => (

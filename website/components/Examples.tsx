@@ -238,7 +238,7 @@ export default function Examples() {
   return (
     <Section id="examples" labelledBy="examples-title" size="page">
       <div className="mx-auto max-w-5xl">
-        <PageHero title={examplesCopy.title} titleId="examples-title">
+        <PageHero title={examplesCopy.title} titleId="examples-title" className="mx-auto">
           {examplesCopy.introduction.map((paragraph) => (
             <p key={paragraph} className="ds-type-body">{paragraph}</p>
           ))}
