@@ -22,7 +22,7 @@ const foundationExample = {
     ship: "Release the change as soon as confidence is sufficient.",
   },
   takeaway:
-    "The workflow stays the same even when the change is small and urgent.",
+    "Ship It! describes the same four concepts regardless of the size or urgency of the change.",
 };
 
 const destinations = [
