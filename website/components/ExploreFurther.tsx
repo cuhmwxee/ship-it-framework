@@ -7,8 +7,8 @@ const foundationCopy = {
   body: [
     "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
     "Teams can produce changes faster than many delivery processes were designed to handle.",
-    "Software delivery is already a shared workflow.",
-    "Ship It! simply gives teams a language to reason about it.",
+    "Most software delivery frameworks describe everything. Ship It! asks what remains after everything unnecessary has been removed.",
+    "The result is a minimal workflow that still describes every software change.",
   ],
 };
 
