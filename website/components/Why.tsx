@@ -1,4 +1,5 @@
 import Card from "@/components/ui/Card";
+import InlineLink from "@/components/ui/InlineLink";
 import Section from "@/components/ui/Section";
 
 const whyCopy = {
@@ -10,23 +11,10 @@ const whyCopy = {
       ],
     },
     {
-      title: "The problem",
+      title: "Why it helps",
       body: [
-        "Small changes often travel through processes designed for larger, riskier work.",
-        "When every change follows the same path, delivery effort can become disproportionate.",
-      ],
-    },
-    {
-      title: "What Ship It! does",
-      body: [
-        "Ship It! reveals the workflow teams already follow.",
-        "It helps teams make proportional delivery decisions for each change.",
-      ],
-    },
-    {
-      title: "Philosophy",
-      body: [
-        "Ship It! does not remove process. It keeps process proportional so the workflow matches the change.",
+        "Small changes often move through processes designed for larger, riskier work.",
+        "Ship It! gives teams a shared language for deciding what each change actually needs before it ships.",
       ],
     },
   ],
@@ -55,6 +43,11 @@ export default function Why() {
           <WhyCard key={card.title} title={card.title} body={card.body} />
         ))}
       </div>
+      <p className="mt-8 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+        The <InlineLink href="/framework">Framework</InlineLink> defines that language, and{" "}
+        <InlineLink href="/examples">Examples</InlineLink> shows how it adapts to different
+        kinds of changes.
+      </p>
     </Section>
   );
 }
