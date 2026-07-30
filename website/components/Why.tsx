@@ -14,6 +14,7 @@ const whyCopy = {
       title: "Why it helps",
       body: [
         "Small changes often move through processes designed for larger, riskier work.",
+        "Teams can interpret the same change differently, especially around what is ready to ship.",
         "Ship It! gives teams a shared language for deciding what each change actually needs before it ships.",
       ],
     },
