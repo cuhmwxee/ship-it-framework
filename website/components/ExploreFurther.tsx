@@ -8,7 +8,6 @@ const foundationCopy = {
     "Teams can produce changes faster than many delivery processes were designed to handle.",
     "Software delivery is already a shared workflow.",
     "Ship It! simply gives teams a language to reason about it.",
-    "The Framework defines that language, and Examples show how it adapts to different kinds of changes.",
   ],
 };
 
