@@ -6,7 +6,6 @@ const examplesCopy = {
   title: "Examples",
   introduction: [
     "These examples show how the framework is applied to different software changes.",
-    "They are grouped by delivery style to show how the same framework supports both developer-led and automated changes.",
     "For concept definitions, see the Framework page.",
   ],
   sections: [
@@ -312,23 +311,6 @@ export default function Examples() {
             {automatedExampleIds.map((id) => (
               <Example key={id} example={examplesById[id]} />
             ))}
-
-            <section aria-labelledby="examples-conclusion-title" className="py-12 sm:py-16">
-              <h2
-                id="examples-conclusion-title"
-                className="text-2xl font-semibold leading-tight text-zinc-50 sm:text-3xl"
-              >
-                Conclusion
-              </h2>
-              <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                These scenarios show how one framework supports very different kinds of
-                delivery decisions.
-              </p>
-              <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                For concept definitions, return to the <InlineLink href="/framework">Framework</InlineLink>.
-                For boundary questions, see the <InlineLink href="/faq">FAQ</InlineLink>.
-              </p>
-            </section>
           </div>
         </div>
       </div>
