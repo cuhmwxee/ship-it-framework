@@ -1,4 +1,5 @@
 import NavigationCard from "@/components/NavigationCard";
+import ReflectionStatement from "@/components/ReflectionStatement";
 import Section from "@/components/ui/Section";
 
 const foundationCopy = {
@@ -57,18 +58,6 @@ export default function ExploreFurther() {
   return (
     <Section spacing="compact">
       <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
-        <h2
-          id="foundation-title"
-          className="mb-4 ds-type-section-heading text-zinc-100"
-        >
-          {foundationCopy.title}
-        </h2>
-        <div className="space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-          {foundationCopy.body.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
-        </div>
-
         <article className="mt-10 border-t border-zinc-800/80 pt-10 sm:mt-12 sm:pt-12">
           <h3 className="text-2xl font-semibold leading-tight text-zinc-50 sm:text-3xl">
             {foundationExample.title}
@@ -115,6 +104,36 @@ export default function ExploreFurther() {
             </div>
           </div>
         </article>
+
+        <div className="mt-12 border-t border-zinc-800/80 pt-10 sm:mt-14 sm:pt-12">
+          <ReflectionStatement
+            emphasis={1}
+            lines={[
+              "Most software delivery frameworks add concepts.",
+              "Ship It! removes them.",
+              "It describes the smallest workflow that still explains every software change.",
+            ]}
+          />
+        </div>
+
+        <h2
+          id="foundation-title"
+          className="mb-4 ds-type-section-heading text-zinc-100"
+        >
+          {foundationCopy.title}
+        </h2>
+        <div className="space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+          {foundationCopy.body.map((line) => (
+            <p key={line}>{line}</p>
+          ))}
+        </div>
+
+        <div className="mt-12 border-t border-zinc-800/80 pt-10 sm:mt-14 sm:pt-12">
+          <ReflectionStatement
+            emphasis={0}
+            lines={["Ship It! is an exercise in reduction."]}
+          />
+        </div>
 
         <h2 className="mb-4 mt-10 ds-type-section-heading text-zinc-100">
           Continue reading
