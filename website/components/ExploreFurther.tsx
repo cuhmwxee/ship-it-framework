@@ -5,27 +5,22 @@ const destinations = [
   {
     href: "/framework",
     title: "Framework",
-    description: "The four concepts and the thinking behind them.",
+    description: "Learn the four core concepts and how they describe delivery from Input to Ship.",
   },
   {
     href: "/manifesto",
     title: "Manifesto",
-    description: "The philosophy behind proportional software delivery.",
+    description: "Read the principles behind proportional delivery decisions.",
   },
   {
     href: "/examples",
     title: "Examples",
-    description: "Real-world delivery situations and workflows.",
+    description: "See how different kinds of changes move through the same workflow.",
   },
   {
     href: "/faq",
     title: "FAQ",
-    description: "Questions about Ship It! and its concepts.",
-  },
-  {
-    href: "/about",
-    title: "About",
-    description: "Why Ship It! exists and where it came from.",
+    description: "Find concise answers to common questions about scope and usage.",
   },
 ];
 
@@ -37,7 +32,7 @@ export default function ExploreFurther() {
           id="explore-further-title"
           className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
         >
-          Explore further
+          Continue in the documentation
         </h2>
         <ul className="mt-6 divide-y divide-zinc-800/80 border-y border-zinc-800/80">
           {destinations.map((destination) => (

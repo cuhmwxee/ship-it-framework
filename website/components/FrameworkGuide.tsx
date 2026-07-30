@@ -11,6 +11,12 @@ const frameworkGuideCopy = {
     "It makes the underlying delivery workflow explicit and asks what is actually required before software ships.",
     "The framework stays intentionally small: four concepts, then implementation detail.",
   ],
+  assumptions: [
+    "Software changes continuously.",
+    "Not every change carries the same risk.",
+    "Different changes may require different delivery processes.",
+    "Teams do not necessarily need a new methodology.",
+  ],
   concepts: [
     {
       title: "Input",
@@ -45,12 +51,6 @@ const frameworkGuideCopy = {
       ],
     },
   ],
-  principles: [
-    "Software changes continuously.",
-    "Not every change carries the same risk.",
-    "Different changes may require different delivery processes.",
-    "Teams do not necessarily need a new methodology.",
-  ],
   relatedPages: [
     { href: "/examples", label: "Examples", description: "shows the concepts in practice." },
     { href: "/faq", label: "FAQ", description: "answers common questions." },
@@ -66,6 +66,26 @@ export default function FrameworkGuide() {
             <p key={paragraph} className="ds-type-body">{paragraph}</p>
           ))}
         </PageHero>
+
+        <section aria-labelledby="assumptions-title" className="mt-12 sm:mt-16">
+          <h2
+            id="assumptions-title"
+            className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
+          >
+            Ship It! assumes
+          </h2>
+          <ul className="mt-6 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            {frameworkGuideCopy.assumptions.map((assumption) => (
+              <li key={assumption} className="flex gap-3">
+                <span aria-hidden="true" className="text-zinc-500">✓</span>
+                <span>{assumption}</span>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            These assumptions are the conceptual foundation of the framework.
+          </p>
+        </section>
 
         <div className="mt-12 sm:mt-16">
           <FrameworkGraph variant="process" />
@@ -83,29 +103,6 @@ export default function FrameworkGuide() {
               <FrameworkStep key={concept.title} title={concept.title} body={concept.body} />
             ))}
           </div>
-        </section>
-
-        <section aria-labelledby="principles-title" className="mt-20 sm:mt-24">
-          <h2
-            id="principles-title"
-            className="text-3xl font-semibold leading-tight text-zinc-50 sm:text-4xl"
-          >
-            Principles
-          </h2>
-          <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            Those assumptions show up in practice:
-          </p>
-          <ul className="mt-4 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            {frameworkGuideCopy.principles.map((principle) => (
-              <li key={principle} className="flex gap-3">
-                <span aria-hidden="true" className="text-zinc-500">✓</span>
-                <span>{principle}</span>
-              </li>
-            ))}
-          </ul>
-          <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            Those assumptions keep the framework small and the language consistent.
-          </p>
         </section>
 
         <div className="mt-20 sm:mt-24">

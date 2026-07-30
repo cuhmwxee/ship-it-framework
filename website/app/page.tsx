@@ -1,4 +1,3 @@
-import Closing from "@/components/Closing";
 import ExploreFurther from "@/components/ExploreFurther";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
@@ -24,13 +23,8 @@ export default function Home() {
       />
 
       <Why />
-      <ReflectionStatement
-        emphasis={1}
-        lines={reflections.workflowNamed}
-      />
       <Framework />
       <Principles />
-      <Closing />
       <ExploreFurther />
     </PageShell>
   );
