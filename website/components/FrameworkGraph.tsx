@@ -34,7 +34,7 @@ const graphCopy = {
   overview:
     "Input, Development, Validation and Ship are four equally important Ship It! concepts.",
   process:
-    "Input flows to Development, then Validation, then Ship. Validation can also return work to Development.",
+    "Input flows to Development, then Validation, then Ship. Failed Validation creates new Input and returns work for further Development.",
 } as const;
 
 export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
@@ -98,7 +98,7 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
                 fontSize={12}
                 textAnchor="middle"
               >
-                Feedback
+                New Input
               </text>
             </>
           )}
