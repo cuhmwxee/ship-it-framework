@@ -11,6 +11,20 @@ const foundationCopy = {
   ],
 };
 
+const foundationExample = {
+  title: "An example",
+  situation: "A small, low-risk update needs to be delivered quickly.",
+  question: "Does this still need the same delivery model as a larger change?",
+  workflow: {
+    input: "A small change request.",
+    development: "Implement the update.",
+    validation: "Verify that the update works as intended.",
+    ship: "Release the change as soon as confidence is sufficient.",
+  },
+  takeaway:
+    "The workflow stays the same even when the change is small and urgent.",
+};
+
 const destinations = [
   {
     href: "/framework",
@@ -42,6 +56,54 @@ const destinations = [
 export default function ExploreFurther() {
   return (
     <Section spacing="compact">
+
+
+        <article className="mt-10 border-t border-zinc-800/80 py-10 sm:py-12">
+          <h3 className="text-2xl font-semibold leading-tight text-zinc-50 sm:text-3xl">
+            {foundationExample.title}
+          </h3>
+
+          <div className="mt-8 space-y-8">
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Situation
+              </h4>
+              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+                {foundationExample.situation}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Question
+              </h4>
+              <p className="mt-3 text-xl leading-relaxed text-zinc-100 sm:text-2xl">
+                {foundationExample.question}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Ship It!
+              </h4>
+              <ul className="mt-3 space-y-2 font-mono text-base leading-relaxed text-zinc-300 sm:text-lg">
+                <li>Input: {foundationExample.workflow.input}</li>
+                <li>Development: {foundationExample.workflow.development}</li>
+                <li>Validation: {foundationExample.workflow.validation}</li>
+                <li>Ship: {foundationExample.workflow.ship}</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Takeaway
+              </h4>
+              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+                {foundationExample.takeaway}
+              </p>
+            </div>
+          </div>
+        </article>
       <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
         <h2
           id="foundation-title"
