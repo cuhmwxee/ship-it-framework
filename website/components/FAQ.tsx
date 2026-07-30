@@ -26,7 +26,6 @@ const faqCopy = {
     },
     {
       question: "Is Ship It! a software development methodology?",
-      answerSymbol: "—",
       answer: [
         "No.",
         "It defines a minimal delivery workflow.",
@@ -70,7 +69,6 @@ const faqCopy = {
     },
     {
       question: "What happens when Validation fails?",
-      answerSymbol: "—",
       answer: [
         "Validation does not end the workflow.",
         "Failed validation creates new Input.",
@@ -79,7 +77,6 @@ const faqCopy = {
     },
     {
       question: "Is Ship It! an AI framework?",
-      answerSymbol: "—",
       answer: [
         "No.",
         "Ship It! is technology-agnostic.",
@@ -88,15 +85,18 @@ const faqCopy = {
     },
     {
       question: "Does Ship It! require any specific tools or technologies?",
-      answerSymbol: "—",
       answer: [
         "No.",
         "Use whatever works for your team.",
       ],
+    },    {
+      question: "Why doesn't Ship It! prescribe how teams should work day to day?",
+      answer: [
+        "Ship It! intentionally avoids prescribing day-to-day working practices. It does not define meetings, ceremonies, planning cadences, or team routines. Those are local decisions that depend on the team, organization, and context. Ship It! provides a shared language for reasoning about software delivery while allowing teams to keep the practices that already work well for them.",
+      ],
     },
     {
       question: "Why is the framework so small?",
-      answerSymbol: "—",
       answer: [
         "Because every new concept increases complexity.",
         "It intentionally defines only the minimum workflow required to deliver validated software.",
@@ -104,7 +104,6 @@ const faqCopy = {
     },
     {
       question: "Will the framework grow over time?",
-      answerSymbol: "—",
       answer: [
         "Only when new ideas make the framework simpler, clearer or easier to apply.",
       ],
@@ -118,7 +117,6 @@ const faqCopy = {
     },
     {
       question: "I want to contact you.",
-      answerSymbol: "—",
       answer: ["Mail to: captain <at> shipitframe.work."],
     },
   ],
