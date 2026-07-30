@@ -1,5 +1,4 @@
 import Card from "@/components/ui/Card";
-import InlineLink from "@/components/ui/InlineLink";
 import Section from "@/components/ui/Section";
 
 const whyCopy = {
@@ -44,11 +43,6 @@ export default function Why() {
           <WhyCard key={card.title} title={card.title} body={card.body} />
         ))}
       </div>
-      <p className="mt-8 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-        The <InlineLink href="/framework">Framework</InlineLink> defines that language, and{" "}
-        <InlineLink href="/examples">Examples</InlineLink> shows how it adapts to different
-        kinds of changes.
-      </p>
     </Section>
   );
 }

@@ -1,3 +1,5 @@
+import InlineLink from "@/components/ui/InlineLink";
+
 const principlesCopy = {
   title: "Ship It! assumes",
   statement:
@@ -28,6 +30,11 @@ export default function Principles() {
         </h2>
         <p className="max-w-2xl text-lg leading-relaxed text-zinc-300 sm:text-xl">
           {principlesCopy.statement}
+        </p>
+        <p className="mt-4 max-w-2xl text-lg leading-relaxed text-zinc-300 sm:text-xl">
+          The <InlineLink href="/framework">Framework</InlineLink> defines that language, and{" "}
+          <InlineLink href="/examples">Examples</InlineLink> shows how it adapts to different
+          kinds of changes.
         </p>
       </div>
     </SectionContainer>
