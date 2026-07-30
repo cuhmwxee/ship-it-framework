@@ -250,7 +250,7 @@ function TableOfContents() {
   return (
     <nav
       aria-label="Examples table of contents"
-      className="border-y border-zinc-800/80 py-4"
+      className="py-4"
     >
       <details>
         <summary className="ds-button-link flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium uppercase tracking-[0.18em] text-zinc-500 [&::-webkit-details-marker]:hidden">
@@ -261,7 +261,7 @@ function TableOfContents() {
           {orderedExampleIds.map((id) => (
             <li key={id}>
               {id === developerExampleIds[0] ? (
-                <div className="mb-3 border-t border-zinc-800/80 pt-3">
+                <div className="mb-3 pt-1">
                   <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
                     Developer-led changes
                   </p>
