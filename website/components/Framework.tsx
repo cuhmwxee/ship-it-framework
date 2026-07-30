@@ -1,7 +1,7 @@
 import FrameworkGraph from "@/components/FrameworkGraph";
 
 const frameworkPreviewCopy = {
-  lead: "The framework is built around four concepts. Together they describe the path from Input to Ship.",
+  lead: "The framework uses four concepts to reason about delivery: Input, Development, Validation, and Ship.",
 };
 
 export default function Framework() {
