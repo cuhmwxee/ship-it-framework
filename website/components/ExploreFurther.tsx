@@ -32,7 +32,7 @@ export default function ExploreFurther() {
           id="explore-further-title"
           className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
         >
-          Continue in the documentation
+          Continue reading
         </h2>
         <ul className="mt-6 divide-y divide-zinc-800/80 border-y border-zinc-800/80">
           {destinations.map((destination) => (
