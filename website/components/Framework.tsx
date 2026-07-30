@@ -1,7 +1,7 @@
 import FrameworkGraph from "@/components/FrameworkGraph";
 
 const frameworkPreviewCopy = {
-  lead: "The framework uses four concepts to reason about delivery: Input, Development, Validation, and Ship.",
+  lead: "Ship It! describes the minimum workflow required to move a software change from Input to Ship, using four concepts: Input, Development, Validation, and Ship.",
 };
 
 export default function Framework() {
