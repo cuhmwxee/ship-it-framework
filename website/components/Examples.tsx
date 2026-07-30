@@ -6,7 +6,35 @@ const examplesCopy = {
   title: "Examples",
   introduction: [
     "These examples show how the framework is applied to different software changes.",
+    "They are grouped by delivery style to show how the same framework supports both developer-led and automated changes.",
     "For concept definitions, see the Framework page.",
+  ],
+  sections: [
+    {
+      id: "developer-led",
+      title: "Developer-led changes",
+      subtitle:
+        "Changes where developers actively shape the delivery process.",
+      items: [
+        "production-bug",
+        "large-feature",
+        "infrastructure-migration",
+        "feature-flag-rollout",
+        "database-change",
+      ],
+    },
+    {
+      id: "automated-assisted",
+      title: "Automated and assisted changes",
+      subtitle:
+        "Changes where the framework helps reduce repeated delivery decisions while maintaining confidence.",
+      items: [
+        "dependency-update",
+        "automated-change",
+        "ai-assisted-development",
+        "security-patch",
+      ],
+    },
   ],
   items: [
     {
@@ -153,6 +181,17 @@ const examplesCopy = {
   ],
 } as const;
 
+const examplesById = Object.fromEntries(
+  examplesCopy.items.map((example) => [example.id, example]),
+) as Record<(typeof examplesCopy.items)[number]["id"], (typeof examplesCopy.items)[number]>;
+
+const developerExampleIds = examplesCopy.sections[0].items;
+const automatedExampleIds = examplesCopy.sections[1].items;
+const orderedExampleIds = [
+  ...developerExampleIds,
+  ...automatedExampleIds,
+] as Array<(typeof examplesCopy.items)[number]["id"]>;
+
 function Example({ example }: { example: (typeof examplesCopy.items)[number] }) {
   return (
     <article
@@ -219,13 +258,20 @@ function TableOfContents() {
         Examples
       </h2>
       <ol className="mt-4 space-y-2">
-        {examplesCopy.items.map((example) => (
-          <li key={example.id}>
+        {orderedExampleIds.map((id) => (
+          <li key={id}>
+            {id === automatedExampleIds[0] ? (
+              <div className="mb-3 border-t border-zinc-800/80 pt-3">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
+                  Automated and assisted changes
+                </p>
+              </div>
+            ) : null}
             <a
-              href={`#${example.id}`}
+              href={`#${id}`}
               className="ds-text-link text-sm leading-relaxed text-zinc-400 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950"
             >
-              {example.title}
+              {examplesById[id].title}
             </a>
           </li>
         ))}
@@ -247,9 +293,26 @@ export default function Examples() {
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem] lg:gap-16">
           <TableOfContents />
           <div className="border-b border-zinc-800/80 lg:order-1">
-            {examplesCopy.items.map((example) => (
-              <Example key={example.id} example={example} />
+            {developerExampleIds.map((id) => (
+              <Example key={id} example={examplesById[id]} />
             ))}
+
+            <section aria-labelledby="automated-assisted-title" className="py-6 sm:py-8">
+              <p
+                id="automated-assisted-title"
+                className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-500"
+              >
+                Automated and assisted changes
+              </p>
+              <p className="mt-2 text-base leading-relaxed text-zinc-400 sm:text-lg">
+                The same framework also applies to changes that are automated or AI-assisted.
+              </p>
+            </section>
+
+            {automatedExampleIds.map((id) => (
+              <Example key={id} example={examplesById[id]} />
+            ))}
+
             <section aria-labelledby="examples-conclusion-title" className="py-12 sm:py-16">
               <h2
                 id="examples-conclusion-title"
