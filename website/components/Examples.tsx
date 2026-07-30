@@ -1,5 +1,3 @@
-import InlineLink from "@/components/ui/InlineLink";
-import PageHero from "@/components/PageHero";
 import Section from "@/components/ui/Section";
 
 const examplesCopy = {
@@ -283,11 +281,22 @@ export default function Examples() {
   return (
     <Section id="examples" labelledBy="examples-title" size="page">
       <div className="mx-auto max-w-5xl">
-        <PageHero title={examplesCopy.title} titleId="examples-title" className="mx-auto">
-          {examplesCopy.introduction.map((paragraph) => (
-            <p key={paragraph} className="ds-type-body">{paragraph}</p>
-          ))}
-        </PageHero>
+        <div className="mb-12 border-b border-zinc-800/80 pb-12">
+          <h1
+            id="examples-title"
+            className="ds-type-page-title"
+          >
+            {examplesCopy.title}
+          </h1>
+
+          <div className="mt-8 ds-page-hero__body">
+            {examplesCopy.introduction.map((paragraph) => (
+              <p key={paragraph} className="ds-type-body">
+                {paragraph}
+              </p>
+            ))}
+          </div>
+        </div>
 
         <div className="mt-12 grid gap-12 lg:grid-cols-[minmax(0,1fr)_14rem] lg:gap-16">
           <TableOfContents />
