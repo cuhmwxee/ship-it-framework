@@ -22,19 +22,18 @@ const destinations = [
     title: "FAQ",
     description: "Find concise answers to common questions about scope and usage.",
   },
+  {
+    href: "/about",
+    title: "About",
+    description: "Learn more about the team and the project.",
+  },
 ];
 
 export default function ExploreFurther() {
   return (
-    <Section labelledBy="explore-further-title" spacing="compact">
+    <Section spacing="compact">
       <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
-        <h2
-          id="explore-further-title"
-          className="text-2xl font-medium leading-snug text-zinc-100 sm:text-3xl"
-        >
-          Continue in the documentation
-        </h2>
-        <ul className="mt-6 divide-y divide-zinc-800/80 border-y border-zinc-800/80">
+        <ul className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
           {destinations.map((destination) => (
             <li key={destination.href}>
               <NavigationCard href={destination.href} title={destination.title}>
