@@ -281,7 +281,7 @@ export default function Examples() {
   return (
     <Section id="examples" labelledBy="examples-title" size="page">
       <div className="mx-auto max-w-5xl">
-        <div className="mb-12 border-b border-zinc-800/80 pb-12">
+        <div className="mb-12 pb-12">
           <h1
             id="examples-title"
             className="ds-type-page-title"
