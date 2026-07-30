@@ -1,21 +1,26 @@
+import InlineLink from "@/components/ui/InlineLink";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/ui/Section";
 
 const manifestoCopy = {
   title: "Manifesto",
-  intro:
-    "Ship It! is built on a simple belief: delivery should match the nature of the change. The goal is not more process. The goal is proportional confidence.",
+  intro: [
+    "Software delivery has changed. Changes are smaller, faster, and increasingly AI-assisted.",
+    "Many teams still describe delivery with language built for larger and slower work.",
+    "When that language is unclear, delivery decisions become inconsistent.",
+    "Ship It! exists to provide a shared language for those decisions.",
+  ],
   principles: [
     "Not every software change needs the same delivery process.",
     "Validation should be proportional to risk.",
     "Small changes should remain small.",
     "Critical changes deserve stronger validation.",
-    "Feedback improves development.",
     "Delivery decisions should be intentional.",
+    "Teams benefit from a shared model for those decisions.",
     "Keep your existing way of working.",
     "AI accelerates change. Engineering judgment remains essential.",
   ],
-  closing: "Keep your process. Improve your delivery decisions.",
+  closing: "Keep your process. Improve your delivery decisions through a shared language.",
 } as const;
 
 function ManifestoPrincipleItem({
@@ -40,7 +45,9 @@ export default function Manifesto() {
     <Section id="manifesto" labelledBy="manifesto-title" spacing="compact">
       <div className="ds-content">
         <PageHero title={manifestoCopy.title} titleId="manifesto-title">
-          <p className="ds-type-body">{manifestoCopy.intro}</p>
+          {manifestoCopy.intro.map((paragraph) => (
+            <p key={paragraph} className="ds-type-body">{paragraph}</p>
+          ))}
         </PageHero>
 
         <ol className="mt-10 w-full divide-y divide-zinc-800/80 border-y border-zinc-800/80">
@@ -51,6 +58,10 @@ export default function Manifesto() {
 
         <p className="mt-10 text-xl font-semibold leading-relaxed text-blue-400 sm:text-2xl">
           {manifestoCopy.closing}
+        </p>
+        <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+          The Manifesto explains why. The <InlineLink href="/framework">Framework</InlineLink>
+          {" "}defines the model.
         </p>
       </div>
     </Section>

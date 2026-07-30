@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import InlineLink from "@/components/ui/InlineLink";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/ui/Section";
 
@@ -14,25 +15,6 @@ const faqCopy = {
       answer: [
         "Ship It! is a minimal software delivery framework.",
         "It describes the minimum workflow required to move a software change from Input to Ship.",
-        "Rather than introducing a new methodology, it makes an existing delivery workflow explicit.",
-      ],
-    },
-    {
-      question: "Can Ship It! be used with Scrum or Kanban?",
-      answer: [
-        "Yes.",
-        "Ship It! is designed to complement, not replace, your existing way of working.",
-        "Whether your team uses Scrum, Kanban, or another approach, Ship It! helps determine what each software change needs before it ships.",
-      ],
-    },
-    {
-      question: "Is Ship It! a software development methodology?",
-      answerSymbol: "—",
-      answer: [
-        "No.",
-        "Ship It! intentionally defines less than traditional methodologies.",
-        "It focuses on the workflow required to deliver software.",
-        "Planning, estimation, ceremonies, team structure, and roles remain your team's choice.",
       ],
     },
     {
@@ -43,11 +25,19 @@ const faqCopy = {
       ],
     },
     {
-      question: "Where does Ship It! come from?",
+      question: "Is Ship It! a software development methodology?",
+      answerSymbol: "—",
       answer: [
-        "It emerged from practical software delivery experience.",
-        "It was created by observing how software is actually delivered.",
-        "If better ideas emerge, the framework should evolve.",
+        "No.",
+        "It defines a minimal delivery workflow.",
+        "Planning, estimation, ceremonies, team structure, and roles remain your team's choice.",
+      ],
+    },
+    {
+      question: "Can Ship It! be used with Scrum or Kanban?",
+      answer: [
+        "Yes.",
+        "Ship It! works with your existing way of working.",
       ],
     },
     {
@@ -79,22 +69,29 @@ const faqCopy = {
       ],
     },
     {
-      question: "Is Ship It! an AI framework?",
-      answerSymbol: "—",
-      answer: [
-        "No.",
-        "Ship It! is technology-agnostic.",
-        "AI is one reason software delivery is changing, but the framework applies regardless of how software is created.",
-      ],
-    },
-    {
       question: "What happens when Validation fails?",
       answerSymbol: "—",
       answer: [
         "Validation does not end the workflow.",
         "Failed validation creates new Input.",
-        "The framework does not define whether that Input is a bug report, a review comment, or a failed test.",
-        "It defines only that the work continues.",
+        "The framework defines that work continues.",
+      ],
+    },
+    {
+      question: "Is Ship It! an AI framework?",
+      answerSymbol: "—",
+      answer: [
+        "No.",
+        "Ship It! is technology-agnostic.",
+        "AI can participate in Development or Validation, but it does not redefine the framework.",
+      ],
+    },
+    {
+      question: "Does Ship It! require any specific tools or technologies?",
+      answerSymbol: "—",
+      answer: [
+        "No.",
+        "Use whatever works for your team.",
       ],
     },
     {
@@ -102,7 +99,7 @@ const faqCopy = {
       answerSymbol: "—",
       answer: [
         "Because every new concept increases complexity.",
-        "The framework intentionally defines only the minimum workflow required to deliver validated software.",
+        "It intentionally defines only the minimum workflow required to deliver validated software.",
       ],
     },
     {
@@ -113,13 +110,10 @@ const faqCopy = {
       ],
     },
     {
-      question: "Does Ship It! require any specific tools or technologies?",
-      answerSymbol: "—",
+      question: "Where does Ship It! come from?",
       answer: [
-        "No.",
-        "Use whatever works for your team.",
-        "Ship It! is independent of tools, platforms, and technologies.",
-        "It defines only the delivery workflow.",
+        "It emerged from practical software delivery experience.",
+        "It was created by observing how software is actually delivered.",
       ],
     },
     {
@@ -197,6 +191,9 @@ export default function FAQ() {
       <div className="ds-content">
         <PageHero title={faqCopy.title} titleId="faq-title" className="mb-6">
           <p className="ds-type-body">{faqCopy.introduction}</p>
+          <p className="ds-type-body">
+            For full concept definitions, see the <InlineLink href="/framework">Framework</InlineLink>.
+          </p>
         </PageHero>
         <div>
           {faqCopy.items.map((item, index) => {
@@ -217,6 +214,10 @@ export default function FAQ() {
             );
           })}
         </div>
+        <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+          If your question is about applying these ideas in real delivery situations,
+          continue in <InlineLink href="/examples">Examples</InlineLink>.
+        </p>
       </div>
     </Section>
   );

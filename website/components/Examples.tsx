@@ -1,11 +1,12 @@
+import InlineLink from "@/components/ui/InlineLink";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/ui/Section";
 
 const examplesCopy = {
   title: "Examples",
   introduction: [
-    "These examples show how the same four concepts apply to different software changes.",
-    "They are prompts for delivery decisions, not templates for delivery process.",
+    "These examples show how the framework is applied to different software changes.",
+    "For concept definitions, see the Framework page.",
   ],
   items: [
     {
@@ -16,12 +17,13 @@ const examplesCopy = {
         "The fix is small, but it still needs to travel through the same process as a major feature.",
       ],
       question: "Does an urgent bug fix need the same delivery model as a larger change?",
-      workflow: [
-        "Input → customer report.",
-        "Development → bug fix.",
-        "Validation → reproduce the issue and verify the fix.",
-        "Ship → release.",
-      ],
+      workflow: {
+        input: "Customer report.",
+        development: "Implement the bug fix.",
+        validation: "Reproduce the issue and verify the fix.",
+        ship: "Release the fix.",
+      },
+      takeaway: "The workflow stays the same even when the change is urgent and small.",
     },
     {
       id: "dependency-update",
@@ -30,12 +32,28 @@ const examplesCopy = {
         "An automated dependency update waits for approvals and the next release window.",
       ],
       question: "Does a version update require the same process as a product feature?",
-      workflow: [
-        "Input → automation.",
-        "Development → dependency update.",
-        "Validation → tests and compatibility checks.",
-        "Ship → release.",
+      workflow: {
+        input: "Automated update request.",
+        development: "Apply the dependency update.",
+        validation: "Run tests and compatibility checks.",
+        ship: "Release the update.",
+      },
+      takeaway: "Automation can trigger Input, but it does not remove the need for Validation.",
+    },
+    {
+      id: "automated-change",
+      title: "Automated change",
+      situation: [
+        "Bots continuously update configuration, documentation or infrastructure.",
       ],
+      question: "How much human involvement does an automated change actually need?",
+      workflow: {
+        input: "Automation signal.",
+        development: "System applies the change.",
+        validation: "Run automated checks and policy gates.",
+        ship: "Deploy the validated change.",
+      },
+      takeaway: "Automation changes who performs the work, not the structure of the workflow.",
     },
     {
       id: "ai-assisted-development",
@@ -45,26 +63,13 @@ const examplesCopy = {
         "The surrounding delivery process was designed for much slower development.",
       ],
       question: "What changes when Development accelerates but the rest of the process stays the same?",
-      workflow: [
-        "Input → product or engineering need.",
-        "Development → developer and AI.",
-        "Validation → confidence in the produced change.",
-        "Ship → release.",
-      ],
-    },
-    {
-      id: "automated-change",
-      title: "Automated change",
-      situation: [
-        "Bots continuously update configuration, documentation or infrastructure.",
-      ],
-      question: "How much human involvement does an automated change actually need?",
-      workflow: [
-        "Input → automation.",
-        "Development → system.",
-        "Validation → automated checks.",
-        "Ship → deployment.",
-      ],
+      workflow: {
+        input: "Product or engineering need.",
+        development: "Developer and AI produce the change.",
+        validation: "Establish confidence in the produced change.",
+        ship: "Release the validated change.",
+      },
+      takeaway: "Faster Development increases pressure on decision quality in Validation.",
     },
     {
       id: "large-feature",
@@ -74,27 +79,13 @@ const examplesCopy = {
         "Sometimes an organization is building an entirely new capability.",
       ],
       question: "When is a heavier delivery process justified?",
-      workflow: [
-        "Input → business requirement.",
-        "Development → multiple developers and teams.",
-        "Validation → testing, reviews and rollout.",
-        "Ship → release.",
-      ],
-    },
-    {
-      id: "security-patch",
-      title: "Security patch",
-      situation: [
-        "A security vulnerability requires an urgent update.",
-        "The change itself is small, but delaying it increases risk.",
-      ],
-      question: "How quickly should a security-related change move through the delivery process?",
-      workflow: [
-        "Input → vulnerability report or dependency scanner.",
-        "Development → patch or update.",
-        "Validation → security and compatibility checks.",
-        "Ship → deployment.",
-      ],
+      workflow: {
+        input: "Business requirement.",
+        development: "Coordinate work across teams.",
+        validation: "Combine testing, reviews and staged rollout checks.",
+        ship: "Release with controlled exposure.",
+      },
+      takeaway: "Larger scope justifies deeper Validation while preserving the same workflow.",
     },
     {
       id: "infrastructure-migration",
@@ -104,12 +95,13 @@ const examplesCopy = {
         "The work touches many components and may take weeks or months.",
       ],
       question: "Should every infrastructure change follow the same process, or can delivery happen incrementally?",
-      workflow: [
-        "Input → operational need.",
-        "Development → infrastructure work.",
-        "Validation → testing and monitoring.",
-        "Ship → gradual rollout.",
-      ],
+      workflow: {
+        input: "Operational requirement.",
+        development: "Execute infrastructure changes incrementally.",
+        validation: "Use testing and monitoring at each step.",
+        ship: "Roll out gradually.",
+      },
+      takeaway: "Incremental delivery can reduce risk without changing the framework.",
     },
     {
       id: "feature-flag-rollout",
@@ -119,12 +111,13 @@ const examplesCopy = {
         "Enabling it becomes a separate delivery event.",
       ],
       question: "What actually counts as \"shipping\" when deployment and release happen at different times?",
-      workflow: [
-        "Input → product decision.",
-        "Development → configuration change.",
-        "Validation → metrics and monitoring.",
-        "Ship → enable the feature.",
-      ],
+      workflow: {
+        input: "Product decision.",
+        development: "Prepare the configuration change.",
+        validation: "Use metrics and monitoring as release checks.",
+        ship: "Enable the feature for users.",
+      },
+      takeaway: "Ship is defined by user availability, not only by deployment timing.",
     },
     {
       id: "database-change",
@@ -133,12 +126,29 @@ const examplesCopy = {
         "A schema change affects multiple systems and cannot always be released in a single step.",
       ],
       question: "How should complex technical changes be delivered safely?",
-      workflow: [
-        "Input → product or technical requirement.",
-        "Development → schema and application changes.",
-        "Validation → compatibility and migration testing.",
-        "Ship → staged rollout.",
+      workflow: {
+        input: "Product or technical requirement.",
+        development: "Coordinate schema and application updates.",
+        validation: "Verify compatibility and migration safety.",
+        ship: "Release in stages.",
+      },
+      takeaway: "Complexity increases validation depth, not framework complexity.",
+    },
+    {
+      id: "security-patch",
+      title: "Security patch",
+      situation: [
+        "A security vulnerability requires an urgent update.",
+        "The change itself is small, but delaying it increases risk.",
       ],
+      question: "How quickly should a security-related change move through the delivery process?",
+      workflow: {
+        input: "Vulnerability report or scanner alert.",
+        development: "Prepare the patch or update.",
+        validation: "Run security and compatibility checks under time pressure.",
+        ship: "Deploy as soon as confidence is sufficient.",
+      },
+      takeaway: "Urgency changes delivery tempo, but validated confidence remains mandatory.",
     },
   ],
 } as const;
@@ -179,10 +189,20 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
             Ship It!
           </h3>
           <ul className="mt-3 space-y-2 font-mono text-base leading-relaxed text-zinc-300 sm:text-lg">
-            {example.workflow.map((step) => (
-              <li key={step}>{step}</li>
-            ))}
+            <li>Input: {example.workflow.input}</li>
+            <li>Development: {example.workflow.development}</li>
+            <li>Validation: {example.workflow.validation}</li>
+            <li>Ship: {example.workflow.ship}</li>
           </ul>
+        </div>
+
+        <div>
+          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+            Takeaway
+          </h3>
+          <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            {example.takeaway}
+          </p>
         </div>
       </div>
     </article>
@@ -230,6 +250,22 @@ export default function Examples() {
             {examplesCopy.items.map((example) => (
               <Example key={example.id} example={example} />
             ))}
+            <section aria-labelledby="examples-conclusion-title" className="py-12 sm:py-16">
+              <h2
+                id="examples-conclusion-title"
+                className="text-2xl font-semibold leading-tight text-zinc-50 sm:text-3xl"
+              >
+                Conclusion
+              </h2>
+              <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+                These scenarios show how one framework supports very different kinds of
+                delivery decisions.
+              </p>
+              <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+                For concept definitions, return to the <InlineLink href="/framework">Framework</InlineLink>.
+                For boundary questions, see the <InlineLink href="/faq">FAQ</InlineLink>.
+              </p>
+            </section>
           </div>
         </div>
       </div>
