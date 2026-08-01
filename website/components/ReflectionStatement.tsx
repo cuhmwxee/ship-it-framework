@@ -5,7 +5,7 @@ type ReflectionStatementProps = {
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
-    <section className="mx-auto w-full px-6 py-32 sm:px-10 sm:py-40 lg:px-12 lg:py-48">
+    <section className="mx-auto w-full px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
       {children}
     </section>
   );
@@ -15,17 +15,19 @@ export default function ReflectionStatement({
   lines,
   emphasis,
 }: ReflectionStatementProps) {
+  const emphasisIndex = emphasis ?? -1;
+
   return (
     <SectionContainer>
-      <div className="mx-auto flex max-w-[700px] justify-center">
-        <article className="space-y-4 text-center">
+      <div className="mx-auto flex max-w-3xl justify-center">
+        <article className="space-y-5 text-center">
           {lines.map((line, index) => (
             <p
               key={line}
               className={
-                index === emphasis
-                  ? "text-3xl font-semibold leading-relaxed text-blue-400 sm:text-4xl lg:text-5xl"
-                  : "text-3xl leading-relaxed text-zinc-50 sm:text-4xl lg:text-5xl"
+                index === emphasisIndex
+                  ? "text-2xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-3xl lg:text-4xl"
+                  : "mx-auto max-w-[56ch] text-lg leading-relaxed text-zinc-300 sm:text-xl"
               }
             >
               {line}
