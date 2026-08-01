@@ -6,14 +6,14 @@ const frameworkPreviewCopy = {
 
 export default function Framework() {
   return (
-    <div className="mx-auto max-w-3xl text-center">
+    <div className="mx-auto max-w-4xl">
       <p
         id="framework-title"
-        className="text-2xl leading-snug text-zinc-200 sm:text-3xl"
+        className="mx-auto max-w-3xl text-xl leading-relaxed text-zinc-200 sm:text-2xl"
       >
         {frameworkPreviewCopy.lead}
       </p>
-      <div className="mt-10">
+      <div className="mt-12 sm:mt-14">
         <FrameworkGraph variant="overview" />
       </div>
     </div>

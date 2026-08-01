@@ -56,10 +56,10 @@ const destinations = [
 
 export default function ExploreFurther() {
   return (
-    <Section spacing="compact">
-      <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
-        <article className="mt-10 border-t border-zinc-800/80 pt-10 sm:mt-12 sm:pt-12">
-          <h3 className="text-2xl font-semibold leading-tight text-zinc-50 sm:text-3xl">
+    <Section spacing="default">
+      <div className="ds-content">
+        <article className="border-t border-zinc-800/80 pt-10 sm:pt-12">
+          <h3 className="text-xl font-semibold leading-tight text-zinc-100 sm:text-2xl">
             {foundationExample.title}
           </h3>
 
@@ -77,7 +77,7 @@ export default function ExploreFurther() {
               <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
                 Question
               </h4>
-              <p className="mt-3 text-xl leading-relaxed text-zinc-100 sm:text-2xl">
+              <p className="mt-3 text-lg leading-relaxed text-zinc-100 sm:text-xl">
                 {foundationExample.question}
               </p>
             </div>
@@ -105,7 +105,7 @@ export default function ExploreFurther() {
           </div>
         </article>
 
-        <div className="mt-12 border-t border-zinc-800/80 pt-10 sm:mt-14 sm:pt-12">
+        <div className="mt-14 sm:mt-16">
           <ReflectionStatement
             emphasis={1}
             lines={[
@@ -118,24 +118,24 @@ export default function ExploreFurther() {
 
         <h2
           id="foundation-title"
-          className="mb-4 ds-type-section-heading text-zinc-100"
+          className="mb-4 mt-4 ds-type-section-heading text-zinc-100"
         >
           {foundationCopy.title}
         </h2>
-        <div className="space-y-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+        <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
           {foundationCopy.body.map((line) => (
             <p key={line}>{line}</p>
           ))}
         </div>
 
-        <div className="mt-12 border-t border-zinc-800/80 pt-10 sm:mt-14 sm:pt-12">
+        <div className="mt-16 sm:mt-20">
           <ReflectionStatement
             emphasis={0}
             lines={["Ship It! is an exercise in reduction."]}
           />
         </div>
 
-        <h2 className="mb-4 mt-10 ds-type-section-heading text-zinc-100">
+        <h2 className="mb-4 mt-12 ds-type-section-heading text-zinc-100 sm:mt-14">
           Continue reading
         </h2>
         <ul className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
