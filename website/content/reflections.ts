@@ -1,8 +1,9 @@
 export const reflections = {
   seen: [
-    "You have seen this.",
-    "The change was small.",
-    "The process around it was not.",
+    "Not every software change needs every step your process describes.",
+    "Most software delivery frameworks add concepts. Ship It! removes them.",
+    "The result is the minimum workflow every software change still follows.",
+    "Ship It! is a minimal software delivery framework.",
   ],
 
   reveals: [
