@@ -13,10 +13,10 @@ export default function Home() {
 
       <ReflectionStatement
         emphasis={0}
-        lines={["Software delivery should be proportional."]}
+        lines={reflections.proportional}
       />
 
-      <Section spacing="compact" className="pt-4 sm:pt-4">
+      <Section spacing="compact" className="pt-4">
         <div className="ds-content">
           <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             <p>

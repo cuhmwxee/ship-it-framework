@@ -153,7 +153,7 @@ export default function ExploreFurther() {
         <div className="mt-16 sm:mt-20">
           <ReflectionStatement
             emphasis={0}
-            lines={["Keep your process. Improve your delivery decisions."]}
+            lines={reflections.keepProcess}
           />
         </div>
 
@@ -172,7 +172,7 @@ export default function ExploreFurther() {
         <div className="mt-16 sm:mt-20">
           <ReflectionStatement
             emphasis={0}
-            lines={["Ship It! is an exercise in reduction."]}
+            lines={reflections.reduction}
           />
         </div>
 

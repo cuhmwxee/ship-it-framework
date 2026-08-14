@@ -17,7 +17,6 @@ export const frameworkGraphScale = {
   arrowHeadSize: 10,
   graphMaxWidth: 1152,
   graphHeight: 300,
-  overviewHeight: 204,
   graphMargin: 24,
 } as const;
 
@@ -38,21 +37,7 @@ const graphCopy = {
 } as const;
 
 export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
-  const isProcess = variant === "process";
-  const markerId = `framework-graph-arrow-${variant}`;
-  const connectionInset = 2;
-  const nodeLabelYOffset = -1;
-  const nodeRight = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth;
-  const nodeMiddle = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth / 2;
-  const nodeBottom = graphTop + frameworkGraphScale.nodeHeight;
-  const returnY = 236;
-  const feedbackLabelX = (nodeMiddle(1) + nodeMiddle(2)) / 2;
-  const feedbackLabelY = returnY - 12;
-  const graphHeight = isProcess
-    ? frameworkGraphScale.graphHeight
-    : frameworkGraphScale.overviewHeight;
-
-  if (!isProcess) {
+  if (variant === "overview") {
     return (
       <ol aria-label={graphCopy.overview} className="framework-overview">
         {concepts.map((concept, index) => (
@@ -74,6 +59,17 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
       </ol>
     );
   }
+
+  const markerId = `framework-graph-arrow-${variant}`;
+  const connectionInset = 2;
+  const nodeLabelYOffset = -1;
+  const nodeRight = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth;
+  const nodeMiddle = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth / 2;
+  const nodeBottom = graphTop + frameworkGraphScale.nodeHeight;
+  const returnY = 236;
+  const feedbackLabelX = (nodeMiddle(1) + nodeMiddle(2)) / 2;
+  const feedbackLabelY = returnY - 12;
+  const graphHeight = frameworkGraphScale.graphHeight;
 
   return (
     <figure
@@ -103,28 +99,26 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
             </marker>
           </defs>
 
-          {isProcess && (
-            <>
-              <path className="framework-graph-relationship" d={`M${nodeRight(0) + connectionInset} ${graphCenterY}H${concepts[1].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
-              <path className="framework-graph-relationship" d={`M${nodeRight(1) + connectionInset} ${graphCenterY}H${concepts[2].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
-              <path className="framework-graph-relationship" d={`M${nodeRight(2) + connectionInset} ${graphCenterY}H${concepts[3].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
-              <path
-                className="framework-graph-relationship"
-                d={`M${nodeMiddle(2)} ${nodeBottom}V${returnY - frameworkGraphScale.arrowRadius}Q${nodeMiddle(2)} ${returnY} ${nodeMiddle(2) - frameworkGraphScale.arrowRadius} ${returnY}H${nodeMiddle(1) + frameworkGraphScale.arrowRadius}Q${nodeMiddle(1)} ${returnY} ${nodeMiddle(1)} ${returnY - frameworkGraphScale.arrowRadius}V${nodeBottom}`}
-                strokeWidth={frameworkGraphScale.arrowWidth}
-                markerEnd={`url(#${markerId})`}
-              />
-              <text
-                className="framework-graph-annotation"
-                x={feedbackLabelX}
-                y={feedbackLabelY}
-                fontSize={12}
-                textAnchor="middle"
-              >
-                New Input
-              </text>
-            </>
-          )}
+          <>
+            <path className="framework-graph-relationship" d={`M${nodeRight(0) + connectionInset} ${graphCenterY}H${concepts[1].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
+            <path className="framework-graph-relationship" d={`M${nodeRight(1) + connectionInset} ${graphCenterY}H${concepts[2].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
+            <path className="framework-graph-relationship" d={`M${nodeRight(2) + connectionInset} ${graphCenterY}H${concepts[3].x - connectionInset}`} strokeWidth={frameworkGraphScale.arrowWidth} markerEnd={`url(#${markerId})`} />
+            <path
+              className="framework-graph-relationship"
+              d={`M${nodeMiddle(2)} ${nodeBottom}V${returnY - frameworkGraphScale.arrowRadius}Q${nodeMiddle(2)} ${returnY} ${nodeMiddle(2) - frameworkGraphScale.arrowRadius} ${returnY}H${nodeMiddle(1) + frameworkGraphScale.arrowRadius}Q${nodeMiddle(1)} ${returnY} ${nodeMiddle(1)} ${returnY - frameworkGraphScale.arrowRadius}V${nodeBottom}`}
+              strokeWidth={frameworkGraphScale.arrowWidth}
+              markerEnd={`url(#${markerId})`}
+            />
+            <text
+              className="framework-graph-annotation"
+              x={feedbackLabelX}
+              y={feedbackLabelY}
+              fontSize={12}
+              textAnchor="middle"
+            >
+              New Input
+            </text>
+          </>
 
           {concepts.map((concept) => (
             <a
