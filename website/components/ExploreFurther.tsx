@@ -150,9 +150,16 @@ export default function ExploreFurther() {
           </div>
         </article>
 
+        <div className="mt-16 sm:mt-20">
+          <ReflectionStatement
+            emphasis={0}
+            lines={["Keep your process. Improve your delivery decisions."]}
+          />
+        </div>
+
         <h2
           id="foundation-title"
-          className="mb-4 mt-16 ds-type-section-heading text-zinc-100 sm:mt-20"
+          className="mb-4 mt-4 ds-type-section-heading text-zinc-100"
         >
           {foundationCopy.title}
         </h2>
