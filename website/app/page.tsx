@@ -11,7 +11,7 @@ export default function Home() {
       <Hero />
 
       <ReflectionStatement
-        emphasis={0}
+        emphasis={3}
         lines={reflections.seen}
       />
 

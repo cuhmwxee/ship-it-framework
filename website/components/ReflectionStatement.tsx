@@ -26,7 +26,7 @@ export default function ReflectionStatement({
               key={line}
               className={
                 index === emphasisIndex
-                  ? "text-2xl font-semibold leading-tight tracking-tight text-zinc-50 sm:text-3xl lg:text-4xl"
+                  ? "text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:text-3xl lg:text-4xl"
                   : "mx-auto max-w-[56ch] text-lg leading-relaxed text-zinc-300 sm:text-xl"
               }
             >

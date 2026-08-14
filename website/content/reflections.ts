@@ -37,4 +37,8 @@ export const reflections = {
     "Keep the practices that help your team collaborate.",
     "Use Ship It! to think about what each software change actually needs before it ships.",
   ],
+
+  aiEra: [
+    "Ship It! was created in the AI era for the AI era.",
+  ],
 };

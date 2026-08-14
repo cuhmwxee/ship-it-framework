@@ -1,6 +1,7 @@
 import NavigationCard from "@/components/NavigationCard";
 import ReflectionStatement from "@/components/ReflectionStatement";
 import Section from "@/components/ui/Section";
+import { reflections } from "@/content/reflections";
 
 const foundationCopy = {
   title: "Foundation",
@@ -58,6 +59,10 @@ export default function ExploreFurther() {
   return (
     <Section spacing="default">
       <div className="ds-content">
+        <div className="mb-8 sm:mb-10">
+          <ReflectionStatement emphasis={0} lines={reflections.aiEra} />
+        </div>
+
         <article className="border-t border-zinc-800/80 pt-10 sm:pt-12">
           <h3 className="text-xl font-semibold leading-tight text-zinc-100 sm:text-2xl">
             {foundationExample.title}
@@ -112,6 +117,7 @@ export default function ExploreFurther() {
               "Most software delivery frameworks add concepts.",
               "Ship It! removes them.",
               "It describes the smallest workflow that still explains every software change.",
+              "Ship It! does not replace workflows that already work. You can keep your Scrum/Kanban/Agile practices. Ship It! helps when the current workflow no longer fits the change.",
             ]}
           />
         </div>
