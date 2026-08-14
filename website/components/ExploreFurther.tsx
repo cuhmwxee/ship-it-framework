@@ -110,21 +110,49 @@ export default function ExploreFurther() {
           </div>
         </article>
 
-        <div className="mt-14 sm:mt-16">
-          <ReflectionStatement
-            emphasis={1}
-            lines={[
-              "Most software delivery frameworks add concepts.",
-              "Ship It! removes them.",
-              "It describes the smallest workflow that still explains every software change.",
-              "Ship It! does not replace workflows that already work. You can keep your Scrum/Kanban/Agile practices. Ship It! helps when the current workflow no longer fits the change.",
-            ]}
-          />
-        </div>
+        <article className="mt-16 border-t border-zinc-800/80 pt-10 sm:mt-20 sm:pt-12">
+          <h2 className="ds-type-section-heading text-zinc-100">
+            What changes in practice?
+          </h2>
+          <div className="mt-4 space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            <p>
+              Not every software change needs the full delivery process. Ship It!
+              makes the minimum workflow explicit: identify the Input, develop the
+              change, validate it independently, and Ship when there is sufficient
+              confidence.
+            </p>
+            <p>
+              When a process is heavier than the change, teams naturally compress
+              or work around steps. Ship It! makes that reduction an intentional
+              delivery decision instead of an informal exception.
+            </p>
+          </div>
+        </article>
+
+        <article className="mt-14 sm:mt-16">
+          <h2 className="ds-type-section-heading text-zinc-100">
+            Does this replace our process?
+          </h2>
+          <div className="mt-4 space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+            <p>No.</p>
+            <p>
+              Teams can keep Scrum, Kanban, continuous delivery, pull requests,
+              automated testing, release management, and their own delivery
+              practices. Ship It! is not another comprehensive process layered on
+              top of them.
+            </p>
+            <p>
+              It describes the smaller workflow underneath them: the work required
+              for this change to become shippable. The question is not which
+              process to replace, but what this change actually needs to reach
+              production with appropriate validation.
+            </p>
+          </div>
+        </article>
 
         <h2
           id="foundation-title"
-          className="mb-4 mt-4 ds-type-section-heading text-zinc-100"
+          className="mb-4 mt-16 ds-type-section-heading text-zinc-100 sm:mt-20"
         >
           {foundationCopy.title}
         </h2>
