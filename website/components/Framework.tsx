@@ -9,7 +9,7 @@ export default function Framework() {
     <div className="mx-auto max-w-4xl">
       <p
         id="framework-title"
-        className="mx-auto max-w-3xl text-xl leading-relaxed text-zinc-200 sm:text-2xl"
+        className="ds-type-body mx-auto max-w-3xl text-center"
       >
         {frameworkPreviewCopy.lead}
       </p>
