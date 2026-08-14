@@ -52,6 +52,29 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
     ? frameworkGraphScale.graphHeight
     : frameworkGraphScale.overviewHeight;
 
+  if (!isProcess) {
+    return (
+      <ol aria-label={graphCopy.overview} className="framework-overview">
+        {concepts.map((concept, index) => (
+          <li key={concept.label} className="framework-overview__step">
+            <a
+              href={concept.href}
+              aria-label={`Read about ${concept.label}`}
+              className="framework-overview__link"
+            >
+              {concept.label}
+            </a>
+            {index < concepts.length - 1 && (
+              <span aria-hidden="true" className="framework-overview__arrow">
+                →
+              </span>
+            )}
+          </li>
+        ))}
+      </ol>
+    );
+  }
+
   return (
     <figure
       aria-labelledby={`framework-graph-caption-${variant}`}

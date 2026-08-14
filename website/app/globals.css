@@ -154,6 +154,28 @@ body {
 .ds-framework-step__title { color: var(--color-text-primary); font-family: var(--font-geist-mono), ui-monospace, monospace; font-size: clamp(1.5rem, 3vw, 1.875rem); line-height: 1.15; }
 .ds-framework-step__body { display: grid; gap: var(--space-sm); margin-top: var(--space-sm); color: var(--color-text-secondary); font-size: var(--type-body); line-height: 1.6; }
 
+.framework-overview {
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-sm);
+  justify-content: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.framework-overview__step {
+  align-items: center;
+  display: flex;
+  gap: var(--space-sm);
+}
+
+.framework-overview__link { color: var(--color-text-primary); font-family: var(--font-geist-mono), ui-monospace, monospace; font-size: clamp(1.125rem, 2vw, 1.25rem); font-weight: 500; line-height: 1.3; }
+.framework-overview__link:hover { color: var(--color-interactive-hover); }
+.framework-overview__link:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 3px; }
+.framework-overview__arrow { color: var(--color-text-muted); font-family: var(--font-geist-mono), ui-monospace, monospace; }
+
 /* Framework Graph: shared node-and-relationship language for all graph variants. */
 .framework-graph {
   --framework-graph-border: #60a5fa;

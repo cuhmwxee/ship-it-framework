@@ -59,7 +59,7 @@ export default function ExploreFurther() {
   return (
     <Section spacing="default">
       <div className="ds-content">
-        <div className="mb-8 sm:mb-10">
+        <div className="mb-4">
           <ReflectionStatement emphasis={0} lines={reflections.aiEra} />
         </div>
 
@@ -176,7 +176,7 @@ export default function ExploreFurther() {
           />
         </div>
 
-        <h2 className="mb-4 mt-12 ds-type-section-heading text-zinc-100 sm:mt-14">
+        <h2 className="mb-4 mt-4 ds-type-section-heading text-zinc-100">
           Continue reading
         </h2>
         <ul className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
