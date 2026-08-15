@@ -27,6 +27,22 @@ const foundationExample = {
     "Ship It! describes the same four concepts regardless of the size or urgency of the change.",
 };
 
+const anotherFoundationExample = {
+  title: "An another example",
+  situation:
+    "A customer-facing change affects a critical part of the product.",
+  question:
+    "What level of validation is needed before this change can be shipped?",
+  workflow: {
+    input: "A change request with a meaningful customer impact.",
+    development: "Implement the change with the necessary safeguards.",
+    validation: "Use independent review, automated checks, and targeted testing.",
+    ship: "Release when the evidence supports the required level of confidence.",
+  },
+  takeaway:
+    "The workflow stays the same; the depth of each step grows with the change's risk and impact.",
+};
+
 const destinations = [
   {
     href: "/framework",
@@ -157,6 +173,60 @@ export default function ExploreFurther() {
           />
         </div>
 
+        <article className="mt-16 border-t border-zinc-800/80 pt-10 sm:mt-20 sm:pt-12">
+          <h3 className="text-xl font-semibold leading-tight text-zinc-100 sm:text-2xl">
+            {anotherFoundationExample.title}
+          </h3>
+
+          <div className="mt-8 space-y-8">
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Situation
+              </h4>
+              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+                {anotherFoundationExample.situation}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Question
+              </h4>
+              <p className="mt-3 text-lg leading-relaxed text-zinc-100 sm:text-xl">
+                {anotherFoundationExample.question}
+              </p>
+            </div>
+
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Ship It!
+              </h4>
+              <ul className="mt-3 space-y-2 font-mono text-base leading-relaxed text-zinc-300 sm:text-lg">
+                <li>Input: {anotherFoundationExample.workflow.input}</li>
+                <li>Development: {anotherFoundationExample.workflow.development}</li>
+                <li>Validation: {anotherFoundationExample.workflow.validation}</li>
+                <li>Ship: {anotherFoundationExample.workflow.ship}</li>
+              </ul>
+            </div>
+
+            <div>
+              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+                Takeaway
+              </h4>
+              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+                {anotherFoundationExample.takeaway}
+              </p>
+            </div>
+          </div>
+        </article>
+
+        <div className="mt-16 sm:mt-20">
+          <ReflectionStatement
+            emphasis={0}
+            lines={reflections.reduction}
+          />
+        </div>
+
         <h2
           id="foundation-title"
           className="mb-4 mt-4 ds-type-section-heading text-zinc-100"
@@ -169,14 +239,7 @@ export default function ExploreFurther() {
           ))}
         </div>
 
-        <div className="mt-16 sm:mt-20">
-          <ReflectionStatement
-            emphasis={0}
-            lines={reflections.reduction}
-          />
-        </div>
-
-        <h2 className="mb-4 mt-4 ds-type-section-heading text-zinc-100">
+        <h2 className="mb-4 mt-16 ds-type-section-heading text-zinc-100 sm:mt-20">
           Continue reading
         </h2>
         <ul className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
