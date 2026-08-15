@@ -1,4 +1,5 @@
 import PageHero from "@/components/PageHero";
+import InlineLink from "@/components/ui/InlineLink";
 import Section from "@/components/ui/Section";
 
 const aboutCopy = {
@@ -20,6 +21,9 @@ export default function About() {
           {aboutCopy.paragraphs.map((paragraph) => (
             <p key={paragraph} className="ds-type-body">{paragraph}</p>
           ))}
+          <p className="mt-[var(--space-md)] text-base leading-relaxed text-zinc-400">
+            <InlineLink href="https://buymeacoffee.com/hmaattaf">Support the project.</InlineLink>
+          </p>
         </PageHero>
       </div>
     </Section>
