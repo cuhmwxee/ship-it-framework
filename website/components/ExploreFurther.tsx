@@ -36,6 +36,10 @@ export default function ExploreFurther() {
       <div className="ds-content">
         <DeliveryStory />
 
+        <p className="mt-8 text-lg leading-relaxed text-zinc-300 sm:mt-10 sm:text-xl">
+          If you&apos;ve ever skipped a step because the change was tiny, you already get it.
+        </p>
+
         <article className="mt-16 border-t border-zinc-800/80 pt-10 sm:mt-20 sm:pt-12">
           <h2 className="ds-type-section-heading text-zinc-100">
             What changes in practice?
@@ -79,6 +83,15 @@ export default function ExploreFurther() {
             </p>
           </div>
         </article>
+
+        <div className="mt-16 sm:mt-20">
+          <p className="text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:text-3xl lg:text-4xl">
+            Turns out, the process can be smaller.
+          </p>
+          <p className="mt-3 text-sm text-zinc-400">
+            Trust me, bro. We checked.
+          </p>
+        </div>
 
         <h2 className="mb-4 mt-16 ds-type-section-heading text-zinc-100 sm:mt-20">
           Continue reading
