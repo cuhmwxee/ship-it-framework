@@ -3,6 +3,7 @@ import ExploreFurther from "@/components/ExploreFurther";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import PageShell from "@/components/PageShell";
+import ReflectionStatement from "@/components/ReflectionStatement";
 import Section from "@/components/ui/Section";
 import { reflections } from "@/content/reflections";
 
@@ -32,6 +33,11 @@ export default function Home() {
           </div>
         </div>
       </Section>
+
+      <ReflectionStatement
+        lines={["What if the process is the thing that needs simplifying?"]}
+        emphasis={0}
+      />
 
       <Framework />
       <ExploreFurther />
