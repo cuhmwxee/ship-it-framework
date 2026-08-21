@@ -14,9 +14,15 @@ const geistMono = Geist_Mono({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.shipitframe.work"),
-  title: "Ship It! | The Minimal Software Delivery Framework",
+  title: {
+    default: "Ship It! | The Minimal Software Delivery Framework",
+    template: "%s | Ship It!",
+  },
   description:
-    "Build. Validate. Ship. A minimal software delivery framework created by developers, for developers.",
+    "Ship It! is a minimal software delivery framework built around four concepts — Input, Development, Validation, and Ship — that describes the minimum workflow every software change follows.",
+  alternates: {
+    canonical: "/",
+  },
   icons: {
     icon: "/favicon.ico",
     apple: "/icons/apple-touch-icon.png",
@@ -25,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Ship It!",
     description:
-      "Build. Validate. Ship. A minimal software delivery framework.",
+      "Input, Development, Validation, Ship — the minimal software delivery framework.",
     url: "https://www.shipitframe.work",
     siteName: "Ship It!",
     locale: "en_US",
@@ -36,7 +42,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Ship It!",
     description:
-      "Build. Validate. Ship. A minimal software delivery framework.",
+      "Input, Development, Validation, Ship — the minimal software delivery framework.",
     creator: "@HarriMaatta",
   },
 };

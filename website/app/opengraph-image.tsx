@@ -18,8 +18,8 @@ export default function Image() {
           flexDirection: "column",
           justifyContent: "space-between",
           padding: "72px 84px",
-          backgroundColor: "#0F172A",
-          color: "#F8FAFC",
+          backgroundColor: "#050505",
+          color: "#f4f4f5",
           fontFamily: "Inter, Arial, sans-serif",
         }}
       >
@@ -29,31 +29,36 @@ export default function Image() {
               display: "flex",
               alignItems: "center",
               gap: 14,
-              color: "#22D3EE",
+              color: "#c47a4a",
               fontSize: 24,
               fontWeight: 600,
               letterSpacing: "0.24em",
               textTransform: "uppercase",
             }}
           >
-            <div style={{ width: 48, height: 2, backgroundColor: "#22D3EE" }} />
+            <div style={{ width: 48, height: 2, backgroundColor: "#c47a4a" }} />
             <div>Ship It!</div>
           </div>
 
           <div
             style={{
               display: "flex",
-              flexDirection: "column",
-              gap: 12,
-              fontSize: 84,
+              alignItems: "center",
+              flexWrap: "wrap",
+              gap: 20,
+              fontSize: 52,
               fontWeight: 700,
-              lineHeight: 1.02,
-              letterSpacing: "-0.03em",
+              lineHeight: 1.05,
+              letterSpacing: "-0.02em",
             }}
           >
-            <div>Build.</div>
-            <div>Validate.</div>
-            <div>Ship.</div>
+            <div>Input</div>
+            <div style={{ color: "#a1a1aa" }}>→</div>
+            <div>Development</div>
+            <div style={{ color: "#a1a1aa" }}>→</div>
+            <div>Validation</div>
+            <div style={{ color: "#a1a1aa" }}>→</div>
+            <div>Ship</div>
           </div>
         </div>
 
@@ -70,7 +75,7 @@ export default function Image() {
               maxWidth: 560,
               fontSize: 30,
               lineHeight: 1.35,
-              color: "#E2E8F0",
+              color: "#d4d4d8",
             }}
           >
             The minimal software delivery framework.
@@ -79,7 +84,7 @@ export default function Image() {
             style={{
               fontSize: 24,
               fontWeight: 600,
-              color: "#22D3EE",
+              color: "#c47a4a",
               letterSpacing: "0.02em",
             }}
           >
