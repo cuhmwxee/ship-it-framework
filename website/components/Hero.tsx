@@ -6,7 +6,7 @@ const heroCopy = {
     "Ship It! is a lightweight software delivery framework for individuals, teams, and enterprises.",
   hook: "Not every software change needs the same delivery process.",
   detail:
-    "It helps you decide what each change needs before it ships, without replacing the practices that already work.",
+    "Ship It! helps you decide what each change needs before it ships, without replacing the practices that already work.",
   closing: "Keep your process. Improve your delivery decisions.",
 };
 
