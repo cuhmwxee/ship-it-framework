@@ -202,7 +202,7 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
 
       <div className="mt-8 space-y-8">
         <div>
-          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
             Situation
           </h3>
           <div className="mt-3 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
@@ -213,7 +213,7 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
         </div>
 
         <div>
-          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
             Question
           </h3>
           <p className="mt-3 text-xl leading-relaxed text-zinc-100 sm:text-2xl">
@@ -222,7 +222,7 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
         </div>
 
         <div>
-          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
             Ship It!
           </h3>
           <ul className="mt-3 space-y-2 font-mono text-base leading-relaxed text-zinc-300 sm:text-lg">
@@ -234,7 +234,7 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
         </div>
 
         <div>
-          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
+          <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
             Takeaway
           </h3>
           <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
@@ -253,23 +253,23 @@ function TableOfContents() {
       className="py-4"
     >
       <details>
-        <summary className="ds-button-link flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium uppercase tracking-[0.18em] text-zinc-500 [&::-webkit-details-marker]:hidden">
+        <summary className="ds-button-link flex cursor-pointer list-none items-center justify-between gap-3 text-sm font-medium uppercase tracking-[0.18em] text-zinc-400 [&::-webkit-details-marker]:hidden">
           Jump to example
-          <span aria-hidden="true" className="text-zinc-500">▾</span>
+          <span aria-hidden="true" className="text-zinc-400">▾</span>
         </summary>
         <ol className="mt-4 space-y-2">
           {orderedExampleIds.map((id) => (
             <li key={id}>
               {id === developerExampleIds[0] ? (
                 <div className="mb-3 pt-1">
-                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-400">
                     Developer-led changes
                   </p>
                 </div>
               ) : null}
               {id === automatedExampleIds[0] ? (
                 <div className="mb-3 border-t border-zinc-800/80 pt-3">
-                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-600">
+                  <p className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-400">
                     Automated and assisted changes
                   </p>
                 </div>
@@ -310,7 +310,7 @@ export default function Examples() {
             <section aria-labelledby="automated-assisted-title" className="py-6 sm:py-8">
               <p
                 id="automated-assisted-title"
-                className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-500"
+                className="font-mono text-[11px] font-medium uppercase tracking-[0.18em] text-zinc-400"
               >
                 Automated and assisted changes
               </p>

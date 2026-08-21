@@ -76,7 +76,7 @@ export default function FrameworkGuide() {
           <ul className="mt-6 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             {frameworkGuideCopy.assumptions.map((assumption) => (
               <li key={assumption} className="flex gap-3">
-                <span aria-hidden="true" className="text-zinc-500">✓</span>
+                <span aria-hidden="true" className="text-zinc-400">✓</span>
                 <span>{assumption}</span>
               </li>
             ))}

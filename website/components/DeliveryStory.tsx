@@ -26,7 +26,7 @@ export default function DeliveryStory() {
             <p key={paragraph}>{paragraph}</p>
           ))}
         </div>
-        <footer className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-zinc-500 sm:text-sm">
+        <footer className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-zinc-400 sm:text-sm">
           {story.label}
         </footer>
       </blockquote>
