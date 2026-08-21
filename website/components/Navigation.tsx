@@ -24,7 +24,27 @@ export default function Navigation() {
           </span>
         </Link>
 
-        <nav aria-label="Primary navigation" className="flex items-center gap-1 sm:gap-3">
+        <details className="relative md:hidden">
+          <summary className="ds-button-link ds-focusable cursor-pointer list-none rounded-md px-2 py-2 text-sm font-medium text-zinc-400 [&::-webkit-details-marker]:hidden">
+            Menu
+          </summary>
+          <nav
+            aria-label="Primary navigation"
+            className="absolute right-0 top-[calc(100%+0.75rem)] w-44 border border-zinc-800 bg-zinc-950 p-2 shadow-lg"
+          >
+            {navItems.map((item) => (
+              <Link
+                key={item.href}
+                href={item.href}
+                className="ds-button-link ds-focusable block rounded-md px-3 py-2 text-sm font-medium text-zinc-400"
+              >
+                {item.label}
+              </Link>
+            ))}
+          </nav>
+        </details>
+
+        <nav aria-label="Primary navigation" className="hidden items-center gap-3 md:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
