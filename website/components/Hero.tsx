@@ -45,6 +45,7 @@ export default function Hero() {
             width={180}
             height={180}
             className="h-32 w-32 sm:h-44 sm:w-44 lg:h-56 lg:w-56"
+            priority
           />
         </div>
         <TextStack>
