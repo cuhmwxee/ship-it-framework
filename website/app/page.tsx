@@ -22,17 +22,13 @@ export default function Home() {
             <p>
               Delivery processes often describe everything around a change:
               planning, coordination, review, validation, and release. Those
-              practices can be useful, but their full weight is not necessary for
-              every change.
+              practices can be useful. The question is which of them this change
+              needs before it ships.
             </p>
-            {reflections.seen.slice(0, -1).map((line) => (
+            {reflections.seen.slice(0, 2).map((line) => (
               <p key={line}>{line}</p>
             ))}
           </div>
-
-          <p className="py-10 text-center text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:py-12 sm:text-3xl lg:text-4xl">
-            {reflections.seen[reflections.seen.length - 1]}
-          </p>
         </div>
       </Section>
 

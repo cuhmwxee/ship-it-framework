@@ -2,8 +2,12 @@ import BrandMark from "@/components/BrandMark";
 
 const heroCopy = {
   title: "Ship It!",
-  subtitle: "The minimal software delivery framework.",
-  motto: ["Build.", "Validate.", "Ship."],
+  answer:
+    "Ship It! is a lightweight software delivery framework for individuals, teams, and enterprises.",
+  hook: "Not every software change needs the same delivery process.",
+  detail:
+    "It helps you decide what each change needs before it ships, without replacing the practices that already work.",
+  closing: "Keep your process. Improve your delivery decisions.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
@@ -22,15 +26,12 @@ function TextStack({ children }: { children: React.ReactNode }) {
   return <div className="max-w-3xl space-y-10">{children}</div>;
 }
 
-function HeroMotto({ words }: { words: string[] }) {
+function HeroClosing({ children }: { children: React.ReactNode }) {
   return (
     <p
-      aria-label={words.join(" ")}
-      className="flex flex-col gap-1 font-mono text-sm uppercase tracking-[0.2em] text-zinc-500 sm:flex-row sm:gap-3 sm:text-base"
+      className="font-mono text-sm uppercase tracking-[0.16em] text-zinc-500 sm:text-base"
     >
-      {words.map((word) => (
-        <span key={word}>{word}</span>
-      ))}
+      {children}
     </p>
   );
 }
@@ -47,7 +48,7 @@ export default function Hero() {
           />
         </div>
         <TextStack>
-          <div className="space-y-5">
+          <div className="space-y-6">
             <h1
               id="hero-title"
               className="ds-type-hero leading-none"
@@ -55,10 +56,18 @@ export default function Hero() {
               {heroCopy.title}
             </h1>
             <p className="max-w-2xl text-xl leading-relaxed text-zinc-300 sm:text-2xl">
-              {heroCopy.subtitle}
+              {heroCopy.answer}
             </p>
           </div>
-          <HeroMotto words={heroCopy.motto} />
+          <div className="max-w-2xl space-y-4 border-l border-zinc-700 pl-5 sm:pl-6">
+            <p className="text-lg font-medium leading-relaxed text-zinc-100 sm:text-xl">
+              {heroCopy.hook}
+            </p>
+            <p className="text-lg leading-relaxed text-zinc-400 sm:text-xl">
+              {heroCopy.detail}
+            </p>
+          </div>
+          <HeroClosing>{heroCopy.closing}</HeroClosing>
         </TextStack>
       </div>
     </SectionContainer>

@@ -1,47 +1,6 @@
+import DeliveryStory from "@/components/DeliveryStory";
 import NavigationCard from "@/components/NavigationCard";
-import ReflectionStatement from "@/components/ReflectionStatement";
 import Section from "@/components/ui/Section";
-import { reflections } from "@/content/reflections";
-
-const foundationCopy = {
-  title: "Foundation",
-  body: [
-    "Software changes are becoming smaller, more frequent and increasingly AI-assisted.",
-    "Teams can produce changes faster than many delivery processes were designed to handle.",
-    "Most software delivery frameworks describe everything. Ship It! asks what remains after everything unnecessary has been removed.",
-    "The result is a minimal workflow that still describes every software change.",
-  ],
-};
-
-const foundationExample = {
-  title: "An example",
-  situation: "A small, low-risk update needs to be delivered quickly.",
-  question: "Does this still need the same delivery model as a larger change?",
-  workflow: {
-    input: "A small change request.",
-    development: "Implement the update.",
-    validation: "Verify that the update works as intended.",
-    ship: "Release the change as soon as confidence is sufficient.",
-  },
-  takeaway:
-    "Ship It! describes the same four concepts regardless of the size or urgency of the change.",
-};
-
-const anotherFoundationExample = {
-  title: "An another example",
-  situation:
-    "A customer-facing change affects a critical part of the product.",
-  question:
-    "What level of validation is needed before this change can be shipped?",
-  workflow: {
-    input: "A change request with a meaningful customer impact.",
-    development: "Implement the change with the necessary safeguards.",
-    validation: "Use independent review, automated checks, and targeted testing.",
-    ship: "Release when the evidence supports the required level of confidence.",
-  },
-  takeaway:
-    "The workflow stays the same; the depth of each step grows with the change's risk and impact.",
-};
 
 const destinations = [
   {
@@ -75,56 +34,7 @@ export default function ExploreFurther() {
   return (
     <Section spacing="default">
       <div className="ds-content">
-        <div className="mb-4">
-          <ReflectionStatement emphasis={0} lines={reflections.aiEra} />
-        </div>
-
-        <article className="border-t border-zinc-800/80 pt-10 sm:pt-12">
-          <h3 className="text-xl font-semibold leading-tight text-zinc-100 sm:text-2xl">
-            {foundationExample.title}
-          </h3>
-
-          <div className="mt-8 space-y-8">
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Situation
-              </h4>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                {foundationExample.situation}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Question
-              </h4>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-100 sm:text-xl">
-                {foundationExample.question}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Ship It!
-              </h4>
-              <ul className="mt-3 space-y-2 font-mono text-base leading-relaxed text-zinc-300 sm:text-lg">
-                <li>Input: {foundationExample.workflow.input}</li>
-                <li>Development: {foundationExample.workflow.development}</li>
-                <li>Validation: {foundationExample.workflow.validation}</li>
-                <li>Ship: {foundationExample.workflow.ship}</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Takeaway
-              </h4>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                {foundationExample.takeaway}
-              </p>
-            </div>
-          </div>
-        </article>
+        <DeliveryStory />
 
         <article className="mt-16 border-t border-zinc-800/80 pt-10 sm:mt-20 sm:pt-12">
           <h2 className="ds-type-section-heading text-zinc-100">
@@ -132,15 +42,19 @@ export default function ExploreFurther() {
           </h2>
           <div className="mt-4 space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             <p>
-              Not every software change needs the full delivery process. Ship It!
-              makes the minimum workflow explicit: identify the Input, develop the
-              change, validate it independently, and Ship when there is sufficient
-              confidence.
+              Start with the change. Develop the solution. Validate it
+              independently. Ship when the evidence gives the appropriate level
+              of confidence.
             </p>
             <p>
-              When a process is heavier than the change, teams naturally compress
-              or work around steps. Ship It! makes that reduction an intentional
-              delivery decision instead of an informal exception.
+              The workflow remains the same; the depth of each step grows with
+              the change&apos;s risk and impact. This turns informal shortcuts into
+              intentional delivery decisions.
+            </p>
+            <p>
+              Small changes can stay small. Critical changes can receive the
+              validation they deserve. Teams spend their effort where it creates
+              confidence, instead of carrying process that adds none.
             </p>
           </div>
         </article>
@@ -165,79 +79,6 @@ export default function ExploreFurther() {
             </p>
           </div>
         </article>
-
-        <div className="mt-16 sm:mt-20">
-          <ReflectionStatement
-            emphasis={0}
-            lines={reflections.keepProcess}
-          />
-        </div>
-
-        <article className="mt-16 border-t border-zinc-800/80 pt-10 sm:mt-20 sm:pt-12">
-          <h3 className="text-xl font-semibold leading-tight text-zinc-100 sm:text-2xl">
-            {anotherFoundationExample.title}
-          </h3>
-
-          <div className="mt-8 space-y-8">
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Situation
-              </h4>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                {anotherFoundationExample.situation}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Question
-              </h4>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-100 sm:text-xl">
-                {anotherFoundationExample.question}
-              </p>
-            </div>
-
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Ship It!
-              </h4>
-              <ul className="mt-3 space-y-2 font-mono text-base leading-relaxed text-zinc-300 sm:text-lg">
-                <li>Input: {anotherFoundationExample.workflow.input}</li>
-                <li>Development: {anotherFoundationExample.workflow.development}</li>
-                <li>Validation: {anotherFoundationExample.workflow.validation}</li>
-                <li>Ship: {anotherFoundationExample.workflow.ship}</li>
-              </ul>
-            </div>
-
-            <div>
-              <h4 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-500">
-                Takeaway
-              </h4>
-              <p className="mt-3 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-                {anotherFoundationExample.takeaway}
-              </p>
-            </div>
-          </div>
-        </article>
-
-        <div className="mt-16 sm:mt-20">
-          <ReflectionStatement
-            emphasis={0}
-            lines={reflections.reduction}
-          />
-        </div>
-
-        <h2
-          id="foundation-title"
-          className="mb-4 mt-4 ds-type-section-heading text-zinc-100"
-        >
-          {foundationCopy.title}
-        </h2>
-        <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-          {foundationCopy.body.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
-        </div>
 
         <h2 className="mb-4 mt-16 ds-type-section-heading text-zinc-100 sm:mt-20">
           Continue reading
