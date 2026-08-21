@@ -1,9 +1,16 @@
+import type { Metadata } from "next";
 import ExploreFurther from "@/components/ExploreFurther";
 import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import PageShell from "@/components/PageShell";
 import Section from "@/components/ui/Section";
 import { reflections } from "@/content/reflections";
+
+export const metadata: Metadata = {
+  alternates: {
+    canonical: "/",
+  },
+};
 
 export default function Home() {
   return (
