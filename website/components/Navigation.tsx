@@ -19,7 +19,7 @@ export default function Navigation() {
           aria-label="Ship It! — Home"
           className="ds-brand-link ds-focusable flex shrink-0 items-center gap-3 rounded-md text-zinc-50"
         >
-          <BrandMark width={28} height={28} className="h-7 w-7 shrink-0 sm:h-6 sm:w-6" />
+          <BrandMark width={28} height={28} className="h-7 w-7 shrink-0 sm:h-6 sm:w-6" priority />
           <span className="hidden text-lg font-semibold tracking-tight sm:block">
             Ship It!
           </span>
