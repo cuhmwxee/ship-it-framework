@@ -19,8 +19,8 @@ export default function ReflectionStatement({
 
   return (
     <SectionContainer>
-      <div className="mx-auto flex max-w-3xl justify-center">
-        <article className="space-y-5 text-center">
+      <div className="mx-auto max-w-3xl">
+        <article className="space-y-5">
           {lines.map((line, index) => (
             <p
               key={line}
