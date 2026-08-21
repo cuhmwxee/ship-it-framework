@@ -1,6 +1,4 @@
 export const reflections = {
-  proportional: ["Software delivery should be proportional."],
-
   seen: [
     "Not every software change needs every step your process describes.",
     "Most software delivery frameworks add concepts. Ship It! removes them.",
@@ -44,7 +42,7 @@ export const reflections = {
     "Ship It! was created in the AI era for the AI era.",
   ],
 
-  keepProcess: ["Keep your process. Improve your delivery decisions."],
-
-  reduction: ["Ship It! is an exercise in reduction."],
+  fit: [
+    "Ship It! does not replace workflows that already work. It helps when the current workflow no longer fits the change.",
+  ],
 };

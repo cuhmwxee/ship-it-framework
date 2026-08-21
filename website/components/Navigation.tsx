@@ -16,6 +16,7 @@ export default function Navigation() {
       <div className="mx-auto flex h-16 max-w-5xl items-center justify-between gap-6 px-6 sm:px-10 lg:px-12">
         <Link
           href="/"
+          aria-label="Ship It! — Home"
           className="ds-brand-link ds-focusable flex shrink-0 items-center gap-3 rounded-md text-zinc-50"
         >
           <BrandMark width={28} height={28} className="h-7 w-7 shrink-0 sm:h-6 sm:w-6" />

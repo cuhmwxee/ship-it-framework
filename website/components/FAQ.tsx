@@ -137,7 +137,7 @@ function FAQItem({
 }) {
   return (
     <article className="border-t border-zinc-800/80 py-4 sm:py-5">
-      <h3 className="m-0">
+      <h2 className="m-0">
         <button
           id={buttonId}
           type="button"
@@ -156,19 +156,21 @@ function FAQItem({
             ▾
           </span>
         </button>
-      </h3>
+      </h2>
       <div
         id={panelId}
         role="region"
         aria-labelledby={buttonId}
-        className={`grid overflow-hidden transition-all duration-200 motion-reduce:transition-none ${
-          isOpen ? "mt-3 max-h-80 opacity-100" : "max-h-0 opacity-0"
+        className={`grid transition-[grid-template-rows] duration-200 ease-in-out motion-reduce:transition-none ${
+          isOpen ? "mt-3 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
         }`}
       >
-        <div className="space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
-          {answer.map((line) => (
-            <p key={line}>{line}</p>
-          ))}
+        <div className="overflow-hidden">
+          <div className="space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
+            {answer.map((line) => (
+              <p key={line}>{line}</p>
+            ))}
+          </div>
         </div>
       </div>
     </article>

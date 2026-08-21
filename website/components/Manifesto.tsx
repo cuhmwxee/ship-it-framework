@@ -32,7 +32,7 @@ function ManifestoPrincipleItem({
 }) {
   return (
     <li className="flex flex-col gap-2 py-5 sm:flex-row sm:items-baseline sm:gap-6 sm:py-6">
-      <span className="text-[11px] font-mono uppercase tracking-[0.35em] text-zinc-500">
+      <span className="text-[11px] font-mono uppercase tracking-[0.35em] text-zinc-400">
         {String(index + 1).padStart(2, "0")}
       </span>
       <p className="text-lg leading-relaxed text-zinc-300 sm:text-xl">{text}</p>

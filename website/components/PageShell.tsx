@@ -4,10 +4,10 @@ import Navigation from "@/components/Navigation";
 
 export default function PageShell({ children }: { children: ReactNode }) {
   return (
-    <main className="ds-page-shell">
+    <div className="ds-page-shell">
       <Navigation />
-      {children}
+      <main>{children}</main>
       <Footer />
-    </main>
+    </div>
   );
 }

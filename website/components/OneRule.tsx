@@ -19,7 +19,7 @@ function RuleStatement() {
     <div className="mx-auto max-w-2xl text-center">
       <h2
         id="one-rule-title"
-        className="mb-8 font-mono text-[11px] uppercase tracking-[0.35em] text-zinc-500 sm:text-xs"
+        className="mb-8 font-mono text-[11px] uppercase tracking-[0.35em] text-zinc-400 sm:text-xs"
       >
         {oneRuleCopy.title}
       </h2>

@@ -29,7 +29,7 @@ function TextStack({ children }: { children: React.ReactNode }) {
 function HeroClosing({ children }: { children: React.ReactNode }) {
   return (
     <p
-      className="font-mono text-sm uppercase tracking-[0.16em] text-zinc-500 sm:text-base"
+      className="font-mono text-sm uppercase tracking-[0.16em] text-zinc-400 sm:text-base"
     >
       {children}
     </p>
