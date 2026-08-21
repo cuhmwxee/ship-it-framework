@@ -30,6 +30,15 @@ export default function Home() {
             {reflections.seen.slice(0, 2).map((line) => (
               <p key={line}>{line}</p>
             ))}
+            <p>
+              Software changes are becoming smaller, more frequent and
+              increasingly AI-assisted. Teams can produce changes faster than
+              many delivery processes were designed to handle.{" "}
+              <strong>
+                AI can make changes faster. It doesn&apos;t make unnecessary
+                steps necessary.
+              </strong>
+            </p>
           </div>
         </div>
       </Section>
