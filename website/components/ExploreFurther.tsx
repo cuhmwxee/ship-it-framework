@@ -80,11 +80,7 @@ export default function ExploreFurther() {
           </div>
         </article>
 
-        <p className="mt-16 text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:mt-20 sm:text-3xl lg:text-4xl">
-          The framework stays small. Delivery decisions stay intentional.
-        </p>
-
-        <h2 className="mb-4 mt-6 ds-type-section-heading text-zinc-100">
+        <h2 className="mb-4 mt-16 ds-type-section-heading text-zinc-100 sm:mt-20">
           Continue reading
         </h2>
         <ul className="divide-y divide-zinc-800/80 border-y border-zinc-800/80">
