@@ -89,7 +89,7 @@ export default function ExploreFurther() {
             Turns out, the process can be smaller.
           </p>
           <p className="mt-3 text-sm text-zinc-400">
-            Trust me, bro. We checked.
+            Empirically tested. In production.
           </p>
         </div>
 
