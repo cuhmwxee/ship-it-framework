@@ -3,7 +3,7 @@ import BrandMark from "@/components/BrandMark";
 const heroCopy = {
   title: "Ship It!",
   answer:
-    "Ship It! is a lightweight software delivery framework for individuals, teams, and enterprises.",
+    "Ship It! is a lightweight software delivery framework for teams that already have a process.",
   hook: "Not every software change needs the same delivery process.",
   detail:
     "Ship It! helps you decide what each change needs before it ships, without replacing the practices that already work.",
