@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/faq",
   },
+  openGraph: {
+    title: "FAQ",
+    description:
+      "Answers to common questions about what Ship It! is, who it's for, and how it fits alongside Scrum, Kanban and your existing process.",
+    url: "/faq",
+  },
+  twitter: {
+    title: "FAQ",
+    description:
+      "Answers to common questions about what Ship It! is, who it's for, and how it fits alongside Scrum, Kanban and your existing process.",
+  },
 };
 
 export default function FAQPage() {
