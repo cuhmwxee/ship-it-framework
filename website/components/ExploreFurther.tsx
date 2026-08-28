@@ -1,6 +1,6 @@
 import DeliveryStory from "@/components/DeliveryStory";
 import NavigationCard from "@/components/NavigationCard";
-import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 
 const destinations = [
   {
@@ -32,9 +32,10 @@ const destinations = [
 
 export default function ExploreFurther() {
   return (
-    <Section spacing="default">
-      <div className="ds-content">
-        <DeliveryStory />
+    <div className="ds-section ds-section--default">
+      <Container>
+        <div className="ds-content">
+          <DeliveryStory />
 
         <p className="mt-8 text-lg leading-relaxed text-zinc-300 sm:mt-10 sm:text-xl">
           If you&apos;ve ever skipped a step because the change was tiny, you already get it.
@@ -105,7 +106,8 @@ export default function ExploreFurther() {
             </li>
           ))}
         </ul>
-      </div>
-    </Section>
+        </div>
+      </Container>
+    </div>
   );
 }
