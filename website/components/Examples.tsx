@@ -60,12 +60,12 @@ const examplesCopy = {
       ],
       question: "Does this change really need the same process as a high-risk production change?",
       analysis: [
-        "The team examined what evidence was actually necessary before shipping this specific change.",
-        "The version bump touched no application code, and existing checks were already run. The question was not whether to validate the update, but what validation this particular change actually needed.",
+        "The team stopped and asked whether this particular change actually needed the same process as a change capable of affecting the whole system — a concrete application of Ship It!'s central question: what does this change need before it ships?",
+        "The version bump touched no application code, and existing checks were already run. The question was not whether to validate the update, but what validation this particular change actually required.",
       ],
       decision: [
-        "For this specific illustrative change, the ticket, security review, architecture review, change approval, and release-manager handoff were not required.",
-        "Validation for this change meant running the existing checks and confirming the results — nothing more. This is a shippable decision for this change, not a universal rule for every dependency update.",
+        "The existing checks provided the validation needed for this change, so the additional review and approval steps — ticket, security review, architecture review, change approval, and release-manager handoff — were removed from this specific change's path.",
+        "This is a decision about this specific change, not a blanket rule for dependency updates. The standard process remains available whenever a change's risk or impact calls for it.",
       ],
       workflow: {
         input: "Automated dependency update request (Pino 9.13.0 → 9.13.1).",
@@ -74,11 +74,11 @@ const examplesCopy = {
         ship: "Release the update without additional approval gates.",
       },
       practice: [
-        "Reducing the delivery path for this change is not about skipping validation.",
+        "Reducing the delivery path for this change was not about skipping validation or reducing rigor.",
         "The delivery path was reduced to what this change actually needed, while more demanding validation remains appropriate when the risk and impact of a change require it.",
       ],
       whyItMatters: [
-        "When teams do not spend review, approval, handoff, and testing effort on work that does not need that level of process, that effort remains available for work where it creates more value — including deeper testing and validation for changes with greater risk and impact.",
+        "When teams do not spend review, approval, handoff, and deployment-window effort on work that does not need that level of process, that effort remains available for work where it creates more value — including deeper testing and validation for changes with greater risk and impact.",
       ],
       failureCase: [
         "If Validation fails, that failure becomes new Input and the work continues back through Development and Validation.",

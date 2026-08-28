@@ -9,8 +9,6 @@ const story = {
     "Under Ship It!, the answer was no. The existing checks provided the validation this change needed, so the additional review and approval steps were removed from its path.",
     "From then on, the team could spend that effort where it created more value — including testing and validation that mattered for changes with greater risk and impact.",
   ],
-  conclusion:
-    "Ship It! makes that question explicit: what does this change need before it ships?",
 };
 
 export default function DeliveryStory() {
@@ -33,14 +31,11 @@ export default function DeliveryStory() {
           {story.label}
         </footer>
       </blockquote>
-      <p className="mt-8 text-xl font-medium leading-relaxed text-zinc-100 sm:text-2xl">
-        {story.conclusion}
-      </p>
-      <p className="mt-6 text-base font-medium text-zinc-300 sm:text-lg">
-        <InlineLink href="/examples#dependency-update">
-          Read the dependency update example →
+      <div className="mt-8">
+        <InlineLink href="/examples#dependency-update" className="text-base font-medium sm:text-lg">
+          Read the full dependency update example →
         </InlineLink>
-      </p>
+      </div>
     </article>
   );
 }
