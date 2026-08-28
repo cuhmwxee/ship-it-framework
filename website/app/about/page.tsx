@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/about",
   },
+  openGraph: {
+    title: "About",
+    description:
+      "The story behind Ship It! — why it defines the minimum shared workflow every software change follows, from Input to Ship.",
+    url: "/about",
+  },
+  twitter: {
+    title: "About",
+    description:
+      "The story behind Ship It! — why it defines the minimum shared workflow every software change follows, from Input to Ship.",
+  },
 };
 
 export default function AboutPage() {

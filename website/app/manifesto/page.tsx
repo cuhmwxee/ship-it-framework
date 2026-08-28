@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/manifesto",
   },
+  openGraph: {
+    title: "Manifesto",
+    description:
+      "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",
+    url: "/manifesto",
+  },
+  twitter: {
+    title: "Manifesto",
+    description:
+      "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",
+  },
 };
 
 export default function ManifestoPage() {

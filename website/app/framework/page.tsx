@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   alternates: {
     canonical: "/framework",
   },
+  openGraph: {
+    title: "Framework",
+    description:
+      "The four concepts of Ship It!: Input, Development, Validation, and Ship — the minimum workflow every software change follows.",
+    url: "/framework",
+  },
+  twitter: {
+    title: "Framework",
+    description:
+      "The four concepts of Ship It!: Input, Development, Validation, and Ship — the minimum workflow every software change follows.",
+  },
 };
 
 export default function FrameworkPage() {
