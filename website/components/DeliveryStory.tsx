@@ -1,14 +1,13 @@
+import InlineLink from "@/components/ui/InlineLink";
+
 const story = {
   title: "A familiar delivery story",
   label: "Illustrative scenario",
   paragraphs: [
-    "The dependency update was small: Pino 9.13.0 to 9.13.1. We changed a version, ran the existing checks, and made no application-code changes.",
-    "But it entered the same path as a high-risk production change: a ticket, security review, architecture review, change approval, release-manager handoff, and the next deployment window.",
-    "The question was never whether to validate it. The question was whether this change needed the same delivery process as a change that could affect the whole system.",
-    "Under Ship It!, the team asked what this change needed before it shipped, instead of defaulting to the standard path.",
-    "The version bump touched no application code, and the existing checks already provided the evidence needed for this change. So Validation for this change meant running those checks and confirming the results — nothing more.",
-    "The ticket, security review, architecture review, change approval, and release-manager handoff were not required for this specific change. They remain available for changes that need them.",
-    "This is what this change needed. It is not a rule for every dependency update.",
+    "The dependency update was small: Pino 9.13.0 to 9.13.1. We changed a version, ran the existing checks, and made no application-code changes. Yet it entered the same delivery path as a high-risk production change.",
+    "The team stopped and asked: does this change really need the same process?",
+    "Under Ship It!, the answer was no. The existing checks provided the validation this change needed, so the additional review and approval steps were removed from its path.",
+    "From then on, the team could spend that effort where it created more value — including testing and validation that mattered for changes with greater risk and impact.",
   ],
   conclusion:
     "Ship It! makes that question explicit: what does this change need before it ships?",
@@ -36,6 +35,11 @@ export default function DeliveryStory() {
       </blockquote>
       <p className="mt-8 text-xl font-medium leading-relaxed text-zinc-100 sm:text-2xl">
         {story.conclusion}
+      </p>
+      <p className="mt-6 text-base font-medium text-zinc-300 sm:text-lg">
+        <InlineLink href="/examples#dependency-update">
+          Read the dependency update example →
+        </InlineLink>
       </p>
     </article>
   );
