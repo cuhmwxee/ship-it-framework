@@ -4,7 +4,7 @@ import Framework from "@/components/Framework";
 import Hero from "@/components/Hero";
 import PageShell from "@/components/PageShell";
 import ReflectionStatement from "@/components/ReflectionStatement";
-import Section from "@/components/ui/Section";
+import Container from "@/components/ui/Container";
 import { reflections } from "@/content/reflections";
 
 export const metadata: Metadata = {
@@ -18,30 +18,32 @@ export default function Home() {
     <PageShell>
       <Hero />
 
-      <Section spacing="compact" className="pt-4">
-        <div className="ds-content">
-          <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-            <p>
-              Delivery processes often describe everything around a change:
-              planning, coordination, review, validation, and release. Those
-              practices can be useful. The question is which of them this change
-              needs before it ships.
-            </p>
-            {reflections.seen.slice(0, 2).map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-            <p>
-              Software changes are becoming smaller, more frequent and
-              increasingly AI-assisted. Teams can produce changes faster than
-              many delivery processes were designed to handle.{" "}
-              <strong>
-                AI can make changes faster. It doesn&apos;t make unnecessary
-                steps necessary.
-              </strong>
-            </p>
+      <div className="ds-section ds-section--compact pt-4">
+        <Container>
+          <div className="ds-content">
+            <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              <p>
+                Delivery processes often describe everything around a change:
+                planning, coordination, review, validation, and release. Those
+                practices can be useful. The question is which of them this change
+                needs before it ships.
+              </p>
+              {reflections.seen.slice(0, 2).map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+              <p>
+                Software changes are becoming smaller, more frequent and
+                increasingly AI-assisted. Teams can produce changes faster than
+                many delivery processes were designed to handle.{" "}
+                <strong>
+                  AI can make changes faster. It doesn&apos;t make unnecessary
+                  steps necessary.
+                </strong>
+              </p>
+            </div>
           </div>
-        </div>
-      </Section>
+        </Container>
+      </div>
 
       <ReflectionStatement
         lines={["What if the process is the thing that needs simplifying?"]}

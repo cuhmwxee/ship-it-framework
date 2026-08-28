@@ -5,9 +5,9 @@ type ReflectionStatementProps = {
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
   return (
-    <section className="mx-auto w-full px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
+    <div className="mx-auto w-full px-6 py-16 sm:px-10 sm:py-20 lg:px-12 lg:py-24">
       {children}
-    </section>
+    </div>
   );
 }
 

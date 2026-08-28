@@ -1,6 +1,3 @@
-"use client";
-
-import { useState } from "react";
 import InlineLink from "@/components/ui/InlineLink";
 import PageHero from "@/components/PageHero";
 import Section from "@/components/ui/Section";
@@ -123,89 +120,39 @@ const faqCopy = {
 function FAQItem({
   question,
   answer,
-  isOpen,
-  onToggle,
-  panelId,
-  buttonId,
 }: {
   question: string;
   answer: string[];
-  isOpen: boolean;
-  onToggle: () => void;
-  panelId: string;
-  buttonId: string;
 }) {
   return (
-    <article className="border-t border-zinc-800/80 py-4 sm:py-5">
-      <h2 className="m-0">
-        <button
-          id={buttonId}
-          type="button"
-          aria-expanded={isOpen}
-          aria-controls={panelId}
-          onClick={onToggle}
-          className="ds-button-link flex w-full items-center justify-between gap-4 py-3 text-left text-base font-medium leading-snug text-zinc-50 focus:outline-none focus-visible:ring-2 focus-visible:ring-zinc-400 focus-visible:ring-offset-2 focus-visible:ring-offset-zinc-950 sm:text-lg"
-        >
-          <span>{question}</span>
+    <details className="group border-t border-zinc-800/80 py-4 sm:py-5">
+      <summary className="ds-button-link ds-focusable flex w-full cursor-pointer list-none items-center justify-between gap-4 py-3 text-left text-base font-medium leading-snug text-zinc-50 [&::-webkit-details-marker]:hidden sm:text-lg">
+          <span role="heading" aria-level={2}>{question}</span>
           <span
             aria-hidden="true"
-            className={`text-lg text-zinc-400 transition-transform duration-200 motion-reduce:transition-none ${
-              isOpen ? "rotate-180" : "rotate-0"
-            }`}
+            className="text-lg text-zinc-400 transition-transform duration-200 motion-reduce:transition-none group-open:rotate-180"
           >
             ▾
           </span>
-        </button>
-      </h2>
-      <div
-        id={panelId}
-        role="region"
-        aria-labelledby={buttonId}
-        className={`grid transition-[grid-template-rows] duration-200 ease-in-out motion-reduce:transition-none ${
-          isOpen ? "mt-3 grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
-        }`}
-      >
-        <div className="overflow-hidden">
-          <div className="space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
-            {answer.map((line) => (
-              <p key={line}>{line}</p>
-            ))}
-          </div>
-        </div>
+      </summary>
+      <div className="mt-3 space-y-2 pb-2 text-base leading-relaxed text-zinc-300 sm:text-lg">
+        {answer.map((line) => (
+          <p key={line}>{line}</p>
+        ))}
       </div>
-    </article>
+    </details>
   );
 }
 
 export default function FAQ() {
-  const [openItem, setOpenItem] = useState<number | null>(null);
-
-  const toggleItem = (index: number) => {
-    setOpenItem(current => current === index ? null : index);
-  };
-
   return (
     <Section id="faq" labelledBy="faq-title">
       <div className="ds-content">
         <PageHero title={faqCopy.title} titleId="faq-title" className="mb-6" /> 
         <div>
-          {faqCopy.items.map((item, index) => {
-            const isOpen = openItem === index;
-            const buttonId = `faq-button-${index}`;
-            const panelId = `faq-panel-${index}`;
-
-            return (
-              <FAQItem
-                key={item.question}
-                question={item.question}
-                answer={item.answer}
-                isOpen={isOpen}
-                onToggle={() => toggleItem(index)}
-                panelId={panelId}
-                buttonId={buttonId}
-              />
-            );
-          })}
+          {faqCopy.items.map((item) => (
+            <FAQItem key={item.question} question={item.question} answer={item.answer} />
+          ))}
         </div>
         <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
           If your question is about applying these ideas in real delivery situations,
