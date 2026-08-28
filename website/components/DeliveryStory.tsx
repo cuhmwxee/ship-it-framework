@@ -5,6 +5,10 @@ const story = {
     "The dependency update was small: Pino 9.13.0 to 9.13.1. We changed a version, ran the existing checks, and made no application-code changes.",
     "But it entered the same path as a high-risk production change: a ticket, security review, architecture review, change approval, release-manager handoff, and the next deployment window.",
     "The question was never whether to validate it. The question was whether this change needed the same delivery process as a change that could affect the whole system.",
+    "Under Ship It!, the team asked what this change needed before it shipped, instead of defaulting to the standard path.",
+    "The version bump touched no application code, and the existing checks already provided the evidence needed for this change. So Validation for this change meant running those checks and confirming the results — nothing more.",
+    "The ticket, security review, architecture review, change approval, and release-manager handoff were not required for this specific change. They remain available for changes that need them.",
+    "This is what this change needed. It is not a rule for every dependency update.",
   ],
   conclusion:
     "Ship It! makes that question explicit: what does this change need before it ships?",
@@ -25,27 +29,6 @@ export default function DeliveryStory() {
           {story.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
-          <p>
-            Under Ship It!, the team asked what <em>this</em> change needed before it shipped,
-            instead of defaulting to the standard path.
-          </p>
-          <p>
-            The version bump touched no application code, and the existing checks were enough
-            to give confidence in the change. So Validation for this change meant running those
-            checks and confirming the results — nothing more.
-          </p>
-          <p>
-            The ticket, security review, architecture review, change approval, and release-manager
-            handoff were not required for this specific change. They remain available for changes
-            that need them.
-          </p>
-          <p>
-            This is what this change needed. It is not a rule for every dependency update.
-          </p>
-          <p>
-            If Validation had failed, that failure would have become new Input and the work would
-            have continued from there.
-          </p>
         </div>
         <footer className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-zinc-400 sm:text-sm">
           {story.label}
