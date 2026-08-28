@@ -25,6 +25,27 @@ export default function DeliveryStory() {
           {story.paragraphs.map((paragraph) => (
             <p key={paragraph}>{paragraph}</p>
           ))}
+          <p>
+            Under Ship It!, the team asked what <em>this</em> change needed before it shipped,
+            instead of defaulting to the standard path.
+          </p>
+          <p>
+            The version bump touched no application code, and the existing checks were enough
+            to give confidence in the change. So Validation for this change meant running those
+            checks and confirming the results — nothing more.
+          </p>
+          <p>
+            The ticket, security review, architecture review, change approval, and release-manager
+            handoff were not required for this specific change. They remain available for changes
+            that need them.
+          </p>
+          <p>
+            This is what this change needed. It is not a rule for every dependency update.
+          </p>
+          <p>
+            If Validation had failed, that failure would have become new Input and the work would
+            have continued from there.
+          </p>
         </div>
         <footer className="mt-6 font-mono text-xs uppercase tracking-[0.18em] text-zinc-400 sm:text-sm">
           {story.label}
