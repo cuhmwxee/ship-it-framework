@@ -55,16 +55,36 @@ const examplesCopy = {
       id: "dependency-update",
       title: "Dependency update",
       situation: [
-        "An automated dependency update waits for approvals and the next release window.",
+        "The dependency update was small: Pino 9.13.0 to 9.13.1. The team changed a version, ran existing checks, and made no application-code changes.",
+        "Despite being a patch version bump touching no application code, the change entered the standard path designed for high-risk production changes: a ticket, security review, architecture review, change approval, release-manager handoff, and waiting for the next deployment window.",
       ],
-      question: "Does a version update require the same process as a product feature?",
+      question: "Does this change really need the same process as a high-risk production change?",
+      analysis: [
+        "The team examined what evidence was actually necessary before shipping this specific change.",
+        "The version bump touched no application code, and existing checks were already run. The question was not whether to validate the update, but what validation this particular change actually needed.",
+      ],
+      decision: [
+        "For this specific illustrative change, the ticket, security review, architecture review, change approval, and release-manager handoff were not required.",
+        "Validation for this change meant running the existing checks and confirming the results — nothing more. This is a shippable decision for this change, not a universal rule for every dependency update.",
+      ],
       workflow: {
-        input: "Automated update request.",
-        development: "Apply the dependency update.",
-        validation: "Run tests and compatibility checks.",
-        ship: "Release the update.",
+        input: "Automated dependency update request (Pino 9.13.0 → 9.13.1).",
+        development: "Apply the version bump without application-code changes.",
+        validation: "Run existing automated checks and confirm passing results.",
+        ship: "Release the update without additional approval gates.",
       },
-      takeaway: "Automation can trigger Input, but it does not remove the need for Validation.",
+      practice: [
+        "Reducing the delivery path for this change is not about skipping validation.",
+        "The delivery path was reduced to what this change actually needed, while more demanding validation remains appropriate when the risk and impact of a change require it.",
+      ],
+      whyItMatters: [
+        "When teams do not spend review, approval, handoff, and testing effort on work that does not need that level of process, that effort remains available for work where it creates more value — including deeper testing and validation for changes with greater risk and impact.",
+      ],
+      failureCase: [
+        "If Validation fails, that failure becomes new Input and the work continues back through Development and Validation.",
+      ],
+      takeaway: "Ship It! makes delivery decisions explicit by matching process depth to what the change actually needs.",
+      label: "Illustrative scenario",
     },
     {
       id: "automated-change",
@@ -191,6 +211,13 @@ const orderedExampleIds = [
 ] as Array<(typeof examplesCopy.items)[number]["id"]>;
 
 function Example({ example }: { example: (typeof examplesCopy.items)[number] }) {
+  const analysis = "analysis" in example ? example.analysis : undefined;
+  const decision = "decision" in example ? example.decision : undefined;
+  const practice = "practice" in example ? example.practice : undefined;
+  const whyItMatters = "whyItMatters" in example ? example.whyItMatters : undefined;
+  const failureCase = "failureCase" in example ? example.failureCase : undefined;
+  const label = "label" in example ? example.label : undefined;
+
   return (
     <article
       id={example.id}
@@ -214,12 +241,38 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
 
         <div>
           <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
-            Question
+            The question
           </h3>
           <p className="mt-3 text-xl leading-relaxed text-zinc-100 sm:text-2xl">
             {example.question}
           </p>
         </div>
+
+        {analysis ? (
+          <div>
+            <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
+              The analysis
+            </h3>
+            <div className="mt-3 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              {analysis.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {decision ? (
+          <div>
+            <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
+              The Ship It! decision
+            </h3>
+            <div className="mt-3 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              {decision.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
 
         <div>
           <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
@@ -233,6 +286,45 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
           </ul>
         </div>
 
+        {practice ? (
+          <div>
+            <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
+              What changed in practice
+            </h3>
+            <div className="mt-3 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              {practice.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {whyItMatters ? (
+          <div>
+            <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
+              Why that matters
+            </h3>
+            <div className="mt-3 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              {whyItMatters.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
+        {failureCase ? (
+          <div>
+            <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
+              Failure case
+            </h3>
+            <div className="mt-3 space-y-2 text-lg leading-relaxed text-zinc-300 sm:text-xl">
+              {failureCase.map((line) => (
+                <p key={line}>{line}</p>
+              ))}
+            </div>
+          </div>
+        ) : null}
+
         <div>
           <h3 className="font-mono text-sm font-medium uppercase tracking-[0.18em] text-zinc-400">
             Takeaway
@@ -241,6 +333,12 @@ function Example({ example }: { example: (typeof examplesCopy.items)[number] }) 
             {example.takeaway}
           </p>
         </div>
+
+        {label ? (
+          <footer className="font-mono text-xs uppercase tracking-[0.18em] text-zinc-400 sm:text-sm">
+            {label}
+          </footer>
+        ) : null}
       </div>
     </article>
   );

@@ -1,3 +1,5 @@
+import InlineLink from "@/components/ui/InlineLink";
+
 const story = {
   title: "A familiar delivery story",
   label: "Illustrative scenario",
@@ -33,6 +35,11 @@ export default function DeliveryStory() {
       </blockquote>
       <p className="mt-8 text-xl font-medium leading-relaxed text-zinc-100 sm:text-2xl">
         {story.conclusion}
+      </p>
+      <p className="mt-6 text-base font-medium text-zinc-300 sm:text-lg">
+        <InlineLink href="/examples#dependency-update">
+          Read the dependency update example →
+        </InlineLink>
       </p>
     </article>
   );
