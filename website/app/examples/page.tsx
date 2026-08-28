@@ -5,20 +5,20 @@ import PageShell from "@/components/PageShell";
 export const metadata: Metadata = {
   title: "Examples",
   description:
-    "See how Input, Development, Validation and Ship apply to real changes — from production bug fixes to dependency updates and AI-assisted development.",
+    "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
   alternates: {
     canonical: "/examples",
   },
   openGraph: {
     title: "Examples",
     description:
-      "See how Input, Development, Validation and Ship apply to real changes — from production bug fixes to dependency updates and AI-assisted development.",
+      "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
     url: "/examples",
   },
   twitter: {
     title: "Examples",
     description:
-      "See how Input, Development, Validation and Ship apply to real changes — from production bug fixes to dependency updates and AI-assisted development.",
+      "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
   },
 };
 
