@@ -7,7 +7,6 @@ const heroCopy = {
   hook: "Not every software change needs the same delivery process.",
   detail:
     "Ship It! helps you decide what each change needs before it ships, without replacing the practices that already work.",
-  closing: "Keep your process. Improve your delivery decisions.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {
@@ -24,16 +23,6 @@ function SectionContainer({ children }: { children: React.ReactNode }) {
 
 function TextStack({ children }: { children: React.ReactNode }) {
   return <div className="max-w-3xl space-y-10">{children}</div>;
-}
-
-function HeroClosing({ children }: { children: React.ReactNode }) {
-  return (
-    <p
-      className="font-mono text-sm uppercase tracking-[0.16em] text-zinc-400 sm:text-base"
-    >
-      {children}
-    </p>
-  );
 }
 
 export default function Hero() {
@@ -68,7 +57,6 @@ export default function Hero() {
               {heroCopy.detail}
             </p>
           </div>
-          <HeroClosing>{heroCopy.closing}</HeroClosing>
         </TextStack>
       </div>
     </SectionContainer>
