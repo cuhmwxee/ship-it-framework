@@ -36,7 +36,8 @@ const frameworkGuideCopy = {
     {
       title: "Validation",
       body: [
-        "Validation provides confidence that the change solves the intended problem and can survive in production.",
+        "Validation provides enough confidence to decide whether a particular change is ready to Ship.",
+        "That confidence comes from relevant evidence that the change solves the intended problem and is suitable for its intended environment.",
         "Validation may involve tests, reviews, monitoring, experimentation or human judgment.",
         "If Validation fails, it creates new Input and the workflow continues.",
       ],

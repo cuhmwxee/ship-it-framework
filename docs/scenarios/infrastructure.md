@@ -36,7 +36,7 @@ Infrastructure validation:
 - Security validation
 - Team review
 
-Validation confirms safety before production deployment.
+Validation provides evidence to assess whether the change is suitable for the production environment before deployment.
 
 ## Observations
 

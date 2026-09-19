@@ -29,7 +29,7 @@ Validation that fails creates new input.
 ## Principles
 
 - Keep it simple.
-- Validate independently.
+- Validate before shipping.
 - Ship often.
 
 ## Status

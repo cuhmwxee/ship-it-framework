@@ -64,7 +64,8 @@ The workflow is defined by [framework-diagram.md](framework-diagram.md). It MUST
 The workflow MUST begin with Input.
 Every Input MUST pass through Development.
 Development MUST be followed by Validation.
-Ship MUST follow successful Validation.
+Ship MUST occur only after successful Validation.
+Successful Validation does not require the change to Ship.
 If Validation fails, the workflow MUST return to Input.
 
 Implementation MAY vary.
@@ -82,7 +83,7 @@ The following requirements are mandatory:
 3. Every change MUST be validated before Ship.
 4. Ship MUST occur only after successful Validation.
 5. Failed Validation MUST create new Input.
-6. Validation MUST provide independent verification that the work is ready to ship.
+6. Validation MUST ground confidence in relevant evidence to inform whether the particular change is ready to Ship.
 7. The ordering of Input, Development, Validation, and Ship MUST be preserved.
 8. The framework MUST remain applicable across different implementations of Development and Validation.
 
@@ -96,7 +97,7 @@ A workflow is Ship It! compliant if:
 
 - ✓ Work enters the framework as Input.
 - ✓ Work passes through Development.
-- ✓ Work passes independent Validation.
+- ✓ Work passes Validation.
 - ✓ Only validated work is shipped.
 
 Implementation details are outside the scope of this specification.

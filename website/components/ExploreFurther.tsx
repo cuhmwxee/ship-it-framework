@@ -43,7 +43,7 @@ export default function ExploreFurther() {
           <DeliveryStory />
 
         <p className="mt-8 text-lg leading-relaxed text-zinc-300 sm:mt-10 sm:text-xl">
-          If you&apos;ve ever skipped a step because the change was tiny, you already get it.
+          The question is whether a step contributes to what this particular change needs before it ships.
         </p>
 
         <article className="mt-16 border-t border-zinc-800/80 pt-10 sm:mt-20 sm:pt-12">
@@ -52,8 +52,7 @@ export default function ExploreFurther() {
           </h2>
           <div className="mt-4 space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             <p>
-              Start with the change. Develop the solution. Validate it
-              independently. Ship when the evidence gives the appropriate level
+              Start with the change. Develop the solution. Validate it. Ship when the evidence gives the appropriate level
               of confidence.
             </p>
             <p>

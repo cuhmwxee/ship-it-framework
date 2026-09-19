@@ -1,6 +1,6 @@
 const oneRuleCopy = {
   title: "",
-  rule: "Every change must be independently validated before it is shipped.",
+  rule: "Every change must be validated before it is shipped.",
 };
 
 function SectionContainer({ children }: { children: React.ReactNode }) {

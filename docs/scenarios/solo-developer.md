@@ -41,7 +41,7 @@ Validation may include:
 - Manual testing
 - Static analysis tools
 
-The key is independent verification that the work is ready.
+The key is relevant evidence that provides enough confidence that the work is ready.
 
 ## Observations
 
@@ -49,7 +49,7 @@ The workflow didn't change.
 
 Only the Validation implementation changed.
 
-The developer performs validation themselves, but it is still independent verification before shipping.
+The developer performs validation themselves, using the evidence to decide whether the change is ready to ship.
 
 The framework remains:
 
@@ -61,7 +61,7 @@ Input → Development → Validation → Ship
 
 ✓ Development: Developer writes code
 
-✓ Validation: Developer validates their own work independently
+✓ Validation: Developer validates their own work
 
 ✓ Ship: Validated code is deployed
 

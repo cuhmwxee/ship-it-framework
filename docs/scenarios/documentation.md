@@ -37,7 +37,7 @@ Documentation validation:
 - Style guide compliance
 - Example verification
 
-Validation ensures documentation quality.
+Validation builds confidence that the documentation is accurate and suitable to publish.
 
 ## Observations
 

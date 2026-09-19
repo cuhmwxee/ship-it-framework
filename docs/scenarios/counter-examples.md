@@ -31,7 +31,7 @@ D --> S
 
 Validation is skipped entirely.
 
-There is no independent verification before shipping.
+There is no Validation before shipping.
 
 Problems reach users without detection.
 
@@ -78,7 +78,7 @@ D --> S
 
 ### Why This Fails
 
-The framework requires independent verification.
+The framework requires Validation before Ship.
 
 Skipping validation means no verification happens.
 
@@ -90,7 +90,7 @@ Edge cases and unintended consequences reach users.
 
 ✓ Development: Fix implemented
 
-✗ Validation: SKIPPED - No independent review or testing
+✗ Validation: SKIPPED - No Validation before Ship
 
 ✗ Ship: Unvalidated code shipped
 

@@ -47,17 +47,17 @@ Use whatever tools you already use.
 
 ## Step 3
 
-Validate it independently.
+Validate it.
 
-Independent does not necessarily mean another person.
-
-It means the validation is capable of proving the work correct.
+Use relevant evidence to assess whether the change solves the intended problem and is suitable for its intended environment.
 
 ---
 
 ## Step 4
 
-Ship.
+Decide whether the evidence gives enough confidence to Ship.
+
+Ship only when the change is ready.
 
 Repeat.
 
