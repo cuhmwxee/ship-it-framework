@@ -6,8 +6,8 @@ const story = {
   paragraphs: [
     "The dependency update was small: Pino 9.13.0 to 9.13.1. We changed a version, ran the existing checks, and made no application-code changes. Yet it entered the same delivery path as a high-risk production change.",
     "The team stopped and asked: does this change really need the same process?",
-    "Under Ship It!, the answer was no. The existing checks provided the validation this change needed, so the additional review and approval steps were removed from its path.",
-    "From then on, the team could spend that effort where it created more value — including testing and validation that mattered for changes with greater risk and impact.",
+    "The team considered this particular change and the evidence from the existing checks. Those checks provided enough confidence that it was ready to ship. Additional review and approval steps did not meaningfully contribute to what this change needed, so the team skipped them for this change.",
+    "Those steps remained part of the process for changes that needed them. This was a decision about this update, not a general rule for dependency updates.",
   ],
 };
 

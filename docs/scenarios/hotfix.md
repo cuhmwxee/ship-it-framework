@@ -55,7 +55,7 @@ Even under pressure, validation cannot be skipped.
 
 ✓ Development: Team implements emergency fix
 
-✓ Validation: Rapid but independent validation confirms fix
+✓ Validation: Rapid validation provides evidence that the fix addresses the bug
 
 ✓ Ship: Fix is deployed to production
 

@@ -34,7 +34,7 @@ Development may be performed by:
 
 ## Validation
 
-Validation provides independent verification that work is ready to ship.
+Validation uses relevant evidence to build confidence that a change solves the intended problem and is suitable for its intended environment, informing whether it is ready to Ship.
 
 ---
 

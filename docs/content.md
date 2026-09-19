@@ -104,9 +104,9 @@ That's it.
 
 # One Rule
 
-Every change must be independently validated before it is shipped.
+Every change must be validated before it is shipped.
 
-Validation may be performed by another developer, an automated process, or any combination that fits your team.
+Validation may be performed by a developer, an automated process, or any combination that fits your team.
 
 ---
 
@@ -146,11 +146,11 @@ Use whatever works.
 
 ## Validation builds trust.
 
-Independent validation builds trust.
+Validation builds confidence from relevant evidence.
 
-If validation succeeds, ship it.
+Successful validation supports the decision to ship.
 
-If not, create new Input.
+If validation fails, create new Input.
 
 ---
 
@@ -410,9 +410,9 @@ Yes.
 
 ## Can one person validate their own work?
 
-Sometimes.
+Yes.
 
-Independent validation is recommended whenever possible.
+What matters is whether relevant evidence provides enough confidence that the change is ready to ship.
 
 ---
 
