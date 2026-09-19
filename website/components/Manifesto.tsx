@@ -56,7 +56,7 @@ export default function Manifesto() {
           ))}
         </ol>
 
-        <p className="mt-10 text-xl font-semibold leading-relaxed text-blue-400 sm:text-2xl">
+        <p className="mt-10 text-xl font-semibold leading-relaxed text-[var(--color-accent)] sm:text-2xl">
           {manifestoCopy.closing}
         </p>
         <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
