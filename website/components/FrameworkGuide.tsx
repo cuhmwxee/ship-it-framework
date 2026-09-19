@@ -51,6 +51,7 @@ const frameworkGuideCopy = {
     },
   ],
   relatedPages: [
+    { href: "/in-practice", label: "In practice", description: "explains how the model fits with your existing way of working." },
     { href: "/examples", label: "Examples", description: "shows the concepts in practice." },
     { href: "/faq", label: "FAQ", description: "answers common questions." },
   ],

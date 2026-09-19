@@ -19,6 +19,11 @@ const destinations = [
     description: "See how different kinds of changes move through the same workflow.",
   },
   {
+    href: "/in-practice",
+    title: "In practice",
+    description: "See how Ship It! fits with your existing process and development practices.",
+  },
+  {
     href: "/faq",
     title: "FAQ",
     description: "Find concise answers to common questions about scope and usage.",
