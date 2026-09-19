@@ -58,10 +58,13 @@ export default function InPractice() {
             <h2 id={`${section.id}-title`} className="ds-type-section-heading">
               {section.title}
             </h2>
-            <p className="ds-type-body mt-[var(--space-sm)] font-medium">
+            <p
+              className="ds-type-body mt-[var(--space-sm)] font-semibold"
+              style={{ color: "var(--color-text-primary)" }}
+            >
               {section.lead}
             </p>
-            <div className="ds-stack ds-stack--lg mt-6 ds-type-body">
+            <div className="ds-stack ds-stack--lg mt-8 ds-type-body">
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
               ))}
