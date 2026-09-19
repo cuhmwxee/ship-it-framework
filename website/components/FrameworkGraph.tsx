@@ -1,3 +1,5 @@
+import { useId } from "react";
+
 type FrameworkGraphProps = {
   variant: "overview" | "process";
 };
@@ -37,6 +39,8 @@ const graphCopy = {
 } as const;
 
 export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
+  const instanceId = useId();
+
   if (variant === "overview") {
     return (
       <ol aria-label={graphCopy.overview} className="framework-overview">
@@ -60,7 +64,7 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
     );
   }
 
-  const markerId = `framework-graph-arrow-${variant}`;
+  const markerId = `framework-graph-arrow-${instanceId}`;
   const connectionInset = 2;
   const nodeLabelYOffset = -1;
   const nodeRight = (index: number) => concepts[index].x + frameworkGraphScale.nodeWidth;
@@ -73,7 +77,7 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
 
   return (
     <figure
-      aria-labelledby={`framework-graph-caption-${variant}`}
+      aria-labelledby={`framework-graph-caption-${instanceId}`}
       className="framework-graph"
       style={{ maxWidth: frameworkGraphScale.graphMaxWidth }}
     >
@@ -83,7 +87,7 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
           viewBox={`0 0 ${frameworkGraphScale.graphMaxWidth + frameworkGraphScale.graphMargin * 2} ${graphHeight}`}
           className="framework-graph-svg"
           fill="none"
-          role="img"
+          role="group"
         >
           <defs>
             <marker
@@ -150,7 +154,7 @@ export default function FrameworkGraph({ variant }: FrameworkGraphProps) {
           ))}
         </svg>
       </div>
-      <figcaption id={`framework-graph-caption-${variant}`} className="sr-only">
+      <figcaption id={`framework-graph-caption-${instanceId}`} className="sr-only">
         {graphCopy[variant]}
       </figcaption>
     </figure>

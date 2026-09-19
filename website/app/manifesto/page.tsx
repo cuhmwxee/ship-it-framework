@@ -10,12 +10,19 @@ export const metadata: Metadata = {
     canonical: "/manifesto",
   },
   openGraph: {
+    siteName: "Ship It!",
+    locale: "en_US",
+    type: "website",
+    images: ["/opengraph-image"],
     title: "Manifesto",
     description:
       "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",
     url: "/manifesto",
   },
   twitter: {
+    card: "summary_large_image",
+    creator: "@HarriMaatta",
+    images: ["/opengraph-image"],
     title: "Manifesto",
     description:
       "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",

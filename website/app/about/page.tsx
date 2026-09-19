@@ -10,12 +10,19 @@ export const metadata: Metadata = {
     canonical: "/about",
   },
   openGraph: {
+    siteName: "Ship It!",
+    locale: "en_US",
+    type: "website",
+    images: ["/opengraph-image"],
     title: "About",
     description:
       "The story behind Ship It! — why it defines the minimum shared workflow every software change follows, from Input to Ship.",
     url: "/about",
   },
   twitter: {
+    card: "summary_large_image",
+    creator: "@HarriMaatta",
+    images: ["/opengraph-image"],
     title: "About",
     description:
       "The story behind Ship It! — why it defines the minimum shared workflow every software change follows, from Input to Ship.",

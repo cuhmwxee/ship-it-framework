@@ -10,12 +10,19 @@ export const metadata: Metadata = {
     canonical: "/examples",
   },
   openGraph: {
+    siteName: "Ship It!",
+    locale: "en_US",
+    type: "website",
+    images: ["/opengraph-image"],
     title: "Examples",
     description:
       "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
     url: "/examples",
   },
   twitter: {
+    card: "summary_large_image",
+    creator: "@HarriMaatta",
+    images: ["/opengraph-image"],
     title: "Examples",
     description:
       "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",

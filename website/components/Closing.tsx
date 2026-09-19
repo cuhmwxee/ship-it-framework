@@ -11,7 +11,7 @@ export default function Closing() {
       <div className="ds-content border-t border-zinc-800/80 pt-8 sm:pt-10">
         <h2
           id="closing-title"
-          className="text-2xl font-semibold leading-snug text-blue-400 sm:text-3xl"
+          className="text-2xl font-semibold leading-snug text-[var(--color-accent)] sm:text-3xl"
         >
           {closingCopy.title}
         </h2>

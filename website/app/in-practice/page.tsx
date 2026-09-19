@@ -12,11 +12,18 @@ export const metadata: Metadata = {
     canonical: "/in-practice",
   },
   openGraph: {
+    siteName: "Ship It!",
+    locale: "en_US",
+    type: "website",
+    images: ["/opengraph-image"],
     title: "In practice",
     description,
     url: "/in-practice",
   },
   twitter: {
+    card: "summary_large_image",
+    creator: "@HarriMaatta",
+    images: ["/opengraph-image"],
     title: "In practice",
     description,
   },
