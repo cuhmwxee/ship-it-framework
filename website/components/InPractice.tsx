@@ -6,6 +6,7 @@ const sections = [
   {
     id: "scrum-kanban",
     title: "How does Ship It! fit with Scrum or Kanban?",
+    lead: "Ship It! works within the process a team already uses.",
     paragraphs: [
       "A team can keep its existing backlog, board, ceremonies, Definition of Done, or other process practices. Input, Development, Validation, and Ship are not proposed Jira columns, board states, or Scrum ceremonies. They describe the delivery path of an individual change within that environment.",
       "For example, a bug discovered during a sprint gives a team a reason to change the software. The team develops a fix, checks that it addresses the bug without breaking related behavior, and makes the validated change available through its usual release process. Its existing practices organize that work.",
@@ -15,15 +16,17 @@ const sections = [
   {
     id: "ai-assisted-development",
     title: "How does Ship It! fit with AI-assisted development?",
+    lead: "AI can make changes faster. It doesn't make unnecessary steps necessary — or necessary validation unnecessary.",
     paragraphs: [
       "AI can change how Development happens and how quickly a team produces changes. It does not remove the need to understand the Input: what problem is being solved, and what would count as a useful result?",
       "An assistant might generate a bug fix quickly. The reported failure still needs to be understood, and the fix still needs appropriate Validation before Ship. For example, reproducing the failure and testing the affected behavior can provide evidence that the generated change solves the problem.",
-      "AI can make changes faster. It doesn't make unnecessary steps necessary — or necessary validation unnecessary. The question remains what this change needs before it ships.",
+      "The question remains what this change needs before it ships.",
     ],
   },
   {
     id: "vibe-coding",
     title: "How does Ship It! fit with vibe coding?",
+    lead: "How a change is produced does not determine what it needs before it ships.",
     paragraphs: [
       "In a conversational workflow, someone may describe a desired result, try the generated software, and ask for adjustments. Ship It! uses the same concepts whether the change is written manually, with a coding assistant, through an agent, or through vibe coding.",
       "Input may become clearer through that conversation, and Development may involve many quick iterations. Trying the result can reveal new Input. There is still a decision about whether Validation provides enough confidence to Ship.",
@@ -55,6 +58,9 @@ export default function InPractice() {
             <h2 id={`${section.id}-title`} className="ds-type-section-heading">
               {section.title}
             </h2>
+            <p className="ds-type-body mt-[var(--space-sm)] font-medium">
+              {section.lead}
+            </p>
             <div className="ds-stack ds-stack--lg mt-6 ds-type-body">
               {section.paragraphs.map((paragraph) => (
                 <p key={paragraph}>{paragraph}</p>
