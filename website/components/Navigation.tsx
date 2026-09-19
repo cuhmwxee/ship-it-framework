@@ -6,6 +6,7 @@ const navItems = [
   { href: "/framework", label: "Framework" },
   { href: "/manifesto", label: "Manifesto" },
   { href: "/examples", label: "Examples" },
+  { href: "/in-practice", label: "In practice" },
   { href: "/faq", label: "FAQ" },
   { href: "/about", label: "About" },
 ];
@@ -25,7 +26,7 @@ export default function Navigation() {
           </span>
         </Link>
 
-        <details className="relative md:hidden">
+        <details className="relative lg:hidden">
           <summary className="ds-button-link ds-focusable cursor-pointer list-none rounded-md px-2 py-2 text-sm font-medium text-zinc-400 [&::-webkit-details-marker]:hidden">
             Menu
           </summary>
@@ -45,7 +46,7 @@ export default function Navigation() {
           </nav>
         </details>
 
-        <nav aria-label="Primary navigation" className="hidden items-center gap-3 md:flex">
+        <nav aria-label="Primary navigation" className="hidden items-center gap-3 lg:flex">
           {navItems.map((item) => (
             <Link
               key={item.href}
