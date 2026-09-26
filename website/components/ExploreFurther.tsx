@@ -52,18 +52,19 @@ export default function ExploreFurther() {
           </h2>
           <div className="mt-4 space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             <p>
-              Start with the change. Develop the solution. Validate it. Ship when the evidence gives the appropriate level
-              of confidence.
+              Start with the change. Develop the solution. Validate it. Ship when
+              relevant evidence provides enough confidence that it is ready.
             </p>
             <p>
-              The workflow remains the same; the depth of each step grows with
-              the change&apos;s risk and impact. This turns informal shortcuts into
-              intentional delivery decisions.
+              Use existing practices where they contribute to what this change needs. 
+              Omit steps that do not contribute, and add practices that provide 
+              evidence the existing process does not.
+
             </p>
             <p>
-              Small changes can stay small. Critical changes can receive the
-              validation they deserve. Teams spend their effort where it creates
-              confidence, instead of carrying process that adds none.
+              A change&apos;s size alone does not determine what it needs before
+              it ships. The four concepts remain the same; the practices 
+              depend on the particular change and its context.
             </p>
           </div>
         </article>
@@ -81,7 +82,7 @@ export default function ExploreFurther() {
               top of them.
             </p>
             <p>
-              It describes the smaller workflow underneath them: the work required
+              It describes the shared workflow underneath them: the work required
               for this change to become shippable. The question is not which
               process to replace, but what this change actually needs to reach
               production with appropriate validation.
@@ -91,10 +92,10 @@ export default function ExploreFurther() {
 
         <div className="mt-16 sm:mt-20">
           <p className="text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:text-3xl lg:text-4xl">
-            Turns out, the process can be smaller.
+            Start with the change. Decide what it needs before it ships.
           </p>
           <p className="mt-3 text-sm text-zinc-400">
-            Empirically tested. In production.
+            Keep your process. Improve your delivery decisions.
           </p>
         </div>
 

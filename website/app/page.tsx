@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       <ReflectionStatement
-        lines={["What if the process is the thing that needs simplifying?"]}
+        lines={["What if the process should follow the change — not the other way around?"]}
         emphasis={0}
       />
 
