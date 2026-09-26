@@ -38,9 +38,11 @@ Software delivery should be proportional.
 
 Not every software change needs the same delivery process.
 
-Small changes should remain small.
+Start with the change.
 
-Critical changes should receive the validation they deserve.
+A change's size alone does not determine what it needs before it ships.
+
+Use existing practices where they contribute to what this change needs. Omit steps that do not contribute, and add practices or evidence where the existing process does not meet those needs.
 
 Teams should spend their effort where it creates the most confidence.
 

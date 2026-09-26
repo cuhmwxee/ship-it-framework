@@ -5,20 +5,17 @@ import Section from "@/components/ui/Section";
 const manifestoCopy = {
   title: "Manifesto",
   intro: [
-    "Software delivery has changed. Changes are smaller, faster, and increasingly AI-assisted.",
-    "Many teams still describe delivery with language built for larger and slower work.",
-    "When that language is unclear, delivery decisions become inconsistent.",
+    "Software delivery keeps changing.",
+    "A team's delivery process may not describe what a particular change needs before it ships.",
+    "Without a shared language for those needs, delivery decisions can become inconsistent.",
     "Ship It! exists to provide a shared language for those decisions.",
   ],
   principles: [
     "Not every software change needs the same delivery process.",
-    "Validation should be proportional to risk.",
-    "Small changes should remain small.",
-    "Critical changes deserve stronger validation.",
+    "A change's size alone does not determine what it needs before it ships.",
     "Delivery decisions should be intentional.",
     "Teams benefit from a shared model for those decisions.",
     "Keep your existing way of working.",
-    "AI accelerates change. Engineering judgment remains essential.",
   ],
   closing: "Keep your process. Improve your delivery decisions through a shared language.",
 } as const;
