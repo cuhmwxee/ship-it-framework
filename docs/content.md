@@ -24,13 +24,9 @@ Ship.
 
 ## The Problem
 
-Software changes are becoming smaller, more frequent and increasingly AI-assisted.
+AI can change how Development happens and make implementation faster. When Development takes less time, surrounding delivery work can become more visible. That does not make it unnecessary.
 
-Teams can produce changes faster than ever.
-
-Writing software is becoming easier.
-
-Delivery decisions are becoming more important.
+The question remains: what does this particular change need before it ships?
 
 Teams still use different tools, methodologies and processes.
 

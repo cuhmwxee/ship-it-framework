@@ -20,7 +20,7 @@ const sections = [
     paragraphs: [
       "AI can change how Development happens and how quickly a team produces changes. It does not remove the need to understand the Input: what problem is being solved, and what would count as a useful result?",
       "An assistant might generate a bug fix quickly. The reported failure still needs to be understood, and the fix still needs appropriate Validation before Ship. For example, reproducing the failure and testing the affected behavior can provide evidence that the generated change solves the problem.",
-      "The question remains what this change needs before it ships.",
+      "When Development becomes faster, time spent on surrounding delivery practices can become more visible. That does not make those practices unnecessary. Speed alone does not determine what this change needs before it ships.",
     ],
   },
   {

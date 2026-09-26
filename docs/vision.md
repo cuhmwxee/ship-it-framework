@@ -18,17 +18,9 @@ Ship It! complements existing ways of working rather than replacing them.
 
 ## Why now?
 
-Software delivery has changed.
+AI can change how Development happens and make implementation faster. When Development takes less time, surrounding delivery work can become more visible. That does not make it unnecessary.
 
-Software changes are becoming smaller, more frequent and increasingly AI-assisted.
-
-Teams can produce software changes faster than ever.
-
-Writing code is becoming less of a bottleneck.
-
-Deciding how software should be validated and delivered is becoming more important.
-
-Ship It! exists to help teams make those decisions intentionally.
+The question remains: what does this particular change need before it ships?
 
 ---
 

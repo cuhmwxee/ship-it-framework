@@ -32,12 +32,12 @@ export default function Home() {
                 <p key={line}>{line}</p>
               ))}
               <p>
-                Software changes are becoming smaller, more frequent and
-                increasingly AI-assisted. Teams can produce changes faster than
-                many delivery processes were designed to handle.{" "}
+                AI can change how Development happens and make implementation
+                faster. When Development takes less time, surrounding delivery
+                work can become more visible. That does not make it unnecessary.{" "}
                 <strong>
-                  AI can make changes faster. It doesn&apos;t make unnecessary
-                  steps necessary.
+                  The question remains: what does this particular change need
+                  before it ships?
                 </strong>
               </p>
             </div>
