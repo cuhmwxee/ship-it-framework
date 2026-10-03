@@ -2,47 +2,5 @@ export const reflections = {
   seen: [
     "Not every software change needs every step your process describes.",
     "Most software delivery frameworks add concepts. Ship It! removes them.",
-    "The result is the minimum workflow every software change still follows.",
-    "Ship It! is a minimal software delivery framework.",
-  ],
-
-  reveals: [
-    "Ship It! does not introduce a new workflow.",
-    "Ship It! is a minimal software delivery framework.",
-  ],
-
-  workflowNamed: [
-    "The workflow was already there.",
-    "Now those delivery decisions can be discussed more clearly.",
-  ],
-
-  simplerProcess: [
-    "You may not need a new process.",
-    "You may need a simpler one.",
-  ],
-
-  try: [
-    "Try it on your next change.",
-    "Ask what is actually required before shipping.",
-  ],
-
-  obvious: [
-    "If the framework feels obvious, that is a success.",
-    "The goal was never to invent something new.",
-    "The goal was to describe something essential.",
-  ],
-
-  noNeed: [
-    "Works with your existing way of working.",
-    "Keep the practices that help your team collaborate.",
-    "Use Ship It! to think about what each software change actually needs before it ships.",
-  ],
-
-  aiEra: [
-    "Ship It! was created in the AI era for the AI era.",
-  ],
-
-  fit: [
-    "Ship It! does not replace workflows that already work. It helps when the current workflow no longer fits the change.",
   ],
 };

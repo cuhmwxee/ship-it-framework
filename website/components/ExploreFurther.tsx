@@ -1,6 +1,5 @@
 import DeliveryStory from "@/components/DeliveryStory";
 import NavigationCard from "@/components/NavigationCard";
-import ReflectionStatement from "@/components/ReflectionStatement";
 import Container from "@/components/ui/Container";
 
 const destinations = [
@@ -68,9 +67,9 @@ export default function ExploreFurther() {
           </div>
         </article>
 
-        <ReflectionStatement
-          lines={["Ship It! does not override your obligations."]}
-        />
+        <p className="py-16 text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:py-20 sm:text-3xl lg:py-24 lg:text-4xl">
+          Ship It! does not override your obligations.
+        </p>
 
         <article className="mt-14 sm:mt-16">
           <h2 className="ds-type-section-heading text-zinc-100">
