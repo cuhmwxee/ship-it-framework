@@ -11,7 +11,7 @@ const destinations = [
   {
     href: "/manifesto",
     title: "Manifesto",
-    description: "Read the principles behind proportional delivery decisions.",
+    description: "Read why Ship It! challenges the process a change would normally inherit.",
   },
   {
     href: "/examples",
@@ -56,15 +56,13 @@ export default function ExploreFurther() {
               relevant evidence provides enough confidence that it is ready.
             </p>
             <p>
-              Use existing practices where they contribute to what this change needs. 
-              Omit steps that do not contribute, and add practices that provide 
-              evidence the existing process does not.
-
+              Question the practices this change would normally inherit. A change
+              may need every one of them. Omitting a practice must not remove
+              evidence needed to provide enough confidence to Ship.
             </p>
             <p>
               A change&apos;s size alone does not determine what it needs before
-              it ships. The four concepts remain the same; the practices 
-              depend on the particular change and its context.
+              it ships. Ship It! does not authorize bypassing required controls.
             </p>
           </div>
         </article>

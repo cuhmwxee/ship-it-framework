@@ -80,11 +80,11 @@ You might already be using Ship It! without calling it that.
 
 # Statement
 
-Start with the change.
+A particular software change would normally inherit the team's delivery process. Ship It! challenges whether that change needs all of it before it ships.
 
 What does this particular change need before it ships?
 
-Use existing practices where they contribute to what this change needs. Omit steps that do not contribute, and add practices or evidence where the existing process does not meet those needs.
+Question the practices this change would normally inherit. A change may need every one of them. Omitting a practice must not remove evidence needed to provide enough confidence to Ship.
 
 ---
 
@@ -432,9 +432,9 @@ Software delivery has changed.
 
 Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-AI accelerates change. Ship It! brings proportion to delivery.
+Faster Development does not make surrounding delivery work unnecessary.
 
-Not every software change needs the same delivery process.
+Not every software change needs every step it would normally inherit from the team's process. A change may still need all of them.
 
 A change's size alone does not determine what it needs before it ships.
 

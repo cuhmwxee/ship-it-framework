@@ -6,12 +6,12 @@ const manifestoCopy = {
   title: "Manifesto",
   intro: [
     "Software delivery keeps changing.",
-    "A team's delivery process may not describe what a particular change needs before it ships.",
+    "A change would normally inherit the team's delivery process. Ship It! challenges whether that change needs all of it.",
     "Without a shared language for those needs, delivery decisions can become inconsistent.",
     "Ship It! exists to provide a shared language for those decisions.",
   ],
   principles: [
-    "Not every software change needs the same delivery process.",
+    "Not every software change needs every step it would normally inherit. A change may still need all of them.",
     "A change's size alone does not determine what it needs before it ships.",
     "Delivery decisions should be intentional.",
     "Teams benefit from a shared model for those decisions.",

@@ -5,7 +5,7 @@ import PageShell from "@/components/PageShell";
 export const metadata: Metadata = {
   title: "Manifesto",
   description:
-    "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",
+    "Why Ship It! challenges what a particular change needs from the team's existing delivery process.",
   alternates: {
     canonical: "/manifesto",
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
     title: "Manifesto",
     description:
-      "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",
+      "Why Ship It! challenges what a particular change needs from the team's existing delivery process.",
     url: "/manifesto",
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
     title: "Manifesto",
     description:
-      "The principles behind Ship It!: proportional validation, intentional delivery decisions, and a shared language for software delivery.",
+      "Why Ship It! challenges what a particular change needs from the team's existing delivery process.",
   },
 };
 

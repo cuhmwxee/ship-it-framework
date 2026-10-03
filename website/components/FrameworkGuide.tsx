@@ -12,8 +12,8 @@ const frameworkGuideCopy = {
   ],
   assumptions: [
     "Software changes continuously.",
-    "Not every change carries the same risk.",
-    "Different changes may require different delivery processes.",
+    "A change would normally inherit the team's delivery process.",
+    "Not every change needs every step that process describes.",
     "Teams do not necessarily need a new methodology.",
   ],
   concepts: [

@@ -10,7 +10,7 @@ Ship It! is not another software development methodology.
 
 It is a lightweight decision framework for software delivery.
 
-Its purpose is to help teams decide what each software change needs before it ships.
+A particular software change would normally inherit the team's delivery process. Ship It! challenges whether that change needs all of it before it ships.
 
 Ship It! complements existing ways of working rather than replacing them.
 
@@ -34,7 +34,7 @@ Ship It! exists to help teams make those decisions intentionally.
 
 ## Vision
 
-Software delivery should be proportional.
+What does this particular change need before it ships?
 
 Not every software change needs the same delivery process.
 
@@ -42,9 +42,9 @@ Start with the change.
 
 A change's size alone does not determine what it needs before it ships.
 
-Use existing practices where they contribute to what this change needs. Omit steps that do not contribute, and add practices or evidence where the existing process does not meet those needs.
+Question the practices this change would normally inherit. A change may need every one of them. Omitting a practice must not remove evidence needed to provide enough confidence to Ship.
 
-Teams should spend their effort where it creates the most confidence.
+When existing evidence is insufficient, obtain the evidence needed for Validation before shipping.
 
 ---
 
@@ -53,7 +53,7 @@ Teams should spend their effort where it creates the most confidence.
 These statements express the core philosophy of Ship It! and should remain consistent across the website, documentation and presentations.
 
 - Not every software change needs the same delivery process.
-- AI accelerates change. Ship It! brings proportion to delivery.
+- Faster Development does not make surrounding delivery work unnecessary.
 - Software delivery has changed. Delivery decisions haven't.
 - Validation informs development.
 - Works with your existing way of working.
