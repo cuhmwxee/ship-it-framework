@@ -5,18 +5,18 @@ const exampleData = {
   title: "A dependency update, examined through Ship It!",
   label: "Illustrative scenario",
   body: [
-    "A team needs to update Pino from 9.13.0 to 9.13.1. The change is small: one dependency version changes, no application code is modified, and the existing checks can be run against the change.",
-    "But the change enters the same delivery path as a high-risk production change. There is a ticket, security review, architecture review, change approval, release-manager handoff, and a wait for the next deployment window.",
+    "A team needs to update Pino from 9.13.0 to 9.13.1. One dependency version changes, no application code is modified, and the existing checks can be run against the change.",
+    "The change enters the team's usual delivery path. There is a ticket, security review, architecture review, change approval, release-manager handoff, and a wait for the next deployment window.",
     "The team stops and asks a simple question:",
     "Does this change really need all of that?",
-    "Under Ship It!, the team looks at the change itself rather than its category. What does this particular change need before it can ship?",
+    "Under Ship It!, the team looks at the change itself rather than its category. What does this particular change need before it ships?",
     "The ticket remains part of the process: it is the Input that describes and tracks the change. The team considers this particular update and the evidence from the existing checks. It finds that those checks provide enough confidence that this change is ready to ship, and that additional review and approval steps do not meaningfully contribute to what it needs.",
     "So the team skips those steps for this change. It still develops and validates the update. The skipped steps remain part of the process for other changes that need them.",
-    "The result is not that validation becomes less important. The opposite: the team can direct more of its effort toward validation where it matters — for changes with greater risk, impact, or uncertainty — instead of spending the same effort on every change.",
-    "This is not a rule for dependency updates. It is an example of making the delivery process proportional to the change.",
+    "The decision rests on relevant evidence that this update is ready to ship. Removing an inherited step must not remove evidence needed for that decision or bypass a required control.",
+    "This is not a rule for dependency updates. Another change may need every practice it would normally inherit.",
   ],
   takeaway:
-    "The point is not to remove steps. It is to ask whether each step contributes to the confidence this change needs before it ships.",
+    "The team questioned what this update needed from its usual delivery process. It omitted steps that did not contribute while preserving the evidence needed for Validation.",
 };
 
 export default function Examples() {

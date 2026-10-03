@@ -23,10 +23,10 @@ export default function Home() {
           <div className="ds-content">
             <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
               <p>
-                Delivery processes often describe everything around a change:
-                planning, coordination, review, validation, and release. Those
-                practices can be useful. The question is which of them this change
-                needs before it ships.
+                A change would normally inherit the team&apos;s delivery process:
+                planning, coordination, review, validation, and release. Ship It!
+                challenges whether this particular change needs all of it before
+                it ships.
               </p>
               {reflections.seen.slice(0, 2).map((line) => (
                 <p key={line}>{line}</p>
@@ -37,7 +37,7 @@ export default function Home() {
                 many delivery processes were designed to handle.{" "}
                 <strong>
                   AI can make changes faster. It doesn&apos;t make unnecessary
-                  steps necessary.
+                  steps necessary — or necessary validation unnecessary.
                 </strong>
               </p>
             </div>
@@ -46,7 +46,7 @@ export default function Home() {
       </div>
 
       <ReflectionStatement
-        lines={["What if the process should follow the change — not the other way around?"]}
+        lines={["What does this particular change need before it ships?"]}
         emphasis={0}
       />
 

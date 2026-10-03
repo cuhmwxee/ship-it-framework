@@ -20,7 +20,7 @@ const sections = [
     paragraphs: [
       "AI can change how Development happens and how quickly a team produces changes. It does not remove the need to understand the Input: what problem is being solved, and what would count as a useful result?",
       "An assistant might generate a bug fix quickly. The reported failure still needs to be understood, and the fix still needs appropriate Validation before Ship. For example, reproducing the failure and testing the affected behavior can provide evidence that the generated change solves the problem.",
-      "The question remains what this change needs before it ships.",
+      "Faster Development can make surrounding delivery work more visible. That visibility does not make the work unnecessary. The question remains what this change needs before it ships.",
     ],
   },
   {
@@ -30,7 +30,7 @@ const sections = [
     paragraphs: [
       "In a conversational workflow, someone may describe a desired result, try the generated software, and ask for adjustments. Ship It! uses the same concepts whether the change is written manually, with a coding assistant, through an agent, or through vibe coding.",
       "Input may become clearer through that conversation, and Development may involve many quick iterations. Trying the result can reveal new Input. There is still a decision about whether Validation provides enough confidence to Ship.",
-      "A disposable prototype and a change to customer access controls need different levels of confidence, even if both were produced through the same conversation-driven workflow. Validation should be proportional to the change and its context, rather than simply to how quickly or by what method the code was produced.",
+      "For a disposable prototype or a change to customer access controls, Validation needs relevant evidence that the change solves the intended problem and is suitable for its intended environment. How quickly or by what method the code was produced does not establish that evidence.",
     ],
   },
 ];
