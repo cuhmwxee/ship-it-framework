@@ -86,6 +86,8 @@ What does this particular change need before it ships?
 
 Question the practices this change would normally inherit. A change may need every one of them. Omitting a practice must not remove evidence needed to provide enough confidence to Ship.
 
+Ship It! does not override your obligations.
+
 ---
 
 # The Framework

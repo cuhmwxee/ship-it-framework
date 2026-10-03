@@ -14,6 +14,8 @@ A particular software change would normally inherit the team's delivery process.
 
 Ship It! complements existing ways of working rather than replacing them.
 
+Ship It! does not override your obligations.
+
 ---
 
 ## Why now?
