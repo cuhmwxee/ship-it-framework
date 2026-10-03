@@ -26,7 +26,7 @@ Ship.
 
 Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-Teams can produce changes faster than ever.
+Teams can produce changes faster.
 
 Writing software is becoming easier.
 
@@ -388,7 +388,7 @@ Why not?
 
 No.
 
-It works perfectly alongside Scrum.
+It works alongside Scrum.
 
 ---
 

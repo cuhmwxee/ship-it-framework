@@ -24,7 +24,7 @@ Software delivery has changed.
 
 Software changes are becoming smaller, more frequent and increasingly AI-assisted.
 
-Teams can produce software changes faster than ever.
+Teams can produce software changes faster.
 
 Writing code is becoming less of a bottleneck.
 

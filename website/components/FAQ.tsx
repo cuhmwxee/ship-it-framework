@@ -51,7 +51,8 @@ const faqCopy = {
     {
       question: "What is Validation?",
       answer: [
-        "Validation provides confidence that the change solves the intended problem and can survive in production.",
+        "Validation provides enough confidence to decide whether a particular change is ready to Ship.",
+        "That confidence comes from relevant evidence that the change solves the intended problem and is suitable for its intended environment.",
         "Validation may involve people, automation or both.",
       ],
     },
@@ -67,7 +68,6 @@ const faqCopy = {
       answer: [
         "Validation does not end the workflow.",
         "Failed validation creates new Input.",
-        "The framework defines that work continues.",
       ],
     },
     {
@@ -112,7 +112,7 @@ const faqCopy = {
     },
     {
       question: "I want to contact you.",
-      answer: ["Mail to: captain <at> shipitframe.work."],
+      answer: ["Email: captain <at> shipitframe.work."],
     },
   ],
 };

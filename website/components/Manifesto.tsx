@@ -14,7 +14,6 @@ const manifestoCopy = {
     "Not every software change needs every step it would normally inherit. A change may still need all of them.",
     "A change's size alone does not determine what it needs before it ships.",
     "Delivery decisions should be intentional.",
-    "Teams benefit from a shared model for those decisions.",
     "Keep your existing way of working.",
   ],
   closing: "Keep your process. Improve your delivery decisions through a shared language.",

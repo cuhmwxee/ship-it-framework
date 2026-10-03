@@ -4,9 +4,9 @@ const story = {
   title: "A familiar delivery story",
   label: "Illustrative scenario",
   paragraphs: [
-    "The dependency update was Pino 9.13.0 to 9.13.1. We changed a version, ran the existing checks, and made no application-code changes. It entered the team's usual delivery path.",
+    "The dependency update was Pino 9.13.0 to 9.13.1. The team changed a version, ran the existing checks, and made no application-code changes. It entered the team's usual delivery path.",
     "The team stopped and asked: what does this particular change need before it ships?",
-    "The existing checks provided enough evidence to give the team confidence that the change was ready to ship. Additional review and approval steps did not meaningfully contribute to what this change needed, so the team skipped them for this change.",
+    "The existing checks provided enough evidence to give the team confidence that the change was ready to ship. Additional review and approval steps did not meaningfully contribute to what this change needed, so the team skipped them.",
     "Those steps remained part of the process for changes that needed them. This was a decision about this update, not a general rule for dependency updates.",
   ],
 };
