@@ -16,7 +16,7 @@ const destinations = [
   {
     href: "/examples",
     title: "Examples",
-    description: "See how different kinds of changes move through the same workflow.",
+    description: "See how a dependency update moves through the workflow.",
   },
   {
     href: "/in-practice",
@@ -31,7 +31,7 @@ const destinations = [
   {
     href: "/about",
     title: "About",
-    description: "Learn more about the team and the project.",
+    description: "Learn more about the project.",
   },
 ];
 

@@ -22,9 +22,9 @@ Validation
 
 ↓
 
-Production
+Ship
 
-Validation that fails creates new input.
+Validation that fails creates new Input.
 
 ## Principles
 
