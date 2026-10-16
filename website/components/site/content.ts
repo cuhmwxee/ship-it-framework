@@ -16,7 +16,7 @@ export const framework = {
     {
       title: "Input",
       body: [
-        "Every change starts somewhere.",
+        "Input is the reason why a change exists.",
         "An incident report, a product idea, a dependency update, or an automated system can all become Input.",
         "Input can come from any source in your delivery system.",
       ],
@@ -43,7 +43,7 @@ export const framework = {
       body: [
         "Shipping is the moment a change becomes available.",
         "Deployment and release are sometimes the same step, and sometimes separate.",
-        "Ship It! focuses on the outcome rather than the mechanism.",
+        "How the validated change becomes available depends on the team, product, and change.",
       ],
     },
   ],
@@ -59,8 +59,7 @@ export const manifesto = {
   intro: [
     "Software delivery keeps changing.",
     "A change would normally inherit the team's delivery process. Ship It! challenges whether that change needs all of it.",
-    "Without a shared language for those needs, delivery decisions can become inconsistent.",
-    "Ship It! exists to provide a shared language for those decisions.",
+    "Ship It! provides a shared language to help teams make consistent delivery decisions.",
   ],
   principles: [
     "Not every software change needs every step it would normally inherit. A change may still need all of them.",
@@ -68,7 +67,7 @@ export const manifesto = {
     "Delivery decisions should be intentional.",
     "Keep your existing way of working.",
   ],
-  closing: "Keep your process. Improve your delivery decisions through a shared language.",
+  closing: "Use this shared language to make delivery decisions within your existing process.",
 } as const;
 
 export const example = {
@@ -78,7 +77,7 @@ export const example = {
     "A team needs to update Pino from 9.13.0 to 9.13.1. One dependency version changes, no application code is modified, and the existing checks can be run against the change.",
     "The change enters the team's usual delivery path. There is a ticket, security review, architecture review, change approval, release-manager handoff, and a wait for the next deployment window.",
     "The team stops and asks a simple question:",
-    "Does this change really need all of that?",
+    "Which of these delivery steps does this update need?",
     "Under Ship It!, the team looks at the change itself rather than its category. What does this particular change need before it ships?",
     "The ticket remains part of the process: it is the Input that describes and tracks the change. The team considers this particular update and the evidence from the existing checks. It finds that those checks provide enough confidence that this change is ready to ship, and that additional review and approval steps do not meaningfully contribute to what it needs.",
     "So the team skips those steps for this change. It still develops and validates the update. The skipped steps remain part of the process for other changes that need them.",
@@ -103,11 +102,11 @@ export const practice = [
   {
     id: "ai-assisted-development",
     title: "How does Ship It! fit with AI-assisted development?",
-    lead: "AI can make changes faster. It doesn't make unnecessary steps necessary — or necessary validation unnecessary.",
+    lead: "Faster Development with AI does not change which delivery steps, including Validation, a particular change needs.",
     paragraphs: [
       "AI can change how Development happens and how quickly a team produces changes. It does not remove the need to understand the Input: what problem is being solved, and what would count as a useful result?",
       "An assistant might generate a bug fix quickly. The reported failure still needs to be understood, and the fix still needs appropriate Validation before Ship. For example, reproducing the failure and testing the affected behavior can provide evidence that the generated change solves the problem.",
-      "Faster Development can make surrounding delivery work more visible. That visibility does not make the work unnecessary. The question remains what this change needs before it ships.",
+      "AI can make Development faster, which may make the surrounding delivery work more noticeable. That doesn't mean the work is unnecessary; what matters is whether it contributes to getting this particular change ready to ship.",
     ],
   },
   {
@@ -193,9 +192,7 @@ export const faq = {
     {
       question: "Is Ship It! an AI framework?",
       answer: [
-        "No.",
-        "Ship It! is technology-agnostic.",
-        "AI can participate in Development or Validation, but it does not redefine the framework.",
+        "Ship It! is technology-agnostic: AI can participate in Development or Validation without changing the framework.",
       ],
     },
     {
@@ -226,8 +223,7 @@ export const faq = {
     {
       question: "Where does Ship It! come from?",
       answer: [
-        "It emerged from practical software delivery experience.",
-        "It was created by observing how software is actually delivered.",
+        "Ship It! grew out of observing software delivery in practice.",
       ],
     },
     {
@@ -242,7 +238,7 @@ export const about = {
   paragraphs: [
     "Ship It! grew from a simple observation: software delivery is becoming increasingly diverse, but the fundamental workflow remains the same.",
     "Teams use different methodologies, tools, release strategies, and levels of automation. Some deploy continuously; others release monthly. Some rely heavily on AI-assisted development, while others follow more traditional workflows. Despite these differences, each change begins with an input and is developed and validated to determine whether it is ready to ship.",
-    "Many frameworks focus on how teams should work. Ship It! takes a different approach. It defines the minimum workflow shared by every software change, providing a common language for reasoning about software delivery without prescribing specific practices or tools.",
+    "Ship It! gives teams a common language for discussing software delivery without prescribing how they should work. It defines the minimum workflow shared by every software change, providing a common language for reasoning about software delivery without prescribing specific practices or tools.",
     "The project was inspired in part by Dave Thomas' work on software delivery. Like many ideas in software engineering, similar patterns emerge independently when different people try to simplify the same problem. Ship It! represents one interpretation of those shared principles, developed through practical software delivery experience.",
     "It is not intended to replace Scrum, Kanban, Shape Up, or other methodologies. Instead, it complements them by describing the delivery path of a software change—from Input toward Ship.",
       ],
