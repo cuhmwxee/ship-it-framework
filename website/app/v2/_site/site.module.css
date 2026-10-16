@@ -1,0 +1,195 @@
+/* Only the two full-site shells load these module-scoped additions.
+   Phase 2's shared stylesheet, production, and directions 01/03/05 are untouched. */
+.fullSite { --site-reading-width: 66ch; --site-section-gap: 48px; --site-rule-width: 1px; }
+.fullSite[data-direction="04"] { --site-section-gap: 64px; --site-rule-width: 2px; }
+.fullSite main { min-width: 0; }
+.fullSite main:focus { outline: none; }
+.page { padding-top: 56px; }
+.page a { text-decoration: underline; }
+.pageTitle { margin-bottom: var(--site-section-gap); }
+.pageTitle h1 { font-size: 40px; }
+.lead { max-width: var(--site-reading-width); font-size: 19px; }
+.lead p + p { margin-top: 14px; }
+.pageTitle h1 + .lead { margin-top: 24px; }
+.page p { max-width: var(--site-reading-width); }
+.page h2 { font-size: 27px; }
+.page h3 { font-size: 22px; font-weight: 500; line-height: 1.3; }
+.page section, .page article, .questions details { scroll-margin-top: 28px; }
+.contents { display: grid; gap: 14px; align-self: start; font-size: 14px; line-height: 1.5; }
+.contents > span { font-size: 12px; color: var(--v2-secondary); border-bottom: 1px solid var(--v2-rule); padding-bottom: 12px; }
+.page .contents a { text-decoration: none; }
+.related { margin-top: var(--site-section-gap); padding-top: 28px; border-top: var(--site-rule-width) solid var(--v2-rule); }
+.related h2 { font-size: 24px; margin-bottom: 20px; }
+.related > p { margin-bottom: 20px; }
+.related ul { padding: 0; list-style: none; display: grid; gap: 12px; }
+.related li { max-width: var(--site-reading-width); }
+.related li span { color: var(--v2-secondary); }
+.frameworkTop { display: grid; grid-template-columns: minmax(0, 1fr) 170px; gap: 80px; }
+.assumptions h2 { margin-bottom: 20px; }
+.assumptions ul { padding-left: 20px; display: grid; gap: 8px; margin-bottom: 24px; list-style: disc; }
+.assumptions li::marker { color: var(--v2-accent); }
+.graph { margin: var(--site-section-gap) 0; border-block: 1px solid var(--v2-rule); padding: 24px 0 0; }
+.graph svg { display: block; width: 100%; overflow: visible; }
+.graph .verticalGraph { display: none; }
+.relationships, .arrowhead { stroke: var(--v2-secondary); stroke-width: 1.5; stroke-linecap: square; stroke-linejoin: miter; }
+.graphAnnotation { fill: var(--v2-secondary); font-family: var(--v2-mono, ui-monospace), monospace; font-size: 14px; }
+.nodeShape { stroke: var(--v2-accent); stroke-width: 1.5; fill: var(--v2-bg); }
+.nodeLabel { fill: var(--v2-ink); font-family: var(--v2-mono, ui-monospace), monospace; font-size: 18px; font-weight: 500; }
+.nodeUnderline { display: none; }
+.graphNode:hover .nodeLabel, .graphNode:focus-visible .nodeLabel { fill: var(--v2-accent); text-decoration: underline; }
+.graphNode:focus-visible { outline: none !important; }
+.graphNode:focus-visible .nodeShape { stroke-width: 3; }
+.graphNode:focus-visible .nodeUnderline { stroke: var(--v2-accent); stroke-width: 4; }
+.concepts > h2 { margin-bottom: 28px; }
+.concept { border-top: 1px solid var(--v2-rule); padding-block: 28px; display: grid; grid-template-columns: 20% minmax(0, 1fr); gap: 0; }
+.concept:last-child { border-bottom: 1px solid var(--v2-rule); }
+.concept h3 { padding-right: 24px; font-family: var(--v2-mono, ui-monospace), monospace; font-size: 22px; }
+.principles { padding: 0; list-style: none; border-top: 1px solid var(--v2-rule); }
+.principles li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 20px; padding-block: 28px; border-bottom: 1px solid var(--v2-rule); }
+.principles li > span { font-family: var(--v2-mono, ui-monospace), monospace; font-size: 13px; color: var(--v2-secondary); padding-top: 6px; }
+.manifestoClosing { margin-top: 36px; color: var(--v2-accent); font-size: 24px; line-height: 1.5; }
+.manifestoLink { margin-top: 24px !important; }
+.caseStudy { display: grid; grid-template-columns: 20% minmax(0, 1fr); border-top: 1px solid var(--v2-rule); padding-top: 32px; }
+.caseStudy > header { padding-right: 32px; }
+.caseStudy > header h2 { font-size: 24px; }
+.caseBody { min-width: 0; max-width: var(--site-reading-width); }
+.caseBody > * + * { margin-top: 24px; }
+.caseBody blockquote { margin-block: 32px; padding-left: 24px; border-left: 2px solid var(--v2-accent); color: var(--v2-accent); font-size: 24px; }
+.page .caption { font-family: var(--v2-mono, ui-monospace), monospace; font-size: 12px; color: var(--v2-secondary); margin-top: 32px; }
+.takeaway { grid-column: 2; max-width: var(--site-reading-width); margin-top: 36px; padding-top: 24px; border-top: 1px solid var(--v2-rule); }
+.takeaway h3 { font-family: var(--v2-mono, ui-monospace), monospace; font-size: 14px; margin-bottom: 16px; }
+.practiceLayout { display: grid; grid-template-columns: 20% minmax(0, 1fr); gap: 0; }
+.practiceLayout .contents { position: sticky; top: 28px; padding-right: 36px; }
+.practiceArticles { min-width: 0; }
+.practiceArticles section + section { margin-top: 48px; padding-top: 32px; border-top: 1px solid var(--v2-rule); }
+.practiceArticles h2 { max-width: 38ch; }
+.sectionLead { margin-top: 20px !important; font-weight: 600; }
+.practiceArticles section > div { margin-top: 28px; }
+.questions { border-top: 1px solid var(--v2-rule); }
+.questions details { border-bottom: 1px solid var(--v2-rule); }
+.questions summary { list-style: none; cursor: pointer; display: grid; grid-template-columns: minmax(0, 1fr) 20px; gap: 24px; align-items: baseline; padding-block: 22px; }
+.questions summary::-webkit-details-marker { display: none; }
+.page .questions summary h2 { font-size: 20px; font-weight: 500; letter-spacing: 0; line-height: 1.5; }
+.questions summary > span { color: var(--v2-accent); text-align: center; }
+.questions details[open] summary > span { transform: rotate(45deg); }
+.questions summary:hover h2 { color: var(--v2-accent); }
+.answer { max-width: var(--site-reading-width); padding: 0 36px 28px 0; }
+.faqClosing { margin-top: 32px !important; }
+.about { display: grid; grid-template-columns: 20% minmax(0, 1fr); }
+.about .pageTitle { padding-right: 24px; }
+.aboutBody { min-width: 0; max-width: var(--site-reading-width); }
+.page .support { font-size: 16px; margin-top: 32px; }
+
+/* Working Drawing keeps its label column, precise rules, and blue notation. */
+.fullSite[data-direction="02"] .framework .pageTitle,
+.fullSite[data-direction="02"] .inPractice .pageTitle,
+.fullSite[data-direction="02"] .manifesto .pageTitle,
+.fullSite[data-direction="02"] .examples .pageTitle { display: grid; grid-template-columns: 20% minmax(0, 1fr); }
+.fullSite[data-direction="02"] .pageTitle h1 { padding-right: 24px; }
+.fullSite[data-direction="02"] .pageTitle .lead { margin-top: 0; }
+.fullSite[data-direction="02"] .frameworkTop { margin-left: 20%; }
+.fullSite[data-direction="02"] .manifesto .principles,
+.fullSite[data-direction="02"] .manifestoClosing,
+.fullSite[data-direction="02"] .manifestoLink { margin-left: 20%; max-width: 66ch; }
+.fullSite[data-direction="02"] .faq { max-width: 940px; }
+.fullSite[data-direction="02"] .faq .pageTitle { margin-bottom: 32px; }
+.fullSite[data-direction="02"] .questions summary { grid-template-columns: minmax(0, 1fr) 20px; }
+.fullSite[data-direction="02"] .answer { margin-left: 20%; }
+
+/* Plain Statement uses broader composition, stronger divisions and Archivo. */
+.fullSite[data-direction="04"] .pageTitle h1 { font-size: 46px; }
+.fullSite[data-direction="04"] .page h2 { font-size: 32px; }
+.fullSite[data-direction="04"] .pageTitle { display: grid; grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr); gap: 56px; }
+.fullSite[data-direction="04"] .pageTitle .lead { margin: 0; font-size: 20px; }
+.fullSite[data-direction="04"] .frameworkTop { grid-template-columns: minmax(0, 1fr) 220px; }
+.fullSite[data-direction="04"] .graph { border: 0; background: var(--v2-surface); padding: 32px 24px 0; }
+.fullSite[data-direction="04"] .nodeShape { fill: none; stroke: none; }
+.fullSite[data-direction="04"] .nodeLabel { font-family: var(--v2-body), sans-serif; font-size: 23px; font-weight: 600; }
+.fullSite[data-direction="04"] .nodeUnderline { display: block; stroke: var(--v2-ink); stroke-width: 3; }
+.fullSite[data-direction="04"] .graphAnnotation { font-family: var(--v2-body), sans-serif; }
+.fullSite[data-direction="04"] .concept { grid-template-columns: 28% minmax(0, 1fr); padding-block: 32px; }
+.fullSite[data-direction="04"] .concept h3 { font-family: var(--v2-body), sans-serif; font-size: 30px; font-variation-settings: "wdth" 85; font-weight: 650; }
+.fullSite[data-direction="04"] .principles { border-top: 2px solid var(--v2-ink); }
+.fullSite[data-direction="04"] .principles li { grid-template-columns: 100px minmax(0, 1fr); padding-block: 32px; }
+.fullSite[data-direction="04"] .principles li > span { font-family: var(--v2-body), sans-serif; color: var(--v2-accent); font-size: 25px; font-weight: 600; padding-top: 0; }
+.fullSite[data-direction="04"] .principles li p { font-size: 23px; line-height: 1.5; max-width: 54ch; }
+.fullSite[data-direction="04"] .manifestoClosing { padding: 32px 40px; background: var(--v2-accent); color: var(--v2-bg); max-width: 900px; }
+.fullSite[data-direction="04"] .examples .pageTitle { padding-bottom: 40px; border-bottom: 2px solid var(--v2-ink); margin-bottom: 40px; }
+.fullSite[data-direction="04"] .caseStudy { display: block; border: 0; padding: 0; }
+.fullSite[data-direction="04"] .caseStudy > header { max-width: 700px; padding: 0; margin: 0 auto 32px; }
+.fullSite[data-direction="04"] .caseStudy > header h2 { font-size: 34px; }
+.fullSite[data-direction="04"] .caseBody { max-width: 64ch; margin-inline: auto; }
+.fullSite[data-direction="04"] .takeaway { max-width: 64ch; margin: 40px auto 0; background: var(--v2-surface); padding: 28px 32px; border: 0; }
+.fullSite[data-direction="04"] .takeaway h3 { font-family: var(--v2-body), sans-serif; font-size: 18px; font-weight: 600; }
+.fullSite[data-direction="04"] .practiceLayout { grid-template-columns: 28% minmax(0, 1fr); }
+.fullSite[data-direction="04"] .practiceArticles h2 { font-size: 30px; max-width: 36ch; }
+.fullSite[data-direction="04"] .practiceArticles section + section { margin-top: 56px; padding-top: 36px; border-top: 2px solid var(--v2-ink); }
+.fullSite[data-direction="04"] .faq { max-width: 1000px; margin-inline: auto; }
+.fullSite[data-direction="04"] .faq .pageTitle { display: block; margin-bottom: 40px; }
+.fullSite[data-direction="04"] .questions { border-top: 2px solid var(--v2-ink); }
+.fullSite[data-direction="04"] .questions summary h2 { font-size: 23px; font-weight: 600; font-variation-settings: "wdth" 85; }
+.fullSite[data-direction="04"] .questions summary { padding-block: 24px; }
+.fullSite[data-direction="04"] .about { display: block; max-width: 70ch; margin-inline: auto; }
+.fullSite[data-direction="04"] .about .pageTitle { display: block; border-bottom: 2px solid var(--v2-ink); padding-bottom: 28px; margin-bottom: 32px; }
+
+@media (max-width: 1050px) {
+  .frameworkTop { gap: 40px; }
+  .concept { grid-template-columns: 24% minmax(0, 1fr); }
+  .concept h3 { font-size: 20px; }
+  .practiceLayout .contents { padding-right: 28px; }
+  .fullSite[data-direction="02"] .frameworkTop { margin-left: 0; }
+  .fullSite[data-direction="02"] .pageTitle h1 { font-size: 34px; }
+  .fullSite[data-direction="04"] .pageTitle { gap: 36px; }
+}
+@media (max-width: 900px) {
+  .graph .horizontalGraph { display: none; }
+  .graph .verticalGraph { display: block; max-width: 380px; margin-inline: auto; }
+  .graph { padding-block: 24px; }
+  .graph .nodeLabel { font-size: 21px; }
+  .graph .graphAnnotation { font-size: 17px; }
+  .fullSite[data-direction="04"] .graph { padding: 24px; }
+  .fullSite[data-direction="02"] .page .pageTitle { grid-template-columns: 1fr; }
+  .fullSite[data-direction="02"] .pageTitle .lead { margin-top: 24px; }
+  .fullSite[data-direction="02"] .manifesto .principles,
+  .fullSite[data-direction="02"] .manifestoClosing,
+  .fullSite[data-direction="02"] .manifestoLink { margin-left: 0; }
+  .caseStudy { grid-template-columns: 1fr; }
+  .caseStudy > header { padding-right: 0; margin-bottom: 28px; max-width: 54ch; }
+  .takeaway { grid-column: 1; }
+}
+@media (max-width: 800px) {
+  .page { padding-top: 36px; }
+  .fullSite { --site-section-gap: 40px; }
+  .fullSite[data-direction="04"] { --site-section-gap: 44px; }
+  .fullSite[data-direction="04"] .pageTitle { grid-template-columns: 1fr; gap: 24px; }
+  .fullSite[data-direction="04"] .pageTitle h1 { font-size: 38px; }
+  .frameworkTop, .fullSite[data-direction="04"] .frameworkTop { grid-template-columns: 1fr; gap: 28px; }
+  .frameworkTop .contents { order: -1; display: flex; flex-wrap: wrap; gap: 12px 24px; }
+  .frameworkTop .contents > span { width: 100%; padding-bottom: 8px; }
+  .concept, .fullSite[data-direction="04"] .concept { grid-template-columns: 1fr; gap: 18px; }
+  .concept h3 { padding-right: 0; }
+  .practiceLayout, .fullSite[data-direction="04"] .practiceLayout { grid-template-columns: 1fr; gap: 36px; }
+  .practiceLayout .contents { position: static; padding: 0; }
+  .practiceLayout .contents a { max-width: 56ch; }
+  .about { grid-template-columns: 1fr; }
+  .about .pageTitle { padding-right: 0; margin-bottom: 28px; }
+  .fullSite[data-direction="02"] .answer { margin-left: 0; }
+}
+@media (max-width: 480px) {
+  .page { padding-top: 32px; }
+  .pageTitle h1, .fullSite[data-direction="02"] .pageTitle h1, .fullSite[data-direction="04"] .pageTitle h1 { font-size: 34px; }
+  .fullSite .page h2 { font-size: 26px; }
+  .lead, .fullSite[data-direction="04"] .pageTitle .lead { font-size: 18px; }
+  .principles li { grid-template-columns: 30px minmax(0, 1fr); gap: 12px; padding-block: 24px; }
+  .fullSite[data-direction="04"] .principles li { grid-template-columns: 36px minmax(0, 1fr); gap: 16px; padding-block: 24px; }
+  .fullSite[data-direction="04"] .principles li p { font-size: 20px; }
+  .fullSite[data-direction="04"] .principles li > span { font-size: 20px; }
+  .fullSite[data-direction="04"] .manifestoClosing { padding: 24px; font-size: 22px; }
+  .fullSite[data-direction="04"] .caseStudy > header h2 { font-size: 28px; }
+  .fullSite[data-direction="04"] .takeaway { padding: 24px; }
+  .fullSite .questions summary h2 { font-size: 19px; }
+  .questions summary { gap: 16px; }
+  .answer { padding-right: 0; }
+  .graph, .fullSite[data-direction="04"] .graph { padding: 20px 0; }
+  .fullSite[data-direction="04"] .graph .nodeLabel { font-size: 23px; }
+}

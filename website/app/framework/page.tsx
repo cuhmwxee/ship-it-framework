@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import FrameworkGuide from "@/components/FrameworkGuide";
+import SitePage from "@/components/site/Pages";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function FrameworkPage() {
   return (
     <PageShell>
-      <FrameworkGuide />
+      <SitePage page="framework" direction="02" basePath="" />
     </PageShell>
   );
 }

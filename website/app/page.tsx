@@ -1,11 +1,6 @@
 import type { Metadata } from "next";
-import ExploreFurther from "@/components/ExploreFurther";
-import Framework from "@/components/Framework";
-import Hero from "@/components/Hero";
 import PageShell from "@/components/PageShell";
-import ReflectionStatement from "@/components/ReflectionStatement";
-import Container from "@/components/ui/Container";
-import { reflections } from "@/content/reflections";
+import Home from "@/components/site/Home";
 
 export const metadata: Metadata = {
   alternates: {
@@ -13,45 +8,7 @@ export const metadata: Metadata = {
   },
 };
 
-export default function Home() {
-  return (
-    <PageShell>
-      <Hero />
 
-      <div className="ds-section ds-section--compact pt-4">
-        <Container>
-          <div className="ds-content">
-            <div className="space-y-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
-              <p>
-                A change would normally inherit the team&apos;s delivery process:
-                planning, coordination, review, validation, and release. Ship It!
-                challenges whether this particular change needs all of it before
-                it ships.
-              </p>
-              {reflections.seen.slice(0, 2).map((line) => (
-                <p key={line}>{line}</p>
-              ))}
-              <p>
-                Software changes are becoming smaller, more frequent and
-                increasingly AI-assisted. Teams can produce changes faster than
-                many delivery processes were designed to handle.{" "}
-                <strong>
-                  AI can make changes faster. It doesn&apos;t make unnecessary
-                  steps necessary — or necessary validation unnecessary.
-                </strong>
-              </p>
-            </div>
-          </div>
-        </Container>
-      </div>
-
-      <ReflectionStatement
-        lines={["What does this particular change need before it ships?"]}
-        emphasis={0}
-      />
-
-      <Framework />
-      <ExploreFurther />
-    </PageShell>
-  );
+export default function HomePage() {
+  return <PageShell><Home direction="02" basePath="" /></PageShell>;
 }
