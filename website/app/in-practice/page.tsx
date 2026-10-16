@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import InPractice from "@/components/InPractice";
+import SitePage from "@/components/site/Pages";
 import PageShell from "@/components/PageShell";
 
 const description =
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function InPracticePage() {
   return (
     <PageShell>
-      <InPractice />
+      <SitePage page="in-practice" direction="02" basePath="" />
     </PageShell>
   );
 }

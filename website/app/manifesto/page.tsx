@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import Manifesto from "@/components/Manifesto";
+import SitePage from "@/components/site/Pages";
 import PageShell from "@/components/PageShell";
 
 export const metadata: Metadata = {
@@ -32,7 +32,7 @@ export const metadata: Metadata = {
 export default function ManifestoPage() {
   return (
     <PageShell>
-      <Manifesto />
+      <SitePage page="manifesto" direction="02" basePath="" />
     </PageShell>
   );
 }
