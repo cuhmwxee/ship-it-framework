@@ -21,7 +21,8 @@
 .related { margin-top: var(--site-section-gap); padding-top: 28px; border-top: var(--site-rule-width) solid var(--v2-rule); }
 .related h2 { font-size: 24px; margin-bottom: 20px; }
 .related > p { margin-bottom: 20px; }
-.related ul { padding: 0; list-style: none; display: grid; gap: 12px; }
+.fullSite[data-production="true"][data-direction="02"] .related > p { margin-bottom: 32px; }
+.related ul { padding: 0; list-style: none; display: grid; gap: 24px; }
 .related li { max-width: var(--site-reading-width); }
 .related li span { color: var(--v2-secondary); }
 .frameworkTop { display: grid; grid-template-columns: minmax(0, 1fr) 170px; gap: 80px; }
@@ -81,6 +82,42 @@
 .page .support { font-size: 16px; margin-top: 32px; }
 
 /* Working Drawing keeps its label column, precise rules, and blue notation. */
+.fullSite[data-production="true"][data-direction="02"] .pageTitle {
+  padding-bottom: 24px;
+  margin-bottom: 24px;
+  border-bottom: 1px solid var(--v2-rule);
+}
+.fullSite[data-production="true"][data-direction="02"] .about .pageTitle {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 20% minmax(0, 1fr);
+}
+.fullSite[data-production="true"][data-direction="02"] .aboutBody { grid-column: 2; }
+.fullSite[data-production="true"][data-direction="02"] .manifesto .principles,
+.fullSite[data-production="true"][data-direction="02"] .examples .caseStudy,
+.fullSite[data-production="true"][data-direction="02"] .faq .questions {
+  border-top: 0;
+}
+.fullSite[data-production="true"][data-direction="02"] .caseBody blockquote { margin-block: 48px; }
+.fullSite[data-production="true"][data-direction="02"] .manifestoClosing {
+  margin-left: calc(20% + 68px);
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid var(--v2-rule);
+  color: var(--v2-secondary);
+  font-size: 16px;
+  line-height: 1.5;
+}
+.fullSite[data-production="true"][data-direction="02"] .manifestoClosing h2 {
+  margin-bottom: 16px;
+  font-family: var(--v2-mono, ui-monospace), monospace;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0;
+}
+.fullSite[data-production="true"][data-direction="02"] .manifesto .pageTitle .lead p:not(:first-child) {
+  font-size: 18px;
+}
 .fullSite[data-direction="02"] .framework .pageTitle,
 .fullSite[data-direction="02"] .inPractice .pageTitle,
 .fullSite[data-direction="02"] .manifesto .pageTitle,
@@ -88,13 +125,39 @@
 .fullSite[data-direction="02"] .pageTitle h1 { padding-right: 24px; }
 .fullSite[data-direction="02"] .pageTitle .lead { margin-top: 0; }
 .fullSite[data-direction="02"] .frameworkTop { margin-left: 20%; }
+.fullSite[data-production="true"][data-direction="02"] .frameworkTop {
+  margin-left: 0;
+  grid-template-columns: 20% minmax(0, 1fr);
+  gap: 0;
+}
+.fullSite[data-production="true"][data-direction="02"] .frameworkTop .contents {
+  grid-column: 1;
+  grid-row: 1;
+  padding-right: 36px;
+}
+.fullSite[data-production="true"][data-direction="02"] .frameworkTop .assumptions {
+  grid-column: 2;
+  grid-row: 1;
+}
 .fullSite[data-direction="02"] .manifesto .principles,
 .fullSite[data-direction="02"] .manifestoClosing,
 .fullSite[data-direction="02"] .manifestoLink { margin-left: 20%; max-width: 66ch; }
-.fullSite[data-direction="02"] .faq { max-width: 940px; }
-.fullSite[data-direction="02"] .faq .pageTitle { margin-bottom: 32px; }
+.fullSite[data-production="true"][data-direction="02"] .faq {
+  display: grid;
+  grid-template-columns: 20% minmax(0, 1fr);
+}
+.fullSite[data-production="true"][data-direction="02"] .faq .pageTitle {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-template-columns: 20% minmax(0, 1fr);
+  margin-bottom: 24px;
+}
+.fullSite[data-production="true"][data-direction="02"] .faq .questions,
+.fullSite[data-production="true"][data-direction="02"] .faq .faqClosing {
+  grid-column: 2;
+}
 .fullSite[data-direction="02"] .questions summary { grid-template-columns: minmax(0, 1fr) 20px; }
-.fullSite[data-direction="02"] .answer { margin-left: 20%; }
+.fullSite[data-production="true"][data-direction="02"] .answer { margin-left: 0; }
 
 /* Plain Statement uses broader composition, stronger divisions and Archivo. */
 .fullSite[data-direction="04"] .pageTitle h1 { font-size: 46px; }
@@ -150,9 +213,40 @@
   .fullSite[data-direction="04"] .graph { padding: 24px; }
   .fullSite[data-direction="02"] .page .pageTitle { grid-template-columns: 1fr; }
   .fullSite[data-direction="02"] .pageTitle .lead { margin-top: 24px; }
+  .fullSite[data-production="true"][data-direction="02"] .frameworkTop {
+    grid-template-columns: 1fr;
+    gap: 36px;
+  }
+  .fullSite[data-production="true"][data-direction="02"] .frameworkTop .contents {
+    grid-column: 1;
+    grid-row: 1;
+    padding-right: 0;
+  }
+  .fullSite[data-production="true"][data-direction="02"] .frameworkTop .assumptions {
+    grid-column: 1;
+    grid-row: 2;
+  }
+  .fullSite[data-production="true"][data-direction="02"] .faq {
+    grid-template-columns: 1fr;
+  }
+  .fullSite[data-production="true"][data-direction="02"] .about .pageTitle,
+  .fullSite[data-production="true"][data-direction="02"] .faq .pageTitle {
+    grid-template-columns: 1fr;
+  }
+  .fullSite[data-production="true"][data-direction="02"] .aboutBody {
+    grid-column: 1;
+  }
+  .fullSite[data-production="true"][data-direction="02"] .faq .pageTitle,
+  .fullSite[data-production="true"][data-direction="02"] .faq .questions,
+  .fullSite[data-production="true"][data-direction="02"] .faq .faqClosing {
+    grid-column: 1;
+  }
   .fullSite[data-direction="02"] .manifesto .principles,
   .fullSite[data-direction="02"] .manifestoClosing,
   .fullSite[data-direction="02"] .manifestoLink { margin-left: 0; }
+  .fullSite[data-production="true"][data-direction="02"] .manifestoClosing {
+    margin-left: 0;
+  }
   .caseStudy { grid-template-columns: 1fr; }
   .caseStudy > header { padding-right: 0; margin-bottom: 28px; max-width: 54ch; }
   .takeaway { grid-column: 1; }

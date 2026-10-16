@@ -11,12 +11,12 @@ const destinations = [
   {
     href: "/manifesto",
     title: "Manifesto",
-    description: "Read why Ship It! challenges the process a change would normally inherit.",
+    description: "Read the principles behind proportional delivery decisions.",
   },
   {
     href: "/examples",
     title: "Examples",
-    description: "See how a dependency update moves through the workflow.",
+    description: "See how different kinds of changes move through the same workflow.",
   },
   {
     href: "/in-practice",
@@ -31,7 +31,7 @@ const destinations = [
   {
     href: "/about",
     title: "About",
-    description: "Learn more about the project.",
+    description: "Learn more about the team and the project.",
   },
 ];
 
@@ -56,20 +56,18 @@ export default function ExploreFurther() {
               relevant evidence provides enough confidence that it is ready.
             </p>
             <p>
-              Question the practices this change would normally inherit. A change
-              may need every one of them. Omitting a practice must not remove
-              evidence needed to provide enough confidence to Ship.
+              Use existing practices where they contribute to what this change needs. 
+              Omit steps that do not contribute, and add practices that provide 
+              evidence the existing process does not.
+
             </p>
             <p>
               A change&apos;s size alone does not determine what it needs before
-              it ships.
+              it ships. The four concepts remain the same; the practices 
+              depend on the particular change and its context.
             </p>
           </div>
         </article>
-
-        <p className="py-16 text-2xl font-semibold leading-tight tracking-tight text-[var(--color-interactive-hover)] sm:py-20 sm:text-3xl lg:py-24 lg:text-4xl">
-          Ship It! does not override your obligations.
-        </p>
 
         <article className="mt-14 sm:mt-16">
           <h2 className="ds-type-section-heading text-zinc-100">
@@ -84,8 +82,8 @@ export default function ExploreFurther() {
               top of them.
             </p>
             <p>
-              It describes the shared workflow underneath them: the work required
-              for this change to become shippable. The question is not which
+              It provides a shared way to reason about the work required for 
+              this change to become shippable. The question is not which
               process to replace, but what this change actually needs to reach
               production with appropriate validation.
             </p>
