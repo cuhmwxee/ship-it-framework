@@ -32,10 +32,19 @@ function Framework({ direction, basePath }: DirectionProps) {
   </div>;
 }
 function Manifesto({ direction, basePath }: DirectionProps) {
+  const production = basePath === "";
+
   return <div id="manifesto" className={`${styles.page} ${styles.manifesto}`}>
-    <Title title={manifesto.title} production={basePath === ""}><Paragraphs items={manifesto.intro} /></Title>
+    <Title title={manifesto.title} production={production}><Paragraphs items={manifesto.intro} /></Title>
     <ol className={styles.principles}>{manifesto.principles.map((text, index) => <li key={text}><span>{String(index + 1).padStart(2, "0")}</span><p>{text}</p></li>)}</ol>
-    <div className={styles.manifestoClosing}><p>{manifesto.closing}</p></div>
+    {production ? (
+      <section className={styles.manifestoClosing} aria-labelledby="manifesto-takeaway-title">
+        <h2 id="manifesto-takeaway-title">Takeaway</h2>
+        <p>{manifesto.closing}</p>
+      </section>
+    ) : (
+      <div className={styles.manifestoClosing}><p>{manifesto.closing}</p></div>
+    )}
     <p className={styles.manifestoLink}>The Manifesto explains why. The <Link href={`${siteBase(direction, basePath)}/framework`}>Framework</Link> defines the model.</p>
   </div>;
 }

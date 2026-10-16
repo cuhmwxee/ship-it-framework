@@ -111,6 +111,10 @@
 .drawingGrid .diagram a { border: 1px solid var(--v2-accent); padding: 25px 10px; width: 100%; text-align: center; }
 .drawingGrid .connector { position: absolute; left: 100%; width: 48px; margin: 0; }
 .drawingGrid .context { margin-left: 20%; max-width: 67ch; }
+.prototype[data-production="true"][data-direction="02"] .drawingGrid .context {
+  margin-left: 0;
+  max-width: 78ch;
+}
 .drawingGrid .story { display: grid; grid-template-columns: 20% 1fr; padding-top: 32px; border-top: 1px solid var(--v2-rule); }
 .drawingGrid .story header { padding-right: 36px; }
 .drawingGrid .story h2 { font-size: 22px; }

@@ -10,7 +10,7 @@ import styles from "@/app/v2/_site/site.module.css";
 export default function Shell({ direction, fonts, children, basePath, preview = true }: SiteLocation & { fonts: string; children: ReactNode; preview?: boolean }) {
   const base = siteBase(direction, basePath);
   const name = directions.find((item) => item.id === direction)!.name;
-  return <div className={`${shared.prototype} ${styles.fullSite} ${fonts}`} data-direction={direction}>
+  return <div className={`${shared.prototype} ${styles.fullSite} ${fonts}`} data-direction={direction} data-production={preview ? undefined : "true"}>
     <a href="#main-content" className={shared.skip}>Skip to content</a>
     {preview && <div className={shared.review}>
       <Link href="/v2">← All directions</Link><span>{direction} / {name}</span>
