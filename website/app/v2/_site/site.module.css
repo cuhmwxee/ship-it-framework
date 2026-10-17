@@ -233,6 +233,7 @@
   .fullSite[data-production="true"][data-direction="02"] .faq .pageTitle {
     grid-template-columns: 1fr;
   }
+  .about { grid-template-columns: 1fr; }
   .fullSite[data-production="true"][data-direction="02"] .aboutBody {
     grid-column: 1;
   }
