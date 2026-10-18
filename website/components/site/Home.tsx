@@ -46,7 +46,7 @@ function Story({ base }: { base: string }) {
   return <article id="delivery-story" className={styles.story} aria-labelledby="story-title">
     <header><h2 id="story-title">{story.title}</h2><span className={styles.caption}>{story.label}</span></header>
     <blockquote>{story.paragraphs.map((paragraph) => <p key={paragraph}>{paragraph}</p>)}</blockquote>
-    <Link href={`${base}/examples#dependency-update`} className={styles.storyLink}>Read the full dependency update example →</Link>
+    <Link href={`${base}/examples`} className={styles.storyLink}>Read the full dependency update example →</Link>
     <p className={styles.contribution}>{copy.contribution}</p>
   </article>;
 }
