@@ -7,8 +7,11 @@ import styles from "@/app/v2/_site/site.module.css";
 
 type DirectionProps = SiteLocation;
 function Paragraphs({ items }: { items: readonly string[] }) { return <>{items.map((text) => <p key={text}>{text}</p>)}</>; }
-function Title({ title, children, production }: { title: string; children?: ReactNode; production?: boolean }) {
-  return <header className={styles.pageTitle}><h1 id={production ? `${title.toLowerCase().replaceAll(" ", "-")}-title` : undefined}>{title}</h1>{children && <div className={styles.lead}>{children}</div>}</header>;
+function Title({ title, children, aside, production }: { title: string; children?: ReactNode; aside?: ReactNode; production?: boolean }) {
+  return <>
+    <header className={styles.pageTitle}><h1 id={production ? `${title.toLowerCase().replaceAll(" ", "-")}-title` : undefined}>{title}</h1></header>
+    {aside ? <div className={styles.introRow}>{aside}<div className={styles.pageIntro}>{children}</div></div> : children && <div className={styles.pageIntro}>{children}</div>}
+  </>;
 }
 function Contents({ items }: { items: readonly { id: string; title: string }[] }) {
   return <nav className={styles.contents} aria-label="On this page"><span>On this page</span>{items.map((item) => <a key={item.id} href={`#${item.id}`}>{item.title}</a>)}</nav>;
@@ -18,13 +21,12 @@ function Related({ direction, basePath, pages, intro }: DirectionProps & { pages
 }
 function Framework({ direction, basePath }: DirectionProps) {
   return <div className={`${styles.page} ${styles.framework}`}>
-    <Title title="Framework" production={basePath === ""}><Paragraphs items={framework.introduction} /></Title>
+    <Title title="Framework" aside={<Contents items={framework.concepts.map((concept) => ({ id: concept.title.toLowerCase(), title: concept.title }))} />} production={basePath === ""}><Paragraphs items={framework.introduction} /></Title>
     <div className={styles.frameworkTop}>
       <section className={styles.assumptions} aria-labelledby="assumptions-title"><h2 id="assumptions-title">Ship It! assumes</h2><ul>{framework.assumptions.map((text) => <li key={text}>{text}</li>)}</ul>
         <p>These assumptions are the conceptual foundation of the framework. For the rationale behind them, see the <Link href={`${siteBase(direction, basePath)}/manifesto`}>Manifesto</Link>.</p>
         <p>Read the graph from left to right: Input flows through Development and Validation to Ship. If Validation fails, it creates new Input and work returns for further Development.</p>
       </section>
-      <Contents items={framework.concepts.map((concept) => ({ id: concept.title.toLowerCase(), title: concept.title }))} />
     </div>
     <ProcessDiagram direction={direction} basePath={basePath} />
     <section className={styles.concepts} aria-labelledby="concepts-title"><h2 id="concepts-title">The four concepts</h2><div>{framework.concepts.map((concept) => <article key={concept.title} id={concept.title.toLowerCase()} className={styles.concept}><h3>{concept.title}</h3><div><Paragraphs items={concept.body} /></div></article>)}</div></section>
@@ -60,8 +62,8 @@ function Examples({ basePath }: DirectionProps) {
 }
 function InPractice({ direction, basePath }: DirectionProps) {
   return <div className={`${styles.page} ${styles.inPractice}`}>
-    <Title title="In practice" production={basePath === ""}><p>Ship It! does not require a particular process, tool, or way of writing software. It provides a shared way to reason about a change through Input, Development, Validation, and Ship. These examples show how it fits with practices teams may already use.</p></Title>
-    <div className={styles.practiceLayout}><Contents items={practice} /><div className={styles.practiceArticles}>{practice.map((section) => <section key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.sectionLead}>{section.lead}</p><div><Paragraphs items={section.paragraphs} /></div></section>)}</div></div>
+    <Title title="In practice" aside={<Contents items={practice.map((section) => ({ id: section.id, title: section.title.replace("How does Ship It! fit with ", "").replace(/\?$/, "") }))} />} production={basePath === ""}><p>Ship It! does not require a particular process, tool, or way of writing software. It provides a shared way to reason about a change through Input, Development, Validation, and Ship. These examples show how it fits with practices teams may already use.</p></Title>
+    <div className={styles.practiceLayout}><div className={styles.practiceArticles}>{practice.map((section) => <section key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.sectionLead}>{section.lead}</p><div><Paragraphs items={section.paragraphs} /></div></section>)}</div></div>
     <Related direction={direction} basePath={basePath} pages={[{ href: "/framework", label: "Framework", description: "defines the four concepts." }, { href: "/examples", label: "Examples", description: "examines the delivery decisions for a dependency update." }]} />
   </div>;
 }
