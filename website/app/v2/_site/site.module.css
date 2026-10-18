@@ -368,16 +368,8 @@
   align-self: start;
   padding-top: 22px;
 }
-.manifestoBody {
-  display: grid;
-  grid-template-columns: 20% minmax(0, 1fr);
-  padding-top: 32px;
-}
-.fullSite[data-production="true"][data-direction="02"] .manifestoBody .principles {
-  margin-left: 0;
-}
-.manifestoBody .principles li:first-child {
-  padding-top: 0;
+.fullSite[data-production="true"][data-direction="02"] .examples .caseBody {
+  grid-column: 2;
 }
 
 @media (max-width: 900px) {
@@ -392,9 +384,8 @@
     padding-top: 0;
     margin-bottom: 28px !important;
   }
-  .manifestoBody {
-    grid-template-columns: 1fr;
-    gap: 28px;
+  .fullSite[data-production="true"][data-direction="02"] .examples .caseBody {
+    grid-column: 1;
   }
   .fullSite[data-production="true"][data-direction="02"] {
     --site-content-inset: 0%;

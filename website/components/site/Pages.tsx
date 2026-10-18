@@ -40,21 +40,22 @@ function Manifesto({ direction, basePath }: DirectionProps) {
     <Title
       title={manifesto.title}
       production={production}
+      aside={production ? <h2 className={styles.manifestoStatement}>{manifesto.intro[0]}</h2> : undefined}
     >
       <Paragraphs items={production ? manifesto.intro.slice(1) : manifesto.intro} />
     </Title>
-    <div className={production ? styles.manifestoBody : undefined}>
-      {production && <h2 className={styles.manifestoStatement}>{manifesto.intro[0]}</h2>}
+    <div>
       <ol className={styles.principles}>{manifesto.principles.map((text, index) => <li key={text}><span>{String(index + 1).padStart(2, "0")}</span><p>{text}</p></li>)}</ol>
     </div>
     <p className={styles.manifestoLink}>The Manifesto explains why. The <Link href={`${siteBase(direction, basePath)}/framework`}>Framework</Link> defines the model.</p>
   </div>;
 }
 function Examples({ basePath }: DirectionProps) {
+  const production = basePath === "";
   return <div id="examples" className={`${styles.page} ${styles.examples}`}>
-    <Title title="Examples" production={basePath === ""}><p>A concrete worked example showing how Ship It! is applied to a software change.</p></Title>
+    <Title title="Examples" production={production} aside={production ? <h2 className={styles.manifestoStatement}>{example.title}</h2> : undefined}><p>A concrete worked example showing how Ship It! is applied to a software change.</p></Title>
     <article id="dependency-update" className={styles.caseStudy}>
-      <header><h2>{example.title}</h2></header>
+      {!production && <header><h2>{example.title}</h2></header>}
       <div className={styles.caseBody}>{example.body.map((text, index) => index === 3 ? <blockquote key={text}><p>{text}</p></blockquote> : <p key={text}>{text}</p>)}<p className={styles.caption}>{example.label}</p></div>
     </article>
   </div>;
@@ -69,7 +70,7 @@ function InPractice({ direction, basePath }: DirectionProps) {
 function FAQ({ direction, basePath }: DirectionProps) {
   return <div id="faq" className={`${styles.page} ${styles.faq}`}>
     <Title title={faq.title} production={basePath === ""} />
-    {basePath === "" && <h2 className={`${styles.manifestoStatement} ${styles.faqStatement}`}>A few questions about Ship It!</h2>}
+    {basePath === "" && <h2 className={`${styles.manifestoStatement} ${styles.faqStatement}`}>A few questions. Just as many answers.</h2>}
     <div className={styles.questions}>{faq.items.map((item, index) => <details key={item.question} id={`question-${index + 1}`}><summary><h2>{item.question}</h2><span aria-hidden="true">+</span></summary><div className={styles.answer}><Paragraphs items={item.answer} /></div></details>)}</div>
     <p className={styles.faqClosing}>If your question is about applying these ideas in real delivery situations, continue in <Link href={`${siteBase(direction, basePath)}/examples`}>Examples</Link>.</p>
   </div>;
