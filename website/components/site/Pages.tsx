@@ -37,16 +37,16 @@ function Manifesto({ direction, basePath }: DirectionProps) {
   const production = basePath === "";
 
   return <div id="manifesto" className={`${styles.page} ${styles.manifesto}`}>
-    <Title title={manifesto.title} production={production}><Paragraphs items={manifesto.intro} /></Title>
-    <ol className={styles.principles}>{manifesto.principles.map((text, index) => <li key={text}><span>{String(index + 1).padStart(2, "0")}</span><p>{text}</p></li>)}</ol>
-    {production ? (
-      <section className={styles.manifestoClosing} aria-labelledby="manifesto-takeaway-title">
-        <h2 id="manifesto-takeaway-title">Takeaway</h2>
-        <p>{manifesto.closing}</p>
-      </section>
-    ) : (
-      <div className={styles.manifestoClosing}><p>{manifesto.closing}</p></div>
-    )}
+    <Title
+      title={manifesto.title}
+      production={production}
+    >
+      <Paragraphs items={production ? manifesto.intro.slice(1) : manifesto.intro} />
+    </Title>
+    <div className={production ? styles.manifestoBody : undefined}>
+      {production && <h2 className={styles.manifestoStatement}>{manifesto.intro[0]}</h2>}
+      <ol className={styles.principles}>{manifesto.principles.map((text, index) => <li key={text}><span>{String(index + 1).padStart(2, "0")}</span><p>{text}</p></li>)}</ol>
+    </div>
     <p className={styles.manifestoLink}>The Manifesto explains why. The <Link href={`${siteBase(direction, basePath)}/framework`}>Framework</Link> defines the model.</p>
   </div>;
 }
@@ -56,7 +56,6 @@ function Examples({ basePath }: DirectionProps) {
     <article id="dependency-update" className={styles.caseStudy}>
       <header><h2>{example.title}</h2></header>
       <div className={styles.caseBody}>{example.body.map((text, index) => index === 3 ? <blockquote key={text}><p>{text}</p></blockquote> : <p key={text}>{text}</p>)}<p className={styles.caption}>{example.label}</p></div>
-      <div className={styles.takeaway}><h3>Takeaway</h3><p>{example.takeaway}</p></div>
     </article>
   </div>;
 }
@@ -70,6 +69,7 @@ function InPractice({ direction, basePath }: DirectionProps) {
 function FAQ({ direction, basePath }: DirectionProps) {
   return <div id="faq" className={`${styles.page} ${styles.faq}`}>
     <Title title={faq.title} production={basePath === ""} />
+    {basePath === "" && <h2 className={`${styles.manifestoStatement} ${styles.faqStatement}`}>A few questions about Ship It!</h2>}
     <div className={styles.questions}>{faq.items.map((item, index) => <details key={item.question} id={`question-${index + 1}`}><summary><h2>{item.question}</h2><span aria-hidden="true">+</span></summary><div className={styles.answer}><Paragraphs items={item.answer} /></div></details>)}</div>
     <p className={styles.faqClosing}>If your question is about applying these ideas in real delivery situations, continue in <Link href={`${siteBase(direction, basePath)}/examples`}>Examples</Link>.</p>
   </div>;
@@ -77,6 +77,7 @@ function FAQ({ direction, basePath }: DirectionProps) {
 function About({ basePath }: DirectionProps) {
   return <div id="about" className={`${styles.page} ${styles.about}`}>
     <Title title={about.title} production={basePath === ""} />
+    {basePath === "" && <h2 className={styles.manifestoStatement}>A simple observation about software delivery.</h2>}
     <div className={styles.aboutBody}><Paragraphs items={about.paragraphs} /><p className={styles.support}><Link href="https://buymeacoffee.com/hmaattaf">Support the project.</Link></p></div>
   </div>;
 }
