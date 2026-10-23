@@ -15,7 +15,7 @@ export default function BrandMark({
 }: BrandMarkProps) {
   return (
     <Image
-      src="/brand/shipit-icon.png"
+      src="/icons/shipit-icon.png"
       alt=""
       width={width}
       height={height}

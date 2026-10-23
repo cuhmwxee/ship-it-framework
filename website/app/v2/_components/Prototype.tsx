@@ -23,7 +23,7 @@ function Navigation({ sidebar = false }: { sidebar?: boolean }) {
   return (
     <header className={`${styles.navigation} ${sidebar ? styles.sidebar : ""}`}>
       <Link href="/" className={styles.brand} aria-label="Ship It! — Home">
-        <Image src="/brand/shipit-icon.png" alt="" width={28} height={28} loading="eager" />
+        <Image src="/icons/shipit-icon.png" alt="" width={28} height={28} loading="eager" />
         <span>Ship It!</span>
       </Link>
       <nav className={styles.desktopNav} aria-label="Primary navigation">{links}</nav>
