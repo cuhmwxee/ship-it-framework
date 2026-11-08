@@ -9,8 +9,8 @@ const destinations = [
     description: "Learn the four core concepts and how they describe delivery from Input to Ship.",
   },
   {
-    href: "/manifesto",
-    title: "Manifesto",
+    href: "/principles",
+    title: "Principles",
     description: "Read the principles behind proportional delivery decisions.",
   },
   {

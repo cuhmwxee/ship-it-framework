@@ -1,6 +1,6 @@
 import Link from "next/link";
 import type { ReactNode } from "react";
-import { framework, manifesto, example, practice, faq, about } from "./content";
+import { framework, principles, example, practice, faq, about } from "./content";
 import { siteBase, type PageSlug, type SiteLocation } from "./config";
 import ProcessDiagram from "./ProcessDiagram";
 import styles from "@/app/v2/_site/site.module.css";
@@ -24,7 +24,7 @@ function Framework({ direction, basePath }: DirectionProps) {
     <Title title="Framework" aside={<Contents items={framework.concepts.map((concept) => ({ id: concept.title.toLowerCase(), title: concept.title }))} />} production={basePath === ""}><Paragraphs items={framework.introduction} /></Title>
     <div className={styles.frameworkTop}>
       <section className={styles.assumptions} aria-labelledby="assumptions-title"><h2 id="assumptions-title">Ship It! assumes</h2><ul>{framework.assumptions.map((text) => <li key={text}>{text}</li>)}</ul>
-        <p>These assumptions are the conceptual foundation of the framework. For the rationale behind them, see the <Link href={`${siteBase(direction, basePath)}/manifesto`}>Manifesto</Link>.</p>
+        <p>These assumptions are the conceptual foundation of the framework. For the rationale behind them, see the <Link href={`${siteBase(direction, basePath)}/principles`}>Principles</Link>.</p>
         <p>Read the graph from left to right: Input flows through Development and Validation to Ship. If Validation fails, it creates new Input and work returns for further Development.</p>
       </section>
     </div>
@@ -33,21 +33,21 @@ function Framework({ direction, basePath }: DirectionProps) {
     <Related direction={direction} basePath={basePath} pages={framework.relatedPages} intro="Explore how these concepts apply in practice." />
   </div>;
 }
-function Manifesto({ direction, basePath }: DirectionProps) {
+function Principles({ direction, basePath }: DirectionProps) {
   const production = basePath === "";
 
-  return <div id="manifesto" className={`${styles.page} ${styles.manifesto}`}>
+  return <div id="principles" className={`${styles.page} ${styles.manifesto}`}>
     <Title
-      title={manifesto.title}
+      title={principles.title}
       production={production}
-      aside={production ? <h2 className={styles.manifestoStatement}>{manifesto.intro[0]}</h2> : undefined}
+      aside={production ? <h2 className={styles.manifestoStatement}>{principles.intro[0]}</h2> : undefined}
     >
-      <Paragraphs items={production ? manifesto.intro.slice(1) : manifesto.intro} />
+      <Paragraphs items={production ? principles.intro.slice(1) : principles.intro} />
     </Title>
     <div>
-      <ol className={styles.principles}>{manifesto.principles.map((text, index) => <li key={text}><span>{String(index + 1).padStart(2, "0")}</span><p>{text}</p></li>)}</ol>
+      <ol className={styles.principles}>{principles.principles.map((principle, index) => <li key={principle.title}><span>{String(index + 1).padStart(2, "0")}</span><div><h2>{principle.title}</h2><p>{principle.body}</p></div></li>)}</ol>
     </div>
-    <p className={styles.manifestoLink}>The Manifesto explains why. The <Link href={`${siteBase(direction, basePath)}/framework`}>Framework</Link> defines the model.</p>
+    <p className={styles.manifestoLink}>For the concepts and workflow behind these principles, see the <Link href={`${siteBase(direction, basePath)}/framework`}>Framework</Link>.</p>
   </div>;
 }
 function Examples({ basePath }: DirectionProps) {
@@ -85,7 +85,7 @@ function About({ basePath }: DirectionProps) {
 export default function SitePage({ page, direction, basePath }: { page: PageSlug } & DirectionProps) {
   switch (page) {
     case "framework": return <Framework direction={direction} basePath={basePath} />;
-    case "manifesto": return <Manifesto direction={direction} basePath={basePath} />;
+    case "principles": return <Principles direction={direction} basePath={basePath} />;
     case "examples": return <Examples direction={direction} basePath={basePath} />;
     case "in-practice": return <InPractice direction={direction} basePath={basePath} />;
     case "faq": return <FAQ direction={direction} basePath={basePath} />;

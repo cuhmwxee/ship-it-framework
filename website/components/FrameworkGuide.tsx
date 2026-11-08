@@ -85,7 +85,7 @@ export default function FrameworkGuide() {
           </ul>
           <p className="mt-6 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             These assumptions are the conceptual foundation of the framework. For the
-            rationale behind them, see the <InlineLink href="/manifesto">Manifesto</InlineLink>.
+            rationale behind them, see the <InlineLink href="/principles">Principles</InlineLink>.
           </p>
           <p className="mt-4 text-lg leading-relaxed text-zinc-300 sm:text-xl">
             Read the graph from left to right: Input flows through Development and

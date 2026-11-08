@@ -4,7 +4,7 @@ import BrandMark from "@/components/BrandMark";
 const navItems = [
   { href: "/", label: "Home" },
   { href: "/framework", label: "Framework" },
-  { href: "/manifesto", label: "Manifesto" },
+  { href: "/principles", label: "Principles" },
   { href: "/examples", label: "Examples" },
   { href: "/in-practice", label: "In practice" },
   { href: "/faq", label: "FAQ" },
