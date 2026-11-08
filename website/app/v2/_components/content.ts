@@ -42,7 +42,7 @@ export const story = {
 
 export const destinations = [
   { href: "/framework", title: "Framework", description: "Learn the four core concepts and how they describe delivery from Input to Ship." },
-  { href: "/manifesto", title: "Manifesto", description: "Read why Ship It! challenges the process a change would normally inherit." },
+  { href: "/principles", title: "Principles", description: "Read why Ship It! challenges the process a change would normally inherit." },
   { href: "/examples", title: "Examples", description: "See how a dependency update moves through the workflow." },
   { href: "/in-practice", title: "In practice", description: "See how Ship It! fits with your existing process and development practices." },
   { href: "/faq", title: "FAQ", description: "Find concise answers to common questions about scope and usage." },

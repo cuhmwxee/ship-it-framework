@@ -1,7 +1,7 @@
 export type SiteDirection = "02" | "04";
 export const pages = [
   { slug: "framework", title: "Framework" },
-  { slug: "manifesto", title: "Manifesto" },
+  { slug: "principles", title: "Principles" },
   { slug: "examples", title: "Examples" },
   { slug: "in-practice", title: "In practice" },
   { slug: "faq", title: "FAQ" },

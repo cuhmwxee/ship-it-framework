@@ -54,20 +54,31 @@ export const framework = {
   ],
 } as const;
 
-export const manifesto = {
-  title: "Manifesto",
+export const principles = {
+  title: "Principles",
   intro: [
-    "Software delivery keeps changing.",
-    "A change would normally inherit the team's delivery process. Ship It! challenges whether that change needs all of it.",
-    "Ship It! provides a shared language to help teams make consistent delivery decisions.",
+    "The reasoning behind Ship It!",
+    "A particular software change would normally inherit the team's delivery process. These four principles explain why Ship It! questions what that change needs from it before shipping.",
+    "They provide a basis for delivery decisions within an existing way of working, where Validation provides confidence that a change is ready to Ship and existing obligations still apply.",
   ],
   principles: [
-    "Not every software change needs every step it would normally inherit. A change may still need all of them.",
-    "A change's size alone does not determine what it needs before it ships.",
-    "Delivery decisions should be intentional.",
-    "Keep your existing way of working.",
+    {
+      title: "A change may not need every inherited step",
+      body: "A team's delivery process serves many kinds of change, so some of its steps may not contribute to a particular one. That change may still need every step; omitting a practice must preserve the evidence needed for Validation and respect existing obligations.",
+    },
+    {
+      title: "Size alone does not determine delivery needs",
+      body: "The amount of code changed does not tell us enough about its effects or the confidence needed to Ship. A small change can have consequences that make the team's usual delivery steps necessary.",
+    },
+    {
+      title: "Delivery decisions need a reason",
+      body: "Understanding what an inherited step contributes gives teams a reason to keep it or consider omitting it for a particular change. Validation provides evidence for the decision to Ship, while existing obligations continue to govern what the team may do.",
+    },
+    {
+      title: "Delivery decisions fit within existing ways of working",
+      body: "Teams already have practices, tools, and responsibilities that support delivery. Ship It! provides a shared language for questioning what an individual change needs from that environment, without requiring a replacement process.",
+    },
   ],
-  closing: "Use this shared language to make delivery decisions within your existing process.",
 } as const;
 
 export const example = {

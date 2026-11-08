@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 const baseUrl = "https://www.shipitframe.work";
 
-const routes = ["", "/about", "/examples", "/faq", "/framework", "/in-practice", "/manifesto"];
+const routes = ["", "/about", "/examples", "/faq", "/framework", "/in-practice", "/principles"];
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return routes.map((route) => ({
