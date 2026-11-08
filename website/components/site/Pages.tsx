@@ -20,14 +20,30 @@ function Related({ direction, basePath, pages, intro }: DirectionProps & { pages
   return <nav className={styles.related} aria-labelledby="related-pages-title"><h2 id="related-pages-title">Related pages</h2>{intro && <p>{intro}</p>}<ul>{pages.map((page) => <li key={page.href}><Link href={`${siteBase(direction, basePath)}${page.href}`}>{page.label}</Link>{" "}<span>{page.description}</span></li>)}</ul></nav>;
 }
 function Framework({ direction, basePath }: DirectionProps) {
-  return <div className={`${styles.page} ${styles.framework}`}>
-    <Title title="Framework" aside={<Contents items={framework.concepts.map((concept) => ({ id: concept.title.toLowerCase(), title: concept.title }))} />} production={basePath === ""}><Paragraphs items={framework.introduction} /></Title>
+  const production = basePath === "";
+  const contents = <Contents items={framework.concepts.map((concept) => ({ id: concept.title.toLowerCase(), title: concept.title }))} />;
+  const assumptions = (
     <div className={styles.frameworkTop}>
       <section className={styles.assumptions} aria-labelledby="assumptions-title"><h2 id="assumptions-title">Ship It! assumes</h2><ul>{framework.assumptions.map((text) => <li key={text}>{text}</li>)}</ul>
         <p>These assumptions are the conceptual foundation of the framework. For the rationale behind them, see the <Link href={`${siteBase(direction, basePath)}/principles`}>Principles</Link>.</p>
         <p>Read the graph from left to right: Input flows through Development and Validation to Ship. If Validation fails, it creates new Input and work returns for further Development.</p>
       </section>
     </div>
+  );
+  return <div className={`${styles.page} ${styles.framework}`}>
+    {production ? <>
+      <Title title="Framework" production />
+      <div className={styles.introRow}>
+        {contents}
+        <div className={styles.frameworkIntroContent}>
+          <div className={styles.pageIntro}><Paragraphs items={framework.introduction} /></div>
+          {assumptions}
+        </div>
+      </div>
+    </> : <>
+      <Title title="Framework" aside={contents}><Paragraphs items={framework.introduction} /></Title>
+      {assumptions}
+    </>}
     <ProcessDiagram direction={direction} basePath={basePath} />
     <section className={styles.concepts} aria-labelledby="concepts-title"><h2 id="concepts-title">The four concepts</h2><div>{framework.concepts.map((concept) => <article key={concept.title} id={concept.title.toLowerCase()} className={styles.concept}><h3>{concept.title}</h3><div><Paragraphs items={concept.body} /></div></article>)}</div></section>
     <Related direction={direction} basePath={basePath} pages={framework.relatedPages} intro="Explore how these concepts apply in practice." />
@@ -42,6 +58,7 @@ function Principles({ direction, basePath }: DirectionProps) {
       production={production}
       aside={production ? <h2 className={styles.manifestoStatement}>{principles.intro[0]}</h2> : undefined}
     >
+      {production && <p className={styles.lead}>{principles.subtitle}</p>}
       <Paragraphs items={production ? principles.intro.slice(1) : principles.intro} />
     </Title>
     <div>
@@ -52,11 +69,12 @@ function Principles({ direction, basePath }: DirectionProps) {
 }
 function Examples({ basePath }: DirectionProps) {
   const production = basePath === "";
+  const introduction = "A concrete worked example showing how Ship It! is applied to a software change.";
   return <div id="examples" className={`${styles.page} ${styles.examples}`}>
-    <Title title="Examples" production={production} aside={production ? <h2 className={styles.manifestoStatement}>{example.title}</h2> : undefined}><p>A concrete worked example showing how Ship It! is applied to a software change.</p></Title>
-    <article id="dependency-update" className={styles.caseStudy}>
-      {!production && <header><h2>{example.title}</h2></header>}
-      <div className={styles.caseBody}>{example.body.map((text, index) => index === 3 ? <blockquote key={text}><p>{text}</p></blockquote> : <p key={text}>{text}</p>)}<p className={styles.caption}>{example.label}</p></div>
+    <Title title="Examples" production={production}>{!production && <p>{introduction}</p>}</Title>
+    <article id="configuration-message" className={styles.caseStudy}>
+      <header><h2>{example.title}</h2></header>
+      <div className={styles.caseBody}>{production && <p className={styles.lead}>{introduction}</p>}{example.body.map((text, index) => index === 3 ? <blockquote key={text}><p>{text}</p></blockquote> : <div key={text}><p>{text}</p>{index === 4 && <ul className={styles.practiceContributions}>{example.practices.map((practice) => <li key={practice.title}><strong>{practice.title}:</strong> {practice.contribution}</li>)}</ul>}</div>)}<p className={styles.caption}>{example.label}</p></div>
     </article>
   </div>;
 }
@@ -64,7 +82,7 @@ function InPractice({ direction, basePath }: DirectionProps) {
   return <div className={`${styles.page} ${styles.inPractice}`}>
     <Title title="In practice" aside={<Contents items={practice.map((section) => ({ id: section.id, title: section.title.replace("How does Ship It! fit with ", "").replace(/\?$/, "") }))} />} production={basePath === ""}><p>Ship It! does not require a particular process, tool, or way of writing software. It provides a shared way to reason about a change through Input, Development, Validation, and Ship. These examples show how it fits with practices teams may already use.</p></Title>
     <div className={styles.practiceLayout}><div className={styles.practiceArticles}>{practice.map((section) => <section key={section.id} id={section.id} aria-labelledby={`${section.id}-title`}><h2 id={`${section.id}-title`}>{section.title}</h2><p className={styles.sectionLead}>{section.lead}</p><div><Paragraphs items={section.paragraphs} /></div></section>)}</div></div>
-    <Related direction={direction} basePath={basePath} pages={[{ href: "/framework", label: "Framework", description: "defines the four concepts." }, { href: "/examples", label: "Examples", description: "examines the delivery decisions for a dependency update." }]} />
+    <Related direction={direction} basePath={basePath} pages={[{ href: "/framework", label: "Framework", description: "defines the four concepts." }, { href: "/examples", label: "Examples", description: "examines the delivery decisions for a configuration message correction." }]} />
   </div>;
 }
 function FAQ({ direction, basePath }: DirectionProps) {

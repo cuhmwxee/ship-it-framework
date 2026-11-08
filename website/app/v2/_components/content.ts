@@ -33,17 +33,17 @@ export const story = {
   title: "A familiar delivery story",
   label: "Illustrative scenario",
   paragraphs: [
-    "The dependency update was Pino 9.13.0 to 9.13.1. The team changed a version, ran the existing checks, and made no application-code changes. It entered the team's usual delivery path.",
-    "The team stopped and asked: what does this particular change need before it ships?",
-    "The existing checks provided enough evidence to give the team confidence that the change was ready to ship. Additional review and approval steps did not meaningfully contribute to what this change needed, so the team skipped them.",
-    "Those steps remained part of the process for changes that needed them. This was a decision about this update, not a general rule for dependency updates.",
+    "A developer corrects an internal application’s error message that names an outdated configuration setting, reproduces the error, verifies the new wording, and runs the existing checks.",
+    "The responsible people consider the usual review, QA handoff, approval, and deployment window, including their value for knowledge sharing and coordination. The verification provides sufficient confidence for Validation; they record the results for the team and confirm that no additional approval or coordinated deployment is required.",
+    "They decide to Ship now because the remaining handoffs and wait would contribute little to this correction. This decision respects existing obligations and applies to this change alone, not to small changes or text corrections in general.",
+
   ],
 };
 
 export const destinations = [
   { href: "/framework", title: "Framework", description: "Learn the four core concepts and how they describe delivery from Input to Ship." },
   { href: "/principles", title: "Principles", description: "Read why Ship It! challenges the process a change would normally inherit." },
-  { href: "/examples", title: "Examples", description: "See how a dependency update moves through the workflow." },
+  { href: "/examples", title: "Examples", description: "See how a configuration message correction moves through the workflow." },
   { href: "/in-practice", title: "In practice", description: "See how Ship It! fits with your existing process and development practices." },
   { href: "/faq", title: "FAQ", description: "Find concise answers to common questions about scope and usage." },
   { href: "/about", title: "About", description: "Learn more about the project." },

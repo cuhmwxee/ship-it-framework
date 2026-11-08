@@ -56,6 +56,7 @@ export const framework = {
 
 export const principles = {
   title: "Principles",
+  subtitle: "Four principles for deciding what each change needs before it ships.",
   intro: [
     "The reasoning behind Ship It!",
     "A particular software change would normally inherit the team's delivery process. These four principles explain why Ship It! questions what that change needs from it before shipping.",
@@ -82,21 +83,26 @@ export const principles = {
 } as const;
 
 export const example = {
-  title: "A dependency update, examined through Ship It!",
-  label: "Illustrative scenario",
+  title: "Correcting an outdated configuration message",
+  label: "Fictional illustrative scenario",
   body: [
-    "A team needs to update Pino from 9.13.0 to 9.13.1. One dependency version changes, no application code is modified, and the existing checks can be run against the change.",
-    "The change enters the team's usual delivery path. There is a ticket, security review, architecture review, change approval, release-manager handoff, and a wait for the next deployment window.",
-    "The team stops and asks a simple question:",
-    "Which of these delivery steps does this update need?",
-    "Under Ship It!, the team looks at the change itself rather than its category. What does this particular change need before it ships?",
-    "The ticket remains part of the process: it is the Input that describes and tracks the change. The team considers this particular update and the evidence from the existing checks. It finds that those checks provide enough confidence that this change is ready to ship, and that additional review and approval steps do not meaningfully contribute to what it needs.",
-    "So the team skips those steps for this change. It still develops and validates the update. The skipped steps remain part of the process for other changes that need them.",
-    "The decision rests on relevant evidence that this update is ready to ship. Removing an inherited step must not remove evidence needed for that decision or bypass a required control.",
-    "This is not a rule for dependency updates. Another change may need every practice it would normally inherit.",
+    "A developer notices that an internal reporting application’s error message names an outdated configuration setting. The application reads REPORTING_SERVICE_URL, but the message tells users to set REPORTS_API_URL. The developer records the problem as Input and corrects the message.",
+    "The developer reproduces the error, verifies the new wording against the setting the application reads, and runs the existing checks. They pass, providing evidence for Validation.",
+    "The usual delivery path includes code review, a separate QA handoff, release approval, and a wait for the next deployment window. The people responsible for the application and its release ask:",
+    "What does this particular change need before it ships?",
+    "They consider what each practice contributes beyond testing:",
+    "For this correction, they examine the message, the reproduced error, and the passing checks. They conclude that the evidence provides sufficient confidence for Validation. They record the corrected setting and results for the team; a separate review or QA handoff would add little verification or knowledge sharing here.",
+    "They check existing obligations and confirm that no additional approval is required. There are no related deployments or support arrangements to coordinate through the usual window. The remaining handoffs and wait would contribute little.",
+    "The responsible people make the Ship decision and release the correction now. Validation supports readiness; the decision to Ship also accounts for responsibilities and coordination. Ship It! does not override existing obligations.",
+    "This decision applies to one change. It is not an exemption for small changes or text corrections: another correction may need every usual practice. Size and developer confidence alone are not enough.",
   ],
-  takeaway:
-    "The team questioned what this update needed from its usual delivery process. It omitted steps that did not contribute while preserving the evidence needed for Validation.",
+  practices: [
+    { title: "Code review", contribution: "Challenges assumptions and shares knowledge about the configuration." },
+    { title: "QA handoff", contribution: "Provides independent verification and keeps QA informed." },
+    { title: "Release approval", contribution: "Confirms responsibility for the release." },
+    { title: "Deployment window", contribution: "Coordinates related changes and operational support." },
+  ],
+  takeaway: "Consider the evidence, the value of each practice, and existing obligations before deciding to Ship. Make that decision for the change in front of you.",
 } as const;
 
 export const practice = [

@@ -5,7 +5,7 @@ import PageShell from "@/components/PageShell";
 export const metadata: Metadata = {
   title: "Examples",
   description:
-    "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
+    "See how Ship It! is applied to a software change through a worked example of correcting an outdated configuration message.",
   alternates: {
     canonical: "/examples",
   },
@@ -16,7 +16,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
     title: "Examples",
     description:
-      "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
+      "See how Ship It! is applied to a software change through a worked example of correcting an outdated configuration message.",
     url: "/examples",
   },
   twitter: {
@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     images: ["/opengraph-image"],
     title: "Examples",
     description:
-      "See how Ship It! is applied to a software change through a concrete worked example of a dependency update.",
+      "See how Ship It! is applied to a software change through a worked example of correcting an outdated configuration message.",
   },
 };
 
